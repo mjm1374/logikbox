@@ -1,0 +1,60 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+h1{
+        color: #ffffff !important;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+
+.jumbotron {
+        background: url(../img/digital-landscape-wallpaper-010.jpg);
+     background-size: cover;
+        background-repeat: no-repeat;
+}
+
+#portrait {
+        background: url(../img/me.jpg);
+     background-size: cover;
+        background-repeat: no-repeat;
+        width: 250px;
+        height:250px;
+        float: right;
+        margin-right: 100px;
+        margin-top: -100px;
+        border: 10px solid white;
+        -ms-transform: rotate(7deg); /* IE 9 */
+        -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+        transform: rotate(7deg);
+}
+
+.logoimg{
+        float: right;
+        margin-left: 20px;
+}
+
+.logoimgLeft{
+        float: left;
+        margin-right: 20px;
+        
+}
+.emailform {
+    width:100% !important;
+        height: 40px;
+        font-size: 18px;
+}
+
+.msgbox
+{
+    height: 200px !important;  
+}
+
+
+.error{color:#910505}
+
+
+
+
