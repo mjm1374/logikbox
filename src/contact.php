@@ -30,6 +30,20 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+		<script src='https://www.google.com/recaptcha/api.js?render=6LfoV3sUAAAAALwuQVeRhBeMbPqxZ561orueLeJo'></script>
+		<script>
+		grecaptcha.ready(function() {
+		grecaptcha.execute('6LfoV3sUAAAAALwuQVeRhBeMbPqxZ561orueLeJo', {action: 'email_forms'})
+		.then(function(token) {
+		// Verify the token on the server.
+		//console.log(token);
+			$('form').prepend('<input type="hidden" name="token" value="' + token + '">');
+                $('form').prepend('<input type="hidden" name="action" value="create_comment">');
+                // submit form now
+                $('form').unbind('submit').submit();
+		});
+		});
+		</script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -72,7 +86,7 @@
            
         </div>
         <div class="col-md-8">
-          <h2>Heading</h2>
+          <h2>Write it ups</h2>
           <?php
 			//$controller->invoke();
 			?>

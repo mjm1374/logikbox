@@ -40,26 +40,43 @@ class Controller {
        // $msg = trim($msg);
 		$msg =  $name . " writes \r\n" . $msg;
 		$email_from = $_POST['email'];
-		$email_from = trim($email_from);
+		$email_from = trim($email_from); 
 		
-        if($msg !== ''){
+		//reCaptcha
+		$secret   = "6LfoV3sUAAAAABCL8io_gVio80cvcxbwzW0cm-XQ";
+		$response = $_POST['token'];
+		$remoteip = $_SERVER['REMOTE_ADDR'];
+		$url      = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$response&remoteip=$remoteip");
+		$result   = json_decode($url, TRUE);
+		
+		//echo  $url . "<br>";
+		
+		if($result->success){
+
+             //print_r("Working Fine"); exit;
+        
+		
+			if($msg !== ''){
+				
+				$email_to = "mike@logikbox.com";
+				$email_subject = "Logikbox email";
+				
+				$headers = 'From: '.$email_from."\r\n".
 			
-			$email_to = "mike@logikbox.com";
-			$email_subject = "MVC Email";
+			   'Reply-To: '.$email_from."\r\n" .
+				
+			   //'X-Mailer: PHP/' . phpversion();
+				
+			   @mail($email_to, $email_subject, $msg, $headers);  
+				
+			 
+	 
+	 
+				
+			}
+		
+		}  
 			
-			$headers = 'From: '.$email_from."\r\n".
-			
-		   'Reply-To: '.$email_from."\r\n" .
-			
-		   //'X-Mailer: PHP/' . phpversion();
-			
-		   @mail($email_to, $email_subject, $msg, $headers);  
-			
-		 
- 
- 
-            
-        }           
     }
 }
 
