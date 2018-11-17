@@ -4,7 +4,7 @@ date_default_timezone_set('America/New_York');
 
 	$cnt = 0;
 	$myString = "";
-	$lastDistance = "2017";
+	$lastDistance = "2018";
 
 		foreach ($jobs as $title => $job)
 		{
@@ -20,7 +20,7 @@ date_default_timezone_set('America/New_York');
 			$myString =  $myString . '	<h2>' . $job->company . '</h2>';
 			$myString =  $myString . '	<p><b>' . $job->title . '</b></p>';
 			$myString =  $myString . '	<p>' . $job->description . '</p>';
-			$myString =  $myString . '	<a href="' . $job->link . '" class="cd-read-more">Read more</a>';
+			$myString =  $myString . '	<a href="' . $job->link . '" class="cd-read-more">See Site</a>';
 			$date = new DateTime($job->startDate);
 			$myString =  $myString . '	<span class="cd-date">' . date_format($date, 'd/m/Y') . '</span>';
 			$myString =  $myString . '</div> ';
