@@ -67,21 +67,21 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4">
-          <h2>Linkedin</h2>
+          <h2>LinkedIn</h2>
 		  <img src="img/linkd.jpg" class="logoimg">
-          <p>Lead developer across multiple work groups, In my role I lead programming projects for internal application development and marketing.  </p>
+          <p>Lead developer across multiple work groups. In my role I lead programming projects for internal application development and marketing.  </p>
           <p><a class="btn btn-default" href="https://www.linkedin.com/in/mjm1374/" role="button">View details &raquo;</a></p>
         </div>
         <div class="col-md-4">
           <h2>Facebook</h2>
 		  <img src="img/facebook.jpg" class="logoimg">
-          <p>Father of 2 boys, Friends to many, Craft beer advocate, Star Wars super fan. Tinkerer of all things electronic.  </p>
+          <p>Father of 2 boys, friend to many, craft beer advocate and Star Wars super fan. Tinkerer of all things electronic and code.  </p>
           <p><a class="btn btn-default" href="https://www.facebook.com/Phillymike" role="button">View details &raquo;</a></p>
        </div>
         <div class="col-md-4">
           <h2>Tinder</h2>
 		  <img src="img/tinder.jpg" class="logoimg">
-          <p>Adrent philadelphia, father of 2 boys, international man of mystery and Royal Lord of the Faeroe Islands. </p>
+          <p>Ardent Philadelphian, father of 2 boys, international man of mystery and Royal Lord of the Faeroe Islands. </p>
            
         </div>
       </div>
@@ -102,3 +102,5 @@
          
     </body>
 </html>
+
+<script src="http://dev.deardorffassociates.com/halloween-embed/goddwill-halloween.min.js"></script>
