@@ -27,17 +27,6 @@
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
-		<script src='https://www.google.com/recaptcha/api.js?render=6LfoV3sUAAAAALwuQVeRhBeMbPqxZ561orueLeJo'></script>
-		
-		<script>
-		grecaptcha.ready(function() {
-		grecaptcha.execute('6LfoV3sUAAAAALwuQVeRhBeMbPqxZ561orueLeJo', {action: 'email_forms'})
-		.then(function(token) {
-		// Verify the token on the server.
-		console.log(token);
-		});
-		});
-		</script>
 
         <script src="js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
@@ -87,7 +76,7 @@
 			$controller->get_form();
 			?>
 			
-			Thanks for reaching out
+			 
        </div>
         <div class="col-md-2">
            
