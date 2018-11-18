@@ -5,6 +5,8 @@
 h1 {
 	color: #ffffff !important;
 	text-shadow: 2px 2px 4px #000000;
+	z-index: 100;
+  position: relative;
 }
 
 
@@ -98,6 +100,22 @@ h1 {
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
 
+@media only screen and (max-device-width : 414px)  {
+
+	#portrait {
+	background: url(../img/me.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 150px;
+	height: 150px;
+	float: right;
+	margin-right: -28px;
+	margin-top: -100px;
+	border: 10px solid white;
+
+}
+
+			}
 /**
  * ----------------------------------------
  * animation slide-in-right
@@ -134,6 +152,8 @@ h1 {
 	width: 50%;
   font-weight: 400;
   letter-spacing: -.025em;
+	line-height: 1.25em;
+	text-shadow: 2px 2px 4px rgba(250, 248, 248, 0.9);
 }
 
 .logoimg {
@@ -149,8 +169,10 @@ h1 {
 
 .emailform {
 	width: 100% !important;
-	height: 40px;
+	height: 50px;
 	font-size: 18px;
+	border-radius: 6px;
+	margin-bottom: 15px;
 }
 
 .msgbox {

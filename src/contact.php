@@ -16,7 +16,7 @@
 
 <head>
 	<?php include("header.php"); ?>
-	
+
 	<script src='https://www.google.com/recaptcha/api.js?render=6LfoV3sUAAAAALwuQVeRhBeMbPqxZ561orueLeJo'></script>
 	<script>
 		grecaptcha.ready(function() {
@@ -89,7 +89,7 @@
 					<input type="text" name="email" class="emailform" required><br/>
 					<label>Message</label><br/>
 					<textarea name="msg" class="emailform msgbox"></textarea><br/>
-					<button  type="submit" name="bob">Send</button>
+					<button  type="submit" name="sendMail" class="btn btn-primary">Send</button>
 				</form>
 			</div>
 			<div class="col-md-2">
