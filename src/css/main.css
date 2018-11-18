@@ -24,11 +24,11 @@ h1 {
 	margin-right: 100px;
 	margin-top: -100px;
 	border: 10px solid white;
-	/*-ms-transform: rotate(7deg);
-    -webkit-transform: rotate(7deg);
-    transform: rotate(7deg);*/
+	-ms-transform: translate(-38px, -33px) rotate(367deg);
+  -webkit-transform: translate(-38px, -33px) rotate(367deg);
+  transform: translate(-38px, -33px) rotate(367deg);
 	animation-name: tilt;
-	animation-duration: 2s;
+	animation-duration: 3s;
 	animation-timing-function: ease-out;
 }
 
@@ -38,10 +38,10 @@ h1 {
 		transform: translate(299px, 18px) rotate(29deg);
 	}
 	20% {
-		transform: translate(-38px, -33px) rotate(337deg);
+		transform: translate(-38px, -33px) rotate(367deg);
 	}
 	100% {
-		transform: translate(-38px, -33px) rotate(337deg);
+		transform: translate(-38px, -33px) rotate(367deg);
 	}
 }
 
@@ -50,10 +50,10 @@ h1 {
 		-moz-transform: translate(299px, 18px) rotate(29deg);
 	}
 	20% {
-		-moz-transform: translate(-38px, -33px) rotate(337deg);
+		-moz-transform: translate(-38px, -33px) rotate(367deg);
 	}
 	100% {
-		-moz-transform: translate(-38px, -33px) rotate(337deg);
+		-moz-transform: translate(-38px, -33px) rotate(367deg);
 	}
 }
 
@@ -62,10 +62,10 @@ h1 {
 		-webkit-transform: translate(299px, 18px) rotate(29deg);
 	}
 	20% {
-		-webkit-transform: translate(-38px, -33px) rotate(337deg);
+		-webkit-transform: translate(-38px, -33px) rotate(367deg);
 	}
 	100% {
-		-webkit-transform: translate(-38px, -33px) rotate(337deg);
+		-webkit-transform: translate(-38px, -33px) rotate(367deg);
 	}
 }
 
@@ -74,10 +74,10 @@ h1 {
 		-o-transform: translate(299px, 18px) rotate(29deg);
 	}
 	20% {
-		-o-transform: translate(-38px, -33px) rotate(337deg);
+		-o-transform: translate(-38px, -33px) rotate(367deg);
 	}
 	100% {
-		-o-transform: translate(-38px, -33px) rotate(337deg);
+		-o-transform: translate(-38px, -33px) rotate(367deg);
 	}
 }
 
@@ -86,10 +86,10 @@ h1 {
 		-ms-transform: translate(299px, 18px) rotate(29deg);
 	}
 	20% {
-		-ms-transform: translate(-38px, -33px) rotate(337deg);
+		-ms-transform: translate(-38px, -33px) rotate(367deg);
 	}
 	100% {
-		-ms-transform: translate(-38px, -33px) rotate(337deg);
+		-ms-transform: translate(-38px, -33px) rotate(367deg);
 	}
 }
 
