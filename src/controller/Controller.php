@@ -58,16 +58,15 @@ class Controller {
 			if($msg !== ''){
 
 				$email_to = "mike@logikbox.com";
-				$email_subject = "Logikbox email";
-
-				$headers = 'From: '.$email_from."\r\n".
-
-			   'Reply-To: '.$email_from."\r\n" .
-
-			   //'X-Mailer: PHP/' . phpversion();
+				$email_subject = "Logikbox E-mail";
+				$headers .= "MIME-Version: 1.0\r\n";
+				$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+				$headers .= 'From: '.$email_from."\r\n";
+				$headers .= 'Reply-To: ' . $email_from . "\r\n";
+				$headers .= "X-Priority: 1\r\n";
+				$headers .= "X-MSMail-Priority: High\r\n";
 
 			   @mail($email_to, $email_subject, $msg, $headers);
-
 			}
 
 		} else {
