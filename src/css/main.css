@@ -103,19 +103,36 @@ h1 {
 @media only screen and (max-device-width : 414px)  {
 
 	#portrait {
-	background: url(../img/me.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	width: 150px;
-	height: 150px;
-	float: right;
-	margin-right: -28px;
-	margin-top: -100px;
-	border: 10px solid white;
+		background: url(../img/me.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 150px;
+		height: 150px;
+		float: right;
+		margin-right: -28px;
+		margin-top: -100px;
+		border: 10px solid white;
+
+	}
 
 }
 
-			}
+@media only screen and (max-device-width : 600px)  {
+
+	#portrait {
+		background: url(../img/me.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 150px;
+		height: 150px;
+		float: right;
+		margin-right: -28px;
+		margin-top: -100px;
+		border: 10px solid white;
+
+	}
+
+}
 /**
  * ----------------------------------------
  * animation slide-in-right
