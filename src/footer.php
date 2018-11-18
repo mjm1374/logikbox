@@ -3,7 +3,7 @@
 <p>&copy; Mike Mc
 	<?php echo date("Y"); ?>
 </p>
-
+<div id="signature"></div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38537843-1"></script>
