@@ -1,17 +1,23 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/*font-family: 'Archivo', sans-serif;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Teko', sans-serif;
+font-family: 'Permanent Marker', cursive;
+*/
 
 h1 {
 	color: #ffffff !important;
 	text-shadow: 2px 2px 4px #000000;
 	z-index: 100;
   position: relative;
+	font-family: 'Permanent Marker', cursive;
 }
 
 
 .jumbotron {
-	background: url(../img/digital-landscape-wallpaper-010.jpg);
+	background: url(../img/backgrounds/0_V29ybGQgbWFwdiBrcg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -142,6 +148,10 @@ h1 {
 
 	}
 
+	#pickupLine {
+		font-size: 1em;
+	}
+
 }
 /**
  * ----------------------------------------
@@ -180,7 +190,8 @@ h1 {
   font-weight: 400;
   letter-spacing: -.025em;
 	line-height: 1.25em;
-	text-shadow: 2px 2px 4px rgba(250, 248, 248, 0.9);
+	color: rgba(165, 165, 171, 1);
+	text-shadow: 2px 2px 4px rgba(30, 26, 6, 0.9);
 }
 
 .logoimg {

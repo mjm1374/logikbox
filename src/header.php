@@ -5,7 +5,7 @@
 
         <meta name="description" content="Senior web application developer well versed in .Net, PHP, Cold Fusion, Javascript and HTML/CSS">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link href="https://fonts.googleapis.com/css?family=Archivo|Permanent+Marker|Shadows+Into+Light|Teko" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -19,6 +19,7 @@
 			body {
 				padding-top: 50px;
 				padding-bottom: 20px;
+                font-family: 'Archivo', sans-serif;
 			}
 		</style>
 
