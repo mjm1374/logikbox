@@ -45,7 +45,7 @@
 					$('form').prepend('<input type="hidden" name="token" value="' + token + '">');
 					$('form').prepend('<input type="hidden" name="action" value="create_comment">');
 					// submit form now
-					$('form').unbind('submit').submit();
+					//$('form').unbind('submit').submit();
 				});
 		});
 	</script>
@@ -105,7 +105,7 @@
 					<input type="text" name="email" class="emailform" required><br/>
 					<label>Message</label><br/>
 					<textarea name="msg" class="emailform msgbox"></textarea><br/>
-					<input type="submit" name="submit" value="Send">
+					<button  type="submit" name="bob">Send</button>
 				</form>
 			</div>
 			<div class="col-md-2">
@@ -132,13 +132,17 @@
 	<script>
 		$().ready(function() {
 			// validate the comment form when it is submitted
-			$("#commentForm").validate();
+			//$("#commentForm").validate();
 
 			// validate signup form on keyup and submit
-			$("#signupForm").validate({
+			$("#commentForm").validate({
 				rules: {
-					name: "required",
+					name: {
+						required: true,
+						minlength: 3,
+						lettersonly: true
 
+					},
 					email: {
 						required: true,
 						email: true
