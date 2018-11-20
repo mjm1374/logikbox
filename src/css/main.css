@@ -229,7 +229,14 @@ h1 {
 	vertical-align: middle;
 	display:block;
 	height:150px;
+	display: block;
 }
+
+ .logo img{
+	display: block;
+	margin: 0 auto;;
+ }
+
 .clientBlock{
 	margin-top:50px;
 }
