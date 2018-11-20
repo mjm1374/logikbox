@@ -133,7 +133,7 @@
 									<div class="col-sm-3 logo"><img src="img/logos/Saint-Gobain-150.jpg" alt=""></div>
 									<div class="col-sm-3 logo"><img src="img/logos/sony150.jpg" alt=""></div>
 									<div class="col-sm-3 logo"><img src="img/logos/brandywine150.png" alt=""></div>
-									<div class="col-sm-3 logo"><img src="img/logos/pfcu150.png" alt=""></div>
+									<div class="col-sm-3 logo"><img src="img/logos/goodwill-150.png" alt=""></div>
 								</div>
 
 							</div>
