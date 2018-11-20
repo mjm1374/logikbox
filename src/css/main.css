@@ -223,3 +223,13 @@ h1 {
 .error {
 	color: #910505
 }
+
+.logo{
+	margin:0 auto;
+	vertical-align: middle;
+	display:block;
+	height:150px;
+}
+.clientBlock{
+	margin-top:50px;
+}

@@ -62,8 +62,8 @@
 				<div class="col-md-8">
 					<h2>Thank You</h2>
 					<?php
-			$controller->get_form();
-			?>
+						$controller->get_form();
+					?>
 
 
 				</div>
