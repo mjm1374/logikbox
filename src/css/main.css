@@ -17,9 +17,10 @@ h1 {
 
 
 .jumbotron {
-	background: url(../img/backgrounds/0_V29ybGQgbWFwdiBrcg.jpg);
+	background: url(../img/backgrounds/Dell_Emc_2.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
+
 }
 
 #portrait {
@@ -36,8 +37,9 @@ h1 {
   -webkit-transform: translate(-38px, -33px) rotate(367deg);
   transform: translate(-38px, -33px) rotate(367deg);
 	animation-name: tilt;
-	animation-duration: 3s;
-	animation-timing-function: ease-out;
+	animation-duration: 5s;
+	transition-timing-function: ease-out;
+  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
 }
 
 #signature{

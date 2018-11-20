@@ -117,4 +117,4 @@
 
 	</html>
 
-	<script src="http://dev.deardorffassociates.com/halloween-embed/goddwill-halloween.min.js"></script>
+	<script src="js/goodwill-halloween.min.js"></script>
