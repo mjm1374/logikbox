@@ -69,10 +69,11 @@
 					<p><a class="btn btn-default" href="https://www.facebook.com/Phillymike" role="button">View details &raquo;</a></p>
 				</div>
 				<div class="col-md-4">
-					<h2>Tinder</h2>
-					<img src="img/tinder.jpg" class="logoimg">
-					<p>Ardent Philadelphian, father of 2 boys, international man of mystery and Royal Lord of the Faeroe Islands. </p>
-
+					<h2>Instagram</h2>
+					<img src="img/new-instagram-logo-png-transparent.png" class="logoimg">
+					<p>Studying chef, father of 2 boys and one cat, world traveler and past-life professional photographer. </p>
+					<p><a class="btn btn-default" href="https://www.instagram.com/mjm1374/" role="button">View details &raquo;</a></p>
+				</div>
 				</div>
 			</div>
 
