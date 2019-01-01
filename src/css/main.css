@@ -51,6 +51,9 @@ h1 {
 	float: right;
 
 }
+footer{
+	padding:10px;
+}
 
 
 @keyframes tilt {
@@ -152,6 +155,7 @@ h1 {
 
 	#pickupLine {
 		font-size: 1em;
+		color:#fff;
 	}
 
 }
@@ -192,7 +196,7 @@ h1 {
   font-weight: 400;
   letter-spacing: -.025em;
 	line-height: 1.25em;
-	color: rgba(165, 165, 171, 1);
+	color: rgba(255, 255, 255, 1);
 	text-shadow: 2px 2px 4px rgba(30, 26, 6, 0.9);
 }
 

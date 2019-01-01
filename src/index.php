@@ -99,7 +99,7 @@
 					$.ajax({
 						'async': false,
 						'global': false,
-						'url': 'js/opening.json',
+						'url': 'js/quotes.json',
 						'dataType': "json",
 						'success': function(data) {
 							json = data;
