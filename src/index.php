@@ -58,19 +58,19 @@
 			<div class="row">
 				<div class="col-md-4">
 					<h2>LinkedIn</h2>
-					<img src="img/linkd.jpg" class="logoimg">
+					<img src="img/linkedin-resizeimage.png" class="logoimg" alt="LinkedIn" />
 					<p>Lead developer across multiple work groups. In my role I lead programming projects for internal application development and marketing. </p>
 					<p><a class="btn btn-default" href="https://www.linkedin.com/in/mjm1374/" role="button">View details &raquo;</a></p>
 				</div>
 				<div class="col-md-4">
 					<h2>Facebook</h2>
-					<img src="img/facebook.jpg" class="logoimg">
+					<img src="img/fb-resizeimage.png" class="logoimg" alt="Facebook" />
 					<p>Father of 2 boys, friend to many, craft beer advocate and Star Wars super fan. Tinkerer of all things electronic and code. </p>
 					<p><a class="btn btn-default" href="https://www.facebook.com/Phillymike" role="button">View details &raquo;</a></p>
 				</div>
 				<div class="col-md-4">
 					<h2>Instagram</h2>
-					<img src="img/new-instagram-logo-png-transparent.png" class="logoimg">
+					<img src="img/instagram-resizeimage.png" class="logoimg" alt="Instagram" />
 					<p>Studying chef, father of 2 boys and one cat, world traveler and past-life professional photographer. </p>
 					<p><a class="btn btn-default" href="https://www.instagram.com/mjm1374/" role="button">View details &raquo;</a></p>
 				</div>
