@@ -4,7 +4,7 @@ date_default_timezone_set('America/New_York');
 
 	$cnt = 0;
 	$myString = "";
-	$lastDistance = "2018";
+	$lastDistance = "2019";
 
 		foreach ($jobs as $title => $job)
 		{
