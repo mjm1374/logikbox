@@ -63,8 +63,8 @@
 
 				<section id="cd-timeline" class="cd-container">
 					<?php
-					$controller->invoke();
-				?>
+						$controller->invoke();
+					?>
 				</section>
 				<!-- cd-timeline -->
 

@@ -17,7 +17,7 @@ class Controller {
 		if (!isset($_GET['job']))
 		{
 			// no special book is requested, we'll show a list of all available books
-			$jobs = $this->model->getJobList();
+			$projects = $this->project->getProjectList();
 			include 'view/timeline.php';
 		}
 		else
