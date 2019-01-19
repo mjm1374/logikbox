@@ -1,13 +1,14 @@
 <?php
 include_once("model/Model.php");
-include_once("model/Project.php");
 
 class Controller {
 	public $model;
+	public $project;
 
 	public function __construct()
     {
-        $this->model = new Model();
+		$this->model = new Model();
+		$this->project = new Projects();
 
     }
 
@@ -31,6 +32,13 @@ class Controller {
 	{
 		$jobs = $this->model->getJobList();
 		include 'view/jobnav.php';
+	}
+
+
+	public function projects()
+	{
+		$projects = $this->project->getProjectList();
+		include 'view/projectsnav.php';
 	}
 
 
