@@ -18,4 +18,12 @@
 		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 		<link rel="stylesheet" href="css/main.css">
 
+        <style>
+        body {
+            padding-top: 50px;
+            padding-bottom: 20px;
+            font-family: 'Archivo', sans-serif;
+        }
+        </style>
+
 		<script src="js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
