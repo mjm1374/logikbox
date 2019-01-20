@@ -68,7 +68,7 @@
 								<h2>Overview</h2>
 								<p>I'm a creative professional working in the tech industries, involved in my community and I work to make the world a better place. I've been told I'm a true believer, they might be right, someone has to care.  Born and raised in Philly, huge fan of this town. Lived all over but Philly is always home.  Something about the grit of this town, the neighborhood and their neighbors. The food, the beer, the sports and that uniquely Philly pride. I like my Eagles and Flyers. Serious soccer fan, I follow Man. City and love going to the Union. </p>
 
-								<p>I been an elected committee person for 14 years in the city (Go the mighty 9-14th!). Sat on the board of directors for my local art center, Allens Lane Art Center. I’ve been a life long scooter enthusiast, Quadrophia had a really strong effect on me. Ask my about my scooter runs someday. Amateur astronomer,  I’ve seen all the planets (sorry Pluto, you been dumped to the minor leagues and don’t count anymore). This and programming are the two skills I share with my boys. That is my truest joy.</p>
+								<p>I been an elected committee person for 14 years in the city (Go the mighty 9-14th!). Sat on the board of directors for my local art center, Allens Lane Art Center. I’ve been a life long scooter enthusiast, Quadrophia had a really strong effect on me. Ask me about my scooter runs someday. Amateur astronomer,  I’ve seen all the planets (sorry Pluto, you been dumped to the minor leagues and don’t count anymore). This and programming are the two skills I share with my boys. That is my truest joy.</p>
 
 								<h2>Skills</h2>
 							</div>
