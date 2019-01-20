@@ -21,18 +21,7 @@
         <![endif]-->
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-					<a class="navbar-brand" href="index.php">Mike McAllister</a>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
 					<?php include("nav.php"); ?>
-				</div>
 				<!--/.navbar-collapse -->
 			</div>
 		</nav>
@@ -60,7 +49,7 @@
 				<div class="col-md-4">
 					<h2>Follow me on GitHub</h2>
 					<img src="img/GitHub-Mark.png" class="logoimg" alt="Instagram" />
-					<p>I code there for I am. Follow me and my boys projects on Github.  We do some cool stuff and a lot of just learning exercises so we can get better. Games, insteresting ideas, stupid stuff. You know, why you got into coding too.</p>
+					<p>I code there for I am. Follow me and my boys projects on Github.  We do some cool stuff and a lot of learning exercises so we can get better. Games, interesting ideas, stupid stuff. You know, why you got into coding too.</p>
 					<p><a class="btn btn-default" href="https://www.instagram.com/mjm1374/" role="button">Go to Github &raquo;</a></p>
 				</div>
 		</div>
