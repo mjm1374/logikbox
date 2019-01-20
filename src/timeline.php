@@ -15,8 +15,9 @@
 <!--<![endif]-->
 
 <head>
-	<?php include("header.php"); ?>
 	<link rel="stylesheet" href="css/style.css">
+	<?php include("header.php"); ?>
+	
 </head>
 
 <body>
@@ -33,7 +34,7 @@
 	<!-- Main jumbotron for a primary marketing message or call to action -->
 	<div class="jumbotron">
 		<div class="container">
-			<h1>The History of Me</h1>
+			<h1>Tinkerings</h1>
 			<p>
 
 			</p>
