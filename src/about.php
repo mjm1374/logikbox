@@ -78,10 +78,11 @@
 									<li>HTML 5</li>
 									<li>CSS 3.0</li>
 									<li>Bootstrap 4.0</li>
-									<li>Sasss</li>
+									<li>Sass</li>
 									<li>Javascript</li>
 									<li>ES6</li>
 									<li>jQuery 3.0</li>
+									<li>Vue</li>
 									<li>Angular 5</li>
 									<li>JSON</li>
 									<li>AJAX</li>

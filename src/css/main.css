@@ -137,6 +137,12 @@ footer{
 		border: 10px solid white;
 
 	}
+	.homeProject {
+		float: left;
+		clear: both;
+		width:100% !important;
+		margin-bottom: 20px;
+	}
 
 }
 
@@ -258,4 +264,9 @@ footer{
 	float:right;
 	margin-left: 10px;
 	width:300px;
+}
+
+.homeTitle{
+	color: rgba(229, 181, 44, 0.9);
+
 }

@@ -10,7 +10,7 @@
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 	</button>
-	<a class="navbar-brand" href="index.php" class="homeTitle">Mike McAllister</a>
+	<a class="navbar-brand homeTitle" href="index.php">Mike McAllister</a>
 </div>
 <div id="navbar" class="navbar-collapse collapse">
 
