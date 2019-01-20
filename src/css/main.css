@@ -254,3 +254,8 @@ footer{
 .nava{
 	/* font-size: 1.5em !important; */
 }
+.homeProject{
+	float:right;
+	margin-left: 10px;
+	width:300px;
+}

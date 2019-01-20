@@ -28,6 +28,17 @@ class Controller {
 		}
 	}
 
+	public function firstProject()
+	{
+		
+			// show the r1st project
+			$lastest = $this->project->getFirstProject();
+			include 'view/viewLatest.php';
+		
+	}
+
+
+
 	public function nav()
 	{
 		$jobs = $this->model->getJobList();

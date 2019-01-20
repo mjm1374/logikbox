@@ -53,6 +53,18 @@
 		<div class="container">
 			<!-- Example row of columns -->
 			<div class="row">
+				<div class="col-md-8">
+					<?php $controller->firstProject()  ?>
+					
+				</div>
+				<div class="col-md-4">
+					<h2>Follow me on GitHub</h2>
+					<img src="img/GitHub-Mark.png" class="logoimg" alt="Instagram" />
+					<p>I code there for I am. Follow me and my boys projects on Github.  We do some cool stuff and a lot of just learning exercises so we can get better. Games, insteresting ideas, stupid stuff. You know, why you got into coding too.</p>
+					<p><a class="btn btn-default" href="https://www.instagram.com/mjm1374/" role="button">Go to Github &raquo;</a></p>
+				</div>
+		</div>
+			<div class="row">
 				<div class="col-md-4">
 					<h2>LinkedIn</h2>
 					<img src="img/linkedin-resizeimage.png" class="logoimg" alt="LinkedIn" />
