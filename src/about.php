@@ -102,6 +102,7 @@
 										</ul>
 									</li>
 									<li>Visual Studio</li>
+									<li>DevOps</li>
 									<li>MS Office Suite</li>
 									<li>MySQL Workbench</li>
 									<li>Git</li>

@@ -50,7 +50,7 @@
 					<h2>Follow me on GitHub</h2>
 					<img src="img/GitHub-Mark.png" class="logoimg" alt="Instagram" />
 					<p>I code there for I am. Follow me and my boys projects on Github.  We do some cool stuff and a lot of learning exercises so we can get better. Games, interesting ideas, stupid stuff. You know, why you got into coding too.</p>
-					<p><a class="btn btn-default" href="https://www.instagram.com/mjm1374/" role="button">Go to Github &raquo;</a></p>
+					<p><a class="btn btn-default" href="https://www.github.com/mjm1374/" role="button">Go to Github &raquo;</a></p>
 				</div>
 		</div>
 			<div class="row">
