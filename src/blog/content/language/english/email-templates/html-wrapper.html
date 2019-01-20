@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="{LANG}" dir="{DIR}">
+  <head>
+    <meta charset="{CHARSET}">
+    <title>{TITLE}</title>
+    <style type="text/css">
+    body {
+      background:#fff;
+      padding:0;
+      margin:0;
+      font:14px verdana,sans-serif;
+      color:#555;
+    }
+    div, h1, h2, h3, h4, p, form, label, input, textarea, img, span, fieldset, legend, ul, li {
+      margin:0;
+      padding:0;
+    }
+    img {
+      border:0;
+    }
+    #wrapper {
+      width: 100%;
+    }
+    .header {
+      padding:10px;
+      line-height:20px;
+      border-bottom:1px solid #ddd;
+      font-weight:bold;
+      text-transform: uppercase !important;
+      background-color: #f6f6f6;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#f6f6f6));
+      background-image: -webkit-linear-gradient(top, #f6f6f6, #f6f6f6);
+      background-image: -moz-linear-gradient(top, #f6f6f6, #f6f6f6);
+      background-image: -o-linear-gradient(top, #f6f6f6, #f6f6f6);
+      background-image: linear-gradient(to bottom, #f6f6f6, #f6f6f6);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#f6f6f6');
+      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6',endColorstr='#f6f6f6')";
+    }
+    .content {
+      padding:10px;
+      line-height:20px;
+      font-weight: normal !important;
+    }
+    .footer {
+      padding:10px;
+      line-height:20px;
+      background:#fff;
+      border-top:1px dashed #ddd;
+    }
+    .bold {
+      font-weight: bold !important;
+    }
+    .italic {
+      font-style: italic !important;
+    }
+    </style>
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+     <div class="header">
+      {HEADER}
+     </div>
+
+     <div class="content">
+      {CONTENT}
+     </div>
+
+     <div class="footer">
+      {FOOTER}
+     </div>
+
+    </div>
+
+  </body>
+</html>

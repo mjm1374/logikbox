@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>F.A.Q:  Maian Weblog Documentation</title>
+
+  <link href="content/css/bootstrap.css" rel="stylesheet">
+  <link href="content/css/font-awesome/font-awesome.css" rel="stylesheet">
+  <link href="content/css/docs.css" rel="stylesheet">
+  <link href="content/css/jquery.ibox.css" rel="stylesheet">
+
+  <script src="content/js/jquery.js"></script>
+  <script src="content/js/functions.js"></script>
+
+  <link rel="icon" href="favicon.ico">
+
+</head>
+
+<body>
+
+  <div id="wrapper">
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+          <span class="sr-only">Toggle Navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Documentation</a>
+      </div>
+
+      <div class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+        </div>
+      </div>
+    </nav>
+
+    <div id="page-wrapper">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header">Frequently Asked Questions</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <ol style="padding-left:35px">
+                <li><a href="#q1">How Do I Find My Product Key?</a></li>
+                <li><a href="#q2">I`ve forgot my admin login details. Can I reset them?</a></li>
+                <li><a href="#q2b">I have enabled the search engine friendly urls, but am now getting 404, page not found. Why?</a></li>
+                <li><a href="#q2c">Can I show more journals / blogs per page?</a></li>
+                <li><a href="#q3">Do I need any software on the server to run Maian Weblog?</a></li>
+                <li><a href="#q4">Is Maian Weblog encoded?</a></li>
+                <li><a href="#q5">Can I edit any template files and change colours etc?</a></li>
+                <li><a href="#q6">Will the system work with PHP7?</a></li>
+                <li><a href="#q7">Can I show more latest journals on the homepage?</a></li>
+                <li><a href="#q8">Is there a reseller licence?</a></li>
+                <li><a href="#q9">No emails are being sent, why?</a></li>
+                <li><a href="#q9b">My mail server requires specific "from" headers set. Is this possible?</a></li>
+                <li><a href="#q10">My host doesn`t support SMTP, can I use the PHP mail function?</a></li>
+                <li><a href="#q11">Can I change the text in the software and add my own wording?</a></li>
+                <li><a href="#q12">Can I show more recent journals in the right menu and footer?</a></li>
+                <li><a href="#q13">Can I edit the PHP files?</a></li>
+                <li><a href="#q14">Can I change the X-Mailer header that gets sent out in emails?</a></li>
+                <li><a href="#q15">Can I log search keywords?</a></li>
+                <li><a href="#q16">Can I use multiple languages at the same time?</a></li>
+                <li><a href="#q17">Can I integrate the layout into my own site design?</a></li>
+                <li><a href="#q18">Can I disable API email notifications?</a></li>
+                <li><a href="#q19">Can I remove the version check link in the admin area?</a></li>
+                <li><a href="#q20">Can I remove the documentation link in the admin area?</a></li>
+                <li><a href="#q21">Can I remove the Maian Weblog links in emails?</a></li>
+                <li><a href="#q22">How much do I have to pay for upgrades?</a></li>
+                <li><a href="#q23">Ok, I`ve purchased a licence. What do I do now?</a></li>
+                <li><a href="#q24">Can I disable the BB code?</a></li>
+                <li><a href="#q25">Can you recommend a good web host?</a></li>
+                <li><a href="#q26">What is Twitter Bootstrap?</a></li>
+                <li><a href="#q27">Can I get a discount for Maian Weblog, I`m broke?</a></li>
+                <li><a href="#q29">Can I change the youtube, vimeo, mp3, soundcloud or daily motion embed BB code?</a></li>
+                <li><a href="#q29b">When I use media BB code tags, they don`t show in my RSS feed. Why?</a></li>
+                <li><a href="#q30">Can I omit certain users from being added to the entry log?</a></li>
+                <li><a href="#q31">Can I show more journals in the RSS feed?</a></li>
+                <li><a href="#q32">Can I NOT show private journals in RSS feeds?</a></li>
+                <li><a href="#q33">Does Maian Weblog have a WYSIWYG editor?</a></li>
+                <li><a href="#q34">Can I NOT have the calendar month retained on page load?</a></li>
+                <li><a href="#q34b">Calendar links are UK format, day/month. Can I have U.S format (month,day) instead?</a></li>
+                <li><a href="#q35">Can I set a custom X-Mailer option?</a></li>
+                <li><a href="#q36">Can I set custom mail headers?</a></li>
+                <li><a href="#q37">Can I disable the admin cookie log in option?</a></li>
+                <li><a href="#q38">Can I disable the admin docs link on the top bar?</a></li>
+                <li><a href="#q39">Can I have more latest journals on the admin dashboard?</a></li>
+                <li><a href="#q40">If I upgrade, will my current version break?</a></li>
+                <li><a href="#q41">The installer or upgrade routine fails. Why?</a></li>
+                <li><a href="#q42">What is a cron job?</a></li>
+                <li><a href="#q43">When I search for something, it finds nothing even though it exists, why?</a></li>
+              </ol>
+            </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q1">
+                        How Do I Find My Product Key?
+                        </div>
+                        <div class="panel-body">
+                        If you are using the none commercial version, in your admin area, click 'Purchase Licence' on the top menu to view your product key.<br><br>
+                        If you don`t see this link, access the following link in your admin area: <b>admin/index.php?p=purchase</b>
+                        </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q2">
+						 I`ve forgot my admin login details. Can I reset them?
+                        </div>
+                        <div class="panel-body">
+						Login details are set in the 'admin/control/access.php' file. Just change there.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q2b">
+						 I have enabled the search engine friendly urls, but am now getting 404, page not found. Why?
+                        </div>
+                        <div class="panel-body">
+						Did you enable the .htaccess file as per the instructions in the <a href="ad-settings.html">settings</a>?.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q2c">
+						 Can I show more journals / blogs per page?
+                        </div>
+                        <div class="panel-body">
+                        Yes, edit the 'JNLS_PER_PAGE' option in the 'control/userdef.php' file.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q3">
+						 Do I need any software on the server to run Maian Weblog?
+                        </div>
+                        <div class="panel-body">
+						 Please see the system requirements on the <a href="install-2.html">installation page</a>.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q5">
+						 Can I edit any template files and change colours etc?
+                        </div>
+                        <div class="panel-body">
+						 Yes, you can change anything in the free or commercial version. See the <a href="language.html">template</a> section for more help.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q6">
+						 Will the system work with PHP7?
+                        </div>
+                        <div class="panel-body">
+						 Yes, it is written and tested for PHP5.5+ and PHP7+. See the software <a href="info.html">info page</a> for version numbers.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q7">
+                        Can I show more latest journals on the homepage?
+                        </div>
+                        <div class="panel-body">
+                        Yes, edit the 'HOMEPAGE_LATEST' option in the 'control/userdef.php' file.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q8">
+						 Is there a reseller licence?
+                        </div>
+                        <div class="panel-body">
+						 Yes, more information <a href="white.html">here</a>.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q9">
+						 No emails are being sent, why?
+                        </div>
+                        <div class="panel-body">
+						 You should enable SMTP debugging to help resolve mail issues. More info on the <a href="ad-email.html">mail settings</a> page.<br><br>
+             As mentioned on that page, use a reliable SMTP service for better mail reliability, DO NOT use your own server settings, especially if you are
+             on a shared server!! Using a trusted SMTP service is always recommended.<br><br>
+             If you are having issues sending email over SSL, this is nothing to do with this software or the mail system used by this software. Most likely
+             your server`s SSL is installed incorrectly. If you have issues, you can disable SSL checking (in favour of always allowing insecure connections) by
+             changing the following option in the 'control/classes/mailer/class.send.php' file:<br><br>
+             <b>private &#036;allowInsecure = 'no';</b><br><br>
+             Setting this to 'yes' will allow insecure connections. Whilst this is a workaround, it is NOT recommended.
+             </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q9b">
+						 My mail server requires specific "from" headers set. Is this possible?
+                        </div>
+                        <div class="panel-body">
+						 Yes. Open 'control/userdef.php' and set your "from" override headers in the following:<br><br>
+             <b>define('MAIL_FROM_NAME_HEADER', '');<br>
+             define('MAIL_FROM_EMAIL_HEADER', '');</b><br><br>
+             Example:<br><br>
+             <b>define('MAIL_FROM_NAME_HEADER', 'My Journal');<br>
+             define('MAIL_FROM_EMAIL_HEADER', 'email@example.com');</b><br><br>
+             This doesn`t affect the "To" or "Reply-To" headers.
+             </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q10">
+                        My host doesn`t support SMTP, can I use the PHP mail function?
+                        </div>
+                        <div class="panel-body">
+                        Yes, open the 'control/classes/mailer/class.send.php' file and change:<br><br>
+                        <b>private &#036;sendType = 'smtp';</b><br><br>
+                        to<br><br>
+                        <b>private &#036;sendType = 'mail';</b>
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q11">
+						 Can I change the text in the software and add my own wording?
+                        </div>
+                        <div class="panel-body">
+						 Yes, of course, see the <a href="language.html">language</a> section.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q12">
+                        Can I show more recent journals in the right menu and footer?
+                        </div>
+                        <div class="panel-body">
+                        Yes, edit the 'RECENT_JOURNALS_MENU' &amp; 'RECENT_JOURNALS_FOOTER' options in the 'control/userdef.php' file.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q13">
+						 Can I edit the PHP files?
+                        </div>
+                        <div class="panel-body">
+						 If you feel you need to and know what you are doing. Note that PHP changes can break when the system is upgraded.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q14">
+						Can I change the X-Mailer header that gets sent out in emails?
+						</div>
+                        <div class="panel-body">
+						Yes, via the 'control/userdef.php' file. Set a value in the 'MAIL_X_MAIL_HEADER' option.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q15">
+						Can I log search keywords?
+                        </div>
+                        <div class="panel-body">
+						            Yes, edit the 'LOG_SEARCH_KEYWORDS' option in the 'control/userdef.php' file.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q16">
+						 Can I use multiple languages at the same time?
+                        </div>
+                        <div class="panel-body">
+						 This isn`t supported, sorry.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q17">
+						 Can I integrate the layout into my own site design?
+                        </div>
+                        <div class="panel-body">
+						 Yes, by editing the template. See the <a href="language.html">templates / language</a> section for more details.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q18">
+                        Can I disable API email notifications?
+                        </div>
+                        <div class="panel-body">
+                        Yes, edit the 'ENABLE_API_NOTIFICATIONS' option in the 'control/userdef.php' file.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q19">
+						 Can I remove the version check link in the admin area?
+                        </div>
+                        <div class="panel-body">
+						 Yes, via the 'admin/control/userdef.php' file and the 'ENABLE_VERSION_CHECK' option.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q20">
+						 Can I remove the documentation link in the admin area?
+                        </div>
+                        <div class="panel-body">
+						 Yes, via the 'admin/control/userdef.php' file and the 'ENABLE_HELP_LINK' option.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q21">
+						 Can I remove the Maian Weblog links in emails?
+                        </div>
+                        <div class="panel-body">
+						 No, this will disappear when a commercial licence is applied.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q22">
+						 How much do I have to pay for upgrades?
+                        </div>
+                        <div class="panel-body">
+						 Nothing, all upgrades are FREE for life.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q23">
+						 Ok, I`ve purchased a licence. What do I do now?
+                        </div>
+                        <div class="panel-body">
+						 Firstly, go to the <a href="https://www.maiangateway.com">Maian Script World Licence Centre</a> and log in with the username/password sent to you in the email you received after purchase. If you
+      didn`t receive this email, please contact me via the Maian Weblog website.<br><br>
+      Once you have logged in, use the options provided to generate your licence. Your new licence file will be included in a zip file along with a readme file. You should
+      replace the default .lic file with your new one. This will unlock the free feature restrictions.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q24">
+                        Can I disable the BB code?
+                        </div>
+                        <div class="panel-body">
+                        Yes, edit the 'EN_BB' option in the 'control/userdef.php' file.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q25">
+						 Can you recommend a good web host?
+                        </div>
+                        <div class="panel-body">
+						 There are lots of good web hosting companies around. Try a search on Google. Read what other people say. A VPS or Dedicated server is recommended.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q26">
+						What is Twitter Bootstrap?
+                        </div>
+                        <div class="panel-body">
+						Its a frontend/mobile design framework. More information on their website <a href="http://getbootstrap.com" title="Twitter Bootstrap" onclick="window.open(this);return false">here</a>.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q27">
+						 Can I get a discount for Maian Weblog, I`m broke?
+                        </div>
+                        <div class="panel-body">
+						 Regular monthly discount coupons are emailed to subscribers of my <a href="https://www.maianscriptworld.co.uk/free-nickel-sale-script" onclick="window.open(this);return false">newsletter</a>. It`s an infrequent newsletter. You can unsubscribe at any time.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q29">
+                        Can I change the youtube, vimeo, mp3, soundcloud or daily motion embed code?
+                        </div>
+                        <div class="panel-body">
+                        Yes, edit the 'control/userdef.php' file and the following:<br><br>
+                        YOU_TUBE_EMBED_CODE<br>
+                        VIMEO_EMBED_CODE<br>
+                        DAILY_MOTION_EMBED_CODE<br>
+                        SOUNDCLOUD_EMBED_CODE<br>
+                        MP3_EMBED_CODE
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q29b">
+                        When I use media BB code tags, they don`t show in my RSS feed. Why?
+                        </div>
+                        <div class="panel-body">
+                        Some RSS feed readers won`t render YouTube etc links because data in iframes is ignored by some readers. This is not a fault
+                        of Maian Weblog, more a restriction of XML and the feed reader itself.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q30">
+                        Can I omit certain users from being added to the entry log?
+                        </div>
+                        <div class="panel-body">
+						            Yes, edit the 'control/userdef.php' file and the 'SKIP_ELOG_USRS' option.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q31">
+                        Can I show more journals in the RSS feed?
+                        </div>
+                        <div class="panel-body">
+						            Yes, edit the 'RSS_JOURNALS' option in the 'control/userdef.php' file.
+
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q32">
+                        Can I NOT show private journals in RSS feeds?
+                        </div>
+                        <div class="panel-body">
+						            Yes, edit the 'RSS_PRIVATE_SHOW' option in the 'control/userdef.php' file.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q33">
+                        Does Maian Weblog have a WYSIWYG editor?
+                        </div>
+                        <div class="panel-body">
+						            Yes.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q34">
+                        Can I NOT have the calendar month retained on page load?
+                        </div>
+                        <div class="panel-body">
+						            Yes, edit the 'RETAIN_CAL_MONTH_ON_LOAD' option in the 'control/userdef.php' file.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q34b">
+                        Calendar links are UK format, day/month. Can I have U.S format (month,day) instead?
+                        </div>
+                        <div class="panel-body">
+						            Yes, open the 'control/classes/class.datetime.php' file and change the 'calendar_link_format' to 'us'.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q35">
+                        Can I set a custom X-Mailer option?
+                        </div>
+                        <div class="panel-body">
+						            Yes, edit the 'MAIL_X_MAIL_HEADER' option in the 'control/userdef.php' file.
+
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q36">
+						Can I set custom mail headers?
+                        </div>
+                        <div class="panel-body">
+						            Yes, edit the &#036;customMailHeaders array in the 'control/classes/mailer/global-mail-tags.php' file.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q37">
+                        Can I disable the admin cookie log in option?
+                        </div>
+                        <div class="panel-body">
+						            Yes, edit the 'ENABLE_LOGIN_COOKIE' option in the 'admin/control/userdef.php' file.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q38">
+                        Can I disable the admin docs link on the top bar?
+                        </div>
+                        <div class="panel-body">
+						            Yes, edit the 'ENABLE_HELP_LINK' option in the 'admin/control/userdef.php' file.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q39">
+                        Can I have more latest journals on the admin dashboard?
+                        </div>
+                        <div class="panel-body">
+						            Yes, edit the 'LATEST_DASHBOARD_JOURNALS' option in the 'admin/control/userdef.php' file.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q40">
+                        If I upgrade, will my current version break?
+                        </div>
+                        <div class="panel-body">
+						            Of course anything is possible. Server software upgrades can always cause issues. You should make sure you have a full backup of
+                        any existing systems before attempting an upgrade. Please see the <a href="info3.html">version appendix</a> for any major changes
+              that may cause your existing version to break.</div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q41">
+                        The installer or upgrade routine fails. Why?
+                        </div>
+                        <div class="panel-body">
+                        Please enable the debug logs via the 'install/control/config.php' file and send me the log file written to the
+                        logs folder.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q42">
+                        What is a cron job?
+                        </div>
+                        <div class="panel-body">
+						            It`s an automated task, much like Windows task scheduler. More info <a href="features6.html">here</a>.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="q43">
+                        When I search for something, it finds nothing even though it exists, why?
+                        </div>
+                        <div class="panel-body">
+						            Maian Pal uses the MySQL FULLTEXT search system. It can be unreliable with some keywords. To deactivate it, edit the 'control/userdef.php' file and the following:<br><br>
+                        FULLTEXT_SEARCH<br><br>
+                        If not enabled, searches are performed via standard 'LIKE' queries.
+                        </div>
+					</div>
+				</div>
+			</div>
+
+      <div class="row footerArea">
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    //<![CDATA[
+    jQuery(document).ready(function() {
+      loadTopMenu();
+      loadLeftMenu();
+      loadFooter();
+    });
+    //]]>
+  </script>
+
+  <script src="content/js/bootstrap.js"></script>
+  <script src="content/js/plugins/jquery.metismenu.js"></script>
+  <script src="content/js/plugins/jquery.ibox.js"></script>
+
+</body>
+
+</html>

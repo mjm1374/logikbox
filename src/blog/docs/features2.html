@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Plugin: AddThis Social Share:  Maian Weblog Documentation</title>
+
+  <link href="content/css/bootstrap.css" rel="stylesheet">
+  <link href="content/css/font-awesome/font-awesome.css" rel="stylesheet">
+  <link href="content/css/docs.css" rel="stylesheet">
+  <link href="content/css/jquery.ibox.css" rel="stylesheet">
+
+  <script src="content/js/jquery.js"></script>
+  <script src="content/js/functions.js"></script>
+
+  <link rel="icon" href="favicon.ico">
+
+</head>
+
+<body>
+
+  <div id="wrapper">
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+          <span class="sr-only">Toggle Navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Documentation</a>
+      </div>
+
+      <div class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+        </div>
+      </div>
+    </nav>
+
+    <div id="page-wrapper">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header">Plugin: AddThis Social Share</h1>
+        </div>
+      </div>
+
+            <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">What is AddThis?</div>
+            <div class="panel-body">
+              AddThis is a social bookmarking service that can be integrated into a website with the use of a web widget. Once added, visitors to the website can bookmark an item using a variety of services, such as Facebook, MySpace, Google Bookmarks, and Twitter. The website is the most widely used service for bookmarking and sharing web pages, used on over 5% of the top 10,000 sites on the internet. Text &copy; Wikipedia.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">Where is it in Maian Weblog?</div>
+            <div class="panel-body">
+              At the base of each blog/journal entry as seen in the following screenshot.<br><br>
+              <img class="img-responsive screenshot" src="content/images/screenshots/20.png" alt=""><br>
+              Clicking the + icon brings up a div where you can search for hundreds of social share options, meaning your journals can been seen across
+              loads of social platforms.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">How can I implement it in Maian Weblog?</div>
+            <div class="panel-body">
+              Simply grab your API code from the <a href="http://www.addthis.com/" onclick="window.open(this);return false">AddThis</a> website and paste into the box provided on the following page in your Maian Weblog admin area:<br><br>
+              <div class="alert alert-info">
+              Settings &gt; Social Settings &gt; Other Options
+              </div>
+              Note that this is entirely optional. If you have set up the plugin correctly, you`ll see an image similar to the one above.<br><br>
+              Other images may be available via the <a href="http://www.addthis.com/" onclick="window.open(this);return false">AddThis</a> website. You can
+              also adjust button colours, appearance and size.<br><br>
+              <b>Important</b>: Depending on what code you see, you may need to alter the div inside the 'journal.tpl.php' file.<br><br>
+              The default is:<br><br>
+              &lt;div class="addthis_sharing_toolbox"&gt;&lt;/div&gt;<br><br>
+              You should change this if the div code shown at AddThis is different.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row footerArea">
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    //<![CDATA[
+    jQuery(document).ready(function() {
+      loadTopMenu();
+      loadLeftMenu();
+      loadFooter();
+    });
+    //]]>
+  </script>
+
+  <script src="content/js/bootstrap.js"></script>
+  <script src="content/js/plugins/jquery.metismenu.js"></script>
+  <script src="content/js/plugins/jquery.ibox.js"></script>
+
+</body>
+
+</html>

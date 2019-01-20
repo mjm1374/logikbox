@@ -1,0 +1,28 @@
+         <div class="mswcalendar">
+
+           <div class="table-responsive">
+             <table class="table">
+             <thead>
+               <tr>
+                 <th{c1}>{h1}</th>
+                 <th{c2}>{h2}</th>
+                 <th{c3}>{h3}</th>
+                 <th{c4}>{h4}</th>
+                 <th{c5}>{h5}</th>
+                 <th{c6}>{h6}</th>
+                 <th{c7}>{h7}</th>
+               </tr>
+             </thead>
+             <tbody>
+               {rows}
+             </tbody>
+             </table>
+           </div>
+
+           <div class="row cal_nav">
+             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-left"><a href="#" title="{last_month}" onclick="mswCal('prev');return false"><i class="fa fa-chevron-left fa-fw"></i></a></div>
+             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-center jmonthyear" onclick="mswCalOps('showmonthload')">{month} {year}</div>
+             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-right"><a href="#" title="{next_month}" onclick="mswCal('next');return false"><i class="fa fa-chevron-right fa-fw"></i></a></div>
+           </div>
+
+         </div>

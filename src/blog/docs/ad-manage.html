@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Manage Journals: Maian Weblog Documentation</title>
+
+  <link href="content/css/bootstrap.css" rel="stylesheet">
+  <link href="content/css/font-awesome/font-awesome.css" rel="stylesheet">
+	<link href="content/css/docs.css" rel="stylesheet">
+
+	<script src="content/js/jquery.js"></script>
+	<script src="content/js/functions.js"></script>
+
+	<link rel="icon" href="favicon.ico">
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Documentation</a>
+    </div>
+
+		<div class="navbar-default navbar-static-side" role="navigation">
+      <div class="sidebar-collapse"></div>
+    </div>
+	</nav>
+
+  <div id="page-wrapper">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">Manage Journals</h1>
+      </div>
+    </div>
+
+		<div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Overview</div>
+          <div class="panel-body">
+              Shows all journals currently in system.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Journal List</div>
+          <div class="panel-body">
+              <span class="badge">1</span> To delete, use checkboxes and the delete button. You can select all via the <i class="fa fa-list fa-fw"></i> icon.<br><br>
+              <span class="badge">2</span> To edit, click the <i class="fa fa-pencil-square fa-fw"></i> icon.<br><br>
+              <span class="badge">3</span> To reorder, drag and drop rows.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Filters</div>
+          <div class="panel-body">
+              Shown via the <button type="button" class="btn btn-sm btn-default"><i class="fa fa-chevron-down fa-fw"></i></button> drop down icon.<br><br>
+              <img class="img-responsive screenshot" src="content/images/screenshots/14.png" alt=""><br>
+              <b>Add Journal</b> - Click to add new journal (same as main menu).<br><br>
+              <b>Search by Keyword</b> - Click to show search box, enter keyword and search.<br><br>
+              <b>Search by Date</b> - Click to show date boxes and search by date range. Published date only.<br><br>
+              <b>Show Deleting</b> - Click to show journals set to auto delete.<br><br>
+              <b>Show Unpublished</b> - Click to show journals yet to be published.<br><br>
+              <b>Show Private</b> - Click to show private journals or journals made private by protected categories<br><br>
+              <b>Show Disabled</b> - Click to show disabled journals.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Dates</div>
+          <div class="panel-body">
+              At the base of each journal 2 dates are always shown and a 3rd is shown if auto delete is set.<br><br>
+              <img class="img-responsive screenshot" src="content/images/screenshots/15.png" alt=""><br>
+              <i class="fa fa-check fa-fw"></i> - Denotes date journal was created.<br><br>
+              <i class="fa fa-calendar fa-fw"></i> - Denotes date journal is published. May be a future date.<br><br>
+              <i class="fa fa-calendar-times-o fa-fw"></i> - Denotes date journal will auto delete (if applicable).
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Icons</div>
+          <div class="panel-body">
+              Icons may be shown for journals, these are explained as follows:<br><br>
+              <i class="fa fa-lock fa-fw msw_green"></i> - Denotes private journal.<br><br>
+              <i class="fa fa-lock fa-fw privatecat"></i> - Denotes private journal because of private category.<br><br>
+              <i class="fa fa-thumb-tack fa-fw thumck"></i> - Denotes pinned journal.<br><br>
+              <i class="fa fa-commenting fa-fw"></i> - Denotes comments are enabled for journal.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row footerArea">
+		</div>
+  </div>
+
+</div>
+
+<script>
+//<![CDATA[
+jQuery(document).ready(function() {
+  loadTopMenu();
+  loadLeftMenu();
+  loadFooter();
+});
+//]]>
+</script>
+
+<script src="content/js/bootstrap.js"></script>
+<script src="content/js/plugins/jquery.metismenu.js"></script>
+<script src="content/js/plugins/jquery.ibox.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,274 @@
+.toppagebar {
+  color: #555;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  background: #f5f5f5 url(../images/panel-bg.png) !important;
+  font-size: 15px;
+  border-bottom: 2px solid #c0c0c0;
+}
+
+.toppagebar a {
+  color: #555;
+}
+
+.navbar {
+  background: #0089a1 url(../images/nav-bg.png);
+  color: #fff;
+  border: 0;
+  border-bottom: 3px solid #c0c0c0;
+  border-radius: 0;
+  padding:10px 0 10px 0;
+}
+
+.navbar-default,
+.navbar-default {
+  border-radius: 0;
+}
+
+.navbar .container .fa-bars {
+  font-size: 25px;
+  cursor:pointer;
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.navbar a {
+  color: #fff;
+  font-size: 21px;
+  text-shadow: #000 1px 1px;
+  text-transform: uppercase;
+}
+
+.navbar .row div.leftblock {
+  padding-top: 3px;
+}
+
+.navbar .form-group {
+  margin:0;
+  padding:0;
+}
+
+.navbar .input-group {
+  border: 1px solid #555 !important;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.navbar .input-group-addon {
+  background: #f5f5f5 url(../images/panel-bg.png) !important;
+}
+
+.navbar .form-control {
+  border:0;
+  border-right: 1px solid #ddd;
+}
+
+.navbar .input-group-addon {
+  border: 0 !important;
+}
+
+.right-panel-boxes .panel-body {
+  line-height: 25px;
+  font-size: 12px;
+}
+
+/* Calendar */
+.mswcalendar .head_weekend {
+  font-weight: bold;
+}
+
+.jcalendar_search select {
+  margin-bottom: 5px;
+}
+
+.jcalendar_search .calclose {
+  margin-left: 20px;
+}
+
+.mswcalendar .spin {
+  background: url(../images/animated/spin-small.gif) no-repeat center center;
+}
+
+.mswcalendar .table {
+  margin: 0;
+  padding: 0;
+  color: #888;
+}
+
+.mswcalendar .jmonthyear {
+  cursor:pointer;
+}
+
+.mswcalendar .cal_nav {
+  border-top: 1px dashed #ddd;
+  padding: 20px 0 0 0 !important;
+  margin: 5px 0 0 0 !important;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.mswcalendar .cal_nav i {
+  font-size: 14px;
+}
+
+.mswcalendar .cal_nav div:first-child {
+  padding:0;
+}
+
+.mswcalendar td:hover {
+  background: #f9f9f9;
+}
+
+.mswcalendar td a {
+  color: #555;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.mswcalendar td a:hover {
+  text-decoration: none;
+}
+
+
+.mswcalendar .next_month_day, .mswcalendar .last_month_day {
+  color:#ddd;
+}
+
+.mswcalendar .today {
+  background: #fcfcfc url(../images/bg.png);
+  font-weight: bold;
+  color: #555;
+}
+
+.calresetpanel {
+  text-align: center !important;
+  font-size: 12px;
+  padding: 5px 0 5px 0;
+  font-style: italic;
+  color: #555;
+}
+
+.calresetpanel a {
+  color: #555;
+}
+
+/* Category */
+h1 {
+  font-size: 20px;
+  margin:0;
+  padding:5px 0 10px 5px;
+  color:#555;
+  margin-bottom:20px;
+  border-bottom: 1px solid #ddd;
+}
+.catprivate .panel-body {
+  color: red;
+}
+
+/* Journal */
+.postedby {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.tags .panel-body {
+  font-size: 12px;
+}
+
+.journalarea .panel-heading,.catprivate .panel-heading,.journalpagearea .panel-heading {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.journalarea .panel-heading a,.catprivate .panel-heading a {
+  color: #555;
+}
+
+.journalarea .panel-footer hr,.catprivate .panel-footer hr {
+  margin:10px 0 10px 0 !important;
+  padding:0 !important;
+}
+
+.journalarea .panel-heading a:hover {
+  color: #008097;
+}
+
+.journalarea .panel-footer,.catprivate .panel-footer {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.journalarea .pinned, .catprivate .pinned {
+  margin-right: 20px;
+}
+
+.journalarea .privjnl, .catprivate .privjnl {
+  margin-right: 20px;
+}
+
+.addthis_div .panel-body {
+  padding-bottom: 10px;
+  text-align: right !important;
+}
+
+.journalarea .smalldate,.catprivate .smalldate {
+  display:block;
+  margin-top:5px;
+}
+
+.journalarea p,.catprivate p {
+  padding:0;
+  margin:0;
+}
+
+/* New pages */
+.newpagearea .panel-heading {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Pages */
+.mswpages,.pagination {
+  text-align: right !important;
+  padding:0 !important;
+  margin:0 0 30px 0 !important;
+}
+.pagination li.active a {
+  background: #02798E !important;
+  border: 1px solid #555 !important;
+}
+
+/* Footer Bar */
+.footbar {
+  border-top: 2px solid #ddd;
+  padding:20px;
+  margin-top:30px;
+}
+.footbar .row div {
+  line-height: 35px;
+}
+.footbar .social i {
+  font-size: 32px;
+  color: #02798E;
+}
+.footbar .social i:hover {
+  color: #555;
+}
+.footbar .social .row {
+  padding-top:30px;
+}
+.footbar .row div div {
+  border-top:1px dashed #ddd;
+}
+.footbar .row div div:hover {
+  background:#f5f5f5;
+}
+.footbar h2 {
+  padding:0;
+  margin:0 0 20px 5px;
+  font-size:14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #555;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Themes: Maian Weblog Documentation</title>
+
+  <link href="content/css/bootstrap.css" rel="stylesheet">
+  <link href="content/css/font-awesome/font-awesome.css" rel="stylesheet">
+	<link href="content/css/docs.css" rel="stylesheet">
+
+	<script src="content/js/jquery.js"></script>
+	<script src="content/js/functions.js"></script>
+
+	<link rel="icon" href="favicon.ico">
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Documentation</a>
+    </div>
+
+		<div class="navbar-default navbar-static-side" role="navigation">
+      <div class="sidebar-collapse"></div>
+    </div>
+	</nav>
+
+  <div id="page-wrapper">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">Themes</h1>
+      </div>
+    </div>
+
+		<div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Overview</div>
+          <div class="panel-body">
+              Theme settings for your journal. Different themes can load for different dates if applicable.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Options &gt; Default Theme</div>
+          <div class="panel-body">
+              Set the default theme for your journal, this is the main theme visitors will see initially.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Enable Set Themes</div>
+          <div class="panel-body">
+              Enable or disable set themes. If enabled, see below.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Set Themes</div>
+          <div class="panel-body">
+              If set themes are enabled you can load different themes at different times. For example, at Christmas you may have a Christmas theme. If you
+              have multiple themes that overlap dates, only the first is used. To create a new theme:<br><br>
+              <span class="badge">1</span> Make a copy of the existing '_theme_default' folder and rename to something else. Theme folders must always start '_theme' for the
+              system to pick them up.<br><br>
+              <span class="badge">2</span> Update new theme template set with a new design.<br><br>
+              <span class="badge">3</span> Specify theme on 'Set Themes' tab and dates you want them to load. For set themes, dates and template are required. Use the
+              calendar that appears to select dates. If both dates and template file aren`t specifed, theme will be ignored. Note that the default template set is NOT
+              shown in the drop down as this is used if no other templates are set.<br><br>
+              Use the <button class="btn btn-xs btn-success" type="button"><i class="fa fa-plus fa-fw"></i></button> button to add more set theme rows and the <button class="btn btn-xs btn-info" type="button"><i class="fa fa-minus fa-fw"></i></button> button to remove last row.<br><br>
+              <img class="img-responsive screenshot" src="content/images/screenshots/a6.gif" alt="">
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Available Themes</div>
+          <div class="panel-body">
+              If themes are available, they will be on the <a href="https://www.maianweblog.com/" onclick="window.open(this);return false">Maian Weblog</a> website. If you
+              would like to submit a theme, please email it to: support@maianscriptworld.co.uk.<br><br>
+              If you want to create commercial custom themes on your own websites, this is fine.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row footerArea">
+		</div>
+  </div>
+
+</div>
+
+<script>
+//<![CDATA[
+jQuery(document).ready(function() {
+  loadTopMenu();
+  loadLeftMenu();
+  loadFooter();
+});
+//]]>
+</script>
+
+<script src="content/js/bootstrap.js"></script>
+<script src="content/js/plugins/jquery.metismenu.js"></script>
+<script src="content/js/plugins/jquery.ibox.js"></script>
+
+</body>
+</html>

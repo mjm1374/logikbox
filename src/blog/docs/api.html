@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>API: Maian Weblog Documentation</title>
+
+  <link href="content/css/bootstrap.css" rel="stylesheet">
+  <link href="content/css/font-awesome/font-awesome.css" rel="stylesheet">
+	<link href="content/css/docs.css" rel="stylesheet">
+
+	<script src="content/js/jquery.js"></script>
+	<script src="content/js/functions.js"></script>
+
+	<link rel="icon" href="favicon.ico">
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Documentation</a>
+    </div>
+
+		<div class="navbar-default navbar-static-side" role="navigation">
+      <div class="sidebar-collapse"></div>
+    </div>
+	</nav>
+
+  <div id="page-wrapper">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">API</h1>
+      </div>
+    </div>
+
+		<div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Overview</div>
+          <div class="panel-body">
+              The Maian Weblog API is a simple, yet powerful function that enables you to post a journal entry from any application.<br><br>
+              Data MUST be sent as a HTTP POST and be formatted in JSON. The available parameters are shown below. This is for advanced users.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Enable API</div>
+          <div class="panel-body">
+              To enable the API you need to create an API key in the <a href="ad-settings.html">settings</a>. This must be used in all transmissions
+              and is required to validate incoming posts are genuine.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">API Log</div>
+          <div class="panel-body">
+              Should be enabled when debugging. Activate the API log in your <a href="ad-settings.html">settings</a>. This will write entries to your
+              logs folder. You can refer to this file if you are having issues getting the API to work.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">API Post Structure</div>
+          <div class="panel-body">
+              <b>apikey</b> = API KEY<br>
+              <b>journal</b> = JOURNAL OPTIONS ARRAY<br>
+              <b>tweet</b> = TWEET POST (if applicable)<br>
+              <b>categories</b> = ARRAY OF CATEGORY IDs
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Journal Parameter Options</div>
+          <div class="panel-body">
+              If some parameters aren`t included they will revert to the defaults shown:<br><br>
+              <b>staff</b> = 0 or ID number of staff member if applicable. Default: 0<br>
+              <b>title</b> = Title of Journal. Required.<br>
+              <b>comms</b> = Journal comments. Required.<br>
+              <b>encomms</b> = Are comments enabled for this journal? Yes or No value. Default: No<br>
+              <b>pubts</b> = Publish date/time. Must be valid Unix timestamp. Default: Current date/time<br>
+              <b>delts</b> = Delete date/time. Must be valid Unix timestamp. Default: 0 (disabled)<br>
+              <b>metat</b> = Alternative browser title if applicable. Default: ''<br>
+              <b>slug</b> = Rewrite slug. Must be unique. See note below. Required.<br>
+              <b>tags</b> = Comma delimited search tags. Default: ''<br>
+              <b>stick</b> = Pin journal to top of list screens? Yes or No value. Default: No<br>
+              <b>user</b> = For private journal enter username. Default: ''<br>
+              <b>pass</b> = For private journal enter password. Default: ''<br>
+              <b>en</b> = Is this journal enabled? Yes or No value. Default: Yes<br><br>
+              More info on this options on the '<a href="ad-add.html">Add Journal</a>' page.<br><br>
+              <i class="fa fa-warning fa-fw"></i> For private, both username and password are required. If one is missing, this is ignored.<br><br>
+              <i class="fa fa-warning fa-fw"></i> The ONLY characters allowed for slugs are: <b>hyphens, underscores &amp; alphanumeric</b>. Anything else will be removed or ignored.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Staff ID</div>
+          <div class="panel-body">
+              You can find the staff IDs on the staff screen in your admin control panel. A 0 (zero) value means the global user who logs in via
+              admin/control/access.php.<br><br>
+              <img class="img-responsive screenshot" src="content/images/screenshots/12.png" alt=""><br>
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Tweet Parameter</div>
+          <div class="panel-body">
+              Can only be used if you have enabled the Twitter API. More info <a href="ad-social.html">here</a>.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Category ID Parameter</div>
+          <div class="panel-body">
+              Must be an array of one or more valid category IDs. You can view category IDs in your control panel via the categories screen.<br><br>
+              <img class="img-responsive screenshot" src="content/images/screenshots/13.png" alt=""><br>
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Minimal Example (using Curl)</div>
+          <div class="panel-body">
+              <a href="http://php.net/manual/en/book.curl.php" onclick="window.open(this);return false">Curl</a> can be used to transmit data to your journal system. Here we use
+              just the minimal required values.<br><br>
+              <div class="alert alert-info" style="margin-bottom:0">
+              &lt;?php<br><br>
+
+              &#036;data = array(<br>
+              &nbsp;&nbsp;'apikey' => 'ABC123-DEF789-KJI098',<br>
+              &nbsp;&nbsp;'journal' => array(<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;'title' => 'My Super Duper New Journal',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;'comms' => 'Lorem ipsum dolor sit amet consectetuer quis est at felis dui.',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;'slug' => 'lorem-slug-post'<br>
+              &nbsp;),<br>
+              &nbsp;'categories' => array(1,2,3)<br>
+              );<br><br>
+
+              &#036;ch = curl_init();<br>
+              curl_setopt($ch, CURLOPT_URL, 'http://www.example.com/journal/index.php');<br>
+              curl_setopt($ch, CURLOPT_POST, 1);<br>
+              curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(&#036;data));<br>
+              curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);<br>
+              curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);<br>
+              curl_setopt($ch, CURLOPT_TIMEOUT, 120);<br>
+              &#036;r = curl_exec($ch);<br>
+              curl_close($ch);<br><br>
+
+              print_r(json_decode(&#036;r, true));<br><br>
+
+              ?&gt;
+              </div>
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Advanced Example (using Curl)</div>
+          <div class="panel-body">
+              This example uses more of the parameter options.<br><br>
+              <div class="alert alert-info" style="margin-bottom:0">
+              &lt;?php<br><br>
+
+              &#036;data = array(<br>
+              &nbsp;&nbsp;'apikey' => 'ABC123-DEF789-KJI098',<br>
+              &nbsp;&nbsp;'journal' => array(<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;'title' => 'My Super Duper New Journal',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;'comms' => 'Lorem ipsum dolor sit amet consectetuer quis est at felis dui.',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;'slug' => 'lorem-slug-post',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;'pubts => 1482969600,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;'metat => 'My Super Browser Title',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;'tags => 'super,duper,journal',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;'user => 'lonelyradish',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;'pass => '%52#s@xqlzi6tgt'<br>
+              &nbsp;),<br>
+              &nbsp;'categories' => array(1,2,3)<br>
+              );<br><br>
+
+              &#036;ch = curl_init();<br>
+              curl_setopt($ch, CURLOPT_URL, 'http://www.example.com/journal/index.php');<br>
+              curl_setopt($ch, CURLOPT_POST, 1);<br>
+              curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(&#036;data));<br>
+              curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);<br>
+              curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);<br>
+              curl_setopt($ch, CURLOPT_TIMEOUT, 120);<br>
+              &#036;r = curl_exec($ch);<br>
+              curl_close($ch);<br><br>
+
+              print_r(json_decode(&#036;r, true));<br><br>
+
+              ?&gt;
+              </div><br>
+              <i class="fa fa-warning fa-fw"></i> If you are using a password it is recommend you transmit across SSL ONLY.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Response Handling</div>
+          <div class="panel-body">
+              Maian Weblog responds with a status parameter of either 'err' or 'ok'. Your application should handle the response accordingly. For 'ok' responses
+              the journal ID is also returned in case you wish to do further actions.<br><br>
+
+              OK example:<br><br>
+              <div class="alert alert-info" style="margin-bottom:0">
+              {<br>
+              &nbsp;&nbsp;"status" : "ok",<br>
+              &nbsp;&nbsp;"id" : "10"<br>
+              }
+              </div><br>
+              Error example:<br><br>
+              <div class="alert alert-info" style="margin-bottom:0">
+              {<br>
+              &nbsp;&nbsp;"status" : "err"<br>
+              }
+              </div><br>
+              If an error occurs, refer to the debug log.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Email Notifications</div>
+          <div class="panel-body">
+              Email notifications are sent as normal when a journal is entered via the API. If you prefer NOT to have the API send any notifications, but
+              want to keep standard journal notifications on when posted in the control panel, you can deactivate API notifications via the
+              'ENABLE_API_NOTIFICATIONS' option in the 'control/userdef.php' file. Set to 0 to disable only API notifications.<br><br>
+              <b>define('ENABLE_API_NOTIFICATIONS', 0);</b>
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Problems?</div>
+          <div class="panel-body">
+              Please see the <a href="support.html">support</a> options.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row footerArea">
+		</div>
+  </div>
+
+</div>
+
+<script>
+//<![CDATA[
+jQuery(document).ready(function() {
+  loadTopMenu();
+  loadLeftMenu();
+  loadFooter();
+});
+//]]>
+</script>
+
+<script src="content/js/bootstrap.js"></script>
+<script src="content/js/plugins/jquery.metismenu.js"></script>
+<script src="content/js/plugins/jquery.ibox.js"></script>
+
+</body>
+</html>
