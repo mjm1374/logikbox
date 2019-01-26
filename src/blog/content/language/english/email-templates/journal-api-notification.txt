@@ -1,0 +1,19 @@
+Journal API Notification
+
+<-{separater}->
+
+Hello {NAME},
+
+A new journal entry has been added by {AUTHOR}.
+
+[B]{TITLE}[/B]
+{URL}
+
+Publish Date/Time: [B]{DATETIME}[/B]
+
+<-{separater}->
+
+{WEBSITE_NAME}
+{WEBSITE_URL}
+
+IP address: {IP}

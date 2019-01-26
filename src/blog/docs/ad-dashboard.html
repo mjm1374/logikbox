@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Admin Homepage: Maian Weblog Documentation</title>
+
+  <link href="content/css/bootstrap.css" rel="stylesheet">
+  <link href="content/css/font-awesome/font-awesome.css" rel="stylesheet">
+	<link href="content/css/docs.css" rel="stylesheet">
+
+	<script src="content/js/jquery.js"></script>
+	<script src="content/js/functions.js"></script>
+
+	<link rel="icon" href="favicon.ico">
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Documentation</a>
+    </div>
+
+		<div class="navbar-default navbar-static-side" role="navigation">
+      <div class="sidebar-collapse"></div>
+    </div>
+	</nav>
+
+  <div id="page-wrapper">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">Admin Homepage</h1>
+      </div>
+    </div>
+
+		<div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Overview</div>
+          <div class="panel-body">
+              Main screen displayed after login. If you have other staff, you can set a custom dashboard to load if you need to. More info below.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Navigational Menu</div>
+          <div class="panel-body">
+            Maian Weblog utilises an off canvas menu for all devices. This has the benefit of being cross platform compatible as well as saving
+            on screen space. To show the menu, click the <i class="fa fa-bars fa-fw"></i> icon top left. Click anywhere off the menu to close.<br><br>
+              <img class="img-responsive screenshot" src="content/images/screenshots/a14.gif" alt=""><br>
+              The menu state is saved when clicking headings, so a page refresh won`t change the currently selected area.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Journal History</div>
+          <div class="panel-body">
+              Graphical display of total journals created for the current year and the previous year.<br><br>
+              <img class="img-responsive screenshot" src="content/images/screenshots/16.png" alt=""><br>
+              Disabled journals are also calculated as they are active in the database whether they are active in your journal or not.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Search Journals</div>
+          <div class="panel-body">
+              Quick search box to search journals. Searches title and comments. Same as search box on Journal <a href="ad-manage.html">manage</a> page.<br><br>
+              <img class="img-responsive screenshot" src="content/images/screenshots/17.png" alt=""><br>
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Logged in As / Software Version / Version Check</div>
+          <div class="panel-body">
+              Shows current logged in user and software version. Version check and software version are NOT shown to restricted staff members.<br><br>
+              <img class="img-responsive screenshot" src="content/images/screenshots/18.png" alt=""><br>
+              <i class="fa fa-warning fa-fw"></i> IMPORTANT. The version check does <b>NOT</b> send any personal or server information to
+              the MSWorld servers. Only the version number is sent. It is totally anonymous and nothing is logged. The check also happens over SSL. If you
+              prefer not to have this shown, set the 'ENABLE_VERSION_CHECK' constant to 0 in the 'admin/control/userdef.php' file.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Add Journal</div>
+          <div class="panel-body">
+              Quick link to add new journal. <br><br>
+              <img class="img-responsive screenshot" src="content/images/screenshots/19.png" alt=""><br>
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Last XX Journals</div>
+          <div class="panel-body">
+              Shows the last XX journals, where XX is the value set in the 'LATEST_DASHBOARD_JOURNALS' constant in the 'admin/control/userdef.php' file. Change
+              if you want a higher value. If a staff member has access only to his/her journals, journals by other staff are not shown.<br><br>
+              For journal date / icon explanations, see the main <a href="ad-manage.html">manage</a> page. Note that journals cannot be deleted on the dashboard.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Custom Staff Dashboard</div>
+          <div class="panel-body">
+              If you prefer, you can load custom dashboards for different staff members. This might be useful if you want specific info shown only to a certain
+              staff member. To accomplish this, you need to do the following:<br><br>
+              <span class="badge">1</span> Make a copy of the 'admin/templates/dashboard.php' file and save in the 'admin/templates/' directory.<br><br>
+              <span class="badge">2</span> Rename the file as follows, appending the staff ID number to the file. <b>dashboard-12.php</b><br><br>
+              To get the staff ID number, view the staff manage screen.<br><br>
+              <img class="img-responsive screenshot" src="content/images/screenshots/12.png" alt=""><br>
+              So, if the ID was 3, the file should be <b>dashboard-3.php</b>. Repeat for staff you want to have custom dashboard.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row footerArea">
+		</div>
+  </div>
+
+</div>
+
+<script>
+//<![CDATA[
+jQuery(document).ready(function() {
+  loadTopMenu();
+  loadLeftMenu();
+  loadFooter();
+});
+//]]>
+</script>
+
+<script src="content/js/bootstrap.js"></script>
+<script src="content/js/plugins/jquery.metismenu.js"></script>
+<script src="content/js/plugins/jquery.ibox.js"></script>
+
+</body>
+</html>

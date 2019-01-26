@@ -4,7 +4,7 @@
         <title>Logikbox - Mike McAllister</title>
 
         <meta name="description" content="Senior web application developer well versed in .Net, PHP, Cold Fusion, Javascript and HTML/CSS">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width">
         <link href="https://fonts.googleapis.com/css?family=Archivo|Permanent+Marker|Shadows+Into+Light|Teko" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">

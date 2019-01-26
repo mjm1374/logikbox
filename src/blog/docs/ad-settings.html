@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>General Settings: Maian Weblog Documentation</title>
+
+  <link href="content/css/bootstrap.css" rel="stylesheet">
+  <link href="content/css/font-awesome/font-awesome.css" rel="stylesheet">
+	<link href="content/css/docs.css" rel="stylesheet">
+
+	<script src="content/js/jquery.js"></script>
+	<script src="content/js/functions.js"></script>
+
+	<link rel="icon" href="favicon.ico">
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Documentation</a>
+    </div>
+
+		<div class="navbar-default navbar-static-side" role="navigation">
+      <div class="sidebar-collapse"></div>
+    </div>
+	</nav>
+
+  <div id="page-wrapper">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">General Settings</h1>
+      </div>
+    </div>
+
+		<div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Overview</div>
+          <div class="panel-body">
+              Update your system settings.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">General &gt; Journal Title</div>
+          <div class="panel-body">
+              Enter journal title. Max 100 characters.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">General &gt; Email</div>
+          <div class="panel-body">
+              Enter email address. Used for certain email notifications. For example, journal notification of the 'admin/control/access.php' user. It is also
+              the reply to email if not set in the <a href="ad-email.html">SMTP settings</a>.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">General &gt; Base Folder</div>
+          <div class="panel-body">
+              HTTP path to journal/blog folder with trailing slash. For example:<br><br>
+              <b>http://www.example.com/blog/</b>
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">General &gt; Language</div>
+          <div class="panel-body">
+              Preferred language. See <a href="language.html">language</a> section.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Date/Time &gt; PHP Date Format</div>
+          <div class="panel-body">
+              Preferred date format as supported by PHP. If you are unsure, do not change.<br><br>
+              For supported parameters, click <a href="http://php.net/manual/en/function.date.php" onclick="window.open(this);return false">here</a>.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Date/Time &gt; PHP Time Format</div>
+          <div class="panel-body">
+              Preferred time format as supported by PHP. If you are unsure, do not change.<br><br>
+              For supported parameters, click <a href="http://php.net/manual/en/function.date.php" onclick="window.open(this);return false">here</a>.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Date/Time &gt; Timezone</div>
+          <div class="panel-body">
+              Preferred journal timezone. Overrides server settings. Add/manage timezones in:<br><br>
+              <b>control/timezones.php</b>
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Date/Time &gt; Javascript Calendar Format</div>
+          <div class="panel-body">
+              When you click in date boxes a calendar appears, this is powered by javascript.<br><br>
+              <img class="img-responsive screenshot" src="content/images/screenshots/8.png" alt=""><br>
+              Specify preferred formats. Manage formats in:<br><br>
+              <b>admin/control/arrays.php</b>
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Date/Time &gt; Week Start</div>
+          <div class="panel-body">
+              Specify week start day for calendar. For example, UK is Sunday.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Meta/SEO &gt; Meta Description</div>
+          <div class="panel-body">
+              Meta tags aren`t really necessary for search rankings these days, but adding them does no harm. Enter meta description.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Meta/SEO &gt; Meta Keywords</div>
+          <div class="panel-body">
+              Meta tags aren`t really necessary for search rankings these days, but adding them does no harm. Enter meta keywords, comma delimited.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Meta/SEO &gt; Search Engine Friendly Urls</div>
+          <div class="panel-body">
+              Better urls for search engines. This should be enabled for better search rankings.<br><br>
+              Example of url with search engine friendly urls OFF:<br><br>
+              <b>http://www.example.com/blog/?j=1</b><br><br>
+              Example of url with search engine friendly urls ON:<br><br>
+              <b>http://www.example.com/blog/my-journal-entry</b><br><br>
+              If this is enabled the 'htaccess_COPY.txt' file <b>MUST</b> be renamed to .htaccess
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Options &gt; Default Categories</div>
+          <div class="panel-body">
+              Default categories are pre-populated when you add a new journal.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Options &gt; API Key</div>
+          <div class="panel-body">
+              If you wish to utilise the Maian Weblog <a href="api.html">API</a> you must create an API key to use in your requests, this will determine
+              if the requests are valid or not. <br><br>Click the <i class="fa fa-key fa-fw"></i> icon to auto generate API key.<br><br>
+              <img class="img-responsive screenshot" src="content/images/screenshots/a7.gif" alt="">
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Options &gt; Log API Requests</div>
+          <div class="panel-body">
+              If set, logs all requests to 'logs' folder. Can be useful for debugging. Log folder location can be changed in the following file:<br><br>
+              <b>control/classes/class.api.php</b>
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Options &gt; Enable Cache</div>
+          <div class="panel-body">
+              If enabled, reduces database load. Instead of repeated database queries, data will be loaded from cached data. This is recommended.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Options &gt; Rebuild Cache File If File Older Than</div>
+          <div class="panel-body">
+              If set, rebuilds cache folder after specified amount of time. Not necessary, but can help if cache files become corrupt.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Footers &gt; Public Footer</div>
+          <div class="panel-body">
+              For commercial version ONLY. Enter your own footer data. HTML can be used here, but only use valid HTML5 so as not to break the
+              responsive system.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Footers &gt; Admin Footer</div>
+          <div class="panel-body">
+              For commercial version ONLY. Enter your own admin footer data. HTML can be used here, but only use valid HTML5 so as not to break the
+              responsive system.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row footerArea">
+		</div>
+  </div>
+
+</div>
+
+<script>
+//<![CDATA[
+jQuery(document).ready(function() {
+  loadTopMenu();
+  loadLeftMenu();
+  loadFooter();
+});
+//]]>
+</script>
+
+<script src="content/js/bootstrap.js"></script>
+<script src="content/js/plugins/jquery.metismenu.js"></script>
+<script src="content/js/plugins/jquery.ibox.js"></script>
+
+</body>
+</html>

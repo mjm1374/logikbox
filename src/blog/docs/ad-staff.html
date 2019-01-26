@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Manage Staff: Maian Weblog Documentation</title>
+
+  <link href="content/css/bootstrap.css" rel="stylesheet">
+  <link href="content/css/font-awesome/font-awesome.css" rel="stylesheet">
+	<link href="content/css/docs.css" rel="stylesheet">
+
+	<script src="content/js/jquery.js"></script>
+	<script src="content/js/functions.js"></script>
+
+	<link rel="icon" href="favicon.ico">
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Documentation</a>
+    </div>
+
+		<div class="navbar-default navbar-static-side" role="navigation">
+      <div class="sidebar-collapse"></div>
+    </div>
+	</nav>
+
+  <div id="page-wrapper">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">Manage Staff</h1>
+      </div>
+    </div>
+
+		<div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Overview</div>
+          <div class="panel-body">
+              Enter and / or edit staff members. Additional staff can be set up to post journal entries.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">General &gt; Name</div>
+          <div class="panel-body">
+              Enter name for staff member. Max 250 characters.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">General &gt; Email</div>
+          <div class="panel-body">
+              Enter email address for staff member.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">General &gt; Enabled</div>
+          <div class="panel-body">
+              Enable or disable staff member.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Login &gt; Username</div>
+          <div class="panel-body">
+              Enter log in username for staff member.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Login &gt; Password</div>
+          <div class="panel-body">
+              Enter password for staff member. Click the <i class="fa fa-key fa-fw"></i> icon to auto generate secure password. If you use this option
+              you`ll see the password preview appear above the box. Remember to make a note of it first if you need to reference it afterwards.<br><br>
+              <img class="img-responsive screenshot" src="content/images/screenshots/a2.gif" alt="">
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Permissions &gt; Type</div>
+          <div class="panel-body">
+              Specify staff account type.<br><br>
+              <span class="badge">Admin</span> - Has access to all admin functions and features unless turned off (ie, delete permissions).<br><br>
+              <span class="badge">Restricted</span> - Has access only to restricted pages. If this is chosen, you must specify the pages the staff
+              member will have access to via the drop down. Use the ctrl key for multiple selections.<br><br>
+              <img class="img-responsive screenshot" src="content/images/screenshots/a3.gif" alt=""><br>
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Permissions &gt; Can Only View Personal Journals</div>
+          <div class="panel-body">
+              If set to yes, staff member can ONLY view journals they have posted.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Options &gt; Can Post Tweets</div>
+          <div class="panel-body">
+              If the twitter api is <a href="ad-social.html">set up</a> and activated correctly and this option is enabled, staff can post tweets.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Options &gt; Has Delete Privileges</div>
+          <div class="panel-body">
+              If set to yes, staff member has delete privileges. If disabled, no delete options are shown for any admin page.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Options &gt; Receive Email Notification When Other Staff Post Journals</div>
+          <div class="panel-body">
+              If enabled, staff member will receive email notification if other staff members post journals. Note that for the global admin user (set in 'admin/control/access.php'),
+              the option is in that file via the 'ADM_NOTIFICATIONS' option.
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Notes</div>
+          <div class="panel-body">
+              Backend notes only. Clicking the crosshair shows a bigger textarea. This might be useful for small devices.<br><br>
+              <img class="img-responsive screenshot" src="content/images/screenshots/5.png" alt="">
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Staff List</div>
+          <div class="panel-body">
+              <span class="badge">1</span> To delete, use checkboxes and the delete button. You can select all via the <i class="fa fa-list fa-fw"></i> icon.<br><br>
+              <span class="badge">2</span> To edit, click the <i class="fa fa-pencil-square fa-fw"></i> icon.<br><br>
+              <span class="badge">3</span> ID numbers might be required for certain other admin operations.<br><br>
+              <div class="alert alert-danger warnmsg">
+                <i class="fa fa-warning fa-fw"></i> Note that deleting a staff member will delete all journals posted by that member.
+              </div>
+          </div>
+				</div>
+			</div>
+		</div>
+
+    <div class="row footerArea">
+		</div>
+  </div>
+
+</div>
+
+<script>
+//<![CDATA[
+jQuery(document).ready(function() {
+  loadTopMenu();
+  loadLeftMenu();
+  loadFooter();
+});
+//]]>
+</script>
+
+<script src="content/js/bootstrap.js"></script>
+<script src="content/js/plugins/jquery.metismenu.js"></script>
+<script src="content/js/plugins/jquery.ibox.js"></script>
+
+</body>
+</html>

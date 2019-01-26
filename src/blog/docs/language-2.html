@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Templates &amp; Styling:  Maian Weblog Documentation</title>
+
+  <link href="content/css/bootstrap.css" rel="stylesheet">
+  <link href="content/css/font-awesome/font-awesome.css" rel="stylesheet">
+  <link href="content/css/docs.css" rel="stylesheet">
+  <link href="content/css/jquery.ibox.css" rel="stylesheet">
+
+  <script src="content/js/jquery.js"></script>
+  <script src="content/js/functions.js"></script>
+
+  <link rel="icon" href="favicon.ico">
+
+</head>
+
+<body>
+
+  <div id="wrapper">
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+          <span class="sr-only">Toggle Navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Documentation</a>
+      </div>
+
+      <div class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+        </div>
+      </div>
+    </nav>
+
+    <div id="page-wrapper">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header">Templates &amp; Styling</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">Templates</div>
+            <div class="panel-body">
+              Maian Weblog`s front end interface can be adapted into any existing web layout. This should be accomplished by editing the template files. This will require a
+              knowledge of HTML5, JS, CSS &amp; PHP.<br><br>
+              <div class="alert alert-info">
+              <b>DO NOT</b> adapt the interface into an existing website using PHP includes or iframes, this is bad practice and may produce
+              unreliable results.</div>
+              Read the instructions below carefully.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-danger">
+            <div class="panel-heading"><i class="fa fa-warning fa-fw"></i> HTML5 Responsive Layout</div>
+            <div class="panel-body">
+              Maian Weblog utilises <a href="http://getbootstrap.com/" onclick="window.open(this);return false">Twitter Bootstrap</a>, a free and open-source front-end web framework for designing websites and web applications. You will need
+              to have an excellent understanding of Bootstrap and responsive systems. Using out of date HTML4 code could potentially break the responsive layout.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">Before You Begin</div>
+            <div class="panel-body">
+              Before you attempt any interface edits, the following are recommended.<br><br>
+              [<b>1</b>] Copy the default template folder (as mentioned <a href="language.html">here</a>), update your <a href="ad-themes.html">theme settings</a> to use the new theme, then use the default for reference.<br><br>
+              [<b>2</b>] Backup the entire system, including database structure in case you need to start again.<br><br>
+              [<b>3</b>] Have a good search program/utility handy. Sometimes you are looking for a specific div / class name and you can`t find it. A quick search on the 'content/*theme*/' folder should find you things quicker. There are a few
+              great free programs around, a few recommendations are listed below.<br><br>
+              [<b>4</b>] Use a good quality text editor to edit files, <b>DO NOT</b> edit directly on the server. Edit and upload via FTP. Some free text editors / FTP utilities are shown below.<br><br>
+              [<b>5</b>] Colours are the next problem. Knowing what the hex code is and where it`s located in any CSS or template file. <a href="http://colorcop.net/" onclick="window.open(this);return false">ColorCop</a> enables you to pinpoint a colour area pretty quickly, just drag the eyedropper over the colour you are looking for. it`s also free.<br><br>
+              [<b>6</b>] Patience. Any developer will tell you this is paramount. If you are getting frustrated, come back to it later.
+              <br><br><b class="italics">Note that where *theme* is used, this refers to the theme folder you are using, whether it be the default theme or your own custom theme.</b>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">Template Integration</div>
+            <div class="panel-body">
+              Maian Weblog utilises the <a href="https://github.com/saltybeagle/Savant3" onclick="window.open(this);return false">Savant 3 template engine</a>. This make integrating the layout into your existing site relatively easy compared with none templated
+              systems. The advantage of Savant 3 is that it uses PHP syntax, which you may already be familiar with. Unlike other template engines that basically require you to learn a new language.<br><br>
+              The PHP templates for the system are located in the <b>content/*theme*/</b> folder.<br><br>
+
+              Where you see PHP variables in the .tpl.php files, these should <b>NOT</b> be removed. Example: <b>&lt;?php echo $this-&gt;CODE; ?&gt;</b>. See comments in templates for certain variables.<br><br>
+
+              In most cases, the PHP code in the .tpl.php files parse standard HTML. The HTML templates are located in the <b>content/*theme*/html/</b>. folder.
+              The HTML template files have variable braces. eg: {brace}. These should <b>NOT</b> be removed.<br><br>
+
+              To integrate Maian Weblog into your existing site design is going to require some basic knowledge of HTML. You`ll start by looking at your current HTML structure
+              and comparing it to that of Maian Weblog. Generally work with the header and footer first. If you don`t understand HTML, integrating into another site layout is <b>NOT</b>
+              recommended.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">Header &amp; Footer Files</div>
+            <div class="panel-body">
+              The header and footer files are the files you should start with when creating your own integration. If you need any specific code to you head
+              or body tags you can do so via these files and it will affect all pages. These files are located in your theme folder.<br><br>
+              <b>content/*theme*/footer.tpl.php<br>
+              content/*theme*/header.tpl.php</b>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">Responsive / Mobile Detection</div>
+            <div class="panel-body">
+              Besides the built in bootstrap classes to hide / show elements on small screens, Maian Weblog also utilises the <a href="http://mobiledetect.net/" onclick="window.open(this);return false">Mobile Detect</a> class. In
+              any PHP template file, you can use the following constant:<br><br>
+              <b>MSW_PLATFORM_DETECTION</b><br><br>
+              This will have one of three values based on the user agent you are viewing the website in. The values are:<br><br>
+              <b>pc</b> = Desktop<br>
+              <b>mobile</b> = Mobile phone (as supported by Mobile Detect)<br>
+              <b>tablet</b> = Tablet computer (as supported by Mobile Detect)<br><br>
+              Examples of usage:<br><br>
+              <div class="alert alert-info">
+              &lt;?php<br>
+              switch (MSW_PLATFORM_DETECTION) {<br>
+                &nbsp;&nbsp;case 'pc':<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;// Code here for desktops only..<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+                &nbsp;&nbsp;case 'mobile':<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;// Code here for phones only..<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+                &nbsp;&nbsp;case 'tablet':<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;// Code here for tablets only..<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+              }<br>
+              ?&gt;<br><br>
+              &lt;?php<br>
+              if (MSW_PLATFORM_DETECTION == 'tablet') {<br>
+                &nbsp;&nbsp;// Do something on tablets only..<br>
+              }<br>
+              ?&gt;
+              </div>
+              etc<br><br>
+              Advanced users you may also use the 'MBDX' Maian Weblog object to reference any Mobile Detect functions as detailed on the
+              <a href="http://mobiledetect.net/" onclick="window.open(this);return false">Mobile Detect website</a>. Example<br><br>
+              <div class="alert alert-info" style="margin-bottom:0">
+              &lt;?php<br>
+              if (&#036;MBDX->isMobile()) {<br>
+                &nbsp;&nbsp;// Do something on mobile phones only..<br>
+              }<br>
+              ?&gt;
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">Colours &amp; Appearance</div>
+            <div class="panel-body">
+              For many people, changing the colours is good enough. ALL of the colours you
+             see for the default design are in the stylesheets. Maian Weblog has several stylesheets located in the following directories:<br><br>
+             <b>content/*theme*/css/</b> <span style="font-style:italic">(Frontend Stylesheets)</span><br>
+             <b>admin/templates/css/</b> <span style="font-style:italic">(Admin Stylesheets)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">Images &amp; Font Awesome</div>
+            <div class="panel-body">
+             Most of the graphics within Maian Weblog are created by <a href="https://fontawesome.com/v4.7.0/icons/" onclick="window.open(this);return false">Font Awesome</a>, a font and icon toolkit based on CSS and LESS. Icons are
+             generated via a i tag and a class. More info on the font awesome website.<br><br>
+
+             Maian Weblog has very few actual graphics, but any that do exist are located in the following directories:<br><br>
+             <b>content/*theme*/images/</b> <span style="font-style:italic">(Frontend)</span><br>
+             <b>admin/templates/images/</b> <span style="font-style:italic">(Admin)</span>
+           </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">Custom Logo</div>
+            <div class="panel-body">
+             There is no logo for Maian Weblog, but if you need to add one to your layout, add an image tag (or use CSS) in the header template file.
+           </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">Menu Boxes</div>
+            <div class="panel-body">
+              Menu boxes can be managed in your admin area via 'Layout > Menu Boxes'(via menu). More info <a href="ad-boxes.html">here</a>.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">References &amp; Reading</div>
+            <div class="panel-body">
+              <a href="http://www.google.co.uk/#hl=en&amp;q=html" onclick="window.open(this);return false">HTML (Hypertext Markup Language)</a><br>
+              <a href="http://www.google.co.uk/#hl=en&amp;q=cascading+stylesheets" onclick="window.open(this);return false">CSS (Cascading Stylesheets)</a><br><br>
+              <b>Free Text Editors</b><br><br>
+              <a href="http://www.pspad.com/en/" onclick="window.open(this);return false">PSPad</a><br>
+              <a href="https://notepad-plus-plus.org/" onclick="window.open(this);return false">Notepad++</a><br>
+              <a href="http://www.rj-texted.se/" onclick="window.open(this);return false">RJ TextEd</a><br>
+              <a href="http://www.uvviewsoft.com/synwrite/" onclick="window.open(this);return false">SynWrite</a><br><br>
+              <b>Free FTP Software</b><br><br>
+              <a href="http://filezilla-project.org/" onclick="window.open(this);return false">FileZilla</a><br>
+              <a href="http://winscp.net" onclick="window.open(this);return false">WinSCP</a><br>
+              <a href="https://cyberduck.io" onclick="window.open(this);return false">Cyberduck</a><br>
+              <a href="http://www.wftpserver.com/ftprush.htm" onclick="window.open(this);return false">FTP Rush</a><br><br>
+              <b>Free Search Software</b><br><br>
+              <a href="http://fsl.sytes.net/ssearchxt.html" onclick="window.open(this);return false">Super Finder XT</a><br>
+              <a href="http://mythicsoft.com" onclick="window.open(this);return false">File Locator Lite</a><br>
+              <a href="http://www.fileseek.ca" onclick="window.open(this);return false">File Seek</a><br>
+              <a href="http://www.indexyourfiles.com" onclick="window.open(this);return false">Index Your Files</a><br>
+              <a href="http://www.ultrafilesearch.com" onclick="window.open(this);return false">UltraFileSearch</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row footerArea">
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    //<![CDATA[
+    jQuery(document).ready(function() {
+      loadTopMenu();
+      loadLeftMenu();
+      loadFooter();
+    });
+    //]]>
+  </script>
+
+  <script src="content/js/bootstrap.js"></script>
+  <script src="content/js/plugins/jquery.metismenu.js"></script>
+  <script src="content/js/plugins/jquery.ibox.js"></script>
+
+</body>
+
+</html>

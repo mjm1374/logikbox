@@ -1,0 +1,285 @@
+/*
+  Base CSS
+===================================================*/
+
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Muli'), url(../fonts/muli.woff2) format('woff2'), url(../fonts/muli.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Muli';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Muli Italic'), local('Muli-Italic'), url(../fonts/muli-italic.woff2) format('woff2'), url(../fonts/muli-italic.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Muli Bold'), local('Muli-Bold'), url(../fonts/muli-bold700.woff2) format('woff2'), url(../fonts/muli-bold700.woff) format('woff');
+}
+
+body {
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #555;
+  background: #fcfcfc url(../images/bg.png) fixed;
+}
+
+.left_20 {
+  margin-left: 20px;
+}
+
+.mswitalic {
+  font-style: italic;
+}
+
+.clear {
+  display:none;
+}
+
+img {
+  border:0;
+}
+
+.msw-red {
+  color:red;
+}
+
+.msw-green {
+  color:green;
+}
+
+.msw-light {
+  color: #CFDBC5;
+}
+
+#passPreview {
+  font-weight: normal;
+  margin-left: 20px;
+  color: #420D0F;
+}
+
+.panel {
+  box-shadow: none !important;
+}
+
+.mainmswarea .panel {
+  box-shadow: none !important;
+  border-width: 1px !important;
+}
+
+.mainmswarea .panel .panel-heading {
+  background: #f5f5f5 url(../images/panel-bg.png) !important;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #555;
+}
+
+.mainmswarea .formarea .panel {
+  box-shadow: none !important;
+  border-width: 1px !important;
+  border-top: 0;
+  -webkit-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+}
+
+.margin-top-container {
+  margin-top: 50px;
+}
+
+.managearea .panel-body .table td {
+  border:0;
+}
+
+.managearea .panel-body {
+  padding-bottom:0;
+}
+
+/* Spinners */
+.overlaySpinner {
+  padding: 50px;
+  color: #555;
+}
+
+.overlaySpinner {
+  position: fixed;
+  z-index: 1000001;
+}
+
+.overlaySpinner {
+  text-indent: -100000px;
+  width: 100px;
+  border: 2px solid #C0C0C0;
+  height: 100px;
+  background: #fff url(../images/animated/loading.gif) center center no-repeat;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.msw-box-spinner-right {
+  background: url(../images/animated/spin-small.gif) no-repeat 98% 50% !important;
+}
+
+.msw-box-spinner-left {
+  background: url(../images/animated/spin-small.gif) no-repeat 2% 50% !important;
+}
+
+footer {
+  border-top: 2px solid #ddd;
+  background: #f5f5f5 url(../images/footer-bg.png);
+  text-align: center;
+  padding: 30px 15px 30px 15px;
+  font-size: 12px !important;
+}
+
+footer a {
+  color: #555;
+}
+
+.mobilebreakpoint {
+  display: inline;
+}
+
+.bbButtons {
+  margin-bottom: 5px;
+}
+
+/* Forms */
+.mainmswarea textarea {
+  height: 200px !important;
+}
+
+.mainmswarea select[multiple] {
+  height: 150px !important;
+}
+
+.cursorp {
+  cursor: pointer;
+}
+
+.cursorm {
+  cursor: move;
+}
+
+/*
+ BBCODE FORMATTING
+*/
+
+.bbBold {
+  font-weight: bold;
+}
+.bbUnderline {
+  text-decoration: underline;
+}
+.bbItalics {
+  font-style:italic;
+}
+.bbStrike {
+  text-decoration: line-through;
+}
+.bbDel {
+  text-decoration: line-through;
+  color:red;
+}
+.bbIns {
+  background:yellow;
+}
+.bbEm {
+  font-style:italic;
+  font-weight:bold;
+}
+.bbH1 {
+  font-weight:bold;
+  font-size:22px;
+  margin:5px 0 5px 0;
+}
+.bbH2 {
+  font-weight:bold;
+  font-size:20px;
+  margin:5px 0 5px 0;
+}
+.bbH3 {
+  font-weight:bold;
+  font-size:18px;
+  margin:5px 0 5px 0;
+}
+.bbH4{
+  font-weight:bold;
+  font-size:16px;
+  margin:5px 0 5px 0;
+}
+.bbCentre .img-responsive {
+  display: inline !important;
+}
+.bbCentre {
+  display:block;
+  text-align:center;
+}
+.bbUl {
+  margin:5px 5px 5px 5px;
+}
+.bbUl li {
+  list-style: disc inside none !important;
+}
+.bbUlNumbered {
+  margin:5px 5px 5px 5px;
+}
+.bbUlNumbered li {
+  list-style: decimal inside none !important;
+}
+.bbUlAlpha {
+  margin:5px 5px 5px 5px;
+}
+.bbUlAlpha li {
+  list-style: lower-alpha inside none !important;
+}
+.bbUlUpperAlpha {
+  margin:5px 5px 5px 5px;
+}
+.bbUlUpperAlpha li {
+  list-style: upper-alpha inside none !important;
+}
+.bbLi {
+  padding:2px;
+}
+.bbMailto {
+}
+.bbImg {
+  border:0;
+}
+.bbUrl {
+}
+
+/* No Data */
+.nodatatoshow {
+  text-align: center;
+  font-style:italic;
+  font-size: 12px;
+}
+.nodatatoshow td {
+  padding: 20px  !important;
+}
+.nodatatoshow td:hover {
+  font-weight: normal;
+}
+
+/* Pagination */
+.mswpages {
+  text-align: right !important;
+}
+.mswpages ul {
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-bottom: 15px !important;
+}
+.pagination li.active a {
+  background: #02798E !important;
+  border: 1px solid #555 !important;
+}

@@ -1,0 +1,15 @@
+Database Backup
+
+<-{separater}->
+
+Journal Site: {WEBSITE_NAME}
+Date Created: {DATE_TIME}
+Software Version: v{VERSION}
+
+File enclosed:
+{FILE}
+
+<-{separater}->
+
+{WEBSITE_NAME}
+{WEBSITE_URL}

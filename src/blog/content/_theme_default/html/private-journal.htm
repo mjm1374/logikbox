@@ -1,0 +1,19 @@
+        <div class="panel panel-default catprivate">
+          <div class="panel-heading">
+            <i class="fa fa-lock fa-fw"></i> <a href="{url}" title="{url_text}">{title}</a>
+          </div>
+          <div class="panel-body">
+            {information}
+          </div>
+          <div class="panel-footer hidden-xs">
+            <span class="date pull-right">
+              {private} {pinned} {date},{time} {comments}
+            </span>
+            <i class="fa fa-user fa-fw"></i> {user}
+          </div>
+          <div class="panel-footer hidden-md hidden-sm hidden-lg">
+            <span class="pull-right">{private} {pinned}</span>
+            <i class="fa fa-user fa-fw"></i> {user}<span class="smalldate"><i class="fa fa-calendar fa-fw"></i> {date},{time}</span>
+            <p class="text-right">{comments}</p>
+          </div>
+        </div>

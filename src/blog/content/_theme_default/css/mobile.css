@@ -1,0 +1,65 @@
+/* Small Screen Adjustments */
+
+@media only screen and (max-width : 320px) {
+  .footbar .social h2 {
+    margin-top: 20px;
+  }
+  .journalarea .pinned, .catprivate .pinned {
+    margin-right: 0;
+  }
+  .jcal{
+    display: block;
+    margin-top:5px;
+  }
+  .pushy a {
+    font-size: 15px !important;
+  }
+}
+
+@media only screen and (max-width : 480px) {
+  .footbar .social h2 {
+    margin-top: 20px;
+  }
+  .journalarea .pinned, .catprivate .pinned {
+    margin-right: 0;
+  }
+  .jcal{
+    display: block;
+    margin-top:5px;
+  }
+  .pushy a {
+    font-size: 15px !important;
+  }
+}
+
+@media only screen and (max-width : 768px) {
+  .footbar .social h2 {
+    margin-top: 20px;
+  }
+  .journalarea .pinned, .catprivate .pinned {
+    margin-right: 0;
+  }
+  .jcal{
+    display: block;
+    margin-top:5px;
+  }
+  .pushy a {
+    font-size: 15px !important;
+  }
+}
+
+@media only screen and (max-width : 968px) {
+  .footbar .social h2 {
+    margin-top: 20px;
+  }
+  .journalarea .pinned, .catprivate .pinned {
+    margin-right: 0;
+  }
+  .jcal{
+    display: block;
+    margin-top:5px;
+  }
+  .pushy a {
+    font-size: 15px !important;
+  }
+}

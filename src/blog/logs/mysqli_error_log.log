@@ -1,0 +1,8 @@
+Date/Time: 20 January 2019 @ 18:16:57
+Code: 1045
+Error: Access denied for user 'logikbox'@'localhost' (using password: YES)
+File: /Users/michaelmcallister/Documents/DevRoot/logikbox/src/blog/control/classes/class.db.php
+Line: 455
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+

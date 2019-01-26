@@ -1,0 +1,16 @@
+Mail Test
+
+<-{separater}->
+
+Hello,
+
+This is a test sent from your "{SCRIPT_NAME}" installation.
+
+Looks like everything is working ok.
+
+<-{separater}->
+
+{WEBSITE_NAME}
+{WEBSITE_URL}
+
+IP address: {IP}
