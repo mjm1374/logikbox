@@ -13,7 +13,7 @@ var source = require('vinyl-source-stream');
 
     return bundle.bundle()
     .pipe(source('js/nodeScripts.js'))
-    .pipe(gulp.dest('./jsbundle.js'));
+    .pipe(gulp.dest('js/bundle'));
     
 });
 

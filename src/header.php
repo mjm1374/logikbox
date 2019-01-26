@@ -25,5 +25,5 @@
             font-family: 'Archivo', sans-serif;
         }
         </style>
-        <script src="js/bundle.js"></script>
+        <script src="js/bundle/js/nodeScripts.js"></script>
 		<script src="js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
