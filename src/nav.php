@@ -15,8 +15,8 @@
 <div id="navbar" class="navbar-collapse collapse">
 
 	<ul class="nav navbar-nav">
-		<li class='<?php if ($thisPage == "index.php")  { echo "active"; } ?>'><a href="index.php" class='nava'>Home</a></li>
-        <li class='<?php if ($thisPage == "about.php")  {echo "active "; } ?>'><a href="about.php" class='nava'>About Me</a></li>
+		<li class='<?php if ($thisPage == "index.php")  { echo "active"; } ?>'><a href="index.php" class="nava">Home</a></li>
+        <li class='<?php if ($thisPage == "about.php")  {echo "active "; } ?>'><a href="about.php" class="nava">About Me</a></li>
 		<li class="dropdown  <?php if ($thisPage == "work.php") { echo " active "; }?>">
 			<a class='dropdown-toggle  nava' data-toggle='dropdown' href='#'>Work
             <span class="caret"></span></a>
@@ -34,8 +34,6 @@
 		</li>
 
 		<li class='<?php if ($thisPage == "contact.php")  {echo "active "; }?>'><a href="contact.php" class="nava">Contact</a></li>
-		<li>
-			<?php echo $thisPage; ?>
-		</li>
+		
 	</ul>
 </div>

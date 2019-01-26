@@ -63,7 +63,7 @@
 				<div class="col-md-4">
 					<h2>Facebook</h2>
 					<img src="img/fb-resizeimage.png" class="logoimg" alt="Facebook" />
-					<p>Father of 2 boys, friend to many, craft beer advocate and Star Wars super fan. Tinkerer of all things electronic and code. </p>
+					<p>Father of 2 boys, friend to many, scooter rider, craft beer advocate, soccer fan and Star Wars super nerd. Pride's myself on being a tinkerer of all things electronic and code. </p>
 					<p><a class="btn btn-default" href="https://www.facebook.com/Phillymike" role="button">View details &raquo;</a></p>
 				</div>
 				<div class="col-md-4">
