@@ -1,0 +1,30 @@
+{
+  "name": "logikbox",
+  "version": "3.0.0",
+  "description": "personal website",
+  "main": "jquery.mobile.custom.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjm1374/logikbox.git"
+  },
+  "author": "Mike McAllister",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjm1374/logikbox/issues"
+  },
+  "homepage": "https://github.com/mjm1374/logikbox#readme",
+  "dependencies": {
+    "browserfy": "^1.0.0",
+    "gulp": "^4.0.0",
+    "sportmonks": "^1.2.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "browserify": "^16.2.3",
+    "fs": "0.0.1-security",
+    "gulp-watch": "^5.0.1"
+  }
+}

@@ -34,6 +34,6 @@
 		</li>
 
 		<li class='<?php if ($thisPage == "contact.php")  {echo "active "; }?>'><a href="contact.php" class="nava">Contact</a></li>
-		
+		<li id='sportsBlock'></li>
 	</ul>
 </div>
