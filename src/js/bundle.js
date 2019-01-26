@@ -5,8 +5,17 @@ var sportmonks = new SportmonksApi('XLLBWCMEyXePNyNrIbi9OMnX7pvoOR83RSncC6dGuwNB
 
 sportmonks.get('v2.0/teams/{id}', { id: 85, competitions: true }).then( function(response){
     console.log(response);
-    $('#sportsBlock').innerHTML(response.name);
+    console.log(response.data.name);
+    $('#sportsBlock').html(response.data.name);
 });
+
+this.callTeam = function (teamid){
+    sportmonks.get('v2.0/teams/{id}', { id: teamid, competitions: true }).then( function(response){
+         
+        console.log(response.data.name);
+        $('#sportsBlock').html(response.data.name);
+    });
+}
 
 
 },{"sportmonks":2}],2:[function(require,module,exports){
