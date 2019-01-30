@@ -32,8 +32,8 @@
 	<!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
 			<div class="container">
-				<h1>About Me</h1>
-				<p>Things I do....</p>
+				<h1>About Me</h1>, ,  m
+				<p>Things I do....</p> ,;[]
 				<?php
 			//$controller->invoke();
 			?>
