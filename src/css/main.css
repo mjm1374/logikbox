@@ -208,6 +208,40 @@ footer{
 	text-shadow: 2px 2px 4px rgba(30, 26, 6, 0.9);
 }
 
+#qrCode{
+	border-radius: 5%;
+	border: 2px solid #000;
+	height: 180px;
+	width:200px;
+	position: absolute;
+	left:-165px;
+	overflow: hidden;
+	background-image: url(../img/qr.png);
+	background-size: 170px 170px;
+}
+
+#qrCode:hover{
+	left:-10px;
+}
+
+#qrTitle{
+	background: #000;
+	
+	color: #fff;
+	position: absolute;
+	right:-92px;
+	bottom: 0px;
+    width: 125px;
+    height: 196px;
+}
+#qrTitle span{
+	transform: rotate(90deg);
+	transform-origin: top left;
+	display: block;
+    position: relative;
+    left: 26px;
+    top: 60px;
+}
 .logoimg {
 	float: right;
 	margin-left: 20px;

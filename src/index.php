@@ -31,11 +31,11 @@
 			<div class="container">
 				<h1>Hello, World!</h1>
 				<p id="pickupLine"></p>
+				<div id="qrCode">
+					<div id="qrTitle"><span>Scan for Mobile</span></div>
+				</div>
 				<div id="portrait"></div>
-				<p>
-
-
-				</p>
+				<p></p>
 			</div>
 		</div>
 
