@@ -16,6 +16,9 @@
 
 <head>
 	<?php include("header.php"); ?>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD0uaFDVy5scklnboJVj-ec3e6fa_sHWs"></script> 
+ 
+    <script src="js/map.js"></script>
 </head>
 
 <body>
@@ -32,8 +35,8 @@
 	<!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
 			<div class="container">
-				<h1>About Me</h1>, ,  m
-				<p>Things I do....</p> ,;[]
+				<h1>About Me</h1>
+				<p>Things I do....</p> 
 				<?php
 			//$controller->invoke();
 			?>
@@ -55,9 +58,16 @@
 						<div class="row">
 							<div class="col-sm-12">
 								<h2>Overview</h2>
+								<div class="portaitclear">
+									<div id="portrait"></div>
+								</div>
 								<p>I'm a creative professional working in the tech industries, involved in my community and I work to make the world a better place. I've been told I'm a true believer, they might be right, someone has to care.  Born and raised in Philly, huge fan of this town. Lived all over but Philly is always home.  Something about the grit of this town, the neighborhood and their neighbors. The food, the beer, the sports and that uniquely Philly pride. I like my Eagles and Flyers. Serious soccer fan, I follow Man. City and love going to the Union. </p>
 
-								<p>I been an elected committee person for 14 years in the city (Go the mighty 9-14th!). Sat on the board of directors for my local art center, Allens Lane Art Center. I’ve been a life long scooter enthusiast, Quadrophia had a really strong effect on me. Ask me about my scooter runs someday. Amateur astronomer,  I’ve seen all the planets (sorry Pluto, you been dumped to the minor leagues and don’t count anymore). This and programming are the two skills I share with my boys. That is my truest joy.</p>
+								<p>I been an elected committee person for 14 years in the city (Go the mighty 9-14th!). Sat on the board of directors for my local art center, Allens Lane Art Center. I love to <a href="#" data-toggle="modal" data-target="#myModal">travel</a>, who doesn't. I’ve been a life long scooter enthusiast, Quadrophia had a really strong effect on me. Ask me about my scooter runs someday. Amateur astronomer,  I’ve seen all the planets (sorry Pluto, you been dumped to the minor leagues and don’t count anymore). This and programming are the two skills I share with my boys. That is my truest joy.</p>
+
+								
+								
+								</div>
 
 								<h2>Skills</h2>
 							</div>
@@ -147,6 +157,26 @@
 		<?php include_once("footer.php"); ?>
 	</footer>
 	</div>
+
+	<div class="modal fade" id="myModal" role="dialog">
+									<div class="modal-dialog">
+									
+									<!-- Modal content-->
+									<div class="modal-content">
+										<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4 class="modal-title">My Travels</h4>
+										</div>
+										<div class="modal-body">
+											<div id="map"></div>
+											</div>
+										<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										</div>
+									</div>
+									
+									</div>
+								</div>
 	<!-- /container -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script>
@@ -156,6 +186,14 @@
 	<script src="js/bootstrap.min.js"></script>
 
 	<script src="js/main.js"></script>
+
+	<script>
+	
+	$(document).ready(function($) {
+
+		getLocation();
+	});
+	</script>
 
 
 </body>

@@ -32,7 +32,16 @@
 				<div id="qrCode">
 					<div id="qrTitle"><span>Scan for Mobile</div>
 				</div>
-				<div id="portrait"></div>
+				<div id="quadrophenia">
+					<div id="blue">
+						<div id="white">
+							<div id="red">
+								<div id="photo">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<p></p>
 			</div>
 		</div>

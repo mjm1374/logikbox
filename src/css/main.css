@@ -22,6 +22,14 @@ h1 {
 	background-repeat: no-repeat;
 
 }
+.portaitclear{
+	display:block;
+	float: right;
+	margin-left:50px;
+	width: 250px;
+	height: 250px;
+
+}
 
 #portrait {
 	background: url(../img/me-in-London.jpg);
@@ -29,18 +37,72 @@ h1 {
 	background-repeat: no-repeat;
 	width: 250px;
 	height: 250px;
-	float: right;
-	margin-right: 100px;
-	margin-top: -100px;
-	border: 10px solid white;
+	border: 10px solid #f5f3f3;
+	filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
 	-ms-transform: translate(-38px, -33px) rotate(367deg);
   -webkit-transform: translate(-38px, -33px) rotate(367deg);
   transform: translate(-38px, -33px) rotate(367deg);
-	animation-name: tilt;
+	/* animation-name: tilt; */
 	animation-duration: 5s;
 	transition-timing-function: ease-out;
   transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
 }
+
+#quadrophenia{
+	width: 30px;
+    height: 300px;
+    float: right;
+    margin-right: 300px;
+    margin-top: -150px;
+
+}
+
+#photo {
+	background: url(../img/original_prepared_photo.jpg);
+	background-size: cover;
+	background-position-x: -190px;
+	opacity: 0.6;
+	border-radius: 100%;
+	display: block;
+	margin: 0 auto;
+	width: 300px;
+	height: 300px;
+	position: relative;
+	top: -100px;
+	left: -100px;
+	filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.5));
+  }
+  
+  #blue {
+	background: #0000ff;
+	border-radius: 100%;
+	display: block;
+	margin: 0 auto;
+	width: 300px;
+	height: 300px;
+  }
+  
+  #white {
+	background: #ffffff;
+	border-radius: 100%;
+	position: relative;
+	display: block;
+	top: 50px;
+	margin: 0 auto;
+	width: 200px;
+	height: 200px;
+  }
+  
+  #red {
+	background: #ff0000;
+	border-radius: 100%;
+	position: relative;
+	display: block;
+	top: 50px;
+	margin: 0 auto;
+	width: 100px;
+	height: 100px;
+  }
 
 #signature{
 	background: url(../img/signature.png);
@@ -51,6 +113,16 @@ h1 {
 	float: right;
 
 }
+
+#map{
+	width: 100%;
+	height: 500px;
+	z-index: 20000;;
+}
+.modal-backdrop {
+	z-index: 0 !important;
+}
+
 footer{
 	padding:10px;
 }
@@ -122,7 +194,13 @@ footer{
  * ---------------------------------------------- */
 
 @media only screen and (max-device-width : 414px)  {
-
+	.portaitclear {
+		display: block;
+		float: right;
+		margin-left: 50px;
+		width:250px !important;
+		height:30px !important;
+	}
 	#portrait {
 		background: url(../img/me.jpg);
 		background-size: cover;
@@ -132,7 +210,8 @@ footer{
 		float: right;
 		margin-right: -28px;
 		margin-top: -100px;
-		border: 10px solid white;
+		border: 10px solid #f5f3f3;
+		filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
 
 	}
 	.homeProject {
