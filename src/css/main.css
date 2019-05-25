@@ -17,7 +17,7 @@ h1 {
 
 
 .jumbotron {
-	background: url(../img/backgrounds/Dell_Emc_2.jpg);
+	background: url(../img/backgrounds/London-2019-panorama.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 
@@ -150,7 +150,7 @@ footer{
 @media only screen and (max-device-width : 600px)  {
 
 	#portrait {
-		background: url(../img/me.jpg);
+		background: url(../img/me-in-London.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
 		width: 150px;
