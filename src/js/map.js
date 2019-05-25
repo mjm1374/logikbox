@@ -31,7 +31,7 @@ function initMap(newLat, newLng) {
          
             navigator.geolocation.getCurrentPosition(showPosition,showError);  
         } else { 
-            x.innerHTML = "Geolocation is not supported by this browser.";
+            //x.innerHTML = "Geolocation is not supported by this browser.";
             //console.log("in getloc");
             //defaultLocal = setLocation();
             //console.log(defaultLocal.setLat);
@@ -41,18 +41,19 @@ function initMap(newLat, newLng) {
 
         
     function showError(error) {
+        initMap('40.079' ,'-75.160' );
         switch(error.code) {
           case error.PERMISSION_DENIED:
-            x.innerHTML = "User denied the request for Geolocation.";
+            console.log("User denied the request for Geolocation.");
             break;
           case error.POSITION_UNAVAILABLE:
-            x.innerHTML = "Location information is unavailable.";
+          console.log("Location information is unavailable.");
             break;
           case error.TIMEOUT:
-            x.innerHTML = "The request to get user location timed out.";
+          console.log("The request to get user location timed out.");
             break;
           case error.UNKNOWN_ERROR:
-            x.innerHTML = "An unknown error occurred.";
+          console.log("An unknown error occurred.");
             break;
         }
       } 
@@ -156,14 +157,14 @@ let myTravels = [
     new setLocation('28.3200','-80.6076','Cocoa Beach'),
     new setLocation('36.3803','-75.8308','Corolla Outer Banks'),
     new setLocation('34.8697','-111.7610','Sedona'),
-    new setLocation('33.8303','116.5453','Palm Springs'),
+    new setLocation('33.8303','-116.5453','Palm Springs'),
     new setLocation('41.2565','-95.9345','Omaha'),
     new setLocation('42.2917','-85.5872','Kalamazoo'),
     new setLocation('42.8864','-78.8784','Buffalo'),
-    // new setLocation('','',''),
-    // new setLocation('','',''),
-    // new setLocation('','',''),
-    // new setLocation('','',''),
+    new setLocation('41.4901','-71.3128','Newport'),
+    new setLocation('38.8032','-75.0946','Cape Henlopen'),
+    new setLocation('40.3573','-74.6672','Princeton'),
+    new setLocation('55.5940','12.6605','Dragør'),
     // new setLocation('','',''),
     // new setLocation('','',''),
     // new setLocation('','',''),
