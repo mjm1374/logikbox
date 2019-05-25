@@ -22,6 +22,14 @@ h1 {
 	background-repeat: no-repeat;
 
 }
+.portaitclear{
+	display:block;
+	float: right;
+	margin-left:50px;
+	width: 250px;
+	height: 250px;
+
+}
 
 #portrait {
 	background: url(../img/me-in-London.jpg);
@@ -29,14 +37,12 @@ h1 {
 	background-repeat: no-repeat;
 	width: 250px;
 	height: 250px;
-	float: right;
-	margin-right: 100px;
-	margin-top: -100px;
-	border: 10px solid white;
+	border: 10px solid #f5f3f3;
+	filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
 	-ms-transform: translate(-38px, -33px) rotate(367deg);
   -webkit-transform: translate(-38px, -33px) rotate(367deg);
   transform: translate(-38px, -33px) rotate(367deg);
-	animation-name: tilt;
+	/* animation-name: tilt; */
 	animation-duration: 5s;
 	transition-timing-function: ease-out;
   transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
@@ -177,7 +183,13 @@ footer{
  * ---------------------------------------------- */
 
 @media only screen and (max-device-width : 414px)  {
-
+	.portaitclear {
+		display: block;
+		float: right;
+		margin-left: 50px;
+		width:250px !important;
+		height:30px !important;
+	}
 	#portrait {
 		background: url(../img/me.jpg);
 		background-size: cover;
@@ -187,7 +199,8 @@ footer{
 		float: right;
 		margin-right: -28px;
 		margin-top: -100px;
-		border: 10px solid white;
+		border: 10px solid #f5f3f3;
+		filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
 
 	}
 	.homeProject {
