@@ -112,6 +112,16 @@ h1 {
 	float: right;
 
 }
+
+#map{
+	width: 570px;
+	height: 500px;
+	z-index: 20000;;
+}
+.modal-backdrop {
+	z-index: 0 !important;
+}
+
 footer{
 	padding:10px;
 }
