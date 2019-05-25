@@ -70,6 +70,7 @@ h1 {
 	position: relative;
 	top: -100px;
 	left: -100px;
+	filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.5));
   }
   
   #blue {
