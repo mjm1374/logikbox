@@ -3,7 +3,10 @@ jQuery(document).ready(function($) {
 		offset = 0.8;
 
 		var scrWidth = screen.width;
-		$('.navbar').css('max-width', scrWidth + "px");
+		if(scrWidth < 415){
+			$('.navbar').css('max-width', scrWidth + "px");
+		}
+		
 
 	//hide timeline blocks which are outside the viewport
 	hideBlocks(timelineBlocks, offset);
