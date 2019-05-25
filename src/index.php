@@ -16,9 +16,7 @@
 	</head>
 
 	<body>
-		<!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+		 
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="container">
 					<?php include("nav.php"); ?>
@@ -32,7 +30,7 @@
 				<h1>Hello, World!</h1>
 				<p id="pickupLine"></p>
 				<div id="qrCode">
-					<div id="qrTitle"><span>Scan for Mobile</span></div>
+					<div id="qrTitle"><span>Scan for Mobile</div>
 				</div>
 				<div id="portrait"></div>
 				<p></p>

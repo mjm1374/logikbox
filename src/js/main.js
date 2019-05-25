@@ -2,8 +2,8 @@ jQuery(document).ready(function($) {
 	var timelineBlocks = $('.cd-timeline-block'),
 		offset = 0.8;
 
-		//var scrWidth = window.innerWidth;
-		//$('.navbar').css('max-width', '473px');
+		var scrWidth = screen.width;
+		$('.navbar').css('max-width', scrWidth + "px");
 
 	//hide timeline blocks which are outside the viewport
 	hideBlocks(timelineBlocks, offset);
