@@ -23,6 +23,7 @@
             padding-top: 50px;
             padding-bottom: 20px;
             font-family: 'Archivo', sans-serif;
+            width:100%
         }
         </style>
 
