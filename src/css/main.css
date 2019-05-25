@@ -42,6 +42,61 @@ h1 {
   transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
 }
 
+#quadrophenia{
+	width: 30px;
+    height: 300px;
+    float: right;
+    margin-right: 300px;
+    margin-top: -150px;
+
+}
+
+#photo {
+	background: url(../img/original_prepared_photo.jpg);
+	background-size: cover;
+	background-position-x: -190px;
+	opacity: 0.6;
+	border-radius: 100%;
+	display: block;
+	margin: 0 auto;
+	width: 300px;
+	height: 300px;
+	position: relative;
+	top: -100px;
+	left: -100px;
+  }
+  
+  #blue {
+	background: #0000ff;
+	border-radius: 100%;
+	display: block;
+	margin: 0 auto;
+	width: 300px;
+	height: 300px;
+  }
+  
+  #white {
+	background: #ffffff;
+	border-radius: 100%;
+	position: relative;
+	display: block;
+	top: 50px;
+	margin: 0 auto;
+	width: 200px;
+	height: 200px;
+  }
+  
+  #red {
+	background: #ff0000;
+	border-radius: 100%;
+	position: relative;
+	display: block;
+	top: 50px;
+	margin: 0 auto;
+	width: 100px;
+	height: 100px;
+  }
+
 #signature{
 	background: url(../img/signature.png);
 	background-size: cover;
