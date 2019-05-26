@@ -3,10 +3,12 @@
 
 				
         <h1><?php echo $job->company ; ?> </h1>
-		<h2><?php echo $job->title ;?></h2>
         <p>
+          <?php echo $job->title ;?>
+        </p>
+       
 			
-		</p>
+		
       </div>
     </div>
  
