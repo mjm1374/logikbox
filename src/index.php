@@ -13,6 +13,7 @@
 
 	<head>
 		<?php include("header.php"); ?>
+		<link rel="canonical" href="http://logikbox.com"/>
 	</head>
 
 	<body>

@@ -19,12 +19,12 @@ date_default_timezone_set('America/New_York');
 			
 			$myString =  $myString . '<div class="cd-timeline-block">';
 			$myString =  $myString . '<div class="cd-timeline-img cd-picture">';
-			$myString =  $myString . '	<img src="img/' . $project->img . '" alt="Picture">';
+			$myString =  $myString . '	<img src="img/' . $project->img . '" alt="' . $project->name . '">';
 			$myString =  $myString . '</div> ';
 
 			$myString =  $myString . '<div class="cd-timeline-content">';
 			$myString =  $myString . '	<h2>' . $project->name . '</h2>';
-			$myString =  $myString . '<img src="img/' . $project->bigimg  . '" class="projectImg picLeft" />';
+			$myString =  $myString . '<img src="img/' . $project->bigimg  . '" class="projectImg picLeft" alt="' . $project->name . '" />';
 			$myString =  $myString . '	<p>' . $project->description . '</p>';
 			$myString =  $myString . '	<a href="' . $project->link . '" class="cd-read-more">See Site</a>';
 			$myString =  $myString . '</div> ';

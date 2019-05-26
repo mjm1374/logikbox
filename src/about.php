@@ -16,6 +16,7 @@
 
 <head>
 	<?php include("header.php"); ?>
+	<link rel="canonical" href="http://logikbox.com/about.php"/>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD0uaFDVy5scklnboJVj-ec3e6fa_sHWs"></script> 
  
     <script src="js/map.js"></script>

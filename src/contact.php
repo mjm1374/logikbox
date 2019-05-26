@@ -16,6 +16,7 @@
 
 <head>
 	<?php include("header.php"); ?>
+	<link rel="canonical" href="http://logikbox.com/contact.php"/>
 
 	<script src='https://www.google.com/recaptcha/api.js?render=6LfoV3sUAAAAALwuQVeRhBeMbPqxZ561orueLeJo'></script>
 	<script>
@@ -68,18 +69,18 @@
 
 			</div>
 			<div class="col-md-8">
-				<h2>Write it ups</h2>
+				<h3>Send me a missive</h3>
 				<?php
 			//$controller->invoke();
 			?>
 
 				<form action="thanks.php" method="POST" id="commentForm" name="commentForm">
 					<label>Name</label><br/>
-					<input type="text" name="name" class="emailform" required><br/>
+					<input type="text" name="name" class="emailform" required aria-label="Name"><br/>
 					<label>Email</label><br/>
-					<input type="text" name="email" class="emailform" required><br/>
+					<input type="text" name="email" class="emailform"  aria-label="Email" required><br/>
 					<label>Message</label><br/>
-					<textarea name="msg" class="emailform msgbox"></textarea><br/>
+					<textarea name="msg" class="emailform msgbox"  aria-label="Message"></textarea><br/>
 					<button  type="submit" name="sendMail" class="btn btn-primary">Send</button>
 				</form>
 			</div>

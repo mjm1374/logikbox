@@ -16,6 +16,7 @@
 
 	<head>
 		<?php include("header.php"); ?>
+		<link rel="canonical" href="http://logikbox.com/thanks.php"/>
 	</head>
 
 	<body>

@@ -216,4 +216,6 @@ let myTravels = [
             markers[i].setMap(null);
         }
         markers = [];
-    };
+    }
+
+    document.addEventListener('touchstart', onTouchStart, {passive: true});
