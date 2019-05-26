@@ -1,7 +1,8 @@
 <?php date_default_timezone_set('America/New_York'); ?>
 
-<p>&copy; Mike Mc
-	<?php echo date("Y"); ?>
+<p>
+	&copy; Mike Mc 	<?php echo date("Y"); ?><br />
+	<a href="privacy-policy.php">Privacy Policy</a>
 </p>
 <div id="signature"></div>
 

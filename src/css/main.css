@@ -12,7 +12,7 @@ h1 {
 	text-shadow: 2px 2px 4px #000000;
 	z-index: 100;
   	position: relative;
-	font-family: 'Permanent Marker', cursive;
+	font-family: 'Permanent Marker', cursive !important;
 }
 h2 {
 	color: #efefef;
@@ -106,7 +106,7 @@ h2.homeH2{
 	height: 200px;
   }
   
-  #red {
+#red {
 	background: #ce1126;
 	border-radius: 100%;
 	position: relative;
@@ -116,6 +116,16 @@ h2.homeH2{
 	width: 100px;
 	height: 100px;
   }
+
+.socialContainer{
+	position: relative;
+	height:230px;
+}
+
+.socialContainer--btn{
+	position: absolute;
+	bottom:0px;
+}
 
 #signature{
 	background: url(../img/signature.png);
