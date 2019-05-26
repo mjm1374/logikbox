@@ -71,9 +71,9 @@ h2.homeH2{
 }
 
 #photo {
-	background: url(../img/Mike-in-London.jpg);
+	background: url(../img/me-in-London-cropped.jpg);
 	background-size: cover;
-	background-position-x: -190px;
+	/* background-position-x: -190px; */
 	opacity: 0.6;
 	border-radius: 100%;
 	display: block;
