@@ -18,6 +18,10 @@ h2 {
 	color: #efefef;
 }
 
+h2.homeH2{
+	color: rgba(44, 44, 44, 1);
+}
+
 .jumbotron {
 	background: url(../img/backgrounds/London-2019-panorama-compressed.jpg);
 	background-size: cover;
