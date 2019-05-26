@@ -7,11 +7,11 @@
 ?>
 
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"  lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"  lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"  lang="en"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="">
+<html class="no-js"  lang="en">
 <!--<![endif]-->
 
 <head>
@@ -63,7 +63,7 @@
 								</div>
 								<p>I'm a creative professional working in the tech industries, involved in my community and I work to make the world a better place. I've been told I'm a true believer, they might be right, someone has to care.  Born and raised in Philly, huge fan of this town. Lived all over but Philly is always home.  Something about the grit of this town, the neighborhood and their neighbors. The food, the beer, the sports and that uniquely Philly pride. I like my Eagles and Flyers. Serious soccer fan, I follow Man. City and love going to the Union. </p>
 
-								<p>I been an elected committee person for 14 years in the city (Go the mighty 9-14th!). Sat on the board of directors for my local art center, Allens Lane Art Center. I love to <a href="#" data-toggle="modal" data-target="#myModal">travel</a>, who doesn't. I’ve been a life long scooter enthusiast, Quadrophia had a really strong effect on me. Ask me about my scooter runs someday. Amateur astronomer,  I’ve seen all the planets (sorry Pluto, you been dumped to the minor leagues and don’t count anymore). This and programming are the two skills I share with my boys. That is my truest joy.</p>
+								<p>I been an elected committee person for 14 years in the city (Go the mighty <a href='https://www.facebook.com/NinthWardDems/' target='_blank' rel="noopener">9-14th!</a>). Sat on the board of directors for my local art center, <a href='https://allenslane.org/' target='_blank' rel="noopener">Allens Lane Art Center</a>. I love to <a href="#" data-toggle="modal" data-target="#myModal">travel</a>, who doesn't. I’ve been a life long scooter enthusiast, Quadrophia had a really strong effect on me. Ask me about <a href='#' data-toggle='modal' data-target='#emmaModal'>my scooter</a> runs someday. Amateur astronomer,  I’ve seen all the planets (sorry Pluto, you been dumped to the minor leagues and don’t count anymore). This and programming are the two skills I share with my boys. That is my truest joy.</p>
 
 								
 								
@@ -157,31 +157,50 @@
 		<?php include_once("footer.php"); ?>
 	</footer>
 	</div>
+	<!-- The Modals -->
+ 
+
+	<div class="modal fade" id="emmaModal" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Meet Emma Peel</h4>
+				</div>
+				<div class="modal-body">
+					<img id="emma" src="img/3815420841_f6dbb07a9d.jpg" alt="Meet Emma Peel, She's my scooter" />
+					</div>
+				<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div class="modal fade" id="myModal" role="dialog">
-									<div class="modal-dialog">
-									
-									<!-- Modal content-->
-									<div class="modal-content">
-										<div class="modal-header">
-										<button type="button" class="close" data-dismiss="modal">&times;</button>
-										<h4 class="modal-title">My Travels</h4>
-										</div>
-										<div class="modal-body">
-											<div id="map"></div>
-											</div>
-										<div class="modal-footer">
-										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-										</div>
-									</div>
-									
-									</div>
-								</div>
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">My Travels</h4>
+				</div>
+				<div class="modal-body">
+					<div id="map"></div>
+					</div>
+				<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- /container -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script>
-		window.jQuery || document.write('<script src="js/jquery-2.1.4.js"><\/script>')
-	</script>
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+	 
 
 	<script src="js/bootstrap.min.js"></script>
 
@@ -193,7 +212,8 @@
 
 		getLocation();
 	});
-	</script>
+  
+</script>
 
 
 </body>

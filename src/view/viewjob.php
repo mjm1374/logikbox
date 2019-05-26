@@ -19,7 +19,7 @@
         <div class="col-md-8">
           <h3>Things I did....</h3>
           <p><img src="img/<?php echo $job->logo ; ?>" class="logoimgLeft"><?php echo $job->description ; ?></p>
-	    <a class="btn btn-default" href="<?php echo $job->link ; ?>/" role="button">View Site &raquo;</a> 
+	    <a class="btn btn-default" href="<?php echo $job->link ; ?>/" role="button" target="_blank" rel="noopener">View Site &raquo;</a> 
        </div>
         <div class="col-md-2">
           

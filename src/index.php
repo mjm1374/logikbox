@@ -4,11 +4,11 @@
 ?>
 
 	<!doctype html>
-	<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-	<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-	<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+	<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"  lang="en"> <![endif]-->
+	<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"  lang="en"> <![endif]-->
+	<!--[if IE 8]>         <html class="no-js lt-ie9"  lang="en"> <![endif]-->
 	<!--[if gt IE 8]><!-->
-	<html class="no-js" lang="">
+	<html class="no-js"  lang="en">
 	<!--<![endif]-->
 
 	<head>
@@ -89,8 +89,7 @@
 			</footer>
 		</div>
 		<!-- /container -->
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 		<script src="js/bootstrap.min.js"></script>
 
 		<script src="js/main.js"></script>

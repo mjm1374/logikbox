@@ -17,7 +17,7 @@ h1 {
 
 
 .jumbotron {
-	background: url(../img/backgrounds/London-2019-panorama.jpg);
+	background: url(../img/backgrounds/London-2019-panorama-compressed.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 
@@ -32,7 +32,7 @@ h1 {
 }
 
 #portrait {
-	background: url(../img/me-in-London.jpg);
+	background: url(../img/mike-mcallister-processed-250.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	width: 250px;
@@ -40,12 +40,12 @@ h1 {
 	border: 10px solid #f5f3f3;
 	filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
 	-ms-transform: translate(-38px, -33px) rotate(367deg);
-  -webkit-transform: translate(-38px, -33px) rotate(367deg);
-  transform: translate(-38px, -33px) rotate(367deg);
+  	-webkit-transform: translate(-38px, -33px) rotate(367deg);
+  	transform: translate(-38px, -33px) rotate(367deg);
 	/* animation-name: tilt; */
 	animation-duration: 5s;
 	transition-timing-function: ease-out;
-  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  	transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
 }
 
 #quadrophenia{
@@ -58,7 +58,7 @@ h1 {
 }
 
 #photo {
-	background: url(../img/original_prepared_photo.jpg);
+	background: url(../img/Mike-in-London.jpg);
 	background-size: cover;
 	background-position-x: -190px;
 	opacity: 0.6;
@@ -70,7 +70,7 @@ h1 {
 	position: relative;
 	top: -100px;
 	left: -100px;
-	filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.5));
+	filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.95));
   }
   
   #blue {
@@ -109,9 +109,15 @@ h1 {
 	background-size: cover;
 	background-repeat: no-repeat;
 	width: 250px;
-	height: 52px;
+	height: 57px;
 	float: right;
 
+}
+#emma{
+	display:block;
+	margin:0 auto;
+	filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
+	width: 100%;
 }
 
 #map{
@@ -202,7 +208,6 @@ footer{
 		height:30px !important;
 	}
 	#portrait {
-		background: url(../img/me.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
 		width: 150px;
@@ -229,7 +234,7 @@ footer{
 @media only screen and (max-device-width : 600px)  {
 
 	#portrait {
-		background: url(../img/me-in-London.jpg);
+		/* background: url(../img/mike-mcallister-processed-250.jpg); */
 		background-size: cover;
 		background-repeat: no-repeat;
 		width: 150px;

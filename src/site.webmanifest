@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Logikbox",
+    "short_name": "Logikbox",
     "icons": [
         {
             "src": "/android-chrome-144x144.png",
@@ -11,4 +11,6 @@
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "standalone"
+    "start_url": "/http://logikbox.com"
 }
+ 
