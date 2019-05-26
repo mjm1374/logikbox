@@ -289,19 +289,20 @@ footer{
 }
 
 #qrCode{
-	border-radius: 5%;
+	border-radius: 0% 5% 5% 0%;
 	border: 2px solid #000;
 	height: 180px;
-	width:200px;
+	width:37px;
 	position: absolute;
-	left:-165px;
+	left:0px;
 	overflow: hidden;
 	background-image: url(../img/qr.png);
 	background-size: 170px 170px;
 }
 
 #qrCode:hover{
-	left:-10px;
+	/* left:-10px; */
+	cursor: pointer;
 }
 
 #qrTitle{
