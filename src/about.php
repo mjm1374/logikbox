@@ -1,4 +1,5 @@
 <?php
+	include_once("__apiKeys.php");
 	include_once("controller/Controller.php");
     $controller = new Controller();
 
@@ -17,7 +18,7 @@
 <head>
 	<?php include("header.php"); ?>
 	<link rel="canonical" href="http://logikbox.com/about.php"/>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD0uaFDVy5scklnboJVj-ec3e6fa_sHWs"></script> 
+	<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $gMapKey ?>"></script> 
  
     <script src="js/map.js"></script>
 </head>
