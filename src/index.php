@@ -34,10 +34,12 @@
 					<div id="qrTitle"><span>Scan for Mobile</div>
 				</div>
 				<div id="quadrophenia">
-					<div id="blue">
-						<div id="white">
-							<div id="red">
-								<div id="photo">
+					<div class="quadrophenia_ring1 blue">
+						<div class="quadrophenia_ring2 white">
+							<div class="quadrophenia_ring3 red">
+								<div id="nameplate">
+									<div id="photo">
+									</div>
 								</div>
 							</div>
 						</div>

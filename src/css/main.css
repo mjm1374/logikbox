@@ -70,11 +70,12 @@ h2.homeH2{
 
 }
 
-#photo {
-	background: url(../img/me-in-London-cropped.jpg);
+#nameplate{
+	
+	background: url(../img/mikeMc.png);
 	background-size: cover;
-	/* background-position-x: -190px; */
-	opacity: 0.6;
+	background-position-x: -115px;
+	opacity: 1;
 	border-radius: 100%;
 	display: block;
 	margin: 0 auto;
@@ -85,29 +86,52 @@ h2.homeH2{
 	left: -100px;
 	filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.95));
   }
-  
-  #blue {
-	background: #00247d;
+  #photo{
+	background: url(../img/Scooter-bg.jpg);
+	background-size: cover;
+	background-position-x: -115px;
+	opacity: 0.4;
 	border-radius: 100%;
 	display: block;
 	margin: 0 auto;
 	width: 300px;
 	height: 300px;
+	position: relative;
+	top: 0px;
+	left: 0px;
   }
   
-  #white {
+  .blue {
+	background: #00247d;
+  }
+  
+  .white {
 	background: #ffffff;
+  }
+  
+.red {
+	background: #ce1126;
+  }
+
+.quadrophenia_ring1{
+	border-radius: 100%;
+	display: block;
+	margin: 0 auto;
+	width: 300px;
+	height: 300px;
+	  
+}
+.quadrophenia_ring2{
 	border-radius: 100%;
 	position: relative;
 	display: block;
-	top: 50px;
 	margin: 0 auto;
+	top: 50px;
 	width: 200px;
 	height: 200px;
-  }
-  
-#red {
-	background: #ce1126;
+	  
+}
+.quadrophenia_ring3{
 	border-radius: 100%;
 	position: relative;
 	display: block;
@@ -115,7 +139,46 @@ h2.homeH2{
 	margin: 0 auto;
 	width: 100px;
 	height: 100px;
-  }
+	  
+}
+#brand{
+	display:block;
+	float:right;
+	width:315px;
+	margin-bottom:10px;
+}
+.brand__logo{
+	float: left;
+}
+.brand_ring1{
+	border-radius: 100%;
+	display: block;
+	margin: 0 auto;
+	width: 60px;
+	height: 60px;
+	  
+}
+
+.brand_ring2{
+	border-radius: 100%;
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	top: 10px;
+	width: 40px;
+	height: 40px;
+	  
+}
+.brand_ring3{
+	border-radius: 100%;
+	position: relative;
+	display: block;
+	top: 10px;
+	margin: 0 auto;
+	width: 20px;
+	height: 20px;
+	  
+}
 
 .socialContainer{
 	position: relative;

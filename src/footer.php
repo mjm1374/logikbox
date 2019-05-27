@@ -4,7 +4,17 @@
 	&copy; Mike Mc 	<?php echo date("Y"); ?><br />
 	<a href="privacy-policy.php">Privacy Policy</a>
 </p>
-<div id="signature"></div>
+<div id="brand">
+	<div class="brand__logo">
+		<div class="brand_ring1 blue">
+			<div class="brand_ring2 white">
+				<div class="brand_ring3 red">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="signature"></div>
+</div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38537843-1"></script>

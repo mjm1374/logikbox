@@ -38,4 +38,7 @@ jQuery(document).ready(function($) {
 		var toggleWidth = $("#qrCode").width() < 38 ? "210px" : "37px";
 		$('#qrCode').animate({ width: toggleWidth });
 	});
+
+
+	
 });
