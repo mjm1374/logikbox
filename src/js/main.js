@@ -2,10 +2,10 @@ jQuery(document).ready(function($) {
 	var timelineBlocks = $('.cd-timeline-block'),
 		offset = 0.8;
 
-		var scrWidth = screen.width;
-		if(scrWidth < 415){
-			$('.navbar').css('max-width', scrWidth + "px");
-		}
+		// var scrWidth = screen.width;
+		// if(scrWidth < 415){
+		// 	$('.navbar').css('max-width', scrWidth + "px");
+		// }
 		
 
 	//hide timeline blocks which are outside the viewport
@@ -40,5 +40,5 @@ jQuery(document).ready(function($) {
 	});
 
 
-	
+
 });

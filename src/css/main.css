@@ -84,7 +84,7 @@ h2.homeH2{
 	position: relative;
 	top: -100px;
 	left: -100px;
-	filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.95));
+	
   }
   #photo{
 	background: url(../img/Scooter-bg.jpg);
@@ -119,6 +119,7 @@ h2.homeH2{
 	margin: 0 auto;
 	width: 300px;
 	height: 300px;
+	filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.4));
 	  
 }
 .quadrophenia_ring2{
