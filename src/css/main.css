@@ -336,6 +336,8 @@ footer{
 	#pickupLine {
 		font-size: 1em;
 		color:#fff;
+		z-index: 100;
+		position: relative;
 	}
 
 }
@@ -373,11 +375,13 @@ footer{
 
 #pickupLine {
 	width: 50%;
-  font-weight: 400;
-  letter-spacing: -.025em;
+	font-weight: 400;
+	letter-spacing: -.025em;
 	line-height: 1.25em;
 	color: rgba(255, 255, 255, 1);
 	text-shadow: 2px 2px 4px rgba(30, 26, 6, 0.9);
+	z-index: 100;
+	position: relative;
 }
 
 #qrCode{
