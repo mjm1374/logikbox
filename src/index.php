@@ -16,9 +16,9 @@
 		<link rel="canonical" href="http://logikbox.com/index.php"/>
 	</head>
 
-	<body>
-		 
+	<body> 
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			
 			<div class="container">
 					<?php include("nav.php"); ?>
 				<!--/.navbar-collapse -->
@@ -119,6 +119,8 @@
 
 				$('#pickupLine').html(json.lines[Math.floor(Math.random() * (json.lines.length - 1))]);
 				//console.log( json.lines[Math.floor(Math.random() * 11)]);
+
+				GetInstagram();
 			});
 		</script>
 

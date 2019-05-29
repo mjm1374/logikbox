@@ -33,7 +33,8 @@ h2.homeH2{
     margin-bottom: 15px;
     font-size: 21px;
     font-weight: 200;
-    color: #efefef;
+	color: #efefef;
+	margin-top: -10px;
 }
 .portaitclear{
 	display:block;
