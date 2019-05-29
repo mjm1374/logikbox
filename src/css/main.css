@@ -192,6 +192,34 @@ h2.homeH2{
 	bottom:0px;
 }
 
+.instagram{
+
+}
+.instagram__holder{
+	position: relative;
+	height: 370px;
+	width: 320px;
+    margin: 0 auto;
+
+}
+
+.instagram__pic{
+	position: absolute;
+	top: 0px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 320px;
+	height: 320px;
+	border: 10px solid #f5f3f3;
+	filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
+}
+
+.instagram__copy{
+	position: absolute;
+	bottom: 0px;
+	height:40px
+}
+
 #signature{
 	background: url(../img/signature.png);
 	background-size: cover;

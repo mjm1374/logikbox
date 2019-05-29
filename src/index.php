@@ -90,10 +90,12 @@
 						 <a class="btn btn-default socialContainer--btn" href="https://www.instagram.com/mjm1374/" role="button">View details &raquo;</a>
 					</div>
 				</div>
-				</div>
 			</div>
 
 			<hr>
+			<h2 class="homeH2">Lastest Photos</h2>
+			<div class="row instagram">
+			</div>
 
 			<footer>
 				<?php include_once("footer.php"); ?>

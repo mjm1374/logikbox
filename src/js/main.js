@@ -52,12 +52,19 @@ function GetInstagram(){
 	{ access_token: access_token, } ) )
 	.then(function( result ) {
 		console.log( "my results", result );
-		var myItems =  result.data;
+		var myPics =  result.data;
 		var myString = "";
 
-			myItems.forEach(function (item, key) {
-				 
-			});       
+			for(i = 0; i < 9; i++) {
+				myString += "<div class='col-sm-4'>";
+				myString += "<div class='instagram__holder'>";
+				//myString += "<img class='instagram__pic' src='" + myPics[i].images.low_resolution.url + "' alt='" + myPics[i].caption.text + "' />";
+				myString += "<dic class='instagram__pic' style='background:url(" + myPics[i].images.low_resolution.url + ");background-size: cover;background-repeat: no-repeat;' />";
+				myString += "<div class='instagram__copy'>" + myPics[i].caption.text + "</div>";
+				myString += "</div></div>";
+			}    
+			$('.instagram').html(myString);
+
 	}).fail(function( err ) {
 		console.log("Error: " +  err.responseText);
 	});
