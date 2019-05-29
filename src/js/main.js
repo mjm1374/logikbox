@@ -46,6 +46,7 @@ jQuery(document).ready(function($) {
 
 const access_token = "179767298.1677ed0.53df19c85ce44f2ebabd7040526cab70";
 const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const months = ["January","Febuary","March","April","May","June","July","August","September","October","November","Decemeber"];
 	
 function GetInstagram(){
 
@@ -63,7 +64,7 @@ function GetInstagram(){
 				var day = date.getDate();
 				var fullYear = date.getFullYear();
 
-				var fullDate = days[date.getDay()]  + " " + month + "." + day + "." + fullYear;
+				var fullDate = days[date.getDay()]  + ",  " + months[date.getMonth()] + " " + day + "." + fullYear;
 
 				myString += "<div class='col-sm-4'>";
 				myString += "<div class='instagram__holder'>";
