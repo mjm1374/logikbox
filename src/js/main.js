@@ -68,7 +68,7 @@ function GetInstagram(){
 				myString += "<div class='col-sm-4'>";
 				myString += "<div class='instagram__holder'>";
 				//myString += "<img class='instagram__pic' src='" + myPics[i].images.low_resolution.url + "' alt='" + myPics[i].caption.text + "' />";
-				myString += "<dic class='instagram__pic' style='background:url(" + myPics[i].images.low_resolution.url + ");background-size: cover;background-repeat: no-repeat;' />";
+				myString += "<dic class='instagram__pic' style='background:url(" + myPics[i].images.standard_resolution.url + ");background-size: cover;background-repeat: no-repeat;' />";
 				myString += "<div class='instagram__copy'>" + myPics[i].caption.text + "<br /><span class='instagram__date'>" + fullDate + "</span></div>";
 				myString += "</div></div>";
 			}    
