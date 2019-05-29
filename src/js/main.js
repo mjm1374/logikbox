@@ -2,10 +2,14 @@ jQuery(document).ready(function($) {
 	var timelineBlocks = $('.cd-timeline-block'),
 		offset = 0.8;
 
-		// var scrWidth = screen.width;
-		// if(scrWidth < 415){
-		// 	$('.navbar').css('max-width', scrWidth + "px");
-		// }
+		
+$('#getMoreIstagram').on("click",function(e){
+ 
+	e.preventDefault();
+	var max_id = $('#getMoreIstagram').data('nexturl');
+	GetInstagram(max_id);
+	
+});
 		
 
 	//hide timeline blocks which are outside the viewport
@@ -48,32 +52,44 @@ const access_token = "179767298.1677ed0.53df19c85ce44f2ebabd7040526cab70";
 const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 const months = ["January","Febuary","March","April","May","June","July","August","September","October","November","Decemeber"];
 	
-function GetInstagram(){
+function GetInstagram(max_id){
+ 
 
 	$.when(  $.get( 'https://api.instagram.com/v1/users/self/media/recent/', 
-	{ access_token: access_token, } ) )
+	{ access_token: access_token, max_id: max_id } ) )
 	.then(function( result ) {
 		console.log( "my results", result );
 		var myPics =  result.data;
-		var myString = "";
+		var NextMaxID = result.pagination.next_max_id;
+		console.log(NextMaxID);
+		
 
-			for(i = 0; i < 9; i++) {
-				var date = new Date(parseInt(myPics[i].created_time) * 1000);
+			for(i = 0; i < 20; i++) {
+				let myString = "";
+				let date = new Date(parseInt(myPics[i].created_time) * 1000);
+				let month = (date.getMonth()+1);
+				let day = date.getDate();
+				let fullYear = date.getFullYear();
+				let fullDate = days[date.getDay()]  + ",  " + months[date.getMonth()] + " " + day + "." + fullYear;
+				let myCaption = "";
+				if(myPics[i].caption != undefined || myPics[i].caption != null) {
+					myCaption =  myPics[i].caption.text;
+				}
 
-				var month = (date.getMonth()+1);
-				var day = date.getDate();
-				var fullYear = date.getFullYear();
-
-				var fullDate = days[date.getDay()]  + ",  " + months[date.getMonth()] + " " + day + "." + fullYear;
 
 				myString += "<div class='col-sm-4'>";
 				myString += "<div class='instagram__holder'>";
 				//myString += "<img class='instagram__pic' src='" + myPics[i].images.low_resolution.url + "' alt='" + myPics[i].caption.text + "' />";
 				myString += "<dic class='instagram__pic' style='background:url(" + myPics[i].images.standard_resolution.url + ");background-size: cover;background-repeat: no-repeat;' />";
-				myString += "<div class='instagram__copy'>" + myPics[i].caption.text + "<br /><span class='instagram__date'>" + fullDate + "</span></div>";
+				myString += "<div class='instagram__copy'>" + myCaption + "<br /><span class='instagram__date'>" + fullDate + "</span></div>";
 				myString += "</div></div>";
+				$('.instagram').append(myString);
 			}    
-			$('.instagram').html(myString);
+			 
+		 
+			$('#getMoreIstagram').data('nexturl', NextMaxID);
+			 
+			
 
 	}).fail(function( err ) {
 		console.log("Error: " +  err.responseText);
