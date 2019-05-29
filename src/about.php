@@ -2,9 +2,6 @@
 	include_once("__apiKeys.php");
 	include_once("controller/Controller.php");
     $controller = new Controller();
-
-
-
 ?>
 
 <!doctype html>
@@ -19,7 +16,6 @@
 	<?php include("header.php"); ?>
 	<link rel="canonical" href="http://logikbox.com/about.php"/>
 	<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $gMapKey ?>"></script> 
- 
     <script src="js/map.js"></script>
 </head>
 
@@ -39,23 +35,15 @@
 			<div class="container">
 				<h1>About Me</h1>
 				<p>Things I do....</p> 
-				<?php
-			//$controller->invoke();
-			?>
-
-
+				<?php	//$controller->invoke(); ?>
 			</div>
 		</div>
-
 		<div class="container">
 			<!-- Example row of columns -->
 			<div class="row">
 				<div class="col-md-1">
-
 				</div>
 				<div class="col-md-10">
-
-
 					<div class="col-sm-12">
 						<div class="row">
 							<div class="col-sm-12">
@@ -69,10 +57,13 @@
 
 								
 								
-								</div>
-
-								<h2>Skills</h2>
 							</div>
+						</div>
+							<hr />
+						<div class="row">
+								
+								<h2>Skills</h2>
+							
 							<div class="col-sm-4">
 								<h3>Back-End</h3>
 								<ul>
@@ -100,7 +91,6 @@
 									<li>AJAX</li>
 									<li>XML</li>
 								</ul>
-
 							</div>
 							<div class="col-sm-4">
 								<h3>Technology</h3>
@@ -120,9 +110,11 @@
 									<li>Git</li>
 									<li>SVN</li>
 								</ul>
-
 							</div>
-							<div class="col-sm-12 clientBlock">
+						</div>
+							<hr />
+						<div class="row">
+							<div class="col-sm-12">
 								<h2>Clients</h2>
 								<div class="row">
 									<div class="col-sm-3 logo"><img src="img/logos/amerbergen150.png" alt=""></div>
@@ -138,23 +130,15 @@
 									<div class="col-sm-3 logo"><img src="img/logos/brandywine150.png" alt=""></div>
 									<div class="col-sm-3 logo"><img src="img/logos/goodwill-150.png" alt=""></div>
 								</div>
-
 							</div>
 						</div>
 					</div>
-
-
-
-
-
 				</div>
 				<div class="col-md-1">
-
 				</div>
 			</div>
-
+			</div>
 			<hr>
-
 	<footer>
 		<?php include_once("footer.php"); ?>
 	</footer>
@@ -169,7 +153,7 @@
 				<h4 class="modal-title">Superbowl LII - Greatest moment of my life</h4>
 				</div>
 				<div class="modal-body">
-					<img id="emma" src="img/superbowl_LII.jpg" alt="Eagles 41 - Patriots 33" />
+					<img id="emma" src="img/Superbowl_LII.jpg" alt="Eagles 41 - Patriots 33" />
 					</div>
 				<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -214,17 +198,11 @@
 		</div>
 	</div>
 	<!-- /container -->
-
-
-
 	<script>
-	
 	$(document).ready(function($) {
-
 		getLocation();
 	});
-  
-</script>
+	</script>
 
 
 </body>
