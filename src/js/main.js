@@ -62,9 +62,16 @@ function GetInstagram(max_id){
 		var myPics =  result.data;
 		var NextMaxID = result.pagination.next_max_id;
 		console.log(NextMaxID);
+
+		if(NextMaxID != undefined){
+			$('#getMoreIstagram').data('nexturl', NextMaxID);
+		}else{
+			$('#getMoreIstagram').hide();
+		}
+		
 		
 
-			for(i = 0; i < 20; i++) {
+			for(i = 0; i < myPics.length; i++) {
 				let myString = "";
 				let date = new Date(parseInt(myPics[i].created_time) * 1000);
 				let month = (date.getMonth()+1);
@@ -86,8 +93,7 @@ function GetInstagram(max_id){
 				$('.instagram').append(myString);
 			}    
 			 
-		 
-			$('#getMoreIstagram').data('nexturl', NextMaxID);
+			
 			 
 			
 
