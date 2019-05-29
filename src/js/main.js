@@ -45,6 +45,7 @@ jQuery(document).ready(function($) {
 });
 
 const access_token = "179767298.1677ed0.53df19c85ce44f2ebabd7040526cab70";
+const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 	
 function GetInstagram(){
 
@@ -56,11 +57,19 @@ function GetInstagram(){
 		var myString = "";
 
 			for(i = 0; i < 9; i++) {
+				var date = new Date(parseInt(myPics[i].created_time) * 1000);
+
+				var month = (date.getMonth()+1);
+				var day = date.getDate();
+				var fullYear = date.getFullYear();
+
+				var fullDate = days[date.getDay()]  + " " + month + "." + day + "." + fullYear;
+
 				myString += "<div class='col-sm-4'>";
 				myString += "<div class='instagram__holder'>";
 				//myString += "<img class='instagram__pic' src='" + myPics[i].images.low_resolution.url + "' alt='" + myPics[i].caption.text + "' />";
 				myString += "<dic class='instagram__pic' style='background:url(" + myPics[i].images.low_resolution.url + ");background-size: cover;background-repeat: no-repeat;' />";
-				myString += "<div class='instagram__copy'>" + myPics[i].caption.text + "</div>";
+				myString += "<div class='instagram__copy'>" + myPics[i].caption.text + "<br /><span class='instagram__date'>" + fullDate + "</span></div>";
 				myString += "</div></div>";
 			}    
 			$('.instagram').html(myString);

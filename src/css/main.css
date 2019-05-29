@@ -217,7 +217,12 @@ h2.homeH2{
 .instagram__copy{
 	position: absolute;
 	bottom: 0px;
-	height:40px
+	height:40px;
+	line-height: 1em;
+}
+
+.instagram__date{
+	font-size: 0.65em;
 }
 
 #signature{
