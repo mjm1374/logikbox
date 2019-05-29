@@ -63,7 +63,7 @@ function initMap(newLat, newLng) {
         currentLng = position.coords.longitude;
         currentAlt = position.coords.altitude;
         if(currentAlt != null){currentAlt = currentAlt.toFixed(6);}
-        console.log(currentLat, currentLng, currentAlt);
+        //console.log(currentLat, currentLng, currentAlt);
         //x.innerHTML =  "Your current coordinates: <br />Lat: " + currentLat.toFixed(6) + "<br/>Lng: " + currentLng.toFixed(6) + "<br/>Alt: " + currentAlt;
         
         //sLat.value = position.coords.latitude;
@@ -181,7 +181,7 @@ let myTravels = [
     function goTravel(){
         var arrayLength = myTravels.length;
         for (var i = 0; i < arrayLength; i++) {
-            console.log(myTravels[i].setAlt);
+           // console.log(myTravels[i].setAlt);
             setMarkers(myTravels[i].setLat, myTravels[i].setLng, myTravels[i].setAlt);
         }
 
@@ -216,7 +216,7 @@ let myTravels = [
 
     function DeleteMarkers() {
         //Loop through all the markers and remove
-        console.log(markers.length);
+        //console.log(markers.length);
         for (var i = 0; i < markers.length; i++) {
             markers[i].setMap(null);
         }

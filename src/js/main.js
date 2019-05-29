@@ -81,6 +81,8 @@ function GetInstagram(max_id){
 				let myCaption = "";
 				if(myPics[i].caption != undefined || myPics[i].caption != null) {
 					myCaption =  myPics[i].caption.text;
+				} else {
+					myCaption = "Untitled";
 				}
 
 
