@@ -58,10 +58,10 @@ function GetInstagram(max_id){
 	$.when(  $.get( 'https://api.instagram.com/v1/users/self/media/recent/', 
 	{ access_token: access_token, max_id: max_id } ) )
 	.then(function( result ) {
-		console.log( "my results", result );
+		//console.log( "my results", result );
 		var myPics =  result.data;
 		var NextMaxID = result.pagination.next_max_id;
-		console.log(NextMaxID);
+		//console.log(NextMaxID);
 
 		if(NextMaxID != undefined){
 			$('#getMoreIstagram').data('nexturl', NextMaxID);
@@ -86,7 +86,7 @@ function GetInstagram(max_id){
 				}
 
 
-				myString += "<div class='col-sm-4'>";
+				myString += "<div class='col-md-3 col-sm-6'>";
 				myString += "<div class='instagram__holder'>";
 				//myString += "<img class='instagram__pic' src='" + myPics[i].images.low_resolution.url + "' alt='" + myPics[i].caption.text + "' />";
 				myString += "<dic class='instagram__pic' style='background:url(" + myPics[i].images.standard_resolution.url + ");background-size: cover;background-repeat: no-repeat;' />";
