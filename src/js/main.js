@@ -12,8 +12,6 @@ $('#getMoreIstagram').on("click",function(e){
 });
 
 $(document).on('click','.instagram__pic', function(e){
- 
- 
 	let srcUrl = $(this).data('pic'); 
 	let caption = $(this).data('caption'); //caption
 
@@ -21,8 +19,6 @@ $(document).on('click','.instagram__pic', function(e){
 	$('#bigstagram').attr('alt', caption);
 	$('.modal-title').html(caption);
 	$('#photoModal').modal('show');
-	console.log(srcUrl);
-	
 });
 		
 
@@ -103,7 +99,7 @@ function GetInstagram(max_id){
 				myString += "<div class='col-md-3 col-sm-6'>";
 				myString += "<div class='instagram__holder'>";
 				//myString += "<img class='instagram__pic' src='" + myPics[i].images.low_resolution.url + "' alt='" + myPics[i].caption.text + "' />";
-				myString += "<dic class='instagram__pic' data-pic='" + myPics[i].images.standard_resolution.url + "' data-caption='" +  myCaption + "' style='background:url(" + myPics[i].images.standard_resolution.url + ");background-size: cover;background-repeat: no-repeat;' />";
+				myString += "<div class='instagram__pic' data-pic='" + myPics[i].images.standard_resolution.url + "' data-caption='" +  myCaption + "' style='background:url(" + myPics[i].images.standard_resolution.url + ");background-size: cover;background-repeat: no-repeat;' />";
 				myString += "<div class='instagram__copy'>" + myCaption + "<br /><span class='instagram__date'>" + fullDate + "</span></div>";
 				myString += "</div></div>";
 				$('.instagram').append(myString);

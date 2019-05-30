@@ -197,14 +197,16 @@ h2.homeH2{
 }
 .instagram__holder{
 	position: relative;
-	height: 340px;
+	height: 0px;
 	width: 100%;
 	margin: 0 auto;
 	margin-bottom: 20px;
+	padding-top:130%;
 
 }
 
 .instagram__pic{
+	cursor: pointer;
 	position: absolute;
 	top: 0px;
 	background-size: cover;
@@ -330,7 +332,8 @@ footer{
 
  @media (max-width: 768px) { 
 	.instagram__holder {
-		height: 420px;
+		/* height: 420px; */
+		padding-top:120%;
 	}
 
  }
@@ -366,7 +369,7 @@ footer{
 	}
 
 	.instagram__holder {
-		height: 460px;
+		/* height: 460px; */
 	}
 }
 
@@ -396,7 +399,7 @@ footer{
 
 @media (max-width: 375px) { 
 	.instagram__holder {
-		height: 420px;
+		/* height: 420px; */
 	}
 
  }
