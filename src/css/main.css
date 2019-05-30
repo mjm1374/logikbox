@@ -240,11 +240,13 @@ h2.homeH2{
 	float: right;
 
 }
-#emma{
+ 
+
+.modalImage{
+	width: 100%;
 	display:block;
 	margin:0 auto;
 	filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
-	width: 100%;
 }
 
 #map{

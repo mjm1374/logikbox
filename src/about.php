@@ -153,7 +153,7 @@
 				<h4 class="modal-title">Superbowl LII - Greatest moment of my life</h4>
 				</div>
 				<div class="modal-body">
-					<img id="emma" src="img/Superbowl_LII.jpg" alt="Eagles 41 - Patriots 33" />
+					<img id="superbowl" class="modalImage" src="img/Superbowl_LII.jpg" alt="Eagles 41 - Patriots 33" />
 					</div>
 				<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -171,7 +171,7 @@
 				<h4 class="modal-title">Meet Emma Peel</h4>
 				</div>
 				<div class="modal-body">
-					<img id="emma" src="img/3815420841_f6dbb07a9d.jpg" alt="Meet Emma Peel, She's my scooter" />
+					<img id="emma" class="modalImage" src="img/3815420841_f6dbb07a9d.jpg" alt="Meet Emma Peel, She's my scooter" />
 					</div>
 				<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
