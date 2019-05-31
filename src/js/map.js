@@ -218,3 +218,8 @@ let myTravels = [
     }
 
     document.addEventListener('touchstart', onTouchStart, {passive: true});
+
+
+    function onTouchStart(e){
+        return e;
+    }
