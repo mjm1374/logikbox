@@ -221,9 +221,12 @@ h2.homeH2{
     padding-top: 100%;
 	border: 10px solid #f5f3f3;
 	filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
+	transition: all 0.4s ease-in-out;
+ 
 }
 
 .instagram__pic:hover {
+	
 	filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
 }
 
