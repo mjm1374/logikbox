@@ -78,7 +78,7 @@
 					<div class="socialContainer">
 						<h2 class="homeH2">Facebook</h2>
 						<img src="img/f_logo_RGB-Blue_1024.svg" class="logoimg" alt="Facebook" />
-						<p>Father of 2 boys, friend to many, scooter rider, craft beer advocate, soccer fan and Star Wars super nerd. Pride's myself on being a tinkerer of all things electronic and code. </p>
+						<p>Father of 2 boys, friend to many, scooter rider, craft beer advocate, soccer fan and Star Wars super nerd. Pride myself on being a tinkerer of all things electronic and code. </p>
 						<a class="btn btn-default socialContainer--btn" href="https://www.facebook.com/Phillymike" role="button">View details &raquo;</a>
 					</div>
 				</div>
