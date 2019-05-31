@@ -75,13 +75,13 @@
 			?>
 
 				<form action="thanks.php" method="POST" id="commentForm" name="commentForm">
-					<label>Name</label><br/>
+					<label>Give me a name, it's only polite.</label><br/>
 					<input type="text" name="name" class="emailform" required aria-label="Name"><br/>
-					<label>Email</label><br/>
+					<label>Email, if you want an answer......</label><br/>
 					<input type="text" name="email" class="emailform"  aria-label="Email" required><br/>
-					<label>Message</label><br/>
+					<label>Send me your thoughts, complaints, rants abouts sports...</label><br/>
 					<textarea name="msg" class="emailform msgbox"  aria-label="Message"></textarea><br/>
-					<button  type="submit" name="sendMail" class="btn btn-primary">Send</button>
+					<button  type="submit" name="sendMail" class="btn btn-primary">Shoot it off!</button>
 				</form>
 			</div>
 			<div class="col-md-2">
