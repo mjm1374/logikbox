@@ -1,3 +1,12 @@
+class setLocation {
+	constructor(lat = '40.079', lng = '-75.160', name) {
+		this.setLat = lat;
+		this.setLng = lng;
+		this.name = name;
+	}
+}
+
+
 jQuery(document).ready(function($) {
 	var timelineBlocks = $('.cd-timeline-block'),
 		offset = 0.8;
@@ -68,7 +77,7 @@ function GetInstagram(max_id){
 	$.when(  $.get( 'https://api.instagram.com/v1/users/self/media/recent/', 
 	{ access_token: access_token, max_id: max_id } ) )
 	.then(function( result ) {
-		//console.log( "my results", result );
+		console.log( "my results", result );
 		var myPics =  result.data;
 		var NextMaxID = result.pagination.next_max_id;
 		//console.log(NextMaxID);
@@ -94,13 +103,27 @@ function GetInstagram(max_id){
 				} else {
 					myCaption = "Untitled";
 				}
+				let location =  new setLocation();
+				if(myPics[i].location != undefined){
+					location =  new setLocation(myPics[i].location.latitude, myPics[i].location.longitude, myPics[i].location.name );
+
+				}
+
+				console.log(location);
+				
+
+				myCaption =  myCaption.replace(/'/g, "&#8217;");
 
 
 				myString += "<div class='col-md-3 col-sm-6'>";
 				myString += "<div class='instagram__holder'>";
 				//myString += "<img class='instagram__pic' src='" + myPics[i].images.low_resolution.url + "' alt='" + myPics[i].caption.text + "' />";
-				myString += "<div class='instagram__pic' data-pic='" + myPics[i].images.standard_resolution.url + "' data-caption='" +  myCaption + "' style='background:url(" + myPics[i].images.standard_resolution.url + ");background-size: cover;background-repeat: no-repeat;' />";
-				myString += "<div class='instagram__copy'>" + myCaption + "<br /><span class='instagram__date'>" + fullDate + "</span></div>";
+				myString += "<div class='instagram__pic' data-pic='" + myPics[i].images.standard_resolution.url + "' data-caption='" +  myCaption + "' style='background-image:url(" + myPics[i].images.standard_resolution.url + ");' />";
+				myString += "<div class='instagram__copy'>" + myCaption + "<br /><span class='instagram__date'>" + fullDate ;
+				if(location.name != "" && location.name != undefined){
+					myString += " - " + location.name; 
+				}
+				myString += "</span></div>";
 				myString += "</div></div>";
 				$('.instagram').append(myString);
 			}    

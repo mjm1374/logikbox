@@ -211,6 +211,7 @@ h2.homeH2{
 	top: 0px;
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position-x: 50%;
 	max-width: 100%;
 	width:100%;
     height: 0px;
@@ -220,6 +221,10 @@ h2.homeH2{
     padding-top: 100%;
 	border: 10px solid #f5f3f3;
 	filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
+}
+
+.instagram__pic:hover {
+	filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
 }
 
 .instagram__copy{
