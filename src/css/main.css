@@ -205,7 +205,7 @@ h2.homeH2{
 
 }
 
-.instagram__pic{
+.instagram__border{
 	cursor: pointer;
 	position: absolute;
 	top: 0px;
@@ -224,8 +224,7 @@ h2.homeH2{
 	transition: all 0.4s ease-in-out;
 }
 
-.instagram__pic:hover {
-	
+.instagram__border:hover{
 	filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
 }
 
@@ -235,7 +234,8 @@ h2.homeH2{
     width: 100%;
     display: block;
     position: absolute;
-    top: 0;
+	top: 0;
+	outline: none;
 }
 
 .instagram__video video {
@@ -269,7 +269,6 @@ h2.homeH2{
 	float: right;
 
 }
- 
 
 .modalImage{
 	width: 100%;

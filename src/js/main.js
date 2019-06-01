@@ -33,6 +33,23 @@ $(document).on('click','.instagram__pic', function(e){
 	$('.modal-title').html(caption);
 	$('#photoModal').modal('show');
 });
+
+$(document).on('click','.instagram__vid', function(e){
+	let srcUrl = $(this).data('vid'); 
+	let caption = $(this).data('caption'); //caption
+ 
+	var video = document.getElementById('bigstagram--vid');
+	var source = document.createElement('source');
+
+	source.setAttribute('src',srcUrl);
+	video.appendChild(source);
+	video.load();
+	
+	$('.modal-title').html(caption);
+	$('#videoModal').modal('show'); 
+
+	
+});
 		
 
 	//hide timeline blocks which are outside the viewport
@@ -119,11 +136,11 @@ function GetInstagram(max_id){
 				//myString += "<img class='instagram__pic' src='" + myPics[i].images.low_resolution.url + "' alt='" + myPics[i].caption.text + "' />";
 				
 				if(isVideo == false){
-					myString += "<div class='instagram__pic' data-pic='" + myPics[i].images.standard_resolution.url + "' data-caption='" +  myCaption + "' style='background-image:url(" + myPics[i].images.standard_resolution.url + ");'>";
+					myString += "<div class='instagram__pic instagram__border' data-pic='" + myPics[i].images.standard_resolution.url + "' data-caption='" +  myCaption + "' style='background-image:url(" + myPics[i].images.standard_resolution.url + ");'>";
 				 
 
 				}else{
-					myString += "<div class='instagram__pic' data-pic='" + myPics[i].images.standard_resolution.url + "' data-caption='" +  myCaption + "' >";
+					myString += "<div class='instagram__vid instagram__border' data-vid='" + myPics[i].videos.standard_resolution.url + "' data-caption='" +  myCaption + "' >";
 					myString += "<div class='instagram__video' ><video autoplay muted loop><source src=" + myPics[i].videos.low_resolution.url + " type='video/mp4'></video> </div>";
 				}
 				myString += "</div><div class='instagram__copy'>" + myCaption + "<br /><span class='instagram__date'>" + fullDate ;
