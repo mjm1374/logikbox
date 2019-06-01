@@ -238,6 +238,10 @@ h2.homeH2{
 	outline: none;
 }
 
+#bigstagram--vid{
+	outline: none;
+}
+
 .instagram__video video {
 	height: 100%;
     width: 100%;
