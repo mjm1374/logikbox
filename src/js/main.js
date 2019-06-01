@@ -6,6 +6,11 @@ class setLocation {
 	}
 }
 
+const access_token = "179767298.1677ed0.53df19c85ce44f2ebabd7040526cab70";
+const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const months = ["January","Febuary","March","April","May","June","July","August","September","October","November","Decemeber"];
+	
+
 
 jQuery(document).ready(function($) {
 	var timelineBlocks = $('.cd-timeline-block'),
@@ -67,17 +72,11 @@ $(document).on('click','.instagram__pic', function(e){
 
 });
 
-const access_token = "179767298.1677ed0.53df19c85ce44f2ebabd7040526cab70";
-const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-const months = ["January","Febuary","March","April","May","June","July","August","September","October","November","Decemeber"];
-	
 function GetInstagram(max_id){
- 
-
 	$.when(  $.get( 'https://api.instagram.com/v1/users/self/media/recent/', 
 	{ access_token: access_token, max_id: max_id } ) )
 	.then(function( result ) {
-		console.log( "my results", result );
+		//console.log( "my results", result );
 		var myPics =  result.data;
 		var NextMaxID = result.pagination.next_max_id;
 		//console.log(NextMaxID);
@@ -109,11 +108,7 @@ function GetInstagram(max_id){
 
 				}
 
-				console.log(location);
-				
-
 				myCaption =  myCaption.replace(/'/g, "&#8217;");
-
 
 				myString += "<div class='col-md-3 col-sm-6'>";
 				myString += "<div class='instagram__holder'>";
@@ -127,14 +122,7 @@ function GetInstagram(max_id){
 				myString += "</div></div>";
 				$('.instagram').append(myString);
 			}    
-			 
-			
-			 
-			
-
 	}).fail(function( err ) {
 		console.log("Error: " +  err.responseText);
 	});
-
-
 }

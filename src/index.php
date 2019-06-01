@@ -14,6 +14,7 @@
 	<head>
 		<?php include("header.php"); ?>
 		<link rel="canonical" href="http://logikbox.com/index.php"/>
+		
 	</head>
 
 	<body> 
@@ -31,7 +32,7 @@
 				<h1>Hello, World!</h1>
 				<p id="pickupLine"></p>
 				<div id="qrCode">
-					<div id="qrTitle"><span>Scan for Mobile</div>
+					<div id="qrTitle"><span>Scan for Mobile</span></div>
 				</div>
 				<div id="quadrophenia">
 					<div class="quadrophenia_ring1 blue">
@@ -150,9 +151,9 @@
 			
 		</script>
 
-
+	<script src="js/goodwill-halloween.min.js"></script>
 	</body>
 
 	</html>
 
-	<script src="js/goodwill-halloween.min.js"></script>
+	

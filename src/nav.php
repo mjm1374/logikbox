@@ -1,7 +1,10 @@
 <?php
     $thisPage =  $_SERVER['SCRIPT_NAME'];
-    $thisPage = substr($thisPage, 1, strlen($thisPage));
-
+	$thisPage = substr($thisPage, 1, strlen($thisPage));
+	$thisHost = $_SERVER['HTTP_HOST'];
+	$isDev =  !strpos($thisHost, 'logikbox'); 
+	 
+ 
 ?>
 <div class="navbar-header">
 	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -13,10 +16,13 @@
 	<a class="navbar-brand homeTitle" href="index.php">Mike McAllister</a>
 </div>
 <div id="navbar" class="navbar-collapse collapse">
-
 	<ul class="nav navbar-nav">
-		<li class='<?php if ($thisPage == "index.php")  { echo "active"; } ?>'><a href="index.php" class="nava">Home</a></li>
-        <li class='<?php if ($thisPage == "about.php")  {echo "active "; } ?>'><a href="about.php" class="nava">About Me</a></li>
+		<li class='<?php if ($thisPage == "index.php")  { echo "active"; } ?>'>
+			<a href="/index.php" class="nava">Home</a>
+		</li>
+		<li class='<?php if ($thisPage == "about.php")  {echo "active "; } ?>'
+			><a href="/about<?php if($isDev == true) echo ".php"; ?>" class="nava">About Me</a>
+		</li>
 		<li class="dropdown  <?php if ($thisPage == "work.php") { echo " active "; }?>">
 			<a class='dropdown-toggle  nava' data-toggle='dropdown' href='#'>Work
             <span class="caret"></span></a>
@@ -25,15 +31,18 @@
 			</ul>
 		</li>
 		<li class="dropdown  <?php if ($thisPage == "timeline.php") { echo " active "; }?>">
-			<a class='dropdown-toggle nava' data-toggle='dropdown' href='timeline.php'>My Projects
+			<a class='dropdown-toggle nava' data-toggle='dropdown' href='timeline<?php if($isDev == true) echo ".php"; ?>'>My Projects
             <span class="caret"></span></a>
 			<ul class="dropdown-menu">
-			<li class='<?php if ($thisPage == "timeline.php")  {echo "active "; }?>'><a href="timeline.php" class="nava">Overview</a></li>
+			<li class='<?php if ($thisPage == "timeline.php")  {echo "active "; }?>'>
+				<a href="/timeline<?php if($isDev == true) echo ".php"; ?>" class="nava">Overview</a>
+			</li>
 				<?php $controller->projects(); ?>
 			</ul>
 		</li>
 
-		<li class='<?php if ($thisPage == "contact.php")  {echo "active "; }?>'><a href="contact.php" class="nava">Contact</a></li>
-		
+		<li class='<?php if ($thisPage == "contact.php")  {echo "active "; }?>'>
+			<a href="/contact<?php if($isDev == true) echo ".php"; ?>" class="nava">Contact</a>
+		</li>
 	</ul>
 </div>

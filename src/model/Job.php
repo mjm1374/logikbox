@@ -8,8 +8,9 @@ class Job {
 	public $description;
 	public $logo;
 	public $link;
+	public $url;
 	
-	public function __construct($company, $title, $startDate, $endDate, $description, $logo, $link)  
+	public function __construct($company, $title, $startDate, $endDate, $description, $logo, $link, $url)  
     {  
         $this->company = $company;
 		$this->title = $title;
@@ -18,6 +19,7 @@ class Job {
 	    $this->description = $description;
 		$this->logo = $logo;
 		$this->link = $link;
+		$this->url = $url;
     } 
 }
 

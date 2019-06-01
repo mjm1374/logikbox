@@ -20,7 +20,7 @@
         </div>
         <div class="col-md-8">
           <h3>Things I did....</h3>
-          <p><img src="img/<?php echo $job->logo ; ?>" class="logoimgLeft" alt="<?php echo $job->company ; ?>">
+          <p><img src="/img/<?php echo $job->logo ; ?>" class="logoimgLeft" alt="<?php echo $job->company ; ?>">
           <h4><?php echo $job->company ; ?></h4>
           <h5><?php echo $job->title ; ?></h5>
           <?php echo $job->description ; ?></p>
