@@ -40,9 +40,9 @@
 								<div class="portaitclear">
 									<div id="portrait"></div>
 								</div>
-								<p>I'm a creative professional working in the tech industries, involved in my community and I work to make the world a better place. I've been told I'm a true believer, they might be right, someone has to care.  Born and raised in Philly, huge fan of this town. Lived all over but Philly is always home.  Something about the grit of this town, the neighborhoods and their neighbors. The food, the beer, the sports and that uniquely Philly pride. I like my <a href="#" data-toggle="modal" data-target="#eaglesModal">Eagles</a> and Flyers. Serious soccer fan, I follow Man. City and love going to the Union. </p>
+								<p>I'm a creative professional working in the tech industries, involved in my community and I work to make the world a better place. I've been told I'm a true believer, they might be right, someone has to care.  Born and raised in Philly, huge fan of this town. Lived all over but Philly is always home.  Something about the grit of this town, the neighborhoods and their neighbors. The food, the beer, the sports and that uniquely Philly pride. I like my <a href="#"  data-pic='/img/Superbowl_LII.jpg' data-caption='Superbowl LII - Greatest moment of my life'  data-alt='Eagles 41 - Patriots 33' class='pic__modal'>Eagles</a> and Flyers. Serious soccer fan, I follow Man. City and love going to the Union. </p>
 
-								<p>I've been an elected committee person for 14 years in the city (Go the mighty <a href='https://www.facebook.com/NinthWardDems/' target='_blank' rel="noopener">9-14th!</a>). Sat on the board of directors for my local art center, the <a href='https://allenslane.org/' target='_blank' rel="noopener">Allens Lane Art Center</a>. I love to <a href="#" data-toggle="modal" data-target="#myModal">travel</a>, who doesn't. I’ve been a life long scooter enthusiast, Quadrophenia had a really strong effect on me. Ask me about <a href='#' data-toggle='modal' data-target='#emmaModal'>my scooter</a> runs someday. Amateur astronomer,  I’ve seen all the planets (sorry Pluto, you been dumped to the minor leagues and don’t count anymore). This and programming are the two skills I share with my boys. That is my truest joy.</p>
+								<p>I've been an elected committee person for 14 years in the city (Go the mighty <a href='https://www.facebook.com/NinthWardDems/' target='_blank' rel="noopener">9-14th!</a>). Sat on the board of directors for my local art center, the <a href='https://allenslane.org/' target='_blank' rel="noopener">Allens Lane Art Center</a>. I love to <a href="#" data-toggle="modal" data-target="#map__modal">travel</a>, who doesn't. I’ve been a life long scooter enthusiast, Quadrophenia had a really strong effect on me. Ask me about <a href='#'  data-pic='/img/3815420841_f6dbb07a9d.jpg' data-caption='Meet Emma Peel, She&apos;s my scooter' class='pic__modal'>my scooter</a> runs someday. Amateur <a href='#'  data-pic='/img/mars.jpg' data-caption='Mars in opposition - 4.18.2014' class='pic__modal'>astronomer</a>,  I’ve seen all the planets (sorry Pluto, you been dumped to the minor leagues and don’t count anymore). This and programming are the two skills I share with my boys. That is my truest joy.</p>
 
 								
 								
@@ -132,44 +132,12 @@
 		<?php include_once("footer.php"); ?>
 	</footer>
 	</div>
-	<!-- The Modals -->
-	<div class="modal fade" id="eaglesModal" role="dialog">
-		<div class="modal-dialog">
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">Superbowl LII - Greatest moment of my life</h4>
-				</div>
-				<div class="modal-body">
-					<img id="superbowl" class="modalImage" src="img/Superbowl_LII.jpg" alt="Eagles 41 - Patriots 33" />
-					</div>
-				<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
+	<!-- The Modals -->	
+	<?php
+		include_once("modal-photo.php");
+	?>
 
-	<div class="modal fade" id="emmaModal" role="dialog">
-		<div class="modal-dialog">
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">Meet Emma Peel</h4>
-				</div>
-				<div class="modal-body">
-					<img id="emma" class="modalImage" src="img/3815420841_f6dbb07a9d.jpg" alt="Meet Emma Peel, She's my scooter" />
-					</div>
-				<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="modal fade" id="myModal" role="dialog">
+	<div class="modal fade" id="map__modal" role="dialog">
 		<div class="modal-dialog">
 			<!-- Modal content-->
 			<div class="modal-content">
@@ -194,3 +162,5 @@
 	</script>
 </body>
 </html>
+
+webmanifest
