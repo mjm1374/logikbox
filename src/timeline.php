@@ -17,7 +17,6 @@
 			<!--/.navbar-collapse -->
 		</div>
 	</nav>
-	<!-- Main jumbotron for a primary marketing message or call to action -->
 	<div class="jumbotron">
 		<div class="container">
 			<h1>Tinkerings</h1>
@@ -26,7 +25,6 @@
 		</div>
 	</div>
 	<div class="container">
-		<!-- Example row of columns -->
 		<div class="row">
 			<div class="col-md-1">
 			</div>
@@ -36,7 +34,6 @@
 						$controller->invoke();
 					?>
 				</section>
-				<!-- cd-timeline -->
 			</div>
 			<div class="col-md-1">
 			</div>
