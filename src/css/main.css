@@ -6,7 +6,13 @@ font-family: 'Shadows Into Light', cursive;
 font-family: 'Teko', sans-serif;
 font-family: 'Permanent Marker', cursive;
 */
- 
+body {
+	padding-top: 50px;
+	padding-bottom: 20px;
+	font-family: 'Archivo', sans-serif;
+	width:100%
+}
+
 h1 {
 	color: #ffffff !important;
 	text-shadow: 2px 2px 4px #000000;

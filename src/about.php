@@ -5,31 +5,20 @@
 ?>
 
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"  lang="en"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"  lang="en"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"  lang="en"> <![endif]-->
-<!--[if gt IE 8]><!-->
 <html class="no-js"  lang="en">
-<!--<![endif]-->
-
 <head>
 	<?php include("header.php"); ?>
 	<link rel="canonical" href="http://logikbox.com/about.php"/>
 	<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $gMapKey ?>"></script> 
     <script src="js/map.js"></script>
 </head>
-
 <body>
-	<!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 				<?php include("nav.php"); ?>
 			<!--/.navbar-collapse -->
 		</div>
 	</nav>
-
 	<!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
 			<div class="container">
@@ -51,9 +40,9 @@
 								<div class="portaitclear">
 									<div id="portrait"></div>
 								</div>
-								<p>I'm a creative professional working in the tech industries, involved in my community and I work to make the world a better place. I've been told I'm a true believer, they might be right, someone has to care.  Born and raised in Philly, huge fan of this town. Lived all over but Philly is always home.  Something about the grit of this town, the neighborhood and their neighbors. The food, the beer, the sports and that uniquely Philly pride. I like my <a href="#" data-toggle="modal" data-target="#eaglesModal">Eagles</a> and Flyers. Serious soccer fan, I follow Man. City and love going to the Union. </p>
+								<p>I'm a creative professional working in the tech industries, involved in my community and I work to make the world a better place. I've been told I'm a true believer, they might be right, someone has to care.  Born and raised in Philly, huge fan of this town. Lived all over but Philly is always home.  Something about the grit of this town, the neighborhoods and their neighbors. The food, the beer, the sports and that uniquely Philly pride. I like my <a href="#" data-toggle="modal" data-target="#eaglesModal">Eagles</a> and Flyers. Serious soccer fan, I follow Man. City and love going to the Union. </p>
 
-								<p>I been an elected committee person for 14 years in the city (Go the mighty <a href='https://www.facebook.com/NinthWardDems/' target='_blank' rel="noopener">9-14th!</a>). Sat on the board of directors for my local art center, <a href='https://allenslane.org/' target='_blank' rel="noopener">Allens Lane Art Center</a>. I love to <a href="#" data-toggle="modal" data-target="#myModal">travel</a>, who doesn't. I’ve been a life long scooter enthusiast, Quadrophenia had a really strong effect on me. Ask me about <a href='#' data-toggle='modal' data-target='#emmaModal'>my scooter</a> runs someday. Amateur astronomer,  I’ve seen all the planets (sorry Pluto, you been dumped to the minor leagues and don’t count anymore). This and programming are the two skills I share with my boys. That is my truest joy.</p>
+								<p>I've been an elected committee person for 14 years in the city (Go the mighty <a href='https://www.facebook.com/NinthWardDems/' target='_blank' rel="noopener">9-14th!</a>). Sat on the board of directors for my local art center, the <a href='https://allenslane.org/' target='_blank' rel="noopener">Allens Lane Art Center</a>. I love to <a href="#" data-toggle="modal" data-target="#myModal">travel</a>, who doesn't. I’ve been a life long scooter enthusiast, Quadrophenia had a really strong effect on me. Ask me about <a href='#' data-toggle='modal' data-target='#emmaModal'>my scooter</a> runs someday. Amateur astronomer,  I’ve seen all the planets (sorry Pluto, you been dumped to the minor leagues and don’t count anymore). This and programming are the two skills I share with my boys. That is my truest joy.</p>
 
 								
 								
@@ -203,8 +192,5 @@
 		getLocation();
 	});
 	</script>
-
-
 </body>
-
 </html>

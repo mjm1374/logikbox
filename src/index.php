@@ -4,28 +4,18 @@
 ?>
 
 	<!doctype html>
-	<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"  lang="en"> <![endif]-->
-	<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"  lang="en"> <![endif]-->
-	<!--[if IE 8]>         <html class="no-js lt-ie9"  lang="en"> <![endif]-->
-	<!--[if gt IE 8]><!-->
 	<html class="no-js"  lang="en">
-	<!--<![endif]-->
-
 	<head>
 		<?php include("header.php"); ?>
 		<link rel="canonical" href="http://logikbox.com/index.php"/>
-		
 	</head>
-
 	<body> 
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-			
 			<div class="container">
 					<?php include("nav.php"); ?>
 				<!--/.navbar-collapse -->
 			</div>
 		</nav>
-
 		<!-- Main jumbotron for a primary marketing message or call to action -->
 		<div class="jumbotron">
 			<div class="container">
@@ -49,13 +39,11 @@
 				<p></p>
 			</div>
 		</div>
-
 		<div class="container">
 			<!-- Example row of columns -->
 			<div class="row">
 				<div class="col-md-8">
-					<?php $controller->firstProject()  ?>
-					
+					<?php $controller->firstProject()  ?>	
 				</div>
 				<div class="col-md-4">
 					<div class="socialContainer">
@@ -92,22 +80,17 @@
 					</div>
 				</div>
 			</div>
-
 			<hr>
 			<h2 class="homeH2">Lastest Photos</h2>
 			<div class="row instagram">
 			</div>
 			<a id="getMoreIstagram" class="btn btn-default" href="#" data-nexturl="" role="button">View More &raquo;</a>
 			<hr>
-
-			 
-
 			<footer>
 				<?php include_once("footer.php"); ?>
 			</footer>
 		</div>
-
-		<!-- The Modals -->
+		<!-- Photo Modal -->
 		<div class="modal fade" id="photoModal" role="dialog">
 			<div class="modal-dialog">
 				<!-- Modal content-->
@@ -125,7 +108,7 @@
 				</div>
 			</div>
 		</div>
-
+		<!-- Video Modal -->
 		<div class="modal fade" id="videoModal" role="dialog">
 			<div class="modal-dialog">
 				<!-- Modal content-->
@@ -135,8 +118,7 @@
 					<h4 class="modal-title"></h4>
 					</div>
 					<div class="modal-body">
-						<video  id="bigstagram--vid" width="100%" height="100%" controls autoplay muted>
-							 
+						<video  id="bigstagram--vid" width="100%" height="100%" controls autoplay muted> 
 						</video>
 					</div>
 					<div class="modal-footer">
@@ -146,7 +128,6 @@
 			</div>
 		</div>
 		<!-- /container -->
- 
 		<script>
 			$(document).ready(function() {
 				var json = (function() {
@@ -168,12 +149,9 @@
 
 				GetInstagram();
 			});
-			
 		</script>
-
 	<script src="js/goodwill-halloween.min.js"></script>
 	</body>
-
 	</html>
 
 	
