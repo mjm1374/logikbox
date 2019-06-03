@@ -29,7 +29,7 @@ $(document).on('click','.pic__modal', function(e){
 
 	$('#bigstagram').attr('src', srcUrl);
 	$('#bigstagram').attr('alt', alt);
-	$('.modal-title').html(caption);
+	$('.modal-dynamic-title').html(caption);
 	$('#photoModal').modal('show');
 });
 
@@ -43,7 +43,7 @@ $(document).on('click','.vid__modal', function(e){
 	video.appendChild(source);
 	video.load();
 	
-	$('.modal-title').html(caption);
+	$('.modal-dynamic-title').html(caption);
 	$('#videoModal').modal('show'); 
 
 	

@@ -160,5 +160,3 @@
 	</script>
 </body>
 </html>
-
-webmanifest
