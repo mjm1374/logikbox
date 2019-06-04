@@ -6,7 +6,7 @@
 <!doctype html>
 <html class="no-js"  lang="en">
 <head>
-	<link rel="stylesheet" href="css/style.css">
+	 
 	<?php include("header.php"); ?>
 	<link rel="canonical" href="http://logikbox.com/timeline.php"/>
 </head>
