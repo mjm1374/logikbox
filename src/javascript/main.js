@@ -4,7 +4,7 @@ class setLocation {
 		this.setLng = lng;
 		this.name = name;
 	}
-}
+} 
 
 const access_token = "179767298.1677ed0.53df19c85ce44f2ebabd7040526cab70";
 const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
@@ -49,7 +49,6 @@ $(document).on('click','.vid__modal', function(e){
 	
 });
 		
-
 	//hide timeline blocks which are outside the viewport
 	hideBlocks(timelineBlocks, offset);
 
