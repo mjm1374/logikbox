@@ -7,6 +7,14 @@ var uglify = require('gulp-uglify-es').default;
 //var autoprefixer = require('gulp-autoprefixer');
 //var sassdoc = require('sassdoc');
 
+var concatCss = require('gulp-concat-css');
+ 
+gulp.task('css', function () {
+  return gulp.src('css/**/*.css')
+    .pipe(concatCss("styles/bundle.css"))
+    .pipe(gulp.dest(''));
+});
+
 // gulp.task('sass', function () {
 //     return gulp.src('scss/*.scss')
 //         .pipe(sourcemaps.init())
@@ -31,6 +39,7 @@ gulp.task('js', function () {
 gulp.task('watch', function () {
     //gulp.watch('scss/*.scss', ['sass']);
     gulp.watch('javascript/*.js', ['js']);
+    gulp.watch('css/*.css', ['css']);
 });
 
-gulp.task('default', ['js', 'watch']);
+gulp.task('default', ['js', 'css', 'watch']);
