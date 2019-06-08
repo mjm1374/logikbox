@@ -188,9 +188,16 @@ h2.homeH2{
 	height:230px;
 }
 
+.socialContainer--plus50{
+	height:280px;
+}
+
 .socialContainer--btn{
 	position: absolute;
 	bottom:0px;
+}
+.launch__copy{
+	margin-bottom: 5px;
 }
 
 .instagram{

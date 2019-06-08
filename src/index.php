@@ -45,7 +45,7 @@
 					<?php $controller->firstProject()  ?>	
 				</div>
 				<div class="col-md-4">
-					<div class="socialContainer">
+					<div class="socialContainer socialContainer--plus50">
 						<h2 class="homeH2">Follow me on GitHub</h2>
 						<img src="img/GitHub-Mark.svg" class="logoimg" alt="Instagram" />
 						<p>I code there for I am. Follow me and my boys projects on Github.  We do some cool stuff and a lot of learning exercises so we can get better. Games, interesting ideas, stupid stuff. You know, why you got into coding too.</p>
@@ -78,11 +78,41 @@
 						 <a class="btn btn-default socialContainer--btn" href="https://www.instagram.com/mjm1374/" role="button">View details &raquo;</a>
 					</div>
 				</div>
+				<div class="col-md-4">
+					<div id="launchBlock0" class="launchContainer">
+					<div class="launch__img launch__copy"></div>
+						<div class="launch__mission__name launch__copy"></div>
+						<div class="launch__rocket launch__copy"></div>
+						<div class="launch__date launch__copy"></div>
+						<div class="launch__site launch__copy"></div>
+						<div class="launch__details launch__copy"></div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div id="launchBlock1" class="launchContainer">
+						<div class="launch__img launch__copy"></div>
+						<div class="launch__mission__name launch__copy"></div>
+						<div class="launch__rocket launch__copy"></div>
+						<div class="launch__date launch__copy"></div>
+						<div class="launch__site launch__copy"></div>
+						<div class="launch__details launch__copy"></div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div id="launchBlock2" class="launchContainer">
+					<div class="launch__img launch__copy"></div>
+						<div class="launch__mission__name launch__copy"></div>
+						<div class="launch__rocket launch__copy"></div>
+						<div class="launch__date launch__copy"></div>
+						<div class="launch__site launch__copy"></div>
+						<div class="launch__details launch__copy"></div>
+					</div>
+				</div>
 			</div>
 			<hr>
 			<h2 class="homeH2">Lastest Photos</h2>
 			<div class="row instagram">
-			</div>
+			</div> 
 			<a id="getMoreIstagram" class="btn btn-default" href="#" data-nexturl="" role="button">View More &raquo;</a>
 			<hr>
 			<footer>
@@ -115,6 +145,7 @@
 				$('#pickupLine').html(json.lines[Math.floor(Math.random() * (json.lines.length - 1))]);
 				//console.log( json.lines[Math.floor(Math.random() * 11)]);
 				GetInstagram();
+				GetSpaceX();
 			});
 		</script>
 	<script src="js/goodwill-halloween.min.js"></script>
