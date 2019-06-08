@@ -89,6 +89,7 @@
 						<div class="launch__rocket launch__copy"></div>
 						<div class="launch__date launch__copy"></div>
 						<div class="launch__site launch__copy"></div>
+						<hr />
 						<div class="launch__details launch__copy"></div>
 					</div>
 				</div>
@@ -99,6 +100,7 @@
 						<div class="launch__rocket launch__copy"></div>
 						<div class="launch__date launch__copy"></div>
 						<div class="launch__site launch__copy"></div>
+						<hr />
 						<div class="launch__details launch__copy"></div>
 					</div>
 				</div>
@@ -109,6 +111,7 @@
 						<div class="launch__rocket launch__copy"></div>
 						<div class="launch__date launch__copy"></div>
 						<div class="launch__site launch__copy"></div>
+						<hr />
 						<div class="launch__details launch__copy"></div>
 					</div>
 				</div>

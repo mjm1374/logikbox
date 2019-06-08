@@ -17,7 +17,7 @@ function GetSpaceX(max_id){
 
 
             if(launches[i].details == '' || launches[i].details == null) {
-                launches[i].details = "<span class='red'>Classified</span>";
+                launches[i].details = "<span class=''>There are no details available for this mission.</span>";
             }
             
 
