@@ -78,9 +78,13 @@
 						 <a class="btn btn-default socialContainer--btn" href="https://www.instagram.com/mjm1374/" role="button">View details &raquo;</a>
 					</div>
 				</div>
+				<div class="col-md-12 launchHeader">
+				<img src='/img/spacex/SpaceX-Logo.svg' class='launchLogo' />
+				<h2 class="homeH2">Upcoming Launches</h2>
+				</div>
 				<div class="col-md-4">
 					<div id="launchBlock0" class="launchContainer">
-					<div class="launch__img launch__copy"></div>
+						<img src='' class="launch__img launch__copy" />
 						<div class="launch__mission__name launch__copy"></div>
 						<div class="launch__rocket launch__copy"></div>
 						<div class="launch__date launch__copy"></div>
@@ -90,7 +94,7 @@
 				</div>
 				<div class="col-md-4">
 					<div id="launchBlock1" class="launchContainer">
-						<div class="launch__img launch__copy"></div>
+						<img src='' class="launch__img launch__copy" />
 						<div class="launch__mission__name launch__copy"></div>
 						<div class="launch__rocket launch__copy"></div>
 						<div class="launch__date launch__copy"></div>
@@ -100,7 +104,7 @@
 				</div>
 				<div class="col-md-4">
 					<div id="launchBlock2" class="launchContainer">
-					<div class="launch__img launch__copy"></div>
+						<img src='' class="launch__img launch__copy" />
 						<div class="launch__mission__name launch__copy"></div>
 						<div class="launch__rocket launch__copy"></div>
 						<div class="launch__date launch__copy"></div>
