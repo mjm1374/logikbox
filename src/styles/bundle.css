@@ -30,6 +30,10 @@ body {
   width: 100%;
 }
 
+.red {
+  color: #910505;
+}
+
 h1 {
   color: #ffffff !important;
   text-shadow: 2px 2px 4px #000000;
@@ -208,9 +212,48 @@ h2.homeH2 {
   height: 230px;
 }
 
+.socialContainer--plus50 {
+  height: 280px;
+}
+
 .socialContainer--btn {
   position: absolute;
   bottom: 0px;
+}
+
+.launchHeader {
+  margin-top: 30px;
+}
+
+.launchLogo {
+  width: auto;
+  height: 35px;
+}
+
+.launchContainer {
+  margin-top: 20px;
+}
+
+.launch__mission__name {
+  font-weight: 700;
+}
+
+.launch__copy {
+  margin-bottom: 3px;
+}
+
+.launch__details {
+  height: 250px;
+  overflow-y: scroll;
+  padding-right: 10px;
+}
+
+.launch__img {
+  width: auto;
+  display: block;
+  height: 250px;
+  float: right;
+  margin-left: 20px;
 }
 
 
