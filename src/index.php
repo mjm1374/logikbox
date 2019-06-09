@@ -79,42 +79,10 @@
 					</div>
 				</div>
 				<div class="col-md-12 launchHeader">
-				<img src='/img/spacex/SpaceX-Logo.svg' class='launchLogo' />
+				<img src='/img/spacex/SpaceX-Logo.svg' class='launchLogo' alt="SpaceX" />
 				<h2 class="homeH2">Upcoming Launches</h2>
 				</div>
-				<div class="col-md-4">
-					<div id="launchBlock0" class="launchContainer">
-						<img src='' class="launch__img launch__copy" />
-						<div class="launch__mission__name launch__copy"></div>
-						<div class="launch__rocket launch__copy"></div>
-						<div class="launch__date launch__copy"></div>
-						<div class="launch__site launch__copy"></div>
-						<hr />
-						<div class="launch__details launch__copy"></div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div id="launchBlock1" class="launchContainer">
-						<img src='' class="launch__img launch__copy" />
-						<div class="launch__mission__name launch__copy"></div>
-						<div class="launch__rocket launch__copy"></div>
-						<div class="launch__date launch__copy"></div>
-						<div class="launch__site launch__copy"></div>
-						<hr />
-						<div class="launch__details launch__copy"></div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div id="launchBlock2" class="launchContainer">
-						<img src='' class="launch__img launch__copy" />
-						<div class="launch__mission__name launch__copy"></div>
-						<div class="launch__rocket launch__copy"></div>
-						<div class="launch__date launch__copy"></div>
-						<div class="launch__site launch__copy"></div>
-						<hr />
-						<div class="launch__details launch__copy"></div>
-					</div>
-				</div>
+				<div id="launchBlockHolder"></div>
 			</div>
 			<hr>
 			<h2 class="homeH2">Lastest Photos</h2>
@@ -152,7 +120,7 @@
 				$('#pickupLine').html(json.lines[Math.floor(Math.random() * (json.lines.length - 1))]);
 				//console.log( json.lines[Math.floor(Math.random() * 11)]);
 				GetInstagram();
-				GetSpaceX();
+				GetSpaceX(3);
 			});
 		</script>
 	<script src="js/goodwill-halloween.min.js"></script>
