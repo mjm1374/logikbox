@@ -219,9 +219,9 @@ h2.homeH2{
 	margin-bottom: 3px;
 }
 .launch__details{
-	height:250px;
+	height: 250px;
 	overflow-y: scroll;
-	padding:5px;
+	padding-right: 10px;
 }
 .launch__img{
 	width: auto;

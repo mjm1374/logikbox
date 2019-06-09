@@ -245,7 +245,7 @@ h2.homeH2 {
 .launch__details {
   height: 250px;
   overflow-y: scroll;
-  padding: 5px;
+  padding-right: 10px;
 }
 
 .launch__img {
