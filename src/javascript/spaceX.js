@@ -1,13 +1,13 @@
-function GetSpaceX(max_id){
-	$.when(  $.get( 'https://api.spacexdata.com/v3/launches/upcoming?limit=' + max_id, 
-	{ access_token: access_token, max_id: max_id } ) )
+function GetSpaceX(max_cnt){
+	$.when(  $.get( 'https://api.spacexdata.com/v3/launches/upcoming', 
+	{ limit: max_cnt } ) )
 	.then(function( result ) {
         let launches = result;
         console.log(launches);
         var promises = [];
 
         for(i=0; i < launches.length; i++){
-            //let target = $('#launchBlock' +i);
+            buildTargetBlock(i);
             let rocket = launches[i].rocket.rocket_id;
             let rocketImg = 'falcon9.png';
             let rocketName = launches[i].rocket.rocket_name;
@@ -15,19 +15,7 @@ function GetSpaceX(max_id){
             let missionID = '';
             let launchDate = timeConverter(launches[i].launch_date_unix);
             let description = '';
-
-            let targetBlock = '<div class="col-md-4"><div id="launchBlock' + i + '" class="launchContainer">';
-            targetBlock	= targetBlock +	`<img src="" class="launch__img launch__copy" />
-						<div class="launch__mission__name launch__copy"></div>
-						<div class="launch__rocket launch__copy"></div>
-						<div class="launch__date launch__copy"></div>
-						<div class="launch__site launch__copy"></div>
-						<hr />
-						<div class="launch__details launch__copy"></div>
-					</div>
-                </div>`;
-                $('#launchBlockHolder').append(targetBlock);
-                let target = $('#launchBlock' +i); 
+            let target = $('#launchBlock' + i); 
             
             
             if(launches[i].mission_id.length > 0){  missionID = launches[i].mission_id[0];}
@@ -61,6 +49,20 @@ function GetSpaceX(max_id){
     );
 } 
 
+function buildTargetBlock(i){
+    let targetBlock = '<div class="col-md-4"><div id="launchBlock' + i + '" class="launchContainer">';
+    targetBlock	= targetBlock +	`<img src="" class="launch__img launch__copy" />
+                <div class="launch__mission__name launch__copy"></div>
+                <div class="launch__rocket launch__copy"></div>
+                <div class="launch__date launch__copy"></div>
+                <div class="launch__site launch__copy"></div>
+                <hr />
+                <div class="launch__details launch__copy"></div>
+            </div>
+        </div>`;
+        
+        $('#launchBlockHolder').append(targetBlock);
+}
 
 function timeConverter(UNIX_timestamp){
     var a = new Date(UNIX_timestamp * 1000);
