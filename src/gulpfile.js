@@ -32,7 +32,9 @@ gulp.task('css', function () {
 gulp.task('js', function () {
     return gulp.src(['javascript/*.js'])
         .pipe(concat('script.min.js'))
+        .on('error', onError)
         .pipe(uglify())
+        .on('error', onError)
         .pipe(gulp.dest('js'));
 });
 
@@ -43,3 +45,8 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['js', 'css', 'watch']);
+
+function onError(err) {
+    console.log(err);
+    this.emit('end');
+  }

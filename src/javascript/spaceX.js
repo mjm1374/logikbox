@@ -29,7 +29,7 @@ function GetSpaceX(max_cnt){
                     target.find(".launch__details").html(details);
                    }});
                 promises.push(description);
-            } else{
+            } else {
                 description = launches[i].details;
                 target.find(".launch__details").html(description);
             }
