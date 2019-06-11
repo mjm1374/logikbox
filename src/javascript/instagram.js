@@ -23,7 +23,7 @@ function GetInstagram(max_id){
             let fullDate = days[date.getDay()]  + ",  " + months[date.getMonth()] + " " + day + "." + fullYear;
             let location =  new setLocation();
             let myCaption = "";
-            let likes = ' <span class="text-red">&hearts;</span><span class="instagram__date likecnt"> (' + myPics[i].likes.count +  ')</span>';
+            let likes = ' <span class="text-red">&hearts;</span><span class="instagram__date likecnt"> ' + myPics[i].likes.count +  '</span>';
 
             if(myPics[i].caption != undefined || myPics[i].caption != null) {
                 myCaption =  myPics[i].caption.text;
