@@ -30,8 +30,22 @@ body {
   width: 100%;
 }
 
-.red {
+.text-red {
   color: #910505;
+}
+
+.likebox {
+  position: absolute;
+  bottom: 0px;
+  padding: 3px;
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  right: 0px;
+}
+
+.likecnt {
+  position: relative;
+  top: -2px;
 }
 
 h1 {
@@ -443,7 +457,7 @@ footer {
   position: absolute;
   left: 0px;
   overflow: hidden;
-  background-image: url("../../img/qr.png");
+  background-image: url("/img/qr-code.svg");
   background-size: 170px 170px;
 }
 
