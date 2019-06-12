@@ -79,5 +79,7 @@ $(document).on('click','.vid__modal', function(e){
 		var toggleWidth = $("#qrCode").width() < 38 ? "210px" : "37px";
 		$('#qrCode').animate({ width: toggleWidth });
 	});
+
+	console.log("xxx",instagramGallery);
 });
 
