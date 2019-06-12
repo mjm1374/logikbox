@@ -49,6 +49,10 @@ h2.homeH2{
 	background: url(/img/backgrounds/London-2019-panorama-compressed.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
+	margin: 0 auto;
+	cursor: all-scroll;
+	background-position: 50% 0;
+	transition: background-position 1s linear;
 
 }
 

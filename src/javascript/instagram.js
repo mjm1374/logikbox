@@ -15,7 +15,7 @@ function GetInstagram(max_id){
 	$.when(  $.get( 'https://api.instagram.com/v1/users/self/media/recent/', 
 	{ access_token: access_token, max_id: max_id } ) )
 	.then(function( result ) {
-		console.log( "my results", result );
+		//console.log( "my results", result );
 		var myPics =  result.data;
 		var NextMaxID = result.pagination.next_max_id;
 
@@ -70,6 +70,7 @@ function GetInstagram(max_id){
             }
             myString += "</span></div>"  ;
             myString += "</div></div>";
+
             instagramGallery.push(new Instragram(myCaption, date, isVideo, mediaURL , location, likes));
 
             $('.instagram').append(myString);
