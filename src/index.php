@@ -75,7 +75,7 @@
 						<h2 class="homeH2">Instagram</h2>
 						<img src="img/instagram.svg" class="logoimg" alt="Instagram" />
 						<p>Studying chef, father of 2 boys and one cat, world traveler and past-life professional photographer. </p>
-						 <a class="btn btn-default socialContainer--btn" href="https://www.instagram.com/mjm1374/" role="button">View details &raquo;</a>
+						<a class="btn btn-default socialContainer--btn" href="https://www.instagram.com/mjm1374/" role="button">View details &raquo;</a>
 					</div>
 				</div>
 				<div class="col-md-12 launchHeader">
