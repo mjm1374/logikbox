@@ -3,6 +3,7 @@ var gulp = require('gulp');
 //var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify-es').default;
+var babel = require('gulp-babel');
 //var sourcemaps =  require('gulp-sourcemaps');
 //var autoprefixer = require('gulp-autoprefixer');
 //var sassdoc = require('sassdoc');
@@ -33,6 +34,8 @@ gulp.task('js', function () {
     return gulp.src(['javascript/*.js'])
         .pipe(concat('script.min.js'))
         .on('error', onError)
+        //.pipe(babel({  presets: ['@babel/env'] }))
+        //.on('error', onError)
         .pipe(uglify())
         .on('error', onError)
         .pipe(gulp.dest('js'));

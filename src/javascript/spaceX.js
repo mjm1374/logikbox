@@ -3,7 +3,7 @@ function GetSpaceX(max_cnt){
 	{ limit: max_cnt } ) )
 	.then(function( result ) {
         let launches = result;
-        //console.log(launches);
+        console.log(launches); 
         var promises = [];
 
         for(i=0; i < launches.length; i++){
