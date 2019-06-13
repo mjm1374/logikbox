@@ -32,6 +32,7 @@ body {
 
 .text-red {
   color: #910505;
+  margin-right: 2px;
 }
 
 .likebox {
@@ -72,6 +73,18 @@ h2.homeH2 {
   cursor: all-scroll;
   background-position: 50% 0;
   transition: background-position 1s linear;
+}
+
+@media (min-width: 1500px) {
+  .jumbotron {
+    background-size: 150%;
+  }
+}
+
+@media (min-width: 2500px) {
+  .jumbotron {
+    background-size: 200%;
+  }
 }
 
 .jumbotron p {
