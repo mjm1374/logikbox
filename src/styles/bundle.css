@@ -89,6 +89,10 @@ h2.homeH2 {
   border: 1px solid black;
 }
 
+.worldcup__teams--shade1 {
+  background-color: rgba(40, 44, 44, 0.06);
+}
+
 .worldcup__table {
   width: 100%;
 }
@@ -120,15 +124,15 @@ h2.homeH2 {
 
 @media (min-width: 1500px) {
   .jumbotron {
-    background-size: 150%;
+    background-size: 110%;
   }
 }
 
-@media (min-width: 2500px) {
-  .jumbotron {
-    background-size: 200%;
-  }
-}
+/* @media (min-width: 2500px) {
+	.jumbotron  {
+		background-size: 200%;
+	}
+} */
 
 .jumbotron p {
   margin-bottom: 15px;

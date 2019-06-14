@@ -125,7 +125,7 @@
 				GetGroupResults();
 			});
 		</script>
-	<script src="js/goodwill-halloween.min.js"></script>
+	<!-- <script src="js/goodwill-halloween.min.js"></script> -->
 	</body>
 	</html>
 

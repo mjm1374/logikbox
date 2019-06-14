@@ -32,7 +32,7 @@ function getTeams(teams){
     for (j = 0; j < teams.length; j++) {
         let team = teams[j];
         let name = team.country;
-        teamsString += "<tr class='worldcup__teams'>";
+        teamsString += "<tr class='worldcup__teams worldcup__teams--shade" + j % 2 + "'>";
         teamsString += "<td><div class='worldcup__flag' style='background-image: url(/img/flags/" + name.replace(" ", "") + ".svg'></div><div class='worldcup__teamName'>" + name + "</div></td>";
         teamsString += "<td class='center'>" + team.games_played + "</td>";
         teamsString += "<td class='center'>" + team.wins + "</td>";
