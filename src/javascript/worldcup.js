@@ -32,11 +32,31 @@ function getTeams(teams){
     for (j = 0; j < teams.length; j++) {
         let team = teams[j];
         let name = team.country;
-        teamsString += "<tr class='worldcup__teams'><td>";
-        teamsString += name;
-        teamsString += "</td></tr>"; 
+        teamsString += "<tr class='worldcup__teams'>";
+        teamsString += "<td>" + name + "</td>"
+        teamsString += "<td class='center'>" + team.games_played + "</td>"
+        teamsString += "<td class='center'>" + team.wins + "</td>"
+        teamsString += "<td class='center'>" + team.draws + "</td>"
+        teamsString += "<td class='center'>" + team.losses + "</td>"
+        teamsString += "<td class='center'>" + team.goal_differential + "</td>"
+        teamsString += "<td class='center'>" + team.points + "</td>"
 
+        teamsString += "</tr>"; 
 
+// "id": 1,
+// "country": "France",
+// "alternate_name": null,
+// "fifa_code": "FRA",
+// "group_id": 1,
+// "group_letter": "A",
+// "wins": 2,
+// "draws": 0,
+// "losses": 0,
+// "games_played": 2,
+// "points": 6,
+// "goals_for": 6,
+// "goals_against": 1,
+// "goal_differential": 5
     }
     return teamsString;
 }

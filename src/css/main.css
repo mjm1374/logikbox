@@ -52,7 +52,9 @@ h2.homeH2{
 	display: flex;
 	overflow-y: auto;
 }
-
+.center{
+	margin:0 auto;
+}
 .worldcup__group{
 	display: block;
 	order: 1;
