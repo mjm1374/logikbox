@@ -16,7 +16,7 @@
 				<!--/.navbar-collapse -->
 			</div>
 		</nav>
-		<div class="worldcup"></div>
+		<div class="worldcup--wrapper"><div class="worldcup"></div></div>
 		<div class="jumbotron">
 			<div class="container">
 				<h1>Hello, World!</h1>
