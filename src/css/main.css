@@ -48,29 +48,57 @@ h2.homeH2{
 .worldcup{
 	background:#fff;
 	width: 100%;
-	height:160px;
+	height:165px;
 	display: flex;
-	overflow-y: auto;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
 	background-image: url(/img/Womens-World-Cup-2019-1140x510.png);
 	background-size: cover;
+	filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
+	    padding: 10px;
+}
+
+.worldcup::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+	background-color: transparent;
+}
+
+.worldcup::-webkit-scrollbar {
+	height: 9px;
+	background-color: transparent;
+}
+
+.worldcup::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.5)
 }
 
 .center{
 	margin:0 auto;
 	text-align: center;
+	width:10%;
 }
 .worldcup__group{
 	display: block;
-	order: 1;
+	flex: 0 0 auto;
 	width: auto;
-	min-width: 32%;
+	min-width: 30%;
 	height:135px;
-	margin: 10px;
+	margin: 0px 10px;
 	padding:10px;
 	border: 1px solid black;
 	background: white;
 	opacity: .9;
 	filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
+}
+.worldcup__group:nth-child(1){
+	margin-left: 0px;
 }
 @media (max-width: 414px) {
 	.worldcup__group {
@@ -78,7 +106,7 @@ h2.homeH2{
 	}
 }
 
-.worldcup__teams--shade1{
+.worldcup__teams--shade0{
 	background-color: rgba(40, 44, 44, 0.06);
 }
 .worldcup__table{
@@ -313,19 +341,19 @@ h2.homeH2{
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	border-radius: 10px;
-	background-color: #F5F5F5;
+	background-color: transparent;
 }
 .launch__details::-webkit-scrollbar 
 {
 	width: 9px;
-	background-color: #fff;
+	background-color: transparent;
 }
  
 .launch__details::-webkit-scrollbar-thumb
 {
 	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: rgba(145, 145, 145, 1)
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: rgba(0, 0, 0, .5)
 }
 
 
@@ -401,6 +429,7 @@ h2.homeH2{
 	bottom: 0px;
 	height:40px;
 	line-height: 1em;
+	padding-top: 10px;
 }
 
 .instagram__date{
@@ -630,5 +659,6 @@ footer{
 
 }
 
-
- 
+.credits{
+	font-size: 8px;
+}

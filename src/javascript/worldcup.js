@@ -3,7 +3,7 @@
 function GetGroupResults(max_cnt){
 	$.when(  $.get( 'https://worldcup.sfg.io/teams/group_results' ) )
 	.then(function( groups ) {
-        console.log(groups);
+        console.log("yyy",groups);
         let worldcupBoard = $('.worldcup');
         
         
@@ -32,7 +32,7 @@ function getTeams(teams){
         let team = teams[j];
         let name = team.country;
         teamsString += "<tr class='worldcup__teams worldcup__teams--shade" + j % 2 + "'>";
-        teamsString += "<td><div class='worldcup__flag' style='background-image: url(/img/flags/" + name.replace(" ", "") + ".svg'></div><div class='worldcup__teamName'>" + name + "</div></td>";
+        teamsString += "<td><div class='worldcup__flag' style='background-image: url(/img/flags/" + name.replace(" ", "") + ".svg)'></div><div class='worldcup__teamName' data-fifa='" + team.fifa_code + "' > " + name + " </div></td > ";
         teamsString += "<td class='center'>" + team.games_played + "</td>";
         teamsString += "<td class='center'>" + team.wins + "</td>";
         teamsString += "<td class='center'>" + team.draws + "</td>";

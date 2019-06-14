@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify-es').default;
 var babel = require('gulp-babel');
+var browserSync = require('browser-sync').create();
 //var sourcemaps =  require('gulp-sourcemaps');
 //var autoprefixer = require('gulp-autoprefixer');
 //var sassdoc = require('sassdoc');
@@ -47,7 +48,15 @@ gulp.task('watch', function () {
     gulp.watch('css/*.css', ['css']);
 });
 
-gulp.task('default', ['js', 'css', 'watch']);
+gulp.task('browser-sync', function () {
+  browserSync.init({
+    proxy: "http://localhost:8888"
+  });
+});
+
+gulp.task('default', ['js', 'css', 'watch', 'browser-sync'], function (done) {
+      browserSync.reload();
+      done(););
 
 function onError(err) {
     console.log(err);

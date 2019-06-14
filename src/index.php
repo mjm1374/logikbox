@@ -16,7 +16,7 @@
 				<!--/.navbar-collapse -->
 			</div>
 		</nav>
-		<div class="worldcup"><div></div></div>
+		<div class="worldcup"></div>
 		<div class="jumbotron">
 			<div class="container">
 				<h1>Hello, World!</h1>
@@ -93,7 +93,9 @@
 			<hr>
 			<footer>
 				<?php include_once("footer.php"); ?>
+				
 			</footer>
+			<div class="credits">Icons made by <a href="https://www.freepik.com/?__hstc=57440181.79d66b1f1a0716ef8134194c7c62ad28.1560433074791.1560433074791.1560433074791.1&__hssc=57440181.4.1560433074792&__hsfp=3359128668" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 		</div>
 		
 		<?php
