@@ -27,7 +27,7 @@ function GetSpaceX(max_cnt){
                     details = mission.description;
                     if(details == '' || details == null){ details = "<span class=''>There are no details available for this mission.</span>"; }
                     target.find(".launch__details").html(details);
-                   }});
+                    }});
                 promises.push(description);
             } else {
                 description = launches[i].details;
@@ -43,7 +43,7 @@ function GetSpaceX(max_cnt){
         }
         $.when.apply(null, promises).done(function(){
             //console.log('All done')
-         });
+        });
 
     }
     );
@@ -73,12 +73,6 @@ function timeConverter(UNIX_timestamp){
     var min = a.getMinutes();
     var sec = a.getSeconds();
     var time = month + ' ' +  date  + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
-    return time;
-  }
 
-{/* <div class="launch__mission__name"></div>
-<div class="launch__rocket"></div>
-<div class="launch__date"></div>
-<div class="launch__details"></div>
-<div class="launch__site"></div>
-<div class="launch__img"></div> */}
+    return time;
+}

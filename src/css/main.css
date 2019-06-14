@@ -51,7 +51,10 @@ h2.homeH2{
 	height:160px;
 	display: flex;
 	overflow-y: auto;
+	background-image: url(/img/Womens-World-Cup-2019-1140x510.png);
+	background-size: cover;
 }
+
 .center{
 	margin:0 auto;
 	text-align: center;
@@ -65,6 +68,14 @@ h2.homeH2{
 	margin: 10px;
 	padding:10px;
 	border: 1px solid black;
+	background: white;
+	opacity: .9;
+	filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
+}
+@media (max-width: 414px) {
+	.worldcup__group {
+		min-width: 80%;
+	}
 }
 
 .worldcup__teams--shade1{

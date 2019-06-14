@@ -17,7 +17,6 @@ function GetGroupResults(max_cnt){
             groupString += teams;
             groupString += "</table></div>";
             worldcupBoard.append(groupString);
-
         }
         
         
