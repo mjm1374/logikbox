@@ -13,7 +13,7 @@ function GetGroupResults(max_cnt){
             let letter = group.letter;
             let teams = getTeams(group.ordered_teams);
             groupString += letter + "'>GROUP " + letter + "</th>";
-            groupString += "<th scope='col' class='right' title='GP'>GP</th><th scope='col' class='right' title='W' > W </th><th scope='col' class='right' title='D'>D</th><th scope='col' class='right' title='L' > L </th><th scope='col' class='right' title='GD'>GD</th><th scope='col' class='right' title='P'> P </th></tr></thead>"
+            groupString += "<th scope='col' class='center' title='GP'>GP</th><th scope='col' class='center' title='W' > W </th><th scope='col' class='center' title='D'>D</th><th scope='col' class='center' title='L' > L </th><th scope='col' class='center' title='GD'>GD</th><th scope='col' class='center' title='P'> P </th></tr></thead>"
             groupString += teams;
             groupString += "</table></div>";
             worldcupBoard.append(groupString);
@@ -33,30 +33,16 @@ function getTeams(teams){
         let team = teams[j];
         let name = team.country;
         teamsString += "<tr class='worldcup__teams'>";
-        teamsString += "<td>" + name + "</td>"
-        teamsString += "<td class='center'>" + team.games_played + "</td>"
-        teamsString += "<td class='center'>" + team.wins + "</td>"
-        teamsString += "<td class='center'>" + team.draws + "</td>"
-        teamsString += "<td class='center'>" + team.losses + "</td>"
-        teamsString += "<td class='center'>" + team.goal_differential + "</td>"
-        teamsString += "<td class='center'>" + team.points + "</td>"
+        teamsString += "<td><div class='worldcup__flag' style='background-image: url(/img/flags/" + name.replace(" ", "") + ".svg'></div><div class='worldcup__teamName'>" + name + "</div></td>";
+        teamsString += "<td class='center'>" + team.games_played + "</td>";
+        teamsString += "<td class='center'>" + team.wins + "</td>";
+        teamsString += "<td class='center'>" + team.draws + "</td>";
+        teamsString += "<td class='center'>" + team.losses + "</td>";
+        teamsString += "<td class='center'>" + team.goal_differential + "</td>";
+        teamsString += "<td class='center'>" + team.points + "</td>";
 
         teamsString += "</tr>"; 
 
-// "id": 1,
-// "country": "France",
-// "alternate_name": null,
-// "fifa_code": "FRA",
-// "group_id": 1,
-// "group_letter": "A",
-// "wins": 2,
-// "draws": 0,
-// "losses": 0,
-// "games_played": 2,
-// "points": 6,
-// "goals_for": 6,
-// "goals_against": 1,
-// "goal_differential": 5
     }
     return teamsString;
 }
