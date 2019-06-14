@@ -16,6 +16,7 @@
 				<!--/.navbar-collapse -->
 			</div>
 		</nav>
+		<div class="worldcup"></div>
 		<div class="jumbotron">
 			<div class="container">
 				<h1>Hello, World!</h1>
@@ -121,6 +122,7 @@
 				//console.log( json.lines[Math.floor(Math.random() * 11)]);
 				GetInstagram();
 				GetSpaceX(3);
+				GetGroupResults();
 			});
 		</script>
 	<script src="js/goodwill-halloween.min.js"></script>
