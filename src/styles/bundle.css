@@ -71,13 +71,13 @@ h2.homeH2 {
   background-image: url("/img/Womens-World-Cup-2019-1140x510.png");
   background-size: cover;
   filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
-  padding: 10px;
+  padding: 15px 10px 0px 10px;
 }
 
 .worldcup {
   background: transparent;
   width: 100%;
-  height: 145px;
+  height: 150px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
