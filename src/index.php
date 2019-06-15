@@ -101,6 +101,7 @@
 		<?php
 			include_once("modal-photo.php");
 			include_once("modal-video.php");
+			include_once("modal-worldcup.php");
 		?>
 		
 		<!-- /container -->

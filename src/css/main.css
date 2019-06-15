@@ -91,6 +91,12 @@ h2.homeH2{
 	text-align: center;
 	width:10%;
 }
+
+.middle{
+	margin:0 auto;
+	text-align: center;
+}
+
 .worldcup__group{
 	display: block;
 	flex: 0 0 auto;
@@ -111,6 +117,19 @@ h2.homeH2{
 	.worldcup__group {
 		min-width: 80%;
 	}
+
+	.hideMobile {
+		display:none;
+	}
+}
+.wordcup__matchDate{
+	padding-left:10px;
+}
+.worldcup__group--matches{
+	height: auto;
+	max-height: 400px;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .worldcup__teams--shade0{
@@ -120,21 +139,37 @@ h2.homeH2{
 	width:100%;
 }
 .worldcup__flag{
-	width: 15px;
-	height: 15px;
 	border-radius: 100%;
 	background-size: cover;
+	background-position-x: 50%;
+}
+.worldcup__flag--small{
+	width: 15px;
+	height: 15px;
 	display: inline-block;
 	margin-right: 5px;
-	background-position-x: 50%;
+
+}
+.worldcup__flag--large {
+	width: 30px;
+	height: 30px;
+	display: block;
+	margin: 0 auto;
+
 }
 
 .worldcup__teamName{
 	display: inline-block;
 	height: 15px;
 	vertical-align: 15%;
+	cursor: pointer;
 }
-
+.worldcup__team--winner{
+	font-weight: 700;
+}
+.wordcup__score{
+	padding:10px;
+}
 
 
 .jumbotron {
