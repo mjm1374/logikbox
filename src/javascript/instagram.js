@@ -1,9 +1,21 @@
+class Instragram {
+	constructor(caption = '', date, isVideo = false, mediaURL, location, likes) {
+		this.caption = caption;
+        this.date = date;
+        this.isVideo = isVideo;
+        this.mediaURL = mediaURL;
+        this.location = location;  
+        this.likes = likes;
+	}
+} 
+
+let instagramGallery = [];
 
 function GetInstagram(max_id){
 	$.when(  $.get( 'https://api.instagram.com/v1/users/self/media/recent/', 
 	{ access_token: access_token, max_id: max_id } ) )
 	.then(function( result ) {
-		console.log( "my results", result );
+		//console.log( "my results", result );
 		var myPics =  result.data;
 		var NextMaxID = result.pagination.next_max_id;
 
@@ -23,7 +35,10 @@ function GetInstagram(max_id){
             let fullDate = days[date.getDay()]  + ",  " + months[date.getMonth()] + " " + day + "." + fullYear;
             let location =  new setLocation();
             let myCaption = "";
-            let likes = ' <span class="text-red">&hearts;</span><span class="instagram__date likecnt"> ' + myPics[i].likes.count +  '</span>';
+            let mediaURL = "";
+            let likes =  myPics[i].likes.count;
+            
+            
 
             if(myPics[i].caption != undefined || myPics[i].caption != null) {
                 myCaption =  myPics[i].caption.text;
@@ -42,10 +57,12 @@ function GetInstagram(max_id){
             myString += "<div class='instagram__holder'>";
             
             if(isVideo == false){
-                myString += "<div class='instagram__border pic__modal' data-pic='" + myPics[i].images.standard_resolution.url + "' data-caption='" +  myCaption + "' style='background-image:url(" + myPics[i].images.standard_resolution.url + ");'><div class='likebox'>"  + likes + "</div>";
+                mediaURL =  myPics[i].images.standard_resolution.url;
+                myString += "<div class='instagram__border pic__modal' data-pic='" + mediaURL+ "' data-caption='" +  myCaption + "' style='background-image:url(" + mediaURL + ");'><div class='likebox'><span class='text-red'>&hearts;</span><span class='instagram__date likecnt'>"  + likes + "</span></div>";
             }else{
-                myString += "<div class='instagram__border vid__modal' data-vid='" + myPics[i].videos.standard_resolution.url + "' data-caption='" +  myCaption + "' ><div class='likebox'>"  + likes + "</div>";
-                myString += "<div class='instagram__video' ><video autoplay muted loop><source src=" + myPics[i].videos.low_resolution.url + " type='video/mp4'></video> </div>";
+                mediaURL =  myPics[i].videos.standard_resolution.url;
+                myString += "<div class='instagram__border vid__modal' data-vid='" + mediaURL + "' data-caption='" +  myCaption + "' ><div class='likebox'><span class='text-red'>&hearts;</span><span class='instagram__date likecnt'>"  + likes + "</span></div>";
+                myString += "<div class='instagram__video' ><video autoplay muted loop><source src=" + mediaURL + " type='video/mp4'></video> </div>";
             }
             myString += "</div><div class='instagram__copy'>" + myCaption + "<br /><span class='instagram__date'>" + fullDate  ;
             if(location.name != "" && location.name != undefined){
@@ -53,7 +70,11 @@ function GetInstagram(max_id){
             }
             myString += "</span></div>"  ;
             myString += "</div></div>";
+
+            instagramGallery.push(new Instragram(myCaption, date, isVideo, mediaURL , location, likes));
+
             $('.instagram').append(myString);
+            
         }    
 	}).fail(function( err ) {
 		console.log("Error: " +  err.responseText);

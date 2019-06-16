@@ -16,6 +16,7 @@
 				<!--/.navbar-collapse -->
 			</div>
 		</nav>
+		<div class="worldcup--wrapper"><div class="worldcup"></div></div>
 		<div class="jumbotron">
 			<div class="container">
 				<h1>Hello, World!</h1>
@@ -75,7 +76,7 @@
 						<h2 class="homeH2">Instagram</h2>
 						<img src="img/instagram.svg" class="logoimg" alt="Instagram" />
 						<p>Studying chef, father of 2 boys and one cat, world traveler and past-life professional photographer. </p>
-						 <a class="btn btn-default socialContainer--btn" href="https://www.instagram.com/mjm1374/" role="button">View details &raquo;</a>
+						<a class="btn btn-default socialContainer--btn" href="https://www.instagram.com/mjm1374/" role="button">View details &raquo;</a>
 					</div>
 				</div>
 				<div class="col-md-12 launchHeader">
@@ -92,12 +93,15 @@
 			<hr>
 			<footer>
 				<?php include_once("footer.php"); ?>
+				
 			</footer>
+			<div class="credits">Icons made by <a href="https://www.freepik.com/?__hstc=57440181.79d66b1f1a0716ef8134194c7c62ad28.1560433074791.1560433074791.1560433074791.1&__hssc=57440181.4.1560433074792&__hsfp=3359128668" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 		</div>
 		
 		<?php
 			include_once("modal-photo.php");
 			include_once("modal-video.php");
+			include_once("modal-worldcup.php");
 		?>
 		
 		<!-- /container -->
@@ -121,9 +125,10 @@
 				//console.log( json.lines[Math.floor(Math.random() * 11)]);
 				GetInstagram();
 				GetSpaceX(3);
+				GetGroupResults();
 			});
 		</script>
-	<script src="js/goodwill-halloween.min.js"></script>
+	<!-- <script src="js/goodwill-halloween.min.js"></script> -->
 	</body>
 	</html>
 

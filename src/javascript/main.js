@@ -79,5 +79,19 @@ $(document).on('click','.vid__modal', function(e){
 		var toggleWidth = $("#qrCode").width() < 38 ? "210px" : "37px";
 		$('#qrCode').animate({ width: toggleWidth });
 	});
+
+	//console.log("xxx",instagramGallery);
+
+	//panorama
+	var panorama = $('.jumbotron');
+	var left = panorama.offset().left;
+	var width = panorama.width();
+
+	$('.jumbotron').mousemove(function (e) {
+	var offset = e.pageX - left;
+	var percentage = offset / width * 100;
+	panorama.css('background-position', percentage + '% 0');
+	});
+
 });
 
