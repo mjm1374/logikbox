@@ -10,13 +10,13 @@ body {
 	padding-top: 50px;
 	padding-bottom: 20px;
 	font-family: 'Archivo', sans-serif;
-	width:100%
+	width:100%;
 }
 
 .text-red{
 	color:#910505;
 	margin-right: 2px;
-}
+}x
 
 .likebox{
 	position: absolute;
@@ -39,7 +39,7 @@ h1 {
 	font-family: 'Permanent Marker', cursive !important;
 }
 h2 {
-	color: #efefef;
+	color: #efefef; 
 }
 
 h2.homeH2{

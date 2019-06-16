@@ -61,14 +61,14 @@ function getMatches(team){
             let homeScore = match.home_team.goals;
             let awyaScore = match.away_team.goals;
             let winner = match.winner;
-            let shade = i % 2
+            let shade = i % 2;
 
             matchesString += "<tr class=' worldcup__teams--shade" + shade + "'>";
              
             matchesString += "<td class='wordcup__teamAndFlag middle'><div class='worldcup__flag worldcup__flag--large' style='background-image: url(/img/flags/" + homeTeam.replace(" ", "") + ".svg)'></div><div class='worldcup__teamName";
             if (winner == homeTeam) matchesString += " worldcup__team--winner";
             matchesString += "'> " + homeTeam + " </div></td>";
-            matchesString += "<td class='wordcup__score middle'><span class='small'>" + date.toLocaleDateString() + "</span><br />" + homeScore + "  -  " + awyaScore + "<br/>" + venue + "</td>";
+            matchesString += "<td class='wordcup__score middle'><span class='small'>" + date.toLocaleDateString() + "<br/>" + date.toLocaleTimeString() +  "</span><br />" + homeScore + "  -  " + awyaScore + "<br/>" + venue + "</td>";
             matchesString += "<td class='wordcup__teamAndFlag middle'><div class='worldcup__flag  worldcup__flag--large' style='background-image: url(/img/flags/" + awayTeam.replace(" ", "") + ".svg)'></div><div class='worldcup__teamName";
             if (winner == awayTeam) matchesString += " worldcup__team--winner";
             matchesString += "'> " + awayTeam + " </div></td></tr>";

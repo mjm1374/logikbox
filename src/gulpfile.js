@@ -1,64 +1,93 @@
-var gulp = require('gulp');
-//var cssnano = require('gulp-cssnano');
-//var sass = require('gulp-sass');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify-es').default;
-var babel = require('gulp-babel');
-var browserSync = require('browser-sync').create();
-//var sourcemaps =  require('gulp-sourcemaps');
-//var autoprefixer = require('gulp-autoprefixer');
-//var sassdoc = require('sassdoc');
+"use strict";
 
-var concatCss = require('gulp-concat-css');
- 
-gulp.task('css', function () {
-  return gulp.src('css/**/*.css')
-    .pipe(concatCss("styles/bundle.css"))
-    .pipe(gulp.dest(''));
-});
+const gulp = require("gulp");
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify-es').default;
+const babel = require('gulp-babel');
+const browsersync = require("browser-sync").create();
+const concatCss = require('gulp-concat-css');
+const cssnano = require("cssnano");
+const autoprefixer = require("autoprefixer");
+const postcss = require("gulp-postcss");
 
-// gulp.task('sass', function () {
-//     return gulp.src('scss/*.scss')
-//         .pipe(sourcemaps.init())
-//         .pipe(sass())
-//         .pipe(sourcemaps.write())
-//         .pipe(autoprefixer())
-//         .pipe(cssnano())
-//         .pipe(gulp.dest('css'))
-//         .pipe(sassdoc())
-//         // Release the pressure back and trigger flowing mode (drain)
-//         // See: http://sassdoc.com/gulp/#drain-event
-//         .resume();
-// });
-
-gulp.task('js', function () {
-    return gulp.src(['javascript/*.js'])
-        .pipe(concat('script.min.js'))
-        .on('error', onError)
-        //.pipe(babel({  presets: ['@babel/env'] }))
-        //.on('error', onError)
-        .pipe(uglify())
-        .on('error', onError)
-        .pipe(gulp.dest('js'));
-});
-
-gulp.task('watch', function () {
-    //gulp.watch('scss/*.scss', ['sass']);
-    gulp.watch('javascript/*.js', ['js']);
-    gulp.watch('css/*.css', ['css']);
-});
-
-gulp.task('browser-sync', function () {
-  browserSync.init({
-    proxy: "http://localhost:8888"
+// BrowserSync
+function browserSync(done) {
+  browsersync.init({
+      proxy: "localhost:8888",
+      baseDir: "./",
+      open: true,
+      notify: false
   });
-});
+  done();
+}
 
-gulp.task('default', ['js', 'css', 'watch', 'browser-sync'], function (done) {
-      browserSync.reload();
-      done(););
+// BrowserSync Reload
+function browserSyncReload(done) {
+  browsersync.reload();
+  done();
+}
+
+function defaultTask(done) {
+  // place code for your default task here
+  console.log('gulp is running');
+  build();
+  watch();
+  done();
+}
+
+function watchFiles(done) {
+  gulp.watch('css/*.css', css);
+  gulp.watch('javascript/**/*.js', scripts);
+  gulp.watch("./app/*.php").on("change", browserSyncReload);
+  done();
+}
+
+// CSS task
+function css() {
+  return gulp
+    .src('css/**/*.css')
+    .pipe(concatCss("styles/bundle.css"))
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(gulp.dest('./'))
+    // .pipe(sass({
+    //   outputStyle: "expanded"
+    // }))
+    // .pipe(gulp.dest("./_site/assets/css/"))
+    // .pipe(rename({
+    //   suffix: ".min"
+    // }))
+    // 
+    // .pipe(gulp.dest("./_site/assets/css/"))
+    .pipe(browsersync.stream())
+    ;
+}
+
+// Transpile, concatenate and minify scripts
+function scripts() {
+  return (
+    gulp
+    .src(['javascript/*.js'])
+    .pipe(concat('script.min.js'))
+    .on('error', onError)
+    //.pipe(babel({  presets: ['@babel/env'] }))
+    //.on('error', onError)
+    .pipe(uglify())
+    .on('error', onError)
+    .pipe(gulp.dest('./js'))
+    .pipe(browsersync.stream())
+  );
+}
 
 function onError(err) {
-    console.log(err);
-    this.emit('end');
-  }
+  console.log(err);
+  this.emit('end');
+}
+
+const watch = gulp.parallel(watchFiles, browserSync);
+const js = gulp.series( scripts);
+const build = gulp.series( gulp.parallel(css,js));
+
+exports.watch = watch;
+exports.build = build;
+exports.js = js;
+exports.default = defaultTask;
