@@ -9,6 +9,7 @@ const concatCss = require('gulp-concat-css');
 const cssnano = require("cssnano");
 const autoprefixer = require("autoprefixer");
 const postcss = require("gulp-postcss");
+const plumber = require("gulp-plumber");
 
 // BrowserSync
 function browserSync(done) {
@@ -46,6 +47,7 @@ function watchFiles(done) {
 function css() {
   return gulp
     .src('css/**/*.css')
+    .pipe(plumber())
     .pipe(concatCss("styles/bundle.css"))
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(gulp.dest('./'))
@@ -67,6 +69,7 @@ function scripts() {
   return (
     gulp
     .src(['javascript/*.js'])
+    .pipe(plumber())
     .pipe(concat('script.min.js'))
     .on('error', onError)
     //.pipe(babel({  presets: ['@babel/env'] }))
