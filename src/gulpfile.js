@@ -10,6 +10,7 @@ const cssnano = require("cssnano");
 const autoprefixer = require("autoprefixer");
 const postcss = require("gulp-postcss");
 const plumber = require("gulp-plumber");
+const sourcemaps = require('gulp-sourcemaps');
 
 // BrowserSync
 function browserSync(done) {
@@ -50,6 +51,7 @@ function css() {
     .pipe(plumber())
     .pipe(concatCss("styles/bundle.css"))
     .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest('./'))
     // .pipe(sass({
     //   outputStyle: "expanded"

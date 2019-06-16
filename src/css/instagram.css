@@ -1,0 +1,105 @@
+.instagram {}
+
+.instagram__holder {
+    position: relative;
+    height: 0px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding-top: 130%;
+}
+
+.instagram__border {
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    max-width: 100%;
+    width: 100%;
+    height: 0px;
+    display: flex;
+    flex-grow: 1;
+    margin-bottom: 2px;
+    padding-top: 100%;
+    border: 10px solid #f5f3f3;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
+    transition: all 0.4s ease-in-out;
+}
+
+.instagram__border:hover {
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
+}
+
+.instagram__video {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    outline: none;
+}
+
+#bigstagram--vid {
+    outline: none;
+}
+
+.instagram__video video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -100;
+    right: 0;
+    top: 0;
+    position: absolute;
+    overflow: hidden;
+}
+
+.instagram__copy {
+    position: absolute;
+    bottom: 0px;
+    height: 40px;
+    line-height: 1em;
+    padding-top: 10px;
+}
+
+.instagram__date {
+    font-size: 0.65em;
+}
+
+#signature {
+    background: url(../img/signature.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 57px;
+    float: right;
+
+}
+
+.modalImage {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+    z-index: 20000;
+    ;
+}
+
+.modal-backdrop {
+    z-index: 0 !important;
+}
+
+
+ @media (max-width: 768px) {
+     .instagram__holder {
+         padding-top: 120%;
+     }
+}
