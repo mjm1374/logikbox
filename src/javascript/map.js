@@ -1,4 +1,5 @@
 
+ let map;
 
 function initMap(newLat, newLng) {
     //console.log('map ' + newLat + "/" + newLng);
@@ -15,12 +16,8 @@ function initMap(newLat, newLng) {
 
     map.addListener('dragend', function () {
         //    
-        newCenter = map.getCenter();
-        at = newCenter.lat() + "," + newCenter.lng();;
-       // getplaces();
-        //    console.log("xxx: " + newCenter.lat());
-        //
-        //
+        let newCenter = map.getCenter();
+        let at = newCenter.lat() + "," + newCenter.lng();;
     });
 
 }
@@ -31,10 +28,7 @@ function initMap(newLat, newLng) {
          
             navigator.geolocation.getCurrentPosition(showPosition,showError);  
         } else { 
-            //x.innerHTML = "Geolocation is not supported by this browser.";
-            //console.log("in getloc");
-            //defaultLocal = setLocation();
-            //console.log(defaultLocal.setLat);
+
         }
     } 
 
@@ -59,9 +53,10 @@ function initMap(newLat, newLng) {
       } 
           
     function showPosition(position) {
-        currentLat = position.coords.latitude;
-        currentLng = position.coords.longitude;
-        currentAlt = position.coords.altitude;
+        let pos = position;
+        let currentLat = pos.coords.latitude;
+        let currentLng = pos.coords.longitude;
+        let currentAlt = pos.coords.altitude;
         if(currentAlt != null){currentAlt = currentAlt.toFixed(6);}
         //console.log(currentLat, currentLng, currentAlt);
         //x.innerHTML =  "Your current coordinates: <br />Lat: " + currentLat.toFixed(6) + "<br/>Lng: " + currentLng.toFixed(6) + "<br/>Alt: " + currentAlt;
@@ -70,9 +65,9 @@ function initMap(newLat, newLng) {
         //sLng.value = position.coords.longitude;
         initMap(currentLat ,currentLng ); // init gmap
         //sButton.disabled = false;
-        loop = false;
+        let loop = false;
         //findSatAbove();
-        at = currentLat + "," + currentLng;
+        let at = currentLat + "," + currentLng;
         
         return new setLocation(currentLat,currentLng,currentAlt);
         
@@ -173,8 +168,8 @@ let myTravels = [
 
 
     function goTravel(){
-        var arrayLength = myTravels.length;
-        for (var i = 0; i < arrayLength; i++) {
+        let arrayLength = myTravels.length;
+        for (let i = 0; i < arrayLength; i++) {
            // console.log(myTravels[i].name);
             setMarkers(myTravels[i].setLat, myTravels[i].setLng, myTravels[i].name);
         }
@@ -183,7 +178,7 @@ let myTravels = [
     }
 
     function setMarkers(lat, lng, copy) {
-        var marker = new google.maps.Marker({
+        let marker = new google.maps.Marker({
             
             position: {
                 lat: parseFloat(lat),
@@ -193,7 +188,7 @@ let myTravels = [
             title: copy
         });
    
-        var infowindow = new google.maps.InfoWindow({
+        let infowindow = new google.maps.InfoWindow({
             content: copy
         });
     
@@ -211,7 +206,7 @@ let myTravels = [
     function DeleteMarkers() {
         //Loop through all the markers and remove
         //console.log(markers.length);
-        for (var i = 0; i < markers.length; i++) {
+        for (let i = 0; i < markers.length; i++) {
             markers[i].setMap(null);
         }
         markers = [];

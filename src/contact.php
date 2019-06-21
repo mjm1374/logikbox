@@ -83,7 +83,7 @@
 					},
 				},
 				messages: {
-					name: "Please enter your firstname",
+					name: "Please enter your first name",
 					email: "Please enter a valid email address",
 				}
 			});
