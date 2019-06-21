@@ -6,7 +6,7 @@ function GetSpaceX(max_cnt){
         console.log(launches); 
         var promises = [];
 
-        for(i=0; i < launches.length; i++){
+        for(let i=0; i < launches.length; i++){
             buildTargetBlock(i);
             let rocket = launches[i].rocket.rocket_id;
             let rocketImg = 'falcon9.png';

@@ -25,7 +25,7 @@ function GetInstagram(max_id){
 			$('#getMoreIstagram').hide();
         }
         
-        for(i = 0; i < myPics.length; i++) {
+        for(let i = 0; i < myPics.length; i++) {
             let myString = "";
             let isVideo = false;
             let date = new Date(parseInt(myPics[i].created_time) * 1000);

@@ -31,7 +31,7 @@ function browserSyncReload(done) {
 
 function defaultTask(done) {
   // place code for your default task here
-  console.log('gulp is running');
+  console.log('Gulp 4 is runnging');
   build();
   watch();
   done();
@@ -48,6 +48,7 @@ function watchFiles(done) {
 function css() {
   return gulp
     .src('css/**/*.css')
+    .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(concatCss("styles/bundle.css"))
     .pipe(postcss([autoprefixer(), cssnano()]))
@@ -71,6 +72,10 @@ function scripts() {
   return (
     gulp
     .src(['javascript/*.js'])
+    .pipe(sourcemaps.init())
+     .pipe(babel({
+       presets: ['@babel/env']
+     }))
     .pipe(plumber())
     .pipe(concat('script.min.js'))
     .on('error', onError)
@@ -78,6 +83,7 @@ function scripts() {
     //.on('error', onError)
     .pipe(uglify())
     .on('error', onError)
+    .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest('./js'))
     .pipe(browsersync.stream())
   );

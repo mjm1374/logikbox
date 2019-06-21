@@ -3,15 +3,16 @@
 function GetGroupResults(max_cnt){
 	$.when(  $.get( 'https://worldcup.sfg.io/teams/group_results' ) )
 	.then(function( groups ) {
-        console.log("yyy",groups);
-        let worldcupBoard = $('.worldcup');
+        console.log("groups: ", groups);
+        let worldcupBoard = $('.worldcup'); 
+         
         
-        
-        for (i = 0; i < groups.length; i++) {
-            let groupString = "<div class='worldcup__group'><table class='worldcup__table'><thead><tr><th scope='col' class='left' title='GROUP ";
-            let group = groups[i];
-            let letter = group.letter;
-            let teams = getTeams(group.ordered_teams);
+        for (let i = 0; i < groups.length; i++) {
+            console.log('dddd: ' + i);
+            var groupString = "<div class='worldcup__group'><table class='worldcup__table'><thead><tr><th scope='col' class='left' title='GROUP ";
+            var group = groups[i];
+            var letter = group.letter;
+            var teams = getTeams(group.ordered_teams);
             groupString += letter + "'>GROUP " + letter + "</th>";
             groupString += "<th scope='col' class='center' title='GP'>GP</th><th scope='col' class='center' title='W' > W </th><th scope='col' class='center' title='D'>D</th><th scope='col' class='center' title='L' > L </th><th scope='col' class='center' title='GD'>GD</th><th scope='col' class='center' title='P'> P </th></tr></thead>";
             groupString += teams;
@@ -28,7 +29,7 @@ function GetGroupResults(max_cnt){
 function getTeams(teams){
     let teamsString = "";
     console.log(teams);
-    for (j = 0; j < teams.length; j++) {
+    for (let j = 0; j < teams.length; j++) {
         let team = teams[j];
         let name = team.country;
         teamsString += "<tr class='worldcup__teams worldcup__teams--shade" + j % 2 + "'>";
@@ -52,7 +53,7 @@ function getMatches(team){
         
         let matchesString = "<div class='worldcup__group worldcup__group--matches'><table class='worldcup__table'><thead><tr><th scope='col' class='middle' title='Home'> Home </th><th scope='col' class='middle' title='date and score '></th> <th scope='col' class='middle' title='away' > Away </th></tr></thead> ";
 
-        for(i = 0; i < matches.length; i++){
+        for(let i = 0; i < matches.length; i++){
             let match = matches[i];
             let date = new Date(match.datetime);
             let homeTeam = match.home_team_country;
