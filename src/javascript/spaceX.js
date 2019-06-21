@@ -22,6 +22,7 @@ function GetSpaceX(max_cnt){
             if(rocket == 'falconheavy') { rocketImg = 'falconheavy.png'; }
             if(payload.toLowerCase().indexOf("dragon") >= 0) { rocketImg = 'dragon.png'; }
             if(launches[i].details == '' || launches[i].details == null) {
+                let details;
                 description =  $.ajax({url: 'https://api.spacexdata.com/v3/missions/' + missionID, success: function( mission ) {
                     //console.log("mission",mission);
                     details = mission.description;
