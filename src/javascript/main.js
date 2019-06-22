@@ -12,7 +12,24 @@ const months = ["January","Febuary","March","April","May","June","July","August"
 
 jQuery(document).ready(function($) {
 	var timelineBlocks = $('.cd-timeline-block'),
-		offset = 0.8;
+		offset = 0.8,
+		initial_position = null;
+
+
+	window.addEventListener('deviceorientation', function (e) {
+		if (initial_position === null) {
+			initial_position = Math.floor(e.alpha);
+		};
+
+		var current_position = initial_position - Math.floor(e.alpha);
+
+		//$('#acceleration').html(current_position  + ' m/s2');
+
+		var offset = current_position + left;
+		$('#acceleration').html(current_position + " - " + left );
+		var percentage = offset / width * 100;
+		panorama.css('background-position', percentage + '% 0');
+	});
 		
 $('#getMoreIstagram').on("click",function(e){
 	e.preventDefault();
@@ -92,6 +109,24 @@ $(document).on('click','.vid__modal', function(e){
 	var percentage = offset / width * 100;
 	panorama.css('background-position', percentage + '% 0');
 	});
+
+	if (window.DeviceMotionEvent) {
+		window.addEventListener("devicemotion", motion, false);
+	} else {
+		console.log("DeviceMotionEvent is not supported");
+	}
+
+
+	
+
+	function motion(event) {
+		console.log("Accelerometer: "
+			+ event.accelerationIncludingGravity.x + ", "
+			+ event.accelerationIncludingGravity.y + ", "
+			+ event.accelerationIncludingGravity.z
+		);
+	}
+
 
 });
 
