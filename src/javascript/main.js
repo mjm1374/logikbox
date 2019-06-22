@@ -19,14 +19,21 @@ jQuery(document).ready(function($) {
 	window.addEventListener('deviceorientation', function (e) {
 		if (initial_position === null) {
 			initial_position = Math.floor(e.alpha);
-		};
+		}
 
-		var current_position = initial_position - Math.floor(e.alpha);
+		let current_position = initial_position - Math.floor(e.alpha);
+		let right = panorama.width();
+		let midPoint = right / 2; 
 
-		//$('#acceleration').html(current_position  + ' m/s2');
+		if (current_position < 0){
+			offset = offset + 10;
+		}else{
+			offset = offset - 10;
+		}
 
-		var offset = current_position + left;
-		$('#acceleration').html(current_position + " - " + left );
+		if (offset <= left) offset = 0;
+		if (offset >= right) offset = right;
+		//console.log(current_position + " - " + left + " - " + initial_position);
 		var percentage = offset / width * 100;
 		panorama.css('background-position', percentage + '% 0');
 	});
@@ -106,6 +113,7 @@ $(document).on('click','.vid__modal', function(e){
 
 	$('.jumbotron').mousemove(function (e) {
 	var offset = e.pageX - left;
+		console.log(e.pageX  + " - " + offset);
 	var percentage = offset / width * 100;
 	panorama.css('background-position', percentage + '% 0');
 	});

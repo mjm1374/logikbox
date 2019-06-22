@@ -17,7 +17,7 @@
 			</div>
 		</nav>
 
-		<div id="acceleration" style="display:block; widht:100%; height:100px;"></div>
+		<div id="acceleration" style="display:none; widht:100%; height:100px;"></div>
 		<div class="worldcup--wrapper"><div class="worldcup"></div></div>
 		<div class="jumbotron">
 			<div class="container">
