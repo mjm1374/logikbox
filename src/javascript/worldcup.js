@@ -9,10 +9,10 @@ function GetGroupResults(max_cnt){
         
         for (let i = 0; i < groups.length; i++) {
             console.log('dddd: ' + i);
-            var groupString = "<div class='worldcup__group'><table class='worldcup__table'><thead><tr><th scope='col' class='left' title='GROUP ";
-            var group = groups[i];
-            var letter = group.letter;
-            var teams = getTeams(group.ordered_teams);
+            let groupString = "<div class='worldcup__group'><table class='worldcup__table'><thead><tr><th scope='col' class='left' title='GROUP ";
+            let group = groups[i];
+            let letter = group.letter;
+            let teams = getTeams(group.ordered_teams);
             groupString += letter + "'>GROUP " + letter + "</th>";
             groupString += "<th scope='col' class='center' title='GP'>GP</th><th scope='col' class='center' title='W' > W </th><th scope='col' class='center' title='D'>D</th><th scope='col' class='center' title='L' > L </th><th scope='col' class='center' title='GD'>GD</th><th scope='col' class='center' title='P'> P </th></tr></thead>";
             groupString += teams;

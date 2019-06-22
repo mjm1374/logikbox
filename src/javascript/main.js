@@ -12,7 +12,31 @@ const months = ["January","Febuary","March","April","May","June","July","August"
 
 jQuery(document).ready(function($) {
 	var timelineBlocks = $('.cd-timeline-block'),
-		offset = 0.8;
+		offset = 0.8,
+		initial_position = null;
+
+
+	window.addEventListener('deviceorientation', function (e) {
+		if (initial_position === null) {
+			initial_position = Math.floor(e.alpha);
+		}
+
+		let current_position = initial_position - Math.floor(e.alpha);
+		let right = panorama.width();
+		let midPoint = right / 2; 
+
+		if (current_position < 0){
+			offset = offset + 10;
+		}else{
+			offset = offset - 10;
+		}
+
+		if (offset <= left) offset = 0;
+		if (offset >= right) offset = right;
+		//console.log(current_position + " - " + left + " - " + initial_position);
+		var percentage = offset / width * 100;
+		panorama.css('background-position', percentage + '% 0');
+	});
 		
 $('#getMoreIstagram').on("click",function(e){
 	e.preventDefault();
@@ -89,9 +113,28 @@ $(document).on('click','.vid__modal', function(e){
 
 	$('.jumbotron').mousemove(function (e) {
 	var offset = e.pageX - left;
+		console.log(e.pageX  + " - " + offset);
 	var percentage = offset / width * 100;
 	panorama.css('background-position', percentage + '% 0');
 	});
+
+	if (window.DeviceMotionEvent) {
+		window.addEventListener("devicemotion", motion, false);
+	} else {
+		console.log("DeviceMotionEvent is not supported");
+	}
+
+
+	
+
+	function motion(event) {
+		console.log("Accelerometer: "
+			+ event.accelerationIncludingGravity.x + ", "
+			+ event.accelerationIncludingGravity.y + ", "
+			+ event.accelerationIncludingGravity.z
+		);
+	}
+
 
 });
 
