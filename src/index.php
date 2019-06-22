@@ -19,7 +19,7 @@
 
 		<div id="acceleration" style="display:none; widht:100%; height:100px;"></div>
 		<div class="worldcup--wrapper"><div class="worldcup"></div></div>
-		<div class="jumbotron">
+		<div class="jumbotron jumbotron--homepage">
 			<div class="container">
 				<h1>Hello, World!</h1>
 				<p id="pickupLine"></p>
