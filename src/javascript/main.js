@@ -118,22 +118,7 @@ $(document).on('click','.vid__modal', function(e){
 	panorama.css('background-position', percentage + '% 0');
 	});
 
-	if (window.DeviceMotionEvent) {
-		window.addEventListener("devicemotion", motion, false);
-	} else {
-		console.log("DeviceMotionEvent is not supported");
-	}
-
-
-	
-
-	function motion(event) {
-		console.log("Accelerometer: "
-			+ event.accelerationIncludingGravity.x + ", "
-			+ event.accelerationIncludingGravity.y + ", "
-			+ event.accelerationIncludingGravity.z
-		);
-	}
+ 
 
 
 });
