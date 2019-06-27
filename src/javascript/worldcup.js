@@ -64,7 +64,6 @@ function getMatches(team){
             let shade = i % 2;
 
             matchesString += "<tr class=' worldcup__teams--shade" + shade + "'>";
-             
             matchesString += "<td class='wordcup__teamAndFlag middle'><div class='worldcup__flag worldcup__flag--large' style='background-image: url(/img/flags/" + homeTeam.replace(" ", "") + ".svg)'></div><div class='worldcup__teamName";
             if (winner == homeTeam) matchesString += " worldcup__team--winner";
             matchesString += "'> " + homeTeam + " </div></td>";

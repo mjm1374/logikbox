@@ -14,7 +14,7 @@ function GetSpaceX(max_cnt){
             let rocketName = launches[i].rocket.rocket_name;
             let payload = launches[i].rocket.second_stage.payloads[0].payload_type;
             let missionID = '';
-            let launchDate = timeConverter(launches[i].launch_date_unix) + '<br /><span class="italic">';
+            let launchDate = convertTime(launches[i].launch_date_unix) + '<br /><span class="italic">';
             if (launches[i].is_tentative) {launchDate = launchDate + 'tenative up to a ' + launches[i].tentative_max_precision }else{ launchDate = launchDate + '&nbsp;';}
             launchDate = launchDate + '</span>';
             let description = '';
@@ -68,17 +68,17 @@ function buildTargetBlock(i){
         $('#launchBlockHolder').append(targetBlock);
 }
 
-function timeConverter(UNIX_timestamp){
-    var a = new Date(UNIX_timestamp * 1000);
+
+let convertTime = UNIX_timwstamp => {
+    var a = new Date(UNIX_timwstamp * 1000);
     var year = a.getFullYear();
     var month = months[a.getMonth()];
     var date = a.getDate();
-    var hour = a.getHours(); 
-    var min = a.getMinutes();
-    var formattedMin = ("0" + min).slice(-2);
-    var sec = a.getSeconds();
-    var formattedSec = ("0" + sec).slice(-2);
-    var time = month + ' ' + date + ', ' + year + ' ' + hour + ':' + formattedMin;
+    var hour = a.getHours();
+    var min = ("0" + a.getMinutes()).slice(-2);
+    var sec = ("0" + a.getSeconds()).slice(-2);
+
+    var time = month + ' ' + date + ', ' + year + ' ' + hour + ':' + min;
 
     return time;
-}
+};
