@@ -10,6 +10,21 @@ const access_token = "179767298.1677ed0.53df19c85ce44f2ebabd7040526cab70";
 const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 const months = ["January","Febuary","March","April","May","June","July","August","September","October","November","Decemeber"];
 
+function dynamicSort(property) {
+	var sortOrder = 1;
+	if (property[0] === "-") {
+		sortOrder = -1;
+		property = property.substr(1);
+	}
+	return function (a, b) {
+		/* next line works with strings and numbers, 
+		 * and you may want to customize it to your needs
+		 */
+		var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
+		return result * sortOrder;
+	}
+}
+
 jQuery(document).ready(function($) {
 	var timelineBlocks = $('.cd-timeline-block'),
 		offset = 0.8,
@@ -113,7 +128,7 @@ $(document).on('click','.vid__modal', function(e){
 
 	$('.jumbotron').mousemove(function (e) {
 	var offset = e.pageX - left;
-		console.log(e.pageX  + " - " + offset);
+		//console.log(e.pageX  + " - " + offset);
 	var percentage = offset / width * 100;
 	panorama.css('background-position', percentage + '% 0');
 	});

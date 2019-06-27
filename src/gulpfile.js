@@ -5,12 +5,12 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
 const babel = require('gulp-babel');
 const browsersync = require("browser-sync").create();
-const concatCss = require('gulp-concat-css');
 const cssnano = require("cssnano");
 const autoprefixer = require("autoprefixer");
 const postcss = require("gulp-postcss");
 const plumber = require("gulp-plumber");
 const sourcemaps = require('gulp-sourcemaps');
+const sassdoc = require('sassdoc');
 
 // BrowserSync
 function browserSync(done) {
@@ -50,10 +50,11 @@ function css() {
     .src('css/**/*.css')
     .pipe(sourcemaps.init())
     .pipe(plumber())
-    .pipe(concatCss("styles/bundle.css"))
+    .pipe(concat("bundle.css"))
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write('maps'))
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./styles'))
+    
     // .pipe(sass({
     //   outputStyle: "expanded"
     // }))

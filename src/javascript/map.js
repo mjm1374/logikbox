@@ -157,6 +157,7 @@ let myTravels = [
     new setLocation('41.0807423','-75.420217','The Poconos'),
     new setLocation('40.3643','-74.9513','New Hope'),
     new setLocation('40.2204','-74.0121','Asbury Park'),
+    new setLocation('42.0409', '-74.1182', 'Woodstock'),
     // new setLocation('','',''),
     // new setLocation('','',''),
     // new setLocation('','',''),

@@ -1,9 +1,10 @@
 function GetSpaceX(max_cnt){
 	$.when(  $.get( 'https://api.spacexdata.com/v3/launches/upcoming', 
-	{ limit: max_cnt } ) )
+	{ limit: max_cnt, tbd: 'false' } ) )
 	.then(function( result ) {
         let launches = result;
-        console.log(launches); 
+        //launches.sort(dynamicSort('launch_date_unix'));
+        //console.log('launches',launches); 
         var promises = [];
 
         for(let i=0; i < launches.length; i++){
@@ -13,7 +14,9 @@ function GetSpaceX(max_cnt){
             let rocketName = launches[i].rocket.rocket_name;
             let payload = launches[i].rocket.second_stage.payloads[0].payload_type;
             let missionID = '';
-            let launchDate = timeConverter(launches[i].launch_date_unix);
+            let launchDate = timeConverter(launches[i].launch_date_unix) + '<br /><span class="italic">';
+            if (launches[i].is_tentative) {launchDate = launchDate + 'tenative up to a ' + launches[i].tentative_max_precision }else{ launchDate = launchDate + '&nbsp;';}
+            launchDate = launchDate + '</span>';
             let description = '';
             let target = $('#launchBlock' + i); 
             
@@ -72,8 +75,10 @@ function timeConverter(UNIX_timestamp){
     var date = a.getDate();
     var hour = a.getHours(); 
     var min = a.getMinutes();
+    var formattedMin = ("0" + min).slice(-2);
     var sec = a.getSeconds();
-    var time = month + ' ' +  date  + ' ' + year + ' ' + hour + ':' + min ;
+    var formattedSec = ("0" + sec).slice(-2);
+    var time = month + ' ' + date + ', ' + year + ' ' + hour + ':' + formattedMin;
 
     return time;
 }

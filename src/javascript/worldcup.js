@@ -8,7 +8,6 @@ function GetGroupResults(max_cnt){
          
         
         for (let i = 0; i < groups.length; i++) {
-            console.log('dddd: ' + i);
             let groupString = "<div class='worldcup__group'><table class='worldcup__table'><thead><tr><th scope='col' class='left' title='GROUP ";
             let group = groups[i];
             let letter = group.letter;
@@ -28,7 +27,7 @@ function GetGroupResults(max_cnt){
 
 function getTeams(teams){
     let teamsString = "";
-    console.log(teams);
+    //console.log(teams);
     for (let j = 0; j < teams.length; j++) {
         let team = teams[j];
         let name = team.country;
