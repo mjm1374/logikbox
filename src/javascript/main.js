@@ -1,3 +1,6 @@
+ 
+//import * as tardis from '/modules/lbx-dates.js';
+
 class setLocation {
 	constructor(lat = '40.079', lng = '-75.160', name) {
 		this.setLat = lat;
