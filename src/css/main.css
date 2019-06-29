@@ -246,10 +246,7 @@ footer{
 	margin-bottom: 10px;
 }
 
- 
-
-
- @media (max-width: 576px) {
+@media (max-width: 576px) {
 	.portaitclear {
 		display: block;
 		float: right;

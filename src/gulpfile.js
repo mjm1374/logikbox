@@ -72,7 +72,7 @@ function css() {
 function scripts() {
   return (
     gulp
-    .src(['javascript/*.js'])
+    .src('javascript/**/*.js')
     .pipe(sourcemaps.init())
      .pipe(babel({
        presets: ['@babel/env']
