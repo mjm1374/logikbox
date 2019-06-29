@@ -14,7 +14,7 @@ function GetSpaceX(max_cnt){
             let rocketName = launches[i].rocket.rocket_name;
             let payload = launches[i].rocket.second_stage.payloads[0].payload_type;
             let missionID = '';
-            let launchDate = tardis.unixToMonthDateTime(launches[i].launch_date_unix) + '<br /><span class="italic">';
+            let launchDate = tardis.MonthDateTime(launches[i].launch_date_unix) + '<br /><span class="italic">';
             if (launches[i].is_tentative) {launchDate = launchDate + 'tenative up to a ' + launches[i].tentative_max_precision }else{ launchDate = launchDate + '&nbsp;';}
             launchDate = launchDate + '</span>';
             let description = '';

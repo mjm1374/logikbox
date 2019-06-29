@@ -28,7 +28,7 @@ function GetInstagram(max_id){
         for(let i = 0; i < myPics.length; i++) {
             let myString = "";
             let isVideo = false;
-            let date = tardis.unixToDayMonthDate(myPics[i].created_time);
+            let date = tardis.DayMonthDate(myPics[i].created_time);
              
             let fullDate = date;
             let location =  new setLocation();
