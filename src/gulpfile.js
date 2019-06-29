@@ -11,9 +11,11 @@ const postcss = require("gulp-postcss");
 const plumber = require("gulp-plumber");
 const sourcemaps = require('gulp-sourcemaps');
 const sassdoc = require('sassdoc');
+const tardis = require('tardis');
 
 // BrowserSync
 function browserSync(done) {
+  console.log(tardis.doctorwho());
   browsersync.init({
       proxy: "localhost:8888",
       baseDir: "./",
@@ -31,7 +33,7 @@ function browserSyncReload(done) {
 
 function defaultTask(done) {
   // place code for your default task here
-  console.log('Gulp 4 is runnging');
+  console.log(tardis.doctorwho());
   build();
   watch();
   done();

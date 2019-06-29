@@ -16,13 +16,13 @@ class Controller {
 	{
 		if (!isset($_GET['job']))
 		{
-			// no special book is requested, we'll show a list of all available books
+			// no sproject chosen, show them all
 			$projects = $this->project->getProjectList();
 			include 'view/timeline.php';
 		}
 		else
 		{
-			// show the requested book
+			// show the requested job
 			$job = $this->model->getJob($_GET['job']);
 			include 'view/viewjob.php';
 		}
@@ -31,7 +31,7 @@ class Controller {
 	public function firstProject()
 	{
 		
-			// show the r1st project
+			// show the 1st project
 			$lastest = $this->project->getFirstProject();
 			include 'view/viewLatest.php';
 		
