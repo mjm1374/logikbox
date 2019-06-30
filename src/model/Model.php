@@ -43,7 +43,7 @@ class Projects{
 	{
 		// here goes some hardcoded values to simulate the database
 		return array(
-			"Tardis" => new Project("Tardis", "<span><p>Dates have always been my Kyrptonite. So many formats, standards for many ways to work with them in every different programming language. As I have been refining my site over the last few months I’ve added a great deal of features and data. Toss in a few API’s and their mixed and matched data, things were beginning to getting sloppy. Doing a code review I noticed I was doing more or less the same thing in four separate files to format dates from different sources. My first thought was to standard them in a function and use that function as date format controller.  While planning I opted to make it a module so I could use it on other projects and if I update it one place I can update it everywhere. What started as a basic formatter, then grew into a standard converter and finally a full blown free form pattern mapping Time/Date formatting tool. Supporting Unix timestamps, ISO and UTC time stamps you can enter any combo in, be returned the time in multiple objects in dozens of formats to use as you need. You can also you the prebuilt filters for quick standardized formats and you can even add your own masks and receive back the format of your choosing. It is available on NPM & GitHub, just look for lbx-tardis (some had the good name)</p></span>", "tardis100.png","tardis.webp","https://www.npmjs.com/package/lbx-tardis"),
+			"Tardis" => new Project("Tardis", "<span><p>Dates have always been my kyrptonite. So many formats &amp; standards for the many ways to work with them in every different programming language. Maddening. I have been refining my site over the last few months I’ve added a great deal of features and data. Toss in a few API’s and their mixed and matched data, things were beginning to getting sloppy. Doing a code review I noticed I was doing the same thing in 4 separate files to format dates from different sources. My first thought was to standardize the process in a function and use that as date format controller.  While planning I opted to make it a module so I could use it on other projects and if I update it one place I can update it everywhere with npm. What started as a basic formatter, then grew into a standards converter and finally a full blown free form pattern mapping Time/Date formatting tool. Supporting Unix timestamps, ISO and UTC time stamps you can imput any combo and be returned in an object with multiple values in dozens of formats to use as you need. You can also use the prebuilt filters for quick standardized formats and you can even add your own masks and receive back the format of your choosing. It is available on NPM, just look for lbx-tardis.</p></span>", "tardis100.png","tardis.webp","https://www.npmjs.com/package/lbx-tardis"),
 
 			"Asteroids" => new Project("Asteroids", "<span><p>What started as a simple lesson with my kids on Object Oriented Programming (OOP) eventually morphed into a full blown arcade classic. Based on the vector graphic Atari classic, we rebuilt the game dynamics in HTML5 and JS (ES6). Each game piece is its own div, we leveraged SVG’s to keep the graphics crisp when we scaled them. We wrote our own game engine to update all the pieces and check for collisions. We got lucky and found the original <a href='http://www.classicgaming.cc/classics/asteroids/sounds' target='_blank' rel='noopener'>game sounds</a> on line. Updated the styles to make it a little more colorful. Craziest lesson learned was that the entire build is smaller than the background graphic.</p></span>", "asteroids100b.png","asteroid250.png","https://logikbox.com/asteroids/"),
 			
@@ -70,7 +70,10 @@ class Projects{
 	public function getFirstProject()
 	{
 		$allProjects = $this->getProjectList();
-		return $allProjects["Tardis"];
+		$keys = array_keys($allProjects);
+		$maxProj = count($keys) -1;
+		 
+		return $allProjects[$keys[mt_rand(0,$maxProj)]];
 	}
 	
 	

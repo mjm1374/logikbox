@@ -1,5 +1,6 @@
  
 //import * as tardis from '/modules/lbx-dates.js';
+var tardis = require('tardis');
 
 class setLocation {
 	constructor(lat = '40.079', lng = '-75.160', name) {
@@ -125,11 +126,11 @@ $(document).on('click','.vid__modal', function(e){
 	//console.log("xxx",instagramGallery);
 
 	//panorama
-	var panorama = $('.jumbotron');
+	var panorama = $('.jumbotron--homepage');
 	var left = panorama.offset().left;
 	var width = panorama.width();
 
-	$('.jumbotron').mousemove(function (e) {
+	$('.jumbotron--homepage').mousemove(function (e) {
 	var offset = e.pageX - left;
 		//console.log(e.pageX  + " - " + offset);
 	var percentage = offset / width * 100;
