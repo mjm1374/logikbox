@@ -1,4 +1,4 @@
-
+/*jshint esversion: 6 */
  let map;
 
 function initMap(newLat, newLng) {
@@ -17,7 +17,7 @@ function initMap(newLat, newLng) {
     map.addListener('dragend', function () {
         //    
         let newCenter = map.getCenter();
-        let at = newCenter.lat() + "," + newCenter.lng();;
+        let at = newCenter.lat() + "," + newCenter.lng();
     });
 
 }
@@ -165,7 +165,7 @@ let myTravels = [
     // new setLocation('','',''),
 
 
-]
+];
 
 
     function goTravel(){

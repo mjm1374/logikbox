@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 class Instragram {
 	constructor(caption = '', date, isVideo = false, mediaURL, location, likes) {
 		this.caption = caption;

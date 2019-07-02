@@ -1,6 +1,4 @@
- 
-//import * as tardis from '/modules/lbx-dates.js';
-var tardis = require('tardis');
+/*jshint esversion: 6 */
 
 class setLocation {
 	constructor(lat = '40.079', lng = '-75.160', name) {
@@ -26,7 +24,7 @@ function dynamicSort(property) {
 		 */
 		var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
 		return result * sortOrder;
-	}
+	};
 }
 
 jQuery(document).ready(function($) {
