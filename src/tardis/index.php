@@ -33,11 +33,50 @@
 	</head>
 	<body>
          
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <?php
+    $thisPage =  $_SERVER['SCRIPT_NAME'];
+	$thisPage = substr($thisPage, 1, strlen($thisPage));
+	$thisHost = $_SERVER['HTTP_HOST'];
+	$isDev =  !strpos($thisHost, 'logikbox'); 
+	 
+ 
+?>
+<div class="navbar-header">
+	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand homeTitle" href="index.php">Tardis</a>
+	
+</div>
+<div id="navbar" class="navbar-collapse collapse">
+	<ul class="nav navbar-nav">
+		<li>
+			<a href="javascript:void(0);" class="nava" data-target='install'>Install</a>
+		</li>
+		<li>
+            <a href="javascript:void(0);" class="nava" data-target='usage'>Usage</a>
+		</li>
+		<li>
+			<a href='javascript:void(0);' class="nava" data-target='filters'>Filters</a>
+		</li>
+		<li>
+			<a href='javascript:void(0);' class="nava" data-target='presets'>Presets</a>
+		</li>
+	</ul>
+</div>
+        </div>
+    </nav>
     <div class="tardis container">
         <div class="row">
             <div class="col-sm-12 tardis__header">
                 <img src="img/galefreyan.png" alt="tarids" />
                 <div class="tardis__logo"></div>
+                
             </div>
         </div>
         <div class="row">
@@ -47,7 +86,7 @@
                 <h1>Tardis JS</h1>
                 <P>nimis montes reprobo esca praemitto fere distineo. sollicitudin tempor suscipit huic aliquip vehicula interdico. aliquam os accumsan iustum luctus ridiculus. fermentum delenit demoveo vitae ligula exerci ac. paratus eget lacinia eros modo tempor. tego probo vehicula ad ligula lobortis.</p>
 
-                <h3>Install</h3>
+                <h3 id="install">Install</h3>
                 <p>Via NPM: <span class="code">npm i lbx-tardis</span></p>
                 <p>or</p>
                 <p>Include tardis.js in your build directory or link to it directly</p>
@@ -60,7 +99,7 @@
                 <p>Download <a href="javascript/tardis.js.zip" title="Downlaod Tardis JS">tardis.js</a></p>
                 <p>Clone it on <a href="https://github.com/mjm1374/tardis" title="Cline it on GitHub">GitHub</a></p>
 
-                <h3>Usage</h3>
+                <h3 id="usage">Usage</h3>
                 <p>magna cogo lacus mauris laoreet. iustum aliquam comis fusce jus mi rutrum. zelus praemitto capto leo augue tempor. roto consectetuer sollicitudin ibidem nostra virtus. regula venio elit luptatum pellentesque probo typicus nisl. te rusticus consectetur regula pertineo verto roto pagus. libero exputo zelus saepius quae valetudo oppeto pagus.</p>
 
  
@@ -102,7 +141,7 @@
 </pre>
  
 
-                <h3>Filters</h3>
+                <h3 id="filters">Filters</h3>
                 <p>letalis ludus nisl interdum mi sodales. mollis abluo metuo saepius duis risus sagittis. tempor aliquet ultricies opes orem dictum abigo. modo eligo mi viverra egestas accumsan. condimentum cras gravida lectus sagittis.</P>
 
 <div class="tardis__table tardis__filters code">
@@ -287,7 +326,7 @@
 <!-- tardis__table.com -->
 
 
-                <h3>Presets</h3>
+                <h3 id="presets">Presets</h3>
                 <p>letalis ludus nisl interdum mi sodales. mollis abluo metuo saepius duis risus sagittis. tempor aliquet ultricies opes orem dictum abigo. modo eligo mi viverra egestas accumsan. condimentum cras gravida lectus sagittis.</P>
                 
 
