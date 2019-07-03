@@ -63,7 +63,7 @@
                 <h3>Usage</h3>
                 <p>magna cogo lacus mauris laoreet. iustum aliquam comis fusce jus mi rutrum. zelus praemitto capto leo augue tempor. roto consectetuer sollicitudin ibidem nostra virtus. regula venio elit luptatum pellentesque probo typicus nisl. te rusticus consectetur regula pertineo verto roto pagus. libero exputo zelus saepius quae valetudo oppeto pagus.</p>
 
-<code>
+ 
 <pre>
 {
     <span class="pl-en">Day</span>: <span class="pl-k">"03"</span>
@@ -100,13 +100,19 @@
     <span class="pl-en">yearInt</span>: <span class="pl-c1"> 119</span>
 }
 </pre>
-</code>
+ 
 
                 <h3>Filters</h3>
                 <p>letalis ludus nisl interdum mi sodales. mollis abluo metuo saepius duis risus sagittis. tempor aliquet ultricies opes orem dictum abigo. modo eligo mi viverra egestas accumsan. condimentum cras gravida lectus sagittis.</P>
 
 <div class="tardis__table tardis__filters code" style="width: 100%;" >
 <div class="tardis__tableBody">
+    <div class="tardis__tableRow">
+    <div class="tardis__tableCell tardis__tableCell--header">Mask</div>
+    <div class="tardis__tableCell tardis__tableCell--header mobileHide">Key</div>
+    <div class="tardis__tableCell tardis__tableCell--header">Result</div>
+    <div class="tardis__tableCell tardis__tableCell--header tabletHide">Legend</div>
+    </div>
     <div class="tardis__tableRow">
     <div class="tardis__tableCell">YYYY</div>
     <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">fullYear</span></div>
@@ -275,12 +281,7 @@
     <div class="tardis__tableCell">am/pm</div>
     <div class="tardis__tableCell tabletHide">meridiem display -  lower case</div>
     </div>
-    <div class="tardis__tableRow">
-    <div class="tardis__tableCell"></div>
-    <div class="tardis__tableCell mobileHide"></div>
-    <div class="tardis__tableCell"></div>
-    <div class="tardis__tableCell tabletHide"></div>
-    </div>
+    
 </div>
 </div>
 <!-- tardis__table.com -->
@@ -289,7 +290,7 @@
                 <h3>Presets</h3>
                 <p>letalis ludus nisl interdum mi sodales. mollis abluo metuo saepius duis risus sagittis. tempor aliquet ultricies opes orem dictum abigo. modo eligo mi viverra egestas accumsan. condimentum cras gravida lectus sagittis.</P>
                 
-<code>
+
 <pre>
 <span class="pl-c1">tardis</span>.<span class="pl-en">ISO</span>(<span class="pl-smi">{date}</span>)                <span class="pl-c">// 2019-06-30</span>
 <span class="pl-c1">tardis</span>.<span class="pl-en">ShortDate</span>(<span class="pl-smi">{date}</span>)          <span class="pl-c">// 06/30/2019</span>
@@ -304,9 +305,6 @@
 <span class="pl-c1">tardis</span>.<span class="pl-en">Month</span>(<span class="pl-smi">{date}</span>)              <span class="pl-c">// June</span>
 <span class="pl-c1">tardis</span>.<span class="pl-en">Day</span>(<span class="pl-smi">{date}</span>)                <span class="pl-c">// Sunday</span>
 </pre>
-</code>
-                
-
                 
             </div>
             <div class="col-sm-2"></div>

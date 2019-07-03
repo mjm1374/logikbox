@@ -79,6 +79,11 @@
     display: table-header-group;
     font-weight: bold;
 }
+.tardis__tableCell--header{
+    background: #000;
+    color: #ffffff;
+    font-weight: 700;
+}
 
 .tardis__tableFoot {
     background-color: #EEE;
