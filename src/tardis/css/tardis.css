@@ -7,6 +7,19 @@
 .tardisblue{
     color:rgba(16,35,114,1);
 }
+ 
+.nava{
+   text-align: right;
+}
+
+.navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+    float: right;
+    width: 25%;
+    text-align: center;
+}
 .container {
     padding-right: 0px;
     padding-left: 0px;
@@ -46,7 +59,7 @@
     height: 105px;
     width: 60px;
     position: relative;
-    left: 120px;
+    left: 80%;
     top: 88px;
     z-index: 10;
 }
@@ -120,7 +133,7 @@
     }
 
     .tardis__logo {
-        left: 45px;
+        left: 80%;
         top: 88px;
     }
 

@@ -50,7 +50,7 @@
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand homeTitle" href="index.php">Tardis</a>
+    <a class="navbar-brand homeTitle nava" data-target='top' href="index.php">Tardis</a>
 	
 </div>
 <div id="navbar" class="navbar-collapse collapse">
@@ -72,10 +72,10 @@
         </div>
     </nav>
     <div class="tardis container">
-        <div class="row">
+        <div id="top" class="row">
             <div class="col-sm-12 tardis__header">
                 <img src="img/galefreyan.png" alt="tarids" />
-                <div class="tardis__logo"></div>
+                <div id="tardis__logo" class="tardis__logo"></div>
                 
             </div>
         </div>

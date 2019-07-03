@@ -1,8 +1,14 @@
 $(document).ready(function () {
     console.log(tardis.doctorwho());
     
+    
 });
+ 
 
+$(document).on("click", ".tardis__logo", function (e) {
+    console.log(tardis.doctorwho())
+    });
+    
 $(document).on("click", ".nava",function (e) {
     e.preventDefault();
     let target = $(this).data('target');
