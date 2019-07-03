@@ -84,7 +84,7 @@
             <div class="col-sm-2"></div>
             <div class="col-sm-8 tardis__copy">
                 <h1>Tardis JS</h1>
-                <P>nimis montes reprobo esca praemitto fere distineo. sollicitudin tempor suscipit huic aliquip vehicula interdico. aliquam os accumsan iustum luctus ridiculus. fermentum delenit demoveo vitae ligula exerci ac. paratus eget lacinia eros modo tempor. tego probo vehicula ad ligula lobortis.</p>
+                <P>Tardis JS an open source JavaScript Date library for parsing, formatting and processing. Simple, light weight and easy to implement module that you can use in your JS appication or website. </p>
 
                 <h3 id="install">Install</h3>
                 <p>Via NPM: <span class="code">npm i lbx-tardis</span></p>
@@ -100,9 +100,16 @@
                 <p>Clone it on <a href="https://github.com/mjm1374/tardis" title="Cline it on GitHub">GitHub</a></p>
 
                 <h3 id="usage">Usage</h3>
-                <p>magna cogo lacus mauris laoreet. iustum aliquam comis fusce jus mi rutrum. zelus praemitto capto leo augue tempor. roto consectetuer sollicitudin ibidem nostra virtus. regula venio elit luptatum pellentesque probo typicus nisl. te rusticus consectetur regula pertineo verto roto pagus. libero exputo zelus saepius quae valetudo oppeto pagus.</p>
+                <p><pre><span class="pl-k">const</span> <span class="pl-c1">getDate</span> <span class="pl-k">=</span> <span class="pl-smi">tardis</span>.<span class="pl-en">dateparts</span>() <span class="pl-c"><span class="pl-c">//</span> { year: 119, month: 6, day: 29, hour: 13, min: '04', sec: '12', fullYear: 2019, shortYear: '19', wordYear: 'two thousand and nineteen',  fullMonth: 'June',  shortMonth: 'Jun',....}</span>
 
- 
+<span class="pl-k">const</span> <span class="pl-c1">getISO</span> <span class="pl-k">=</span> <span class="pl-smi">tardis</span>.<span class="pl-en">ISO</span>() <span class="pl-c"><span class="pl-c">//</span> 2019-06-29</span>
+
+<span class="pl-k">const</span> <span class="pl-c1">getTimeStamp</span> <span class="pl-k">=</span> <span class="pl-smi">tardis</span>.<span class="pl-en">patterned</span>(<span class="pl-c1">1133481000</span>, <span class="pl-s"><span class="pl-pds">'</span>M/DD/YYYY - H:I:s TT tt<span class="pl-pds">'</span></span>); <span class="pl-c"><span class="pl-c">//</span> { pattern: '12/02/2005 - 18:50:{{26}} PM pm', time: 1133481000 }</span>
+
+<span class="pl-k">const</span> <span class="pl-c1">getTime</span> <span class="pl-k">=</span> <span class="pl-smi">tardis</span>.<span class="pl-en">patterned</span>(<span class="pl-s"><span class="pl-pds">'</span>2019-06-29T17:26:43<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>M/DD/YYYY - HH:II:SS tt<span class="pl-pds">'</span></span>); <span class="pl-c"><span class="pl-c">//</span>{ pattern: '6/30/2019 - 18:26:43 pm', time: '2019-06-29T17:26:43' }</span>
+</pre></p>
+
+ <p>The Date Object</p>
 <pre>
 {
     <span class="pl-en">Day</span>: <span class="pl-k">"03"</span>
@@ -142,8 +149,7 @@
  
 
                 <h3 id="filters">Filters</h3>
-                <p>letalis ludus nisl interdum mi sodales. mollis abluo metuo saepius duis risus sagittis. tempor aliquet ultricies opes orem dictum abigo. modo eligo mi viverra egestas accumsan. condimentum cras gravida lectus sagittis.</P>
-
+                <p>By using a simple masked you can create an unique time format to meet any of your needs. By invoking the <span class="pl-en">patterned</span> method, pass in a time stamp and a filter pattern. If you do not supply a time stamp the methid is assume you want the current time. The returned object  ({<span class="pl-en">pattern</span>: <span class="pl-c"> pattern</span>, <span class="pl-en">time</span>: <span class="pl-c"> theTime</span>}) with have you your patterned string and the time as a unix time stamp should you need to reuse it. 
 <div class="tardis__table tardis__filters code">
 <div class="tardis__tableBody">
     <div class="tardis__tableRow">
@@ -327,7 +333,7 @@
 
 
                 <h3 id="presets">Presets</h3>
-                <p>letalis ludus nisl interdum mi sodales. mollis abluo metuo saepius duis risus sagittis. tempor aliquet ultricies opes orem dictum abigo. modo eligo mi viverra egestas accumsan. condimentum cras gravida lectus sagittis.</P>
+                <p>Tardis JS has several prebuilt filter patterns for the commonly use time formats. Simply, call the method of the preset format and set a time stamp. If you do not supply a timestamp, date.Now() will be returned.</P>
                 
 
 <pre>
@@ -367,7 +373,7 @@
     </div>
 
     
-<audio id="tardisSnd" controls=false autoplay=false>
+<audio id="tardisSnd" controls=false >
  
   <source src="snd/TARDIS_Remastered_Short.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
