@@ -89,3 +89,19 @@
 .tardis__tableBody {
     display: table-row-group;
 }
+@media only screen and (max-device-width : 414px) {
+    .mobileHide{
+        display: none;
+    }
+
+    .tardis__logo {
+        left: 300px;
+        top: 88px;
+    }
+    .tardis__header img {
+        position: absolute;
+        left: 0;
+        top: 0px;
+      
+    }
+}
