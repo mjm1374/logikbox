@@ -1,12 +1,8 @@
-<?php
-	//include_once("../controller/Controller.php");
-    //$controller = new Controller();
-?>
 
 	<!doctype html>
 	<html class="no-js"  lang="en">
 	<head>
-		        <meta charset="utf-8">
+		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
         <title>Tardis JS - Logikbox - Mike McAllister</title>
@@ -43,6 +39,9 @@
                 <img src="img/galefreyan.png" alt="tarids" />
                 <div class="tardis__logo"></div>
             </div>
+        </div>
+        <div class="row">
+
             <div class="col-sm-2"></div>
             <div class="col-sm-8 tardis__copy">
                 <h1>Tardis JS</h1>
@@ -59,6 +58,7 @@
                 </code>
                 <br/>
                 <p>Download <a href="javascript/tardis.js.zip" title="Downlaod Tardis JS">tardis.js</a></p>
+                <p>Clone it on <a href="https://github.com/mjm1374/tardis" title="Cline it on GitHub">GitHub</a></p>
 
                 <h3>Usage</h3>
                 <p>magna cogo lacus mauris laoreet. iustum aliquam comis fusce jus mi rutrum. zelus praemitto capto leo augue tempor. roto consectetuer sollicitudin ibidem nostra virtus. regula venio elit luptatum pellentesque probo typicus nisl. te rusticus consectetur regula pertineo verto roto pagus. libero exputo zelus saepius quae valetudo oppeto pagus.</p>
@@ -105,7 +105,7 @@
                 <h3>Filters</h3>
                 <p>letalis ludus nisl interdum mi sodales. mollis abluo metuo saepius duis risus sagittis. tempor aliquet ultricies opes orem dictum abigo. modo eligo mi viverra egestas accumsan. condimentum cras gravida lectus sagittis.</P>
 
-<div class="tardis__table tardis__filters code" style="width: 100%;" >
+<div class="tardis__table tardis__filters code">
 <div class="tardis__tableBody">
     <div class="tardis__tableRow">
     <div class="tardis__tableCell tardis__tableCell--header">Mask</div>
@@ -308,18 +308,29 @@
                 
             </div>
             <div class="col-sm-2"></div>
+        </div>
+        <div class="row">
+           
+
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
-                <footer>
-                     Footer
-                    
-                </footer>
+                <hr>
+                <p>
+                    &copy; Mike Mc 	<?php echo date("Y"); ?><br />
+                    <a href="../privacy-policy.php">Privacy Policy</a>
+                </p>
+                <div id="signature"></div>
+
             </div>
             <div class="col-sm-2"></div>
+            
         </div>
     </div>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+
+</body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38537843-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -331,7 +342,5 @@
 
         gtag('config', 'UA-38537843-1');
     </script>
-
-</body>
 </html>
 
