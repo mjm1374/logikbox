@@ -86,8 +86,6 @@ $(document).on('click','.vid__modal', function(e){
 	
 	$('.modal-dynamic-title').html(caption);
 	$('#videoModal').modal('show'); 
-
-	
 });
 		
 	//hide timeline blocks which are outside the viewport

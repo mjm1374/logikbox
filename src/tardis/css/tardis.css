@@ -119,12 +119,16 @@
  
 
 #signature {
-    background: url(../../img/signature.png);
+    background: url(https://logikbox.com/img/signature.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 250px;
     height: 57px;
     float: right;
+}
+
+#tardisSnd{
+    display:none;
 }
 
 @media only screen and (max-device-width : 768px) {
@@ -150,7 +154,7 @@
     }
 
     .tardis__logo {
-        left: 300px;
+   
         top: 88px;
     }
     .tardis__header img {
