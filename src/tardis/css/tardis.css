@@ -89,6 +89,24 @@
 .tardis__tableBody {
     display: table-row-group;
 }
+
+@media only screen and (max-device-width : 768px) {
+    .tabletHide {
+        display: none;
+    }
+
+    .tardis__logo {
+        left: 45px;
+        top: 88px;
+    }
+
+    .tardis__header img {
+        position: absolute;
+        left: 0;
+        top: -50px;
+
+    }
+}
 @media only screen and (max-device-width : 414px) {
     .mobileHide{
         display: none;
@@ -105,3 +123,5 @@
       
     }
 }
+
+DDay
