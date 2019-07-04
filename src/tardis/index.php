@@ -84,7 +84,7 @@
             <div class="col-sm-2"></div>
             <div class="col-sm-8 tardis__copy">
                 <h1>Tardis JS</h1>
-                <P>Tardis JS an open source JavaScript Date library for parsing, formatting and processing. Simple, light weight and easy to implement module that you can use in your JS appication or website. </p>
+                <P>Tardis JS an open source JavaScript Date library for parsing, formatting and processing. A simple, light weight and easy to implement module that you can use in your JS appication or website. </p>
 
                 <h3 id="install">Install</h3>
                 <p>Via NPM: <span class="code">npm i lbx-tardis</span></p>
@@ -149,7 +149,7 @@
  
 
                 <h3 id="filters">Filters</h3>
-                <p>By using a simple masked you can create an unique time format to meet any of your needs. By invoking the <span class="pl-en">patterned</span> method, pass in a time stamp and a filter pattern. If you do not supply a time stamp the methid is assume you want the current time. The returned object  ({<span class="pl-en">pattern</span>: <span class="pl-c"> pattern</span>, <span class="pl-en">time</span>: <span class="pl-c"> theTime</span>}) with have you your patterned string and the time as a unix time stamp should you need to reuse it. 
+                <p>By using a simple mask you can create an unique time format to meet all of your needs. Simply by invoking the <span class="pl-en">patterned</span> method, passing in a time stamp and define a filter pattern. If you do not supply a time stamp the methid will assume you want the current time and return date.Now(). The returned object  ({<span class="pl-en">pattern</span>: <span class="pl-c"> pattern</span>, <span class="pl-en">time</span>: <span class="pl-c"> theTime</span>}) with have your patterned string and the time as a unix time stamp should you need to reuse it. 
 <div class="tardis__table tardis__filters code">
 <div class="tardis__tableBody">
     <div class="tardis__tableRow">
@@ -333,7 +333,7 @@
 
 
                 <h3 id="presets">Presets</h3>
-                <p>Tardis JS has several prebuilt filter patterns for the commonly use time formats. Simply, call the method of the preset format and set a time stamp. If you do not supply a timestamp, date.Now() will be returned.</P>
+                <p>Tardis JS has several prebuilt filter patterns for the most commonly use time formats. Simply, call the method of the preset format you want and set a time stamp. If you do not supply a timestamp, date.Now() will be returned.</P>
                 
 
 <pre>
