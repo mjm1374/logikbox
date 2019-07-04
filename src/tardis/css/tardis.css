@@ -1,0 +1,173 @@
+.tardis{
+    padding-right:0px;
+    padding-left:0px;
+    margin-top: 50px;
+}
+
+.tardisblue{
+    color:rgba(16,35,114,1);
+}
+ 
+.nava{
+   text-align: right;
+}
+
+.navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+    float: right;
+    text-align: center;
+}
+.container {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100% !important;
+}
+
+.tardis__header{
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    width:auto;
+    height:150px;
+    background-color: rgba(16, 35, 114, 1);
+    color: #fff;
+    margin:0;
+    border-bottom: 5px solid rgba(215, 169, 44, 0.9);
+     
+    
+
+}
+.tardis__header img {
+    position: absolute;
+    left: 0;
+    top: -135px;
+    width: 100%;
+    height: auto;
+    opacity: 0.2;
+}
+
+.tardis__logo{
+    background: url(../img/kissclipart-neben-der-spur-book-clipart-the-doctor-tardis-el-f5b9d3d756184d6d.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 105px;
+    width: 60px;
+    position: relative;
+    left: 80%;
+    top: 88px;
+    z-index: 10;
+}
+
+.code{
+    font-family: 'Source Code Pro',
+    monospace;
+}
+
+
+/* tardis__table.com */
+.tardis__table {
+    display: table;
+    width: 100%;
+}
+
+.tardis__tableRow {
+    display: table-row;
+}
+
+.tardis__tableHeading {
+    background-color: #EEE;
+    display: table-header-group;
+}
+
+.tardis__tableCell,
+.tardis__tableHead {
+    border: 1px solid #999999;
+    display: table-cell;
+    padding: 3px 10px;
+}
+
+.tardis__tableHeading {
+    background-color: #EEE;
+    display: table-header-group;
+    font-weight: bold;
+}
+.tardis__tableCell--header{
+    background: #000;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.tardis__tableFoot {
+    background-color: #EEE;
+    display: table-footer-group;
+    font-weight: bold;
+}
+
+.tardis__tableBody {
+    display: table-row-group;
+    background: #f5f5f5;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+ 
+
+#signature {
+    background: url(https://logikbox.com/img/signature.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 57px;
+    float: right;
+}
+
+#tardisSnd{
+    display:none;
+}
+
+@media only screen and (max-device-width : 768px) {
+    .tabletHide {
+        display: none;
+    }
+
+    .tardis__logo {
+        left: 80%;
+        top: 88px;
+    }
+
+    .tardis__header img {
+        position: absolute;
+        left: 0;
+        top: -50px;
+
+    }
+}
+@media only screen and (max-device-width : 414px) {
+    .mobileHide{
+        display: none;
+    }
+
+    .tardis__logo {
+   
+        top: 88px;
+    }
+    .tardis__header img {
+        position: absolute;
+        left: 0;
+        top: 0px;
+      
+    }
+    .navbar-nav>li>a {
+   
+        width: 25%;
+  
+    }
+}
+
+ 
+ 

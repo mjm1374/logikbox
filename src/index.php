@@ -15,7 +15,7 @@
 					<?php include("nav.php"); ?>
 				<!--/.navbar-collapse -->
 			</div>
-		</nav>
+		</nav> 
 
 		<div id="acceleration" style="display:none; widht:100%; height:100px;"></div>
 		<div class="worldcup--wrapper"><div class="worldcup"></div></div>
