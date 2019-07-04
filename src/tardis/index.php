@@ -7,7 +7,14 @@
 
         <title>Tardis JS - Logikbox - Mike McAllister</title>
 
-        <meta name="description" content="A Lightweight Javascript Date/Time Converter and Formatter">
+        <meta name="description" content="A Lightweight Javascript Date and Time Converter and Formatter">
+        <meta property="og:url" content="http//:tardis.logikbox.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Tardis by Logikbox" />
+        <meta property="og:description" content="A Lightweight Javascript Date and Time Converter and Formatter" />
+        <meta property="og:image" content="http://tardis.logikbox.com/img/og-image-tardis.png" />
+        <meta property="og:image:alt" content="Tardis - a Lightweight Javascript Date and Time Converter and Formatter" />
+
         <meta name="viewport" content="width=device-width">
         <link href="https://fonts.googleapis.com/css?family=Archivo|Permanent+Marker|Shadows+Into+Light|Teko" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
@@ -361,7 +368,7 @@
             <div class="col-sm-8">
                 <hr>
                 <p>
-                    &copy; Mike Mc 	<?php echo date("Y"); ?><br />
+                    &copy; <a href="https://logikbox.com">Logikbox</a> 	<?php echo date("Y"); ?> <br />
                     <a href="../privacy-policy.php">Privacy Policy</a>
                 </p>
                 <div id="signature"></div>

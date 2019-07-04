@@ -214,37 +214,16 @@ AddDefaultCharset utf-8
   # Options +SymLinksIfOwnerMatch
     RewriteEngine On
   # RewriteBase /
-
-#mjm1373 -  removes slashes after page
-#removes trailing slash if not a directory
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.+)/$ /$1 [R=301,L]
-
-#force HTTPS
-RewriteCond %{HTTPS} !=on
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
- RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^/?work/(.*?)/?$ /work.php?job=$1 [L]
-
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /work\.php\?job=([^\&\ ]+)
-RewriteRule ^/?work\.php$ /work/%1? [L,R=301] 
-
-#adds ".php" to a URL that isn't a directory or a file
-RewriteCond %{REQUEST_URI} !(\.[^./]+)$
-RewriteCond %{REQUEST_fileNAME} !-d
-RewriteCond %{REQUEST_fileNAME} !-f
-RewriteRule (.*) $1.php [L]
-
-https://www.logikbox.com/work.php?job=Lucky%20Vitamin
-
+ 
 #rewrite index.php to TLD
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9} /index.php HTTP/
-RewriteRule ^index.php$ https://www.logikbox.com/ [R=301,L]
+RewriteRule ^index.php$ http://tardis.logikbox.com/ [R=301,L]
 
-#RewriteRule ^tardis.*$ http://tardis.logikbox.com/ [R=301,L]
+#RewriteCond %{THE_REQUEST} ^[A-Z]{3,9} /tardis HTTP/
+#RewriteRule ^index.php$ http://tardis.logikbox.com/ [R=301,L]
+
+  
+  #Redirect 301 /tardis http://tardis.logikbox.com/
    
 </IfModule>
 

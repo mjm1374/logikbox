@@ -4,12 +4,13 @@
         <title>Logikbox - Mike McAllister</title>
 
         <meta name="description" content="Senior web application developer well versed in .Net, PHP, Cold Fusion, Javascript and HTML/CSS">
-        <meta property="og:url" content="https:logikbox.com" />
+        <meta property="og:url" content="https://logikbox.com" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Logikbox by Mike McAllister" />
         <meta property="og:description" content="Senior web application developer well versed in .Net, PHP, Cold Fusion, Javascript and HTML/CSS" />
         <meta property="og:image" content="https://www.logikbox.com/img/og-image.png" />
-        
+        <meta property="og:image:alt" content="Logikbox - Mike McAllister, Senior web application developer" />
+
         <meta name="viewport" content="width=device-width">
         <link href="https://fonts.googleapis.com/css?family=Archivo|Permanent+Marker|Shadows+Into+Light|Teko" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png">
