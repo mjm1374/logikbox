@@ -4,9 +4,36 @@ $(document).ready(function () {
 
 
 $(document).on("click", ".tardis__logo", function (e) {
-    console.log(tardis.doctorwho());
+    
+    $('#tardis__logo').css('opacity',0);
     $('#tardisSnd').get(0).currentTime = 0;
     $('#tardisSnd').get(0).play();
+
+    $("#tardis__logo").animate({
+        opacity: 0.4,
+    }, 2000, function () {
+        $("#tardis__logo").animate({
+            opacity: 0.20,
+            easing: 'swing'
+        }, 2000, function () {
+            $("#tardis__logo").animate({
+                opacity: 0.65,
+                easing: 'swing'
+            }, 2000, function () {
+                $("#tardis__logo").animate({
+                    opacity: 0.35,
+                    easing: 'swing'
+                }, 2000, function () {
+                    $("#tardis__logo").animate({
+                        opacity: 1,
+                        easing: 'swing'
+                    }, 2000, function () {
+                        console.log(tardis.doctorwho());
+                    });
+                });
+            });
+        });
+    });
 });
 
 $(document).on("click", ".nava",function (e) {
