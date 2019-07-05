@@ -88,8 +88,8 @@
         </div>
         <div class="row">
 
-            <div class="col-sm-2"></div>
-            <div class="col-sm-8 tardis__copy">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6 tardis__copy">
                 <h1>Tardis JS</h1>
                 <P>Tardis JS an open source JavaScript Date library for parsing, formatting and processing. A simple, light weight and easy to implement module that you can use in your JS appication or website. </p>
 
@@ -359,13 +359,13 @@
 </pre>
                 
             </div>
-            <div class="col-sm-2"></div>
+            <div class="col-sm-3"></div>
         </div>
         <div class="row">
            
 
-            <div class="col-sm-2"></div>
-            <div class="col-sm-8">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
                 <hr>
                 <p>
                     &copy; <a href="https://logikbox.com">Logikbox</a> 	<?php echo date("Y"); ?> <br />
@@ -374,7 +374,7 @@
                 <div id="signature"></div>
 
             </div>
-            <div class="col-sm-2"></div>
+            <div class="col-sm-3"></div>
             
         </div>
     </div>
