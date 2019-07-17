@@ -1,7 +1,7 @@
 <?php
-	require_once 'vendor/autoload.php';
-	include_once("controller/Controller.php");
-	$controller = new Controller();
+require_once 'vendor/autoload.php';
+include_once("controller/Controller.php");
+$controller = new Controller();
 
 // $response = Unirest\Request::get(
 // 	"https://api-football-v1.p.rapidapi.com/v2/leagues/league/2",
@@ -148,7 +148,7 @@
 
 		$.ajax({
 			type: "GET",
-			url: "https://api-football-v1.p.rapidapi.com/v2/leagues/league/2",
+			url: "https://api-football-v1.p.rapidapi.com/v2/leagueTable/2",
 			headers: {
 				'X-RapidAPI-Key': 'Rd2pyVFguwJeulnqTswlZ2pJCrlurqnE'
 			},
@@ -162,6 +162,9 @@
 				console.log(result);
 			}
 		});
+
+		//https://api-football-v1.p.rapidapi.com/v2/leagues/league/2
+		//https://api-football-v1.p.rapidapi.com/v2/fixtures/team/50/2
 	</script>
 
 
