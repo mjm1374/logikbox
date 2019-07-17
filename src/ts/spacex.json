@@ -1,0 +1,108 @@
+{
+    "flight_number": 82,
+    "mission_name": "CRS-18",
+    "mission_id": [
+        "EE86F74"
+    ],
+    "launch_year": "2019",
+    "launch_date_unix": 1563752100,
+    "launch_date_utc": "2019-07-21T23:35:00.000Z",
+    "launch_date_local": "2019-07-21T19:35:00-04:00",
+    "is_tentative": false,
+    "tentative_max_precision": "hour",
+    "tbd": false,
+    "launch_window": null,
+    "rocket": {
+        "rocket_id": "falcon9",
+        "rocket_name": "Falcon 9",
+        "rocket_type": "FT",
+        "first_stage": {
+            "cores": [
+                {
+                    "core_serial": "B1056",
+                    "flight": 2,
+                    "block": 5,
+                    "gridfins": true,
+                    "legs": true,
+                    "reused": true,
+                    "land_success": null,
+                    "landing_intent": true,
+                    "landing_type": "RTLS",
+                    "landing_vehicle": "LZ-1"
+                }
+            ]
+        },
+        "second_stage": {
+            "block": 5,
+            "payloads": [
+                {
+                    "payload_id": "CRS-18",
+                    "norad_id": [],
+                    "cap_serial": null,
+                    "reused": true,
+                    "customers": [
+                        "NASA (CRS)"
+                    ],
+                    "nationality": "United States",
+                    "manufacturer": "SpaceX",
+                    "payload_type": "Dragon 1.1",
+                    "payload_mass_kg": null,
+                    "payload_mass_lbs": null,
+                    "orbit": "ISS",
+                    "orbit_params": {
+                        "reference_system": "geocentric",
+                        "regime": "low-earth",
+                        "longitude": null,
+                        "semi_major_axis_km": null,
+                        "eccentricity": null,
+                        "periapsis_km": null,
+                        "apoapsis_km": null,
+                        "inclination_deg": null,
+                        "period_min": null,
+                        "lifespan_years": null,
+                        "epoch": null,
+                        "mean_motion": null,
+                        "raan": null,
+                        "arg_of_pericenter": null,
+                        "mean_anomaly": null
+                    },
+                    "mass_returned_kg": null,
+                    "mass_returned_lbs": null,
+                    "flight_time_sec": null,
+                    "cargo_manifest": null
+                }
+            ]
+        },
+        "fairings": null
+    },
+    "ships": [],
+    "telemetry": {
+        "flight_club": null
+    },
+    "launch_site": {
+        "site_id": "ccafs_slc_40",
+        "site_name": "CCAFS SLC 40",
+        "site_name_long": "Cape Canaveral Air Force Station Space Launch Complex 40"
+    },
+    "launch_success": null,
+    "links": {
+        "mission_patch": null,
+        "mission_patch_small": null,
+        "reddit_campaign": "https://www.reddit.com/r/spacex/comments/c8k6g5/crs18_launch_campaign_thread",
+        "reddit_launch": null,
+        "reddit_recovery": null,
+        "reddit_media": null,
+        "presskit": null,
+        "article_link": null,
+        "wikipedia": null,
+        "video_link": null,
+        "youtube_id": null,
+        "flickr_images": []
+    },
+    "details": "SpaceX's 18th Commercial Resupply Services mission out of a total of 20 such contracted flights for NASA, this launch will deliver essential supplies to the International Space Station using the reusable Dragon 1 cargo spacecraft. The external payload for this mission is International Docking Adapter 3, replacing IDA-1 lost in SpaceX's CRS-7 launch failure. This mission will launch from SLC-40 at Cape Canaveral AFS on a Falcon 9, and the first-stage booster is expected to land back at CCAFS LZ-1.",
+    "upcoming": true,
+    "static_fire_date_utc": null,
+    "static_fire_date_unix": null,
+    "timeline": null,
+    "crew": null
+}
