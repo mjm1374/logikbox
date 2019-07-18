@@ -1,23 +1,6 @@
 <?php
-require_once 'vendor/autoload.php';
-include_once("api-key.php");
 include_once("controller/Controller.php");
 $controller = new Controller();
-
-//$endpoint = "https://api-football-v1.p.rapidapi.com/v2/"; // Live endpoint
-$endpoint = "http://www.api-football.com/demo/api/v2/"; // Demo endpoint
-
-	https://api-football-v1.p.rapidapi.com/v2/teams/team/
-
-$response = Unirest\Request::get(
-	$endpoint . "teams/team/13",
-	array(
-		"X-RapidAPI-Key" => $footballKey ,
-		"Accept" => "application/json"
-	)
-);
-
-
 ?>
 
 <!doctype html>
@@ -37,18 +20,9 @@ $response = Unirest\Request::get(
 	</nav>
 
 	<div id="acceleration" style="display:none; widht:100%; height:100px;"></div>
-	<div class="worldcup--wrapperx">
-		<div class="worldcupx"></div> <?php //$controller->getTable(2)
-		//var_dump($response);  
+	
+		<?php include_once("view/team_banner.php"); ?>
 
-		// ["results"]=> int(1) ["leagues"]=> array(1) { [0]=> object(stdClass)#7 (11) { ["league_id"]=> int(2) ["name"]=> string(14) "Premier League" ["country"]=> string(7) "England" ["country_code"]=> string(2) "GB" ["season"]=> int(2018) ["season_start"]=> string(10) "2018-08-10" ["season_end"]=> string(10) "2019-05-12" ["logo"]=> string(49) "https://www.api-football.com/public/leagues/2.png" ["flag"]=> string(48) "https://www.api-football.com/public/flags/gb.svg" ["standings"]=> int(1) ["is_current"]=> int(0) } } } } >
-
-		var_dump($response->body->api->teams[0]);
-		echo "<br>";
-		$team = $response->body->api->teams[0];
-		echo $team->name; ?>
-		</div>
-	</div>
 	<div class="jumbotron jumbotron--homepage">
 		<div class="container">
 			<h1>Hello, World!</h1>
