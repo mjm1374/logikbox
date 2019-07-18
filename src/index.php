@@ -4,8 +4,11 @@ include_once("api-key.php");
 include_once("controller/Controller.php");
 $controller = new Controller();
 
+//$endpoint = "https://api-football-v1.p.rapidapi.com/v2/"; // Live endpoint
+$endpoint = "http://www.api-football.com/demo/api/v2/"; // Demo endpoint
+
 $response = Unirest\Request::get(
-	"https://api-football-v1.p.rapidapi.com/v2/leagues/league/2",
+	$endpoint . "leagues/league/2",
 	array(
 		"X-RapidAPI-Host" => "api-football-v1.p.rapidapi.com",
 		"X-RapidAPI-Key" => $football 
