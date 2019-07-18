@@ -1,17 +1,18 @@
 <?php
 require_once 'vendor/autoload.php';
+include_once("api-key.php");
 include_once("controller/Controller.php");
 $controller = new Controller();
 
-// $response = Unirest\Request::get(
-// 	"https://api-football-v1.p.rapidapi.com/v2/leagues/league/2",
-// 	array(
-// 		"X-RapidAPI-Host" => "api-football-v1.p.rapidapi.com",
-// 		"X-RapidAPI-Key" => "Rd2pyVFguwJeulnqTswlZ2pJCrlurqnE"
-// 	)
-// );
+$response = Unirest\Request::get(
+	"https://api-football-v1.p.rapidapi.com/v2/leagues/league/2",
+	array(
+		"X-RapidAPI-Host" => "api-football-v1.p.rapidapi.com",
+		"X-RapidAPI-Key" => $football 
+	)
+);
 
-//var_dump($response) ;
+
 ?>
 
 <!doctype html>
@@ -31,8 +32,17 @@ $controller = new Controller();
 	</nav>
 
 	<div id="acceleration" style="display:none; widht:100%; height:100px;"></div>
-	<div class="worldcup--wrapper">
-		<div class="worldcup"></div>
+	<div class="worldcup--wrapperx">
+		<div class="worldcupx"></div> <?php //$controller->getTable(2)
+		//var_dump($response);  
+
+		// ["results"]=> int(1) ["leagues"]=> array(1) { [0]=> object(stdClass)#7 (11) { ["league_id"]=> int(2) ["name"]=> string(14) "Premier League" ["country"]=> string(7) "England" ["country_code"]=> string(2) "GB" ["season"]=> int(2018) ["season_start"]=> string(10) "2018-08-10" ["season_end"]=> string(10) "2019-05-12" ["logo"]=> string(49) "https://www.api-football.com/public/leagues/2.png" ["flag"]=> string(48) "https://www.api-football.com/public/flags/gb.svg" ["standings"]=> int(1) ["is_current"]=> int(0) } } } } >
+
+		var_dump($response->body->api->leagues[0]);
+		echo "<br>";
+		$league = $response->body->api->leagues[0];
+		echo $league->name; ?>
+		</div>
 	</div>
 	<div class="jumbotron jumbotron--homepage">
 		<div class="container">
@@ -142,29 +152,9 @@ $controller = new Controller();
 			//console.log( json.lines[Math.floor(Math.random() * 11)]);
 			GetInstagram();
 			GetSpaceX(3);
-			GetGroupResults();
+			//GetGroupResults();
+			GetTable(2);
 		});
-
-
-		$.ajax({
-			type: "GET",
-			url: "https://api-football-v1.p.rapidapi.com/v2/leagueTable/2",
-			headers: {
-				'X-RapidAPI-Key': 'Rd2pyVFguwJeulnqTswlZ2pJCrlurqnE'
-			},
-
-			success: function(result) {
-				//set your variable to the result 
-				console.log(result);
-			},
-			error: function(result) {
-				//handle the error 
-				console.log(result);
-			}
-		});
-
-		//https://api-football-v1.p.rapidapi.com/v2/leagues/league/2
-		//https://api-football-v1.p.rapidapi.com/v2/fixtures/team/50/2
 	</script>
 
 

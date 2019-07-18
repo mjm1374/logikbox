@@ -1,0 +1,729 @@
+{
+    "api": {
+        "results": 1,
+        "standings": [
+            [
+                {
+                    "rank": 1,
+                    "team_id": 50,
+                    "teamName": "Manchester City",
+                    "logo": "https://www.api-football.com/public/teams/50.png",
+                    "group": "Premier League",
+                    "forme": "WWWWW",
+                    "description": "Promotion - Champions League (Group Stage)",
+                    "all": {
+                        "matchsPlayed": 38,
+                        "win": 32,
+                        "draw": 2,
+                        "lose": 4,
+                        "goalsFor": 95,
+                        "goalsAgainst": 23
+                    },
+                    "home": {
+                        "matchsPlayed": 19,
+                        "win": 18,
+                        "draw": 0,
+                        "lose": 1,
+                        "goalsFor": 57,
+                        "goalsAgainst": 12
+                    },
+                    "away": {
+                        "matchsPlayed": 19,
+                        "win": 14,
+                        "draw": 2,
+                        "lose": 3,
+                        "goalsFor": 38,
+                        "goalsAgainst": 11
+                    },
+                    "goalsDiff": 72,
+                    "points": 98,
+                    "lastUpdate": "2019-05-12"
+                },
+                {
+                    "rank": 2,
+                    "team_id": 40,
+                    "teamName": "Liverpool",
+                    "logo": "https://www.api-football.com/public/teams/40.png",
+                    "group": "Premier League",
+                    "forme": "WWWWW",
+                    "description": "Promotion - Champions League (Group Stage)",
+                    "all": {
+                        "matchsPlayed": 38,
+                        "win": 30,
+                        "draw": 7,
+                        "lose": 1,
+                        "goalsFor": 89,
+                        "goalsAgainst": 22
+                    },
+                    "home": {
+                        "matchsPlayed": 19,
+                        "win": 17,
+                        "draw": 2,
+                        "lose": 0,
+                        "goalsFor": 55,
+                        "goalsAgainst": 10
+                    },
+                    "away": {
+                        "matchsPlayed": 19,
+                        "win": 13,
+                        "draw": 5,
+                        "lose": 1,
+                        "goalsFor": 34,
+                        "goalsAgainst": 12
+                    },
+                    "goalsDiff": 67,
+                    "points": 97,
+                    "lastUpdate": "2019-05-12"
+                },
+                {
+                    "rank": 3,
+                    "team_id": 49,
+                    "teamName": "Chelsea",
+                    "logo": "https://www.api-football.com/public/teams/49.png",
+                    "group": "Premier League",
+                    "forme": "DWDDL",
+                    "description": "Promotion - Champions League (Group Stage)",
+                    "all": {
+                        "matchsPlayed": 38,
+                        "win": 21,
+                        "draw": 9,
+                        "lose": 8,
+                        "goalsFor": 63,
+                        "goalsAgainst": 39
+                    },
+                    "home": {
+                        "matchsPlayed": 19,
+                        "win": 12,
+                        "draw": 6,
+                        "lose": 1,
+                        "goalsFor": 39,
+                        "goalsAgainst": 12
+                    },
+                    "away": {
+                        "matchsPlayed": 19,
+                        "win": 9,
+                        "draw": 3,
+                        "lose": 7,
+                        "goalsFor": 24,
+                        "goalsAgainst": 27
+                    },
+                    "goalsDiff": 24,
+                    "points": 72,
+                    "lastUpdate": "2019-05-12"
+                },
+                {
+                    "rank": 4,
+                    "team_id": 47,
+                    "teamName": "Tottenham",
+                    "logo": "https://www.api-football.com/public/teams/47.png",
+                    "group": "Premier League",
+                    "forme": "DLLWL",
+                    "description": "Promotion - Champions League (Group Stage)",
+                    "all": {
+                        "matchsPlayed": 38,
+                        "win": 23,
+                        "draw": 2,
+                        "lose": 13,
+                        "goalsFor": 67,
+                        "goalsAgainst": 39
+                    },
+                    "home": {
+                        "matchsPlayed": 19,
+                        "win": 12,
+                        "draw": 2,
+                        "lose": 5,
+                        "goalsFor": 34,
+                        "goalsAgainst": 16
+                    },
+                    "away": {
+                        "matchsPlayed": 19,
+                        "win": 11,
+                        "draw": 0,
+                        "lose": 8,
+                        "goalsFor": 33,
+                        "goalsAgainst": 23
+                    },
+                    "goalsDiff": 28,
+                    "points": 71,
+                    "lastUpdate": "2019-05-12"
+                },
+                {
+                    "rank": 5,
+                    "team_id": 42,
+                    "teamName": "Arsenal",
+                    "logo": "https://www.api-football.com/public/teams/42.png",
+                    "group": "Premier League",
+                    "forme": "WDLLL",
+                    "description": "Promotion - Europa League (Group Stage)",
+                    "all": {
+                        "matchsPlayed": 38,
+                        "win": 21,
+                        "draw": 7,
+                        "lose": 10,
+                        "goalsFor": 73,
+                        "goalsAgainst": 51
+                    },
+                    "home": {
+                        "matchsPlayed": 19,
+                        "win": 14,
+                        "draw": 3,
+                        "lose": 2,
+                        "goalsFor": 42,
+                        "goalsAgainst": 16
+                    },
+                    "away": {
+                        "matchsPlayed": 19,
+                        "win": 7,
+                        "draw": 4,
+                        "lose": 8,
+                        "goalsFor": 31,
+                        "goalsAgainst": 35
+                    },
+                    "goalsDiff": 22,
+                    "points": 70,
+                    "lastUpdate": "2019-05-12"
+                },
+                {
+                    "rank": 6,
+                    "team_id": 33,
+                    "teamName": "Manchester United",
+                    "logo": "https://www.api-football.com/public/teams/33.png",
+                    "group": "Premier League",
+                    "forme": "LDDLL",
+                    "description": "Promotion - Europa League (Qualification)",
+                    "all": {
+                        "matchsPlayed": 38,
+                        "win": 19,
+                        "draw": 9,
+                        "lose": 10,
+                        "goalsFor": 65,
+                        "goalsAgainst": 54
+                    },
+                    "home": {
+                        "matchsPlayed": 19,
+                        "win": 10,
+                        "draw": 6,
+                        "lose": 3,
+                        "goalsFor": 33,
+                        "goalsAgainst": 25
+                    },
+                    "away": {
+                        "matchsPlayed": 19,
+                        "win": 9,
+                        "draw": 3,
+                        "lose": 7,
+                        "goalsFor": 32,
+                        "goalsAgainst": 29
+                    },
+                    "goalsDiff": 11,
+                    "points": 66,
+                    "lastUpdate": "2019-05-12"
+                },
+                {
+                    "rank": 7,
+                    "team_id": 39,
+                    "teamName": "Wolves",
+                    "logo": "https://www.api-football.com/public/teams/39.png",
+                    "group": "Premier League",
+                    "forme": "LWWWD",
+                    "description": null,
+                    "all": {
+                        "matchsPlayed": 38,
+                        "win": 16,
+                        "draw": 9,
+                        "lose": 13,
+                        "goalsFor": 47,
+                        "goalsAgainst": 46
+                    },
+                    "home": {
+                        "matchsPlayed": 19,
+                        "win": 10,
+                        "draw": 4,
+                        "lose": 5,
+                        "goalsFor": 28,
+                        "goalsAgainst": 21
+                    },
+                    "away": {
+                        "matchsPlayed": 19,
+                        "win": 6,
+                        "draw": 5,
+                        "lose": 8,
+                        "goalsFor": 19,
+                        "goalsAgainst": 25
+                    },
+                    "goalsDiff": 1,
+                    "points": 57,
+                    "lastUpdate": "2019-05-12"
+                },
+                {
+                    "rank": 8,
+                    "team_id": 45,
+                    "teamName": "Everton",
+                    "logo": "https://www.api-football.com/public/teams/45.png",
+                    "group": "Premier League",
+                    "forme": "DWDWL",
+                    "description": null,
+                    "all": {
+                        "matchsPlayed": 38,
+                        "win": 15,
+                        "draw": 9,
+                        "lose": 14,
+                        "goalsFor": 54,
+                        "goalsAgainst": 46
+                    },
+                    "home": {
+                        "matchsPlayed": 19,
+                        "win": 10,
+                        "draw": 4,
+                        "lose": 5,
+                        "goalsFor": 30,
+                        "goalsAgainst": 21
+                    },
+                    "away": {
+                        "matchsPlayed": 19,
+                        "win": 5,
+                        "draw": 5,
+                        "lose": 9,
+                        "goalsFor": 24,
+                        "goalsAgainst": 25
+                    },
+                    "goalsDiff": 8,
+                    "points": 54,
+                    "lastUpdate": "2019-05-12"
+                },
+                {
+                    "rank": 9,
+                    "team_id": 46,
+                    "teamName": "Leicester",
+                    "logo": "https://www.api-football.com/public/teams/46.png",
+                    "group": "Premier League",
+                    "forme": "DLWDL",
+                    "description": null,
+                    "all": {
+                        "matchsPlayed": 38,
+                        "win": 15,
+                        "draw": 7,
+                        "lose": 16,
+                        "goalsFor": 51,
+                        "goalsAgainst": 48
+                    },
+                    "home": {
+                        "matchsPlayed": 19,
+                        "win": 8,
+                        "draw": 3,
+                        "lose": 8,
+                        "goalsFor": 24,
+                        "goalsAgainst": 20
+                    },
+                    "away": {
+                        "matchsPlayed": 19,
+                        "win": 7,
+                        "draw": 4,
+                        "lose": 8,
+                        "goalsFor": 27,
+                        "goalsAgainst": 28
+                    },
+                    "goalsDiff": 3,
+                    "points": 52,
+                    "lastUpdate": "2019-05-12"
+                },
+                {
+                    "rank": 10,
+                    "team_id": 48,
+                    "teamName": "West Ham",
+                    "logo": "https://www.api-football.com/public/teams/48.png",
+                    "group": "Premier League",
+                    "forme": "WWWDL",
+                    "description": null,
+                    "all": {
+                        "matchsPlayed": 38,
+                        "win": 15,
+                        "draw": 7,
+                        "lose": 16,
+                        "goalsFor": 52,
+                        "goalsAgainst": 55
+                    },
+                    "home": {
+                        "matchsPlayed": 19,
+                        "win": 9,
+                        "draw": 4,
+                        "lose": 6,
+                        "goalsFor": 32,
+                        "goalsAgainst": 27
+                    },
+                    "away": {
+                        "matchsPlayed": 19,
+                        "win": 6,
+                        "draw": 3,
+                        "lose": 10,
+                        "goalsFor": 20,
+                        "goalsAgainst": 28
+                    },
+                    "goalsDiff": -3,
+                    "points": 52,
+                    "lastUpdate": "2019-05-12"
+                },
+                {
+                    "rank": 11,
+                    "team_id": 38,
+                    "teamName": "Watford",
+                    "logo": "https://www.api-football.com/public/teams/38.png",
+                    "group": "Premier League",
+                    "forme": "LLLDW",
+                    "description": null,
+                    "all": {
+                        "matchsPlayed": 38,
+                        "win": 14,
+                        "draw": 8,
+                        "lose": 16,
+                        "goalsFor": 52,
+                        "goalsAgainst": 59
+                    },
+                    "home": {
+                        "matchsPlayed": 19,
+                        "win": 8,
+                        "draw": 3,
+                        "lose": 8,
+                        "goalsFor": 26,
+                        "goalsAgainst": 28
+                    },
+                    "away": {
+                        "matchsPlayed": 19,
+                        "win": 6,
+                        "draw": 5,
+                        "lose": 8,
+                        "goalsFor": 26,
+                        "goalsAgainst": 31
+                    },
+                    "goalsDiff": -7,
+                    "points": 50,
+                    "lastUpdate": "2019-05-12"
+                },
+                {
+                    "rank": 12,
+                    "team_id": 52,
+                    "teamName": "Crystal Palace",
+                    "logo": "https://www.api-football.com/public/teams/52.png",
+                    "group": "Premier League",
+                    "forme": "WWDWL",
+                    "description": null,
+                    "all": {
+                        "matchsPlayed": 38,
+                        "win": 14,
+                        "draw": 7,
+                        "lose": 17,
+                        "goalsFor": 51,
+                        "goalsAgainst": 53
+                    },
+                    "home": {
+                        "matchsPlayed": 19,
+                        "win": 5,
+                        "draw": 5,
+                        "lose": 9,
+                        "goalsFor": 19,
+                        "goalsAgainst": 23
+                    },
+                    "away": {
+                        "matchsPlayed": 19,
+                        "win": 9,
+                        "draw": 2,
+                        "lose": 8,
+                        "goalsFor": 32,
+                        "goalsAgainst": 30
+                    },
+                    "goalsDiff": -2,
+                    "points": 49,
+                    "lastUpdate": "2019-05-12"
+                },
+                {
+                    "rank": 13,
+                    "team_id": 34,
+                    "teamName": "Newcastle",
+                    "logo": "https://www.api-football.com/public/teams/34.png",
+                    "group": "Premier League",
+                    "forme": "WLDWW",
+                    "description": null,
+                    "all": {
+                        "matchsPlayed": 38,
+                        "win": 12,
+                        "draw": 9,
+                        "lose": 17,
+                        "goalsFor": 42,
+                        "goalsAgainst": 48
+                    },
+                    "home": {
+                        "matchsPlayed": 19,
+                        "win": 8,
+                        "draw": 1,
+                        "lose": 10,
+                        "goalsFor": 24,
+                        "goalsAgainst": 25
+                    },
+                    "away": {
+                        "matchsPlayed": 19,
+                        "win": 4,
+                        "draw": 8,
+                        "lose": 7,
+                        "goalsFor": 18,
+                        "goalsAgainst": 23
+                    },
+                    "goalsDiff": -6,
+                    "points": 45,
+                    "lastUpdate": "2019-05-12"
+                },
+                {
+                    "rank": 14,
+                    "team_id": 35,
+                    "teamName": "Bournemouth",
+                    "logo": "https://www.api-football.com/public/teams/35.png",
+                    "group": "Premier League",
+                    "forme": "LWDLW",
+                    "description": null,
+                    "all": {
+                        "matchsPlayed": 38,
+                        "win": 13,
+                        "draw": 6,
+                        "lose": 19,
+                        "goalsFor": 56,
+                        "goalsAgainst": 70
+                    },
+                    "home": {
+                        "matchsPlayed": 19,
+                        "win": 8,
+                        "draw": 5,
+                        "lose": 6,
+                        "goalsFor": 30,
+                        "goalsAgainst": 25
+                    },
+                    "away": {
+                        "matchsPlayed": 19,
+                        "win": 5,
+                        "draw": 1,
+                        "lose": 13,
+                        "goalsFor": 26,
+                        "goalsAgainst": 45
+                    },
+                    "goalsDiff": -14,
+                    "points": 45,
+                    "lastUpdate": "2019-05-12"
+                },
+                {
+                    "rank": 15,
+                    "team_id": 44,
+                    "teamName": "Burnley",
+                    "logo": "https://www.api-football.com/public/teams/44.png",
+                    "group": "Premier League",
+                    "forme": "LLLDW",
+                    "description": null,
+                    "all": {
+                        "matchsPlayed": 38,
+                        "win": 11,
+                        "draw": 7,
+                        "lose": 20,
+                        "goalsFor": 45,
+                        "goalsAgainst": 68
+                    },
+                    "home": {
+                        "matchsPlayed": 19,
+                        "win": 7,
+                        "draw": 2,
+                        "lose": 10,
+                        "goalsFor": 24,
+                        "goalsAgainst": 32
+                    },
+                    "away": {
+                        "matchsPlayed": 19,
+                        "win": 4,
+                        "draw": 5,
+                        "lose": 10,
+                        "goalsFor": 21,
+                        "goalsAgainst": 36
+                    },
+                    "goalsDiff": -23,
+                    "points": 40,
+                    "lastUpdate": "2019-05-12"
+                },
+                {
+                    "rank": 16,
+                    "team_id": 41,
+                    "teamName": "Southampton",
+                    "logo": "https://www.api-football.com/public/teams/41.png",
+                    "group": "Premier League",
+                    "forme": "DLDDL",
+                    "description": null,
+                    "all": {
+                        "matchsPlayed": 38,
+                        "win": 9,
+                        "draw": 12,
+                        "lose": 17,
+                        "goalsFor": 45,
+                        "goalsAgainst": 65
+                    },
+                    "home": {
+                        "matchsPlayed": 19,
+                        "win": 5,
+                        "draw": 8,
+                        "lose": 6,
+                        "goalsFor": 27,
+                        "goalsAgainst": 30
+                    },
+                    "away": {
+                        "matchsPlayed": 19,
+                        "win": 4,
+                        "draw": 4,
+                        "lose": 11,
+                        "goalsFor": 18,
+                        "goalsAgainst": 35
+                    },
+                    "goalsDiff": -20,
+                    "points": 39,
+                    "lastUpdate": "2019-05-12"
+                },
+                {
+                    "rank": 17,
+                    "team_id": 51,
+                    "teamName": "Brighton",
+                    "logo": "https://www.api-football.com/public/teams/51.png",
+                    "group": "Premier League",
+                    "forme": "LDDLD",
+                    "description": null,
+                    "all": {
+                        "matchsPlayed": 38,
+                        "win": 9,
+                        "draw": 9,
+                        "lose": 20,
+                        "goalsFor": 35,
+                        "goalsAgainst": 60
+                    },
+                    "home": {
+                        "matchsPlayed": 19,
+                        "win": 6,
+                        "draw": 5,
+                        "lose": 8,
+                        "goalsFor": 19,
+                        "goalsAgainst": 28
+                    },
+                    "away": {
+                        "matchsPlayed": 19,
+                        "win": 3,
+                        "draw": 4,
+                        "lose": 12,
+                        "goalsFor": 16,
+                        "goalsAgainst": 32
+                    },
+                    "goalsDiff": -25,
+                    "points": 36,
+                    "lastUpdate": "2019-05-12"
+                },
+                {
+                    "rank": 18,
+                    "team_id": 43,
+                    "teamName": "Cardiff",
+                    "logo": "https://www.api-football.com/public/teams/43.png",
+                    "group": "Premier League",
+                    "forme": "WLLLW",
+                    "description": "Relegation - Championship",
+                    "all": {
+                        "matchsPlayed": 38,
+                        "win": 10,
+                        "draw": 4,
+                        "lose": 24,
+                        "goalsFor": 34,
+                        "goalsAgainst": 69
+                    },
+                    "home": {
+                        "matchsPlayed": 19,
+                        "win": 6,
+                        "draw": 2,
+                        "lose": 11,
+                        "goalsFor": 21,
+                        "goalsAgainst": 38
+                    },
+                    "away": {
+                        "matchsPlayed": 19,
+                        "win": 4,
+                        "draw": 2,
+                        "lose": 13,
+                        "goalsFor": 13,
+                        "goalsAgainst": 31
+                    },
+                    "goalsDiff": -35,
+                    "points": 34,
+                    "lastUpdate": "2019-05-12"
+                },
+                {
+                    "rank": 19,
+                    "team_id": 36,
+                    "teamName": "Fulham",
+                    "logo": "https://www.api-football.com/public/teams/36.png",
+                    "group": "Premier League",
+                    "forme": "LLWWW",
+                    "description": "Relegation - Championship",
+                    "all": {
+                        "matchsPlayed": 38,
+                        "win": 7,
+                        "draw": 5,
+                        "lose": 26,
+                        "goalsFor": 34,
+                        "goalsAgainst": 81
+                    },
+                    "home": {
+                        "matchsPlayed": 19,
+                        "win": 6,
+                        "draw": 3,
+                        "lose": 10,
+                        "goalsFor": 22,
+                        "goalsAgainst": 36
+                    },
+                    "away": {
+                        "matchsPlayed": 19,
+                        "win": 1,
+                        "draw": 2,
+                        "lose": 16,
+                        "goalsFor": 12,
+                        "goalsAgainst": 45
+                    },
+                    "goalsDiff": -47,
+                    "points": 26,
+                    "lastUpdate": "2019-05-12"
+                },
+                {
+                    "rank": 20,
+                    "team_id": 37,
+                    "teamName": "Huddersfield",
+                    "logo": "https://www.api-football.com/public/teams/37.png",
+                    "group": "Premier League",
+                    "forme": "DDLLL",
+                    "description": "Relegation - Championship",
+                    "all": {
+                        "matchsPlayed": 38,
+                        "win": 3,
+                        "draw": 7,
+                        "lose": 28,
+                        "goalsFor": 22,
+                        "goalsAgainst": 76
+                    },
+                    "home": {
+                        "matchsPlayed": 19,
+                        "win": 2,
+                        "draw": 3,
+                        "lose": 14,
+                        "goalsFor": 10,
+                        "goalsAgainst": 31
+                    },
+                    "away": {
+                        "matchsPlayed": 19,
+                        "win": 1,
+                        "draw": 4,
+                        "lose": 14,
+                        "goalsFor": 12,
+                        "goalsAgainst": 45
+                    },
+                    "goalsDiff": -54,
+                    "points": 16,
+                    "lastUpdate": "2019-05-12"
+                }
+            ]
+        ]
+    }
+}
