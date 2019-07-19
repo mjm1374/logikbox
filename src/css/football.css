@@ -48,7 +48,7 @@
     width:75px;
     height:75px;
     float:left;
-    margin-right:20px;
+    margin-right: 10px;
     order: 1;
     flex-grow: 1;
 }

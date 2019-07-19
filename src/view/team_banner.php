@@ -2,18 +2,25 @@
 require_once 'vendor/autoload.php';
 include_once("api-key.php");
 
-$myTeam = 13;
-$myLeague = 2;
+
+if ($mode == 'prod') {
+    $myTeam = 50; // live
+    $myLeague = 2;
+} else {
+    $myTeam = 13; // live
+    $myLeague = 2;
+}
+ 
 
 //https:api-football-v1.p.rapidapi.com/v2/teams/team/{id}
 
-$response = Unirest\Request::get(
-    $endpoint . "teams/team/" . $myTeam,
-    array(
-        "X-RapidAPI-Key" => $footballKey,
-        "Accept" => "application/json"
-    )
-);
+// $response = Unirest\Request::get(
+//     $endpoint . "teams/team/" . $myTeam,
+//     array(
+//         "X-RapidAPI-Key" => $footballKey,
+//         "Accept" => "application/json"
+//     )
+// );
 
 $standings = Unirest\Request::get(
     $endpoint . "leagueTable/" . $myLeague,
@@ -22,6 +29,7 @@ $standings = Unirest\Request::get(
         "Accept" => "application/json"
     )
 );
+//var_dump($standings->body);
 ?>
 
 <div class="football">
