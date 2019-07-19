@@ -28,7 +28,9 @@
     width: 30%;
     height: 90%;
     flex-grow: 1;
-    display: display;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     border: 1px solid #000;
     padding: 10px;
     margin-right: 10px;
@@ -47,8 +49,37 @@
     height:75px;
     float:left;
     margin-right:20px;
+    order: 1;
+    flex-grow: 1;
 }
 
+
+.football_teamData{
+    width:80%;
+    height: 100%;
+    float: right;
+    display: flex; 
+    order: 2;
+    flex-grow: 2;
+    flex-direction: column;
+
+}
 .football_title{
-    margin-top: 0px;
+    margin: 0px;
+}
+
+.football__table__header{
+    width: 12%;
+    margin: 0 auto;
+    border-bottom: 1px solid gray;
+    text-align: center;
+}
+.football__table__td__div:first-of-type {
+    text-align: left;
+}
+
+.football__table__td__div{
+    margin: 0 auto;
+    text-align: center;
+    
 }
