@@ -2,7 +2,7 @@
 require_once 'vendor/autoload.php';
 include_once("api-key.php");
 
-
+Unirest\Request::verifyPeer(false);
 if ($mode == 'prod') {
     $myTeam = 50; // live
     $myLeagueCurrentSeason = 2;
@@ -116,14 +116,12 @@ function checkLogo($logo)
         if($nextGame == null){
             $fixtures = getFixturess($myLeagueNextSeason, $myTeam);
             $games = $fixtures->body->api->fixtures;
-             
 
             foreach ($games as $game) {
                 
                 if ($game->event_timestamp >= $today && $filter == 0) {
                     $nextGame = $game;
-                    $filter = 1;
-                    echo "bingo";
+                    $filter = 1; 
                 }
             }
 
