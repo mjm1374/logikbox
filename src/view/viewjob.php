@@ -19,8 +19,8 @@
           <h4><?php echo $job->company ; ?></h4>
           <h5><?php echo $job->title ; ?></h5>
           <?php echo $job->description ; ?></p>
-	    <a class="btn btn-default" href="<?php echo $job->link ; ?>/" role="button" target="_blank" rel="noopener">View Site &raquo;</a> 
-      </div>
+          <a class="btn btn-default" href="<?php echo $job->link ; ?>/" role="button" target="_blank" rel="noopener">View Site &raquo;</a> 
+        </div>
         <div class="col-md-2">
         
         </div>

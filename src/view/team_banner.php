@@ -224,7 +224,7 @@ function checkLogo($logo)
                             <span class="fottball__match__teamName"><?php echo $homeTeam->team_name; ?></span>
                         </td>
                         <td class="football_MatchData">
-                            <?php echo date_format(date_create($nextGame->event_date), 'M d, Y -  H:i'); ?><br />
+                            <?php echo date_format(date_create($nextGame->event_date), 'M d, Y -  H:i'); ?> (GMT)<br />
                             <span class="football__match__score"><?php echo $nextGame->goalsHomeTeam .  " - " . $nextGame->goalsAwayTeam; ?></span><br />
                             <span class="football__venue"><?php echo $nextGame->venue; ?></span>
 

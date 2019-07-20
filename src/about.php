@@ -1,5 +1,5 @@
 <?php
-include_once("__apiKeys.php");
+include_once("api-key.php");
 include_once("controller/Controller.php");
 $controller = new Controller();
 ?>
