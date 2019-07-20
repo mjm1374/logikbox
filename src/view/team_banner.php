@@ -10,18 +10,12 @@ if ($mode == 'prod') {
     $myTeam = 13; // live
     $myLeague = 2;
 }
- 
+
 
 //https:api-football-v1.p.rapidapi.com/v2/teams/team/{id}
 
-// $response = Unirest\Request::get(
-//     $endpoint . "teams/team/" . $myTeam,
-//     array(
-//         "X-RapidAPI-Key" => $footballKey,
-//         "Accept" => "application/json"
-//     )
-// );
 
+// Get teams for team info
 $standings = Unirest\Request::get(
     $endpoint . "leagueTable/" . $myLeague,
     array(
@@ -29,6 +23,17 @@ $standings = Unirest\Request::get(
         "Accept" => "application/json"
     )
 );
+
+// Get team schedule for last and next
+$fixtures = Unirest\Request::get(
+    $endpoint . "fixtures/team/" . $myTeam . "/" . $myLeague ,
+    array(
+        "X-RapidAPI-Key" => $footballKey,
+        "Accept" => "application/json"
+    )
+);
+
+
 //var_dump($standings->body);
 ?>
 
@@ -49,6 +54,7 @@ $standings = Unirest\Request::get(
         //$team = $response->body->api->teams[0]; // I commented this out while high. pay attention, either kill the api call or re-establish this object.
 
         $teams = $standings->body->api->standings[0];
+        $games = $fixtures->body->api->fixtures;
 
 
         foreach ($teams as $obj) {
@@ -61,8 +67,18 @@ $standings = Unirest\Request::get(
         $logo = $teamInfo->logo;
         if ($logo == "Not available in Demo" || $logo == NULL) {
             $logo = "img/football_noLogo.png";
+            $logo = "https://www.api-football.com/public/teams/50.png";
         }
         $standings  = $teamInfo->all;
+
+
+
+        foreach ($games as $obj2) {
+            echo $obj2->event_timestamp . "<br />";
+            //if ($obj->event_timestamp == $myTeam) {
+                //$teamInfo = $obj;
+            //}
+        }
 
         ?>
         <div class="football__item">
