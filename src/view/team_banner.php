@@ -26,13 +26,23 @@ $standings = Unirest\Request::get(
 
 // Get team schedule for last and next
 $fixtures = Unirest\Request::get(
-    $endpoint . "fixtures/team/" . $myTeam . "/" . $myLeague ,
+    $endpoint . "fixtures/team/" . $myTeam . "/" . $myLeague,
     array(
         "X-RapidAPI-Key" => $footballKey,
         "Accept" => "application/json"
     )
 );
 
+
+function checkLogo($logo)
+{
+    if ($logo == "Not available in Demo" || $logo == NULL) {
+        $logo = "img/football_noLogo.png";
+        //$logo = "https://www.api-football.com/public/teams/50.png";
+    }
+
+    return $logo;
+}
 
 //var_dump($standings->body);
 ?>
@@ -57,31 +67,37 @@ $fixtures = Unirest\Request::get(
         $games = $fixtures->body->api->fixtures;
 
 
-        foreach ($teams as $obj) {
-            //echo $obj->team_id;
-            if ($obj->team_id == $myTeam) {
-                $teamInfo = $obj;
+        foreach ($teams as $team) {
+            //echo $team->team_id;
+            if ($team->team_id == $myTeam) {
+                $teamInfo = $team;
             }
         }
 
-        $logo = $teamInfo->logo;
-        if ($logo == "Not available in Demo" || $logo == NULL) {
-            $logo = "img/football_noLogo.png";
-            $logo = "https://www.api-football.com/public/teams/50.png";
-        }
+        $logo = checkLogo($teamInfo->logo);
+
         $standings  = $teamInfo->all;
 
+        $today = time();
+        //$today = '1540321200';
+        $lastGame = null;
+        $nextGame = null;
+        $filter = 0;
 
+        foreach ($games as $game) {
+            //echo $game->event_timestamp . "<br />";
+            if ($game->event_timestamp < $today) {
+                $lastGame = $game;
+            }
 
-        foreach ($games as $obj2) {
-            echo $obj2->event_timestamp . "<br />";
-            //if ($obj->event_timestamp == $myTeam) {
-                //$teamInfo = $obj;
-            //}
+            if ($game->event_timestamp >= $today && $filter == 0) {
+                $nextGame = $game;
+                $filter = 1;
+            }
         }
 
         ?>
-        <div class="football__item">
+        <div class="football_flex football__item">
             <div class="football__logo" style="background-image:url(<?php echo $logo; ?>);"></div>
 
             <div class="football_teamData">
@@ -137,10 +153,62 @@ $fixtures = Unirest\Request::get(
             </div>
         </div>
         <div class="football__item">
-            <h2 class="football_title">Last Game</h2>
+            <h4 class="football_title">Last Game</h4>
+            <?php
+            $awayTeam = $lastGame->awayTeam;
+            $homeTeam = $lastGame->homeTeam;
+            ?>
+            <table class="football__matchInfo">
+                <tr>
+                    <td class="football__match__teamLogo">
+                        <div class="football__match__logo" style="background-image:url(<?php echo checkLogo($homeTeam->logo); ?>);"></div>
+                        <span class="fottball__match__teamName"><?php echo $homeTeam->team_name; ?></span>
+                    </td>
+                    <td class="football_MatchData">
+                        <?php echo date_format(date_create($lastGame->event_date), 'M d, Y'); ?><br />
+                        <span class="football__match__score"><?php echo $lastGame->goalsHomeTeam .  " - " . $lastGame->goalsAwayTeam; ?></span><br />
+                        <span class="football__venue"><?php echo $lastGame->venue; ?></span>
+                    </td>
+
+                    <td class="football__match__teamLogo">
+                        <div class="football__match__logo" style="background-image:url(<?php echo checkLogo($awayTeam->logo); ?>);"></div>
+                        <span class="fottball__match__teamName"><?php echo $awayTeam->team_name; ?></span>
+                    </td>
+                </tr>
+            </table>
         </div>
-        <div class="football__item">
-            <h2 class="football_title">Next Game</h2>
+        <div class="football__item" style="z-index:-100;">
+            <h4 class="football_title">Next Game</h4>
+            <?php if ($nextGame == null) {
+                echo "<h5>Next Season</h5>";
+            } else {
+
+                $awayTeam = $nextGame->awayTeam;
+                $homeTeam = $nextGame->homeTeam;
+                //$Timezone = new DateTimeZone('America / New_York');
+                ?>
+                <table class="football__matchInfo">
+                    <tr>
+                        <td class="football__match__teamLogo">
+                            <div class="football__match__logo" style="background-image:url(<?php echo checkLogo($homeTeam->logo); ?>);"></div>
+                            <span class="fottball__match__teamName"><?php echo $homeTeam->team_name; ?></span>
+                        </td>
+                        <td class="football_MatchData">
+                            <?php echo date_format(date_create($nextGame->event_date), 'M d, Y -  H:i'); ?><br />
+                            <span class="football__match__score"><?php echo $nextGame->goalsHomeTeam .  " - " . $nextGame->goalsAwayTeam; ?></span><br />
+                            <span class="football__venue"><?php echo $nextGame->venue; ?></span>
+
+                        </td>
+
+                        <td class="football__match__teamLogo">
+                            <div class="football__match__logo" style="background-image:url(<?php echo checkLogo($awayTeam->logo); ?>);"></div>
+                            <span class="fottball__match__teamName"><?php echo $awayTeam->team_name; ?></span>
+                        </td>
+                    </tr>
+                </table>
+            <?php
+            }
+            ?>
         </div>
     </div>
 </div>
