@@ -5,33 +5,43 @@ include_once("api-key.php");
 
 if ($mode == 'prod') {
     $myTeam = 50; // live
-    $myLeague = 2;
+    $myLeagueCurrentSeason = 2;
+    $myLeagueNextSeason = 524;
 } else {
     $myTeam = 13; // live
-    $myLeague = 2;
+    $myLeagueCurrentSeason = 2;
+    $myLeagueNextSeason = 524;
 }
 
 
 //https:api-football-v1.p.rapidapi.com/v2/teams/team/{id}
 
 
-// Get teams for team info
-$standings = Unirest\Request::get(
-    $endpoint . "leagueTable/" . $myLeague,
-    array(
-        "X-RapidAPI-Key" => $footballKey,
-        "Accept" => "application/json"
-    )
-);
+function getStandings($myLeague){
+    // Get teams for team info
+    $standings = Unirest\Request::get(
+        $GLOBALS['endpoint'] . "leagueTable/" . $myLeague,
+        array(
+            "X-RapidAPI-Key" => $GLOBALS['footballKey'],
+            "Accept" => "application/json"
+        )
+    );
+    return $standings;
+}
 
-// Get team schedule for last and next
-$fixtures = Unirest\Request::get(
-    $endpoint . "fixtures/team/" . $myTeam . "/" . $myLeague,
-    array(
-        "X-RapidAPI-Key" => $footballKey,
-        "Accept" => "application/json"
-    )
-);
+function getFixturess($myLeague, $myTeam  )
+{
+    // Get team schedule for last and next
+    $fixtures = Unirest\Request::get(
+        $GLOBALS['endpoint'] . "fixtures/team/" . $myTeam . "/" . $myLeague,
+        array(
+            "X-RapidAPI-Key" => $GLOBALS['footballKey'],
+            "Accept" => "application/json"
+        )
+    );
+    return $fixtures;
+}
+
 
 
 function checkLogo($logo)
@@ -44,27 +54,33 @@ function checkLogo($logo)
     return $logo;
 }
 
+    $standings =  getStandings($myLeagueCurrentSeason);
+    $fixtures = getFixturess($myLeagueCurrentSeason, $myTeam);
+
+    $teams = $standings->body->api->standings[0];
+    $games = $fixtures->body->api->fixtures;
+
 //var_dump($standings->body);
 ?>
 
 <div class="football">
     <div class="foootball__inner">
         <?php
-        // League
-        // ["results"]=> int(1) ["leagues"]=> array(1) { [0]=> object(stdClass)#7 (11) { ["league_id"]=> int(2) ["name"]=> string(14) "Premier League" ["country"]=> string(7) "England" ["country_code"]=> string(2) "GB" ["season"]=> int(2018) ["season_start"]=> string(10) "2018-08-10" ["season_end"]=> string(10) "2019-05-12" ["logo"]=> string(49) "https://www.api-football.com/public/leagues/2.png" ["flag"]=> string(48) "https://www.api-football.com/public/flags/gb.svg" ["standings"]=> int(1) ["is_current"]=> int(0) } } } } >
+// League
+// ["results"]=> int(1) ["leagues"]=> array(1) { [0]=> object(stdClass)#7 (11) { ["league_id"]=> int(2) ["name"]=> string(14) "Premier League" ["country"]=> string(7) "England" ["country_code"]=> string(2) "GB" ["season"]=> int(2018) ["season_start"]=> string(10) "2018-08-10" ["season_end"]=> string(10) "2019-05-12" ["logo"]=> string(49) "https://www.api-football.com/public/leagues/2.png" ["flag"]=> string(48) "https://www.api-football.com/public/flags/gb.svg" ["standings"]=> int(1) ["is_current"]=> int(0) } } } } >
 
-        // Team
-        // { ["team_id"]=> int(13) ["name"]=> string(15) "Manchester City" ["code"]=> NULL ["logo"]=> string(21) "Not available in Demo" ["country"]=> string(7) "England" ["founded"]=> int(1880) ["venue_name"]=> string(14) "Etihad Stadium" ["venue_surface"]=> string(5) "grass" ["venue_address"]=> string(14) "Rowsley Street" ["venue_city"]=> string(10) "Manchester" ["venue_capacity"]=> int(55097) }
+// Team
+// { ["team_id"]=> int(13) ["name"]=> string(15) "Manchester City" ["code"]=> NULL ["logo"]=> string(21) "Not available in Demo" ["country"]=> string(7) "England" ["founded"]=> int(1880) ["venue_name"]=> string(14) "Etihad Stadium" ["venue_surface"]=> string(5) "grass" ["venue_address"]=> string(14) "Rowsley Street" ["venue_city"]=> string(10) "Manchester" ["venue_capacity"]=> int(55097) }
 
-        //var_dump($standings->body->api->standings[0]);
+//var_dump($standings->body->api->standings[0]);
 
-        //array(20) { [0]=> object(stdClass)#24 (13) { ["rank"]=> int(1) ["team_id"]=> int(13) ["teamName"]=> string(15) "Manchester City" ["logo"]=> string(21) "Not available in Demo" ["group"]=> string(14) "Premier League" ["forme"]=> string(5) "WWWWW" ["description"]=> string(42) "Promotion - Champions League (Group Stage)" ["all"]=> object(stdClass)#25 (6) { ["matchsPlayed"]=> int(37) ["win"]=> int(31) ["draw"]=> int(2) ["lose"]=> int(4) ["goalsFor"]=> int(91) ["goalsAgainst"]=> int(22) } ["home"]=> object(stdClass)#26 (6) { ["matchsPlayed"]=> int(19) ["win"]=> int(18) ["draw"]=> int(0) ["lose"]=> int(1) ["goalsFor"]=> int(57) ["goalsAgainst"]=> int(12) } ["away"]=> object(stdClass)#27 (6) { ["matchsPlayed"]=> int(18) ["win"]=> int(13) ["draw"]=> int(2) ["lose"]=> int(3) ["goalsFor"]=> int(34) ["goalsAgainst"]=> int(10) } ["goalsDiff"]=> int(69) ["points"]=> int(95) ["lastUpdate"]=> string(10) "2019-05-08" }
+//array(20) { [0]=> object(stdClass)#24 (13) { ["rank"]=> int(1) ["team_id"]=> int(13) ["teamName"]=> string(15) "Manchester City" ["logo"]=> string(21) "Not available in Demo" ["group"]=> string(14) "Premier League" ["forme"]=> string(5) "WWWWW" ["description"]=> string(42) "Promotion - Champions League (Group Stage)" ["all"]=> object(stdClass)#25 (6) { ["matchsPlayed"]=> int(37) ["win"]=> int(31) ["draw"]=> int(2) ["lose"]=> int(4) ["goalsFor"]=> int(91) ["goalsAgainst"]=> int(22) } ["home"]=> object(stdClass)#26 (6) { ["matchsPlayed"]=> int(19) ["win"]=> int(18) ["draw"]=> int(0) ["lose"]=> int(1) ["goalsFor"]=> int(57) ["goalsAgainst"]=> int(12) } ["away"]=> object(stdClass)#27 (6) { ["matchsPlayed"]=> int(18) ["win"]=> int(13) ["draw"]=> int(2) ["lose"]=> int(3) ["goalsFor"]=> int(34) ["goalsAgainst"]=> int(10) } ["goalsDiff"]=> int(69) ["points"]=> int(95) ["lastUpdate"]=> string(10) "2019-05-08" }
 
-        // echo "<br>";
-        //$team = $response->body->api->teams[0]; // I commented this out while high. pay attention, either kill the api call or re-establish this object.
+// echo "<br>";
+//$team = $response->body->api->teams[0]; // I commented this out while high. pay attention, either kill the api call or re-establish this object.
 
-        $teams = $standings->body->api->standings[0];
-        $games = $fixtures->body->api->fixtures;
+
+   
 
 
         foreach ($teams as $team) {
@@ -94,6 +110,23 @@ function checkLogo($logo)
                 $nextGame = $game;
                 $filter = 1;
             }
+        }
+
+        // no next game, try next season
+        if($nextGame == null){
+            $fixtures = getFixturess($myLeagueNextSeason, $myTeam);
+            $games = $fixtures->body->api->fixtures;
+             
+
+            foreach ($games as $game) {
+                
+                if ($game->event_timestamp >= $today && $filter == 0) {
+                    $nextGame = $game;
+                    $filter = 1;
+                    echo "bingo";
+                }
+            }
+
         }
 
         ?>
@@ -177,17 +210,16 @@ function checkLogo($logo)
                 </tr>
             </table>
         </div>
-        <div class="football__item" style="z-index:-100;">
-            <h4 class="football_title">Next Game</h4>
-            <?php if ($nextGame == null) {
-                echo "<h5>Next Season</h5>";
-            } else {
+        <div class="football__item" <?php if ($nextGame == null) { ?> style = "background-image:url(img/sad-soccer.jpg)" <?php } ?> >
+            <h4 class ="football_title">Next Game </h4>
+                <?php if ($nextGame == null) {
+                    echo "<h5>Next Season</h5>";
+                } else {
 
-                $awayTeam = $nextGame->awayTeam;
-                $homeTeam = $nextGame->homeTeam;
-                //$Timezone = new DateTimeZone('America / New_York');
-                ?>
-                <table class="football__matchInfo">
+                    $awayTeam = $nextGame->awayTeam;
+                    $homeTeam = $nextGame->homeTeam;
+                    //$Timezone = new DateTimeZone('America / New_York');
+                    ?> <table class="football__matchInfo">
                     <tr>
                         <td class="football__match__teamLogo">
                             <div class="football__match__logo" style="background-image:url(<?php echo checkLogo($homeTeam->logo); ?>);"></div>
@@ -205,10 +237,10 @@ function checkLogo($logo)
                             <span class="fottball__match__teamName"><?php echo $awayTeam->team_name; ?></span>
                         </td>
                     </tr>
-                </table>
-            <?php
-            }
-            ?>
+                    </table>
+                <?php
+                }
+                ?>
+            </div>
         </div>
     </div>
-</div>
