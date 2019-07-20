@@ -141,3 +141,14 @@
     margin: 5px 0px -10px 0px;
     display: block;
 }
+
+@media only screen and (max-width : 768px) {
+    .mobile__hide{
+        display: none;
+    }
+
+    .football__logo {
+        width: 120px;
+        height: 105px;
+    }
+}

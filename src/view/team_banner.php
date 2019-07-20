@@ -2,6 +2,9 @@
 require_once 'vendor/autoload.php';
 include_once("api-key.php");
 
+$userTimezone = new DateTimeZone('America/New_York');
+$gmtTimezone = new DateTimeZone('GMT');
+
 Unirest\Request::verifyPeer(false);
 if ($mode == 'prod') {
     $myTeam = 50; // live
@@ -17,7 +20,8 @@ if ($mode == 'prod') {
 //https:api-football-v1.p.rapidapi.com/v2/teams/team/{id}
 
 
-function getStandings($myLeague){
+function getStandings($myLeague)
+{
     // Get teams for team info
     $standings = Unirest\Request::get(
         $GLOBALS['endpoint'] . "leagueTable/" . $myLeague,
@@ -29,7 +33,7 @@ function getStandings($myLeague){
     return $standings;
 }
 
-function getFixturess($myLeague, $myTeam  )
+function getFixturess($myLeague, $myTeam)
 {
     // Get team schedule for last and next
     $fixtures = Unirest\Request::get(
@@ -54,11 +58,11 @@ function checkLogo($logo)
     return $logo;
 }
 
-    $standings =  getStandings($myLeagueCurrentSeason);
-    $fixtures = getFixturess($myLeagueCurrentSeason, $myTeam);
+$standings =  getStandings($myLeagueCurrentSeason);
+$fixtures = getFixturess($myLeagueCurrentSeason, $myTeam);
 
-    $teams = $standings->body->api->standings[0];
-    $games = $fixtures->body->api->fixtures;
+$teams = $standings->body->api->standings[0];
+$games = $fixtures->body->api->fixtures;
 
 //var_dump($standings->body);
 ?>
@@ -66,22 +70,6 @@ function checkLogo($logo)
 <div class="football">
     <div class="foootball__inner">
         <?php
-// League
-// ["results"]=> int(1) ["leagues"]=> array(1) { [0]=> object(stdClass)#7 (11) { ["league_id"]=> int(2) ["name"]=> string(14) "Premier League" ["country"]=> string(7) "England" ["country_code"]=> string(2) "GB" ["season"]=> int(2018) ["season_start"]=> string(10) "2018-08-10" ["season_end"]=> string(10) "2019-05-12" ["logo"]=> string(49) "https://www.api-football.com/public/leagues/2.png" ["flag"]=> string(48) "https://www.api-football.com/public/flags/gb.svg" ["standings"]=> int(1) ["is_current"]=> int(0) } } } } >
-
-// Team
-// { ["team_id"]=> int(13) ["name"]=> string(15) "Manchester City" ["code"]=> NULL ["logo"]=> string(21) "Not available in Demo" ["country"]=> string(7) "England" ["founded"]=> int(1880) ["venue_name"]=> string(14) "Etihad Stadium" ["venue_surface"]=> string(5) "grass" ["venue_address"]=> string(14) "Rowsley Street" ["venue_city"]=> string(10) "Manchester" ["venue_capacity"]=> int(55097) }
-
-//var_dump($standings->body->api->standings[0]);
-
-//array(20) { [0]=> object(stdClass)#24 (13) { ["rank"]=> int(1) ["team_id"]=> int(13) ["teamName"]=> string(15) "Manchester City" ["logo"]=> string(21) "Not available in Demo" ["group"]=> string(14) "Premier League" ["forme"]=> string(5) "WWWWW" ["description"]=> string(42) "Promotion - Champions League (Group Stage)" ["all"]=> object(stdClass)#25 (6) { ["matchsPlayed"]=> int(37) ["win"]=> int(31) ["draw"]=> int(2) ["lose"]=> int(4) ["goalsFor"]=> int(91) ["goalsAgainst"]=> int(22) } ["home"]=> object(stdClass)#26 (6) { ["matchsPlayed"]=> int(19) ["win"]=> int(18) ["draw"]=> int(0) ["lose"]=> int(1) ["goalsFor"]=> int(57) ["goalsAgainst"]=> int(12) } ["away"]=> object(stdClass)#27 (6) { ["matchsPlayed"]=> int(18) ["win"]=> int(13) ["draw"]=> int(2) ["lose"]=> int(3) ["goalsFor"]=> int(34) ["goalsAgainst"]=> int(10) } ["goalsDiff"]=> int(69) ["points"]=> int(95) ["lastUpdate"]=> string(10) "2019-05-08" }
-
-// echo "<br>";
-//$team = $response->body->api->teams[0]; // I commented this out while high. pay attention, either kill the api call or re-establish this object.
-
-
-   
-
 
         foreach ($teams as $team) {
             //echo $team->team_id;
@@ -113,18 +101,17 @@ function checkLogo($logo)
         }
 
         // no next game, try next season
-        if($nextGame == null){
+        if ($nextGame == null) {
             $fixtures = getFixturess($myLeagueNextSeason, $myTeam);
             $games = $fixtures->body->api->fixtures;
 
             foreach ($games as $game) {
-                
+
                 if ($game->event_timestamp >= $today && $filter == 0) {
                     $nextGame = $game;
-                    $filter = 1; 
+                    $filter = 1;
                 }
             }
-
         }
 
         ?>
@@ -183,7 +170,7 @@ function checkLogo($logo)
                 <div class="football_rank"><span class="bold">Form:</span> <?php echo $teamInfo->forme; ?></div>
             </div>
         </div>
-        <div class="football__item">
+        <div class="football__item mobile__hide">
             <h4 class="football_title">Last Game</h4>
             <?php
             $awayTeam = $lastGame->awayTeam;
@@ -208,23 +195,28 @@ function checkLogo($logo)
                 </tr>
             </table>
         </div>
-        <div class="football__item" <?php if ($nextGame == null) { ?> style = "background-image:url(img/sad-soccer.jpg)" <?php } ?> >
-            <h4 class ="football_title">Next Game </h4>
-                <?php if ($nextGame == null) {
-                    echo "<h5>Next Season</h5>";
-                } else {
+        <div class="football__item ipad__hide mobile__hide" <?php if ($nextGame == null) { ?> style="background-image:url(img/sad-soccer.jpg)" <?php } ?>>
+            <h4 class="football_title">Next Game </h4>
+            <?php if ($nextGame == null) {
+                echo "<h5>Next Season</h5>";
+            } else {
 
-                    $awayTeam = $nextGame->awayTeam;
-                    $homeTeam = $nextGame->homeTeam;
-                    //$Timezone = new DateTimeZone('America / New_York');
-                    ?> <table class="football__matchInfo">
+                $awayTeam = $nextGame->awayTeam;
+                $homeTeam = $nextGame->homeTeam;
+                $myDateTime = new DateTime($nextGame->event_date, $gmtTimezone);
+                $offset = $userTimezone->getOffset($myDateTime);
+                $myInterval = DateInterval::createFromDateString((string) $offset . 'seconds');
+                $myDateTime->add($myInterval);
+                $gameTime = $myDateTime->format('M d, Y H:i A');
+
+                ?> <table class="football__matchInfo">
                     <tr>
                         <td class="football__match__teamLogo">
                             <div class="football__match__logo" style="background-image:url(<?php echo checkLogo($homeTeam->logo); ?>);"></div>
                             <span class="fottball__match__teamName"><?php echo $homeTeam->team_name; ?></span>
                         </td>
                         <td class="football_MatchData">
-                            <?php echo date_format(date_create($nextGame->event_date), 'M d, Y -  H:i'); ?> (GMT)<br />
+                            <?php echo $gameTime; ?><br />
                             <span class="football__match__score"><?php echo $nextGame->goalsHomeTeam .  " - " . $nextGame->goalsAwayTeam; ?></span><br />
                             <span class="football__venue"><?php echo $nextGame->venue; ?></span>
 
@@ -235,10 +227,10 @@ function checkLogo($logo)
                             <span class="fottball__match__teamName"><?php echo $awayTeam->team_name; ?></span>
                         </td>
                     </tr>
-                    </table>
-                <?php
-                }
-                ?>
-            </div>
+                </table>
+            <?php
+            }
+            ?>
         </div>
     </div>
+</div>
