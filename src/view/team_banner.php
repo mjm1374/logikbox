@@ -80,7 +80,7 @@ $games = $fixtures->body->api->fixtures;
 
         $logo = checkLogo($teamInfo->logo);
 
-        $standings  = $teamInfo->all;
+        $teamStanding  = $teamInfo->all;
 
         $today = time();
         //$today = '1540321200';
@@ -155,12 +155,12 @@ $games = $fixtures->body->api->fixtures;
                     </tr>
                     <tr>
                         <td class="football__table__td__div"><?php echo $teamInfo->rank; ?></td>
-                        <td class="football__table__td__div"><?php echo $standings->matchsPlayed; ?></td>
-                        <td class="football__table__td__div"><?php echo $standings->win; ?></td>
-                        <td class="football__table__td__div"><?php echo $standings->draw; ?></td>
-                        <td class="football__table__td__div"><?php echo $standings->lose; ?></td>
-                        <td class="football__table__td__div"><?php echo $standings->goalsFor; ?></td>
-                        <td class="football__table__td__div"><?php echo $standings->goalsAgainst; ?></td>
+                        <td class="football__table__td__div"><?php echo $teamStanding->matchsPlayed; ?></td>
+                        <td class="football__table__td__div"><?php echo $teamStanding->win; ?></td>
+                        <td class="football__table__td__div"><?php echo $teamStanding->draw; ?></td>
+                        <td class="football__table__td__div"><?php echo $teamStanding->lose; ?></td>
+                        <td class="football__table__td__div"><?php echo $teamStanding->goalsFor; ?></td>
+                        <td class="football__table__td__div"><?php echo $teamStanding->goalsAgainst; ?></td>
                         <td class="football__table__td__div"><?php echo $teamInfo->goalsDiff; ?></td>
                         <td class="football__table__td__div"><?php echo $teamInfo->points; ?></td>
 
