@@ -14,8 +14,6 @@ date_default_timezone_set('America/New_York');
 
 		foreach ($projects as $title => $project)
 		{
-			//echo '<tr><td><a href="index.php?job='.$job->company.'">'.$job->title.'</a></td><td>'.$job->company.'</td><td>'.$job->description.'</td></tr>';
-			
 			
 			$myString =  $myString . '<div class="cd-timeline-block">';
 			$myString =  $myString . '<div class="cd-timeline-img cd-picture">';
@@ -30,8 +28,7 @@ date_default_timezone_set('America/New_York');
 			$myString =  $myString . '</div> ';
 			$myString =  $myString . '</div> ';
 			
-			 
-			 $cnt =  $cnt + 1;
+			$cnt =  $cnt + 1;
 		}
 		
 		//$myString = substr ( $myString, 1 , (strlen($myString) -1 ));

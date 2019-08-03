@@ -35,6 +35,10 @@ body {
 	font-style: italic;
 }
 
+.bold{
+	font-weight: 700;
+}
+
 h1 {
 	color: #ffffff !important;
 	text-shadow: 2px 2px 4px #000000;

@@ -1,0 +1,190 @@
+.football {
+    width: 100%;
+    height: 165px;
+    background-image: url(/img/football_bg2.webp);
+    background-size: cover;
+    background-position-y: center;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
+    padding: 15px 10px 0px 10px;
+
+}
+
+.foootball__inner {
+    background: transparent;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.football__item{
+    width: 30%;
+    height: 90%;
+    border-radius: 4px;
+    border: 1px solid #000;
+    padding: 10px;
+    margin-right: 10px;
+    color: #000;
+    background: #fff;
+    opacity: .9;
+    background-size: cover; 
+    transition: width 2s;
+    /* Standard syntax */
+}
+
+.football__item.football_team--show {
+    display: flex;
+}
+
+.football__item.football_team--hide {
+    display: none;
+}
+.football__item--scroller{
+    display: flex;
+    flex-direction: column
+}
+.football__item--down,
+.football__item--up {
+    cursor: pointer;
+    background-position-x: center;
+    background-size: cover; 
+    height:50%;
+    width:11px; 
+}
+.football__item--up {
+    background-image: url(/img/arrow.svg);
+    order:1;
+
+}
+.football__item--down {
+    background-image: url(/img/arrow.svg);
+    transform: rotate(180deg);
+    order:2;
+    
+}
+.football_flex{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.football__item:last-of-type {
+    margin-right: 0px;
+}
+
+.football__logo{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    width: 120px; 
+    float:left;
+    margin-right: 10px;
+    order: 1;
+    flex-grow: 1;
+}
+
+
+.football_teamData{
+    width:80%;
+    height: 100%;
+    float: right;
+    display: flex; 
+    order: 2;
+    flex-grow: 2;
+    flex-direction: column;
+
+}
+
+.football__venue{
+    font-size: .75em;
+    line-height: 1em;
+
+}
+
+.football_title{
+    margin: 0px;
+}
+
+.football__table__header{
+    width: 10%;
+    margin: 0 auto;
+    border-bottom: 1px solid gray;
+    text-align: center;
+}
+.football__table__td__div:first-of-type {
+    text-align: left;
+}
+
+.football__table__td__div{
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+.football__matchInfo{
+    width: 100%;
+    height: 80px; 
+    table-layout: fixed;
+    margin-top: 5px;
+
+}
+
+.football__match__teamLogo{
+    width:25%;
+    text-align: center;
+    vertical-align: top;
+}
+
+.football__match__logo {
+    background-size: cover;
+    width: 75px;
+    height: 75px;
+    display: block;
+    margin:0 auto;
+}
+
+.fottball__match__teamName{
+    font-size: 0.75em;
+    line-height: 1em;
+    display: block;
+    margin-top: .5em;
+    font-weight: 700;
+}
+
+.football_MatchData{
+    width: 50%;
+    padding:10px;
+    text-align: center;
+    line-height: 1em;
+    
+}
+
+.football__match__score{
+    font-weight: 700;
+    font-size: 3em;
+    line-height: 0.75em;
+    margin:10px 0px;
+    margin: 5px 0px -10px 0px;
+    display: block;
+}
+
+@media only screen and (max-width : 768px) {
+    .mobile__hide{
+        display: none;
+    }
+
+    .football__logo {
+        width: 120px;
+    }
+
+    .football_teamData h2{
+        font-size: 26px;
+    }
+}

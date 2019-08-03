@@ -88,3 +88,5 @@ src/blog/install_x/favicon\.ico
 src/blog/install_x/index\.php
 
 src/__apiKeys\.php
+
+src/api-key\.php
