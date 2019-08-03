@@ -33,7 +33,9 @@
     color: #000;
     background: #fff;
     opacity: .9;
-    background-size: cover;
+    background-size: cover; 
+    transition: width 2s;
+    /* Standard syntax */
 }
 
 .football__item.football_team--show {
@@ -179,6 +181,10 @@
 
     .football__logo {
         width: 120px;
-        height: 105px;
+        height: 100px;
+    }
+
+    .football_teamData h2{
+        font-size: 26px;
     }
 }
