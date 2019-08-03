@@ -73,14 +73,76 @@ $games = $fixtures->body->api->fixtures;
 
         foreach ($teams as $team) {
             //echo $team->team_id;
+            $teamInfo = $team;
+            $showTeam = "hide";
             if ($team->team_id == $myTeam) {
-                $teamInfo = $team;
+                $showTeam = "show";
             }
-        }
+            $logo = checkLogo($teamInfo->logo);
+            $teamStanding  = $teamInfo->all;
+            ?>
+            <div class="football_flex football__item football_teams football_team--<?php echo $teamInfo->rank; ?> football_team--<?php echo $showTeam; ?> ">
+                <div class="football__item--up" data-dir="up">u</div>
+                <div class="football__logo" style="background-image:url(<?php echo $logo; ?>);"></div>
 
-        $logo = checkLogo($teamInfo->logo);
+                <div class="football_teamData">
+                    <h2 class="football_title"><?php echo $teamInfo->teamName; ?></h2>
+                    <div class="football_rank"><?php echo $teamInfo->group; ?></div>
 
-        $teamStanding  = $teamInfo->all;
+                    <table class="footbal__table">
+                        <tr class="footbal__table_tr">
+                            <th class="football__table__header">
+                                <div aria-label="Rank">Rank</div>
+                            </th>
+                            <th class="football__table__header">
+                                <div aria-label="Matches played">MP</div>
+                            </th>
+                            <th class="football__table__header">
+                                <div aria-label="Wins">W</div>
+                            </th>
+                            <th class="football__table__header">
+                                <div aria-label=" Draws">D</div>
+                            </th>
+                            <th class="football__table__header">
+                                <div aria-label=" Losses">L</div>
+                            </th>
+                            <th class="football__table__header">
+                                <div aria-label=" Goals scored">GF</div>
+                            </th>
+                            <th class="football__table__header">
+                                <div aria-label=" Goals against">GA</div>
+                            </th>
+                            <th class="football__table__header">
+                                <div aria-label="Goal difference">GD</div>
+                            </th>
+                            <th class="football__table__header">
+                                <div aria-label="Points">Pts</div>
+                            </th>
+
+                        </tr>
+                        <tr>
+                            <td class="football__table__td__div"><?php echo $teamInfo->rank; ?></td>
+                            <td class="football__table__td__div"><?php echo $teamStanding->matchsPlayed; ?></td>
+                            <td class="football__table__td__div"><?php echo $teamStanding->win; ?></td>
+                            <td class="football__table__td__div"><?php echo $teamStanding->draw; ?></td>
+                            <td class="football__table__td__div"><?php echo $teamStanding->lose; ?></td>
+                            <td class="football__table__td__div"><?php echo $teamStanding->goalsFor; ?></td>
+                            <td class="football__table__td__div"><?php echo $teamStanding->goalsAgainst; ?></td>
+                            <td class="football__table__td__div"><?php echo $teamInfo->goalsDiff; ?></td>
+                            <td class="football__table__td__div"><?php echo $teamInfo->points; ?></td>
+
+                        </tr>
+                    </table>
+
+                    <div class="football_rank"><span class="bold">Form:</span> <?php echo $teamInfo->forme; ?></div>
+                </div>
+                <div class="football__item--down" data-dir="down">d</div>
+            </div>
+
+        <?php
+
+        } // end the rankings loop
+
 
         $today = time();
         //$today = '1540321200';
@@ -113,65 +175,12 @@ $games = $fixtures->body->api->fixtures;
                 }
             }
         }
-
         ?>
-        <div class="football_flex football__item">
-            <div class="football__logo" style="background-image:url(<?php echo $logo; ?>);"></div>
 
-            <div class="football_teamData">
-                <h2 class="football_title"><?php echo $teamInfo->teamName; ?></h2>
-                <div class="football_rank"><?php echo $teamInfo->group; ?></div>
 
-                <table class="footbal__table">
-                    <tr class="footbal__table_tr">
-                        <th class="football__table__header">
-                            <div aria-label="Rank">Rank</div>
-                        </th>
-                        <th class="football__table__header">
-                            <div aria-label="Matches played">MP</div>
-                        </th>
-                        <th class="football__table__header">
-                            <div aria-label="Wins">W</div>
-                        </th>
-                        <th class="football__table__header">
-                            <div aria-label=" Draws">D</div>
-                        </th>
-                        <th class="football__table__header">
-                            <div aria-label=" Losses">L</div>
-                        </th>
-                        <th class="football__table__header">
-                            <div aria-label=" Goals scored">GF</div>
-                        </th>
-                        <th class="football__table__header">
-                            <div aria-label=" Goals against">GA</div>
-                        </th>
-                        <th class="football__table__header">
-                            <div aria-label="Goal difference">GD</div>
-                        </th>
-                        <th class="football__table__header">
-                            <div aria-label="Points">Pts</div>
-                        </th>
 
-                    </tr>
-                    <tr>
-                        <td class="football__table__td__div"><?php echo $teamInfo->rank; ?></td>
-                        <td class="football__table__td__div"><?php echo $teamStanding->matchsPlayed; ?></td>
-                        <td class="football__table__td__div"><?php echo $teamStanding->win; ?></td>
-                        <td class="football__table__td__div"><?php echo $teamStanding->draw; ?></td>
-                        <td class="football__table__td__div"><?php echo $teamStanding->lose; ?></td>
-                        <td class="football__table__td__div"><?php echo $teamStanding->goalsFor; ?></td>
-                        <td class="football__table__td__div"><?php echo $teamStanding->goalsAgainst; ?></td>
-                        <td class="football__table__td__div"><?php echo $teamInfo->goalsDiff; ?></td>
-                        <td class="football__table__td__div"><?php echo $teamInfo->points; ?></td>
-
-                    </tr>
-                </table>
-
-                <div class="football_rank"><span class="bold">Form:</span> <?php echo $teamInfo->forme; ?></div>
-            </div>
-        </div>
         <div class="football__item mobile__hide">
-            <h4 class="football_title">Last Game</h4>
+            <h4 class="football_title">Last Man City Game</h4>
             <?php
             $awayTeam = $lastGame->awayTeam;
             $homeTeam = $lastGame->homeTeam;
@@ -196,7 +205,7 @@ $games = $fixtures->body->api->fixtures;
             </table>
         </div>
         <div class="football__item ipad__hide mobile__hide" <?php if ($nextGame == null) { ?> style="background-image:url(img/sad-soccer.jpg)" <?php } ?>>
-            <h4 class="football_title">Next Game </h4>
+            <h4 class="football_title">Next Man City Game </h4>
             <?php if ($nextGame == null) {
                 echo "<h5>Next Season</h5>";
             } else {

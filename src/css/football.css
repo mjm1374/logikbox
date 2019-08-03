@@ -36,6 +36,18 @@
     background-size: cover;
 }
 
+.football__item.football_team--show {
+    display: flex;
+}
+
+.football__item.football_team--hide {
+    display: none;
+}
+
+.football__item--down,
+.football__item--up {
+    cursor: pointer;
+}
 .football_flex{
     flex-grow: 1;
     display: flex;
