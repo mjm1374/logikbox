@@ -77,6 +77,7 @@ $games = $fixtures->body->api->fixtures;
             $showTeam = "hide";
             if ($team->team_id == $myTeam) {
                 $showTeam = "show";
+                $myteamRank = $teamInfo->rank;
             }
             $logo = checkLogo($teamInfo->logo);
             $teamStanding  = $teamInfo->all;
@@ -247,3 +248,7 @@ $games = $fixtures->body->api->fixtures;
         </div>
     </div>
 </div>
+
+<script>
+    let currentRank = <?php echo $myteamRank; ?>
+</script>

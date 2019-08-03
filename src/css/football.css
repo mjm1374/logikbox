@@ -80,9 +80,10 @@
 }
 
 .football__logo{
-    background-size: cover;
-    width: 120px;
-    height: 115px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    width: 120px; 
     float:left;
     margin-right: 10px;
     order: 1;
@@ -181,7 +182,6 @@
 
     .football__logo {
         width: 120px;
-        height: 100px;
     }
 
     .football_teamData h2{

@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */ 
 
-let currentRank = 1,
+let 
 rankUp = $('.football__item--up'),
 rankDown = $('.football__item--down')
 ;
