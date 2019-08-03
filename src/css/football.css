@@ -53,7 +53,7 @@
     background-position-x: center;
     background-size: cover; 
     height:50%;
-    width:10px; 
+    width:11px; 
 }
 .football__item--up {
     background-image: url(/img/arrow.svg);
