@@ -43,10 +43,28 @@
 .football__item.football_team--hide {
     display: none;
 }
-
+.football__item--scroller{
+    display: flex;
+    flex-direction: column
+}
 .football__item--down,
 .football__item--up {
     cursor: pointer;
+    background-position-x: center;
+    background-size: cover; 
+    height:50%;
+    width:10px; 
+}
+.football__item--up {
+    background-image: url(/img/arrow.svg);
+    order:1;
+
+}
+.football__item--down {
+    background-image: url(/img/arrow.svg);
+    transform: rotate(180deg);
+    order:2;
+    
 }
 .football_flex{
     flex-grow: 1;

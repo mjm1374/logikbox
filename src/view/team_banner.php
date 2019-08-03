@@ -82,7 +82,7 @@ $games = $fixtures->body->api->fixtures;
             $teamStanding  = $teamInfo->all;
             ?>
             <div class="football_flex football__item football_teams football_team--<?php echo $teamInfo->rank; ?> football_team--<?php echo $showTeam; ?> ">
-                <div class="football__item--up" data-dir="up">u</div>
+
                 <div class="football__logo" style="background-image:url(<?php echo $logo; ?>);"></div>
 
                 <div class="football_teamData">
@@ -136,7 +136,11 @@ $games = $fixtures->body->api->fixtures;
 
                     <div class="football_rank"><span class="bold">Form:</span> <?php echo $teamInfo->forme; ?></div>
                 </div>
-                <div class="football__item--down" data-dir="down">d</div>
+                <div class="football__item--scroller">
+                    <div class="football__item--up" data-dir="up"></div>
+                    <div class="football__item--down" data-dir="down"></div>
+                </div>
+
             </div>
 
         <?php
