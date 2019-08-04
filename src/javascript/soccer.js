@@ -26,11 +26,7 @@ $(document).on('click', '.football__item--up, .football__item--down', function(e
 
 });
 
-$(document).on('touchend', '.football__item--up', function (e) {
-    e.preventDefault();
-    $(this).click();
-});
-$(document).on('touchend', '.football__item--down', function (e) {
+$(document).on('touchend', '.football__item--up .football__item--down', function (e) {
     e.preventDefault();
     $(this).click();
 });
