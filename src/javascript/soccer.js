@@ -20,7 +20,7 @@ $(document).on('click', '.football__item--up, .football__item--down', function(e
         currentRank = currentRank + 1;
         if (currentRank == 21) currentRank = 1;
     }
-    console.log(currentRank);
+
     $('.football_team--' + currentRank).removeClass('football_team--hide');
     $('.football_team--' + currentRank).addClass('football_team--show');
 
@@ -30,4 +30,3 @@ $(document).on('touchend', '.football__item--up .football__item--down', function
     e.preventDefault();
     $(this).click();
 });
- 
