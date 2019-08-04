@@ -11,7 +11,7 @@ if ($mode == 'prod') {
     $myLeagueCurrentSeason = 2;
     $myLeagueNextSeason = 524;
 } else {
-    $myTeam = 13; // live
+    $myTeam = 13; // dev
     $myLeagueCurrentSeason = 2;
     $myLeagueNextSeason = 524;
 }

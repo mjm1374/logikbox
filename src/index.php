@@ -132,7 +132,6 @@ $controller = new Controller();
 			GetInstagram();
 			GetSpaceX(3);
 			//GetGroupResults();
-			GetTable(2);
 		});
 	</script>
 
