@@ -63,7 +63,10 @@ $('#getMoreIstagram').on("click",function(e){
 });
 
 $(document).on('click','.pic__modal', function(e){
+	$('#bigstagram').removeClass('hidden');
+	$('#bigstagram--vid').addClass('hidden');
 	$('.modal-btn').addClass('hidden');
+	
 	let srcUrl = $(this).data('pic'); 
 	let caption = $(this).data('caption');
 	let alt = $(this).data('alt'); 

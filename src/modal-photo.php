@@ -10,6 +10,8 @@
             <div class="modal-body">
                 <div class="modal-btn modal-left" data-gotoPos="">&LT;</div>
                 <img id="bigstagram" src="" alt="" class="modalImage" />
+                <video id="bigstagram--vid" width="100%" height="100%" controls autoplay muted>
+                </video>
                 <div class="modal-btn modal-right" data-gotoPos="">&GT;</div>
             </div>
             <div class="modal-footer">
