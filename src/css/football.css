@@ -38,6 +38,13 @@
     /* Standard syntax */
 }
 
+.football_teamData h2 {
+    font-size: 26px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 .football__item.football_team--show {
     display: flex;
 }
@@ -118,9 +125,7 @@
     border-bottom: 1px solid gray;
     text-align: center;
 }
-.football__table__td__div:first-of-type {
-    text-align: left;
-}
+
 
 .football__table__td__div{
     margin: 0 auto;
@@ -156,6 +161,9 @@
     display: block;
     margin-top: .5em;
     font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .football_MatchData{
@@ -186,5 +194,8 @@
 
     .football_teamData h2{
         font-size: 26px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
 }

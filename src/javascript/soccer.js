@@ -7,7 +7,7 @@ rankDown = $('.football__item--down')
 
 
 $(document).on('click', '.football__item--up, .football__item--down', function(e){
-    //e.preventDefault();
+    e.preventDefault();
     let thisClick = $(this).data('dir');
     $('.football_team--' + currentRank).removeClass('football_team--show');
     $('.football_team--' + currentRank).addClass('football_team--hide');
@@ -24,4 +24,9 @@ $(document).on('click', '.football__item--up, .football__item--down', function(e
     $('.football_team--' + currentRank).removeClass('football_team--hide');
     $('.football_team--' + currentRank).addClass('football_team--show');
 
+});
+
+$(document).on('touchend', '.football__item--up .football__item--down', function (e) {
+    e.preventDefault();
+    $(this).click();
 });
