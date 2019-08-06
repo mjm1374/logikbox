@@ -138,8 +138,8 @@ $games = $fixtures->body->api->fixtures;
                     <div class="football_rank"><span class="bold">Form:</span> <?php echo $teamInfo->forme; ?></div>
                 </div>
                 <div class="football__item--scroller">
-                    <div class="football__item--up" data-dir="up"></div>
-                    <div class="football__item--down" data-dir="down"></div>
+                    <div class="football__item--up" data-dir="up" aria-label="Rank up"></div>
+                    <div class=" football__item--down" data-dir="down" aria-label="Rank down"></div>
                 </div>
 
             </div>
