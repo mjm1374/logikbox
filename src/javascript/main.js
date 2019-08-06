@@ -63,15 +63,28 @@ $('#getMoreIstagram').on("click",function(e){
 });
 
 $(document).on('click','.pic__modal', function(e){
+	$('.modal-btn').addClass('hidden');
 	let srcUrl = $(this).data('pic'); 
 	let caption = $(this).data('caption');
 	let alt = $(this).data('alt'); 
+	let currebtPos = $(this).data('pid');
 	if(alt == 'undefined' || alt == "") alt = caption;
 
 	$('#bigstagram').attr('src', srcUrl);
 	$('#bigstagram').attr('alt', alt);
 	$('.modal-dynamic-title').html(caption);
 	$('#photoModal').modal('show');
+
+	//if in gallery mode
+	if (currebtPos != undefined){
+		$('.modal-btn').removeClass('hidden');
+		let prevPos = getNextPosition(currebtPos, -1);
+		let nextPos = getNextPosition(currebtPos, 1);
+		
+		$('.modal-left').data('gotoPos', prevPos);
+		$('.modal-right').data('gotoPos', nextPos);
+	}
+	
 });
 
 $(document).on('click','.vid__modal', function(e){

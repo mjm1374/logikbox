@@ -39,6 +39,10 @@ body {
 	font-weight: 700;
 }
 
+.hidden{
+	display:none;
+}
+
 h1 {
 	color: #ffffff !important;
 	text-shadow: 2px 2px 4px #000000;

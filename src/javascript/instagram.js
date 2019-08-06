@@ -11,6 +11,7 @@ class Instragram {
 } 
 
 let instagramGallery = [];
+let instaGalPos = 0;
 
 function GetInstagram(max_id){
 	$.when(  $.get( 'https://api.instagram.com/v1/users/self/media/recent/', 
@@ -51,7 +52,7 @@ function GetInstagram(max_id){
             
             if(isVideo == false){
                 mediaURL =  myPics[i].images.standard_resolution.url;
-                myString += `<div class='instagram__border pic__modal' data-pic='${mediaURL}' data-caption='${myCaption}' style='background-image:url(${mediaURL});'><div class='likebox'><span class='text-red'>&hearts;</span><span class='instagram__date likecnt'>${likes}</span></div>`;
+                myString += `<div class='instagram__border pic__modal' data-pid='${instaGalPos}' data-pic='${mediaURL}' data-caption='${myCaption}' style='background-image:url(${mediaURL});'><div class='likebox'><span class='text-red'>&hearts;</span><span class='instagram__date likecnt'>${likes}</span></div>`;
             }else{
                 mediaURL =  myPics[i].videos.standard_resolution.url;
                 myString += `<div class='instagram__border vid__modal' data-vid='${mediaURL}' data-caption='${myCaption}'><div class='likebox'><span class='text-red'>&hearts;</span><span class='instagram__date likecnt'>${likes}</span></div>`;
@@ -65,6 +66,7 @@ function GetInstagram(max_id){
             </div></div>`;
 
             instagramGallery.push(new Instragram(myCaption, date, isVideo, mediaURL , location, likes));
+            instaGalPos++;
 
             $('.instagram').append(myString);
             
@@ -73,3 +75,30 @@ function GetInstagram(max_id){
 		console.log("Error: " +  err.responseText);
 	});
 }
+
+function getNextPosition(ind, dir) {
+    let InstraArrayLen = instagramGallery.length;
+    let nextPos  = ind + dir;
+    if (nextPos < 0) nextPos = InstraArrayLen;
+    if (nextPos > InstraArrayLen) nextPos = 0;
+    console.log(ind, dir, nextPos);
+    return nextPos;
+
+}
+
+$(document).on('click', '.modal-btn', function(e){
+    let currebtPos = $(this).data('gotoPos');
+    let prevPos = getNextPosition(currebtPos, -1);
+    let nextPos = getNextPosition(currebtPos, 1);
+    let srcUrl = instagramGallery[currebtPos].mediaURL;
+    let caption = instagramGallery[currebtPos].caption;
+    let alt = instagramGallery[currebtPos].alt;
+    if (alt == 'undefined' || alt == "") alt = caption;
+
+    $('.modal-left').data('gotoPos', prevPos);
+    $('.modal-right').data('gotoPos', nextPos);
+    $('#bigstagram').attr('src', srcUrl);
+    $('#bigstagram').attr('alt', alt);
+    $('.modal-dynamic-title').html(caption);
+    //$('#photoModal').modal('show');
+});
