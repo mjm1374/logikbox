@@ -84,7 +84,11 @@
     float: right;
 
 }
-
+.modal-body--holder{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
 .modalImage {
     width: 100%;
     display: block;
@@ -94,6 +98,49 @@
 
 .modal-btn{
     cursor: pointer;
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    z-index: 100;
+    vertical-align: center;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-size: 25%;
+    
+}
+ 
+
+.modal-left{
+    float: left;
+    background-image: none;
+    opacity: 0;
+    transition: opacity .65s ease-in-out;
+    transition-duration: 1s;
+    
+    
+}
+.modal-left:hover,
+.modal-left:focus {
+    background-image: url(/img/chevron-left.svg);
+    opacity: 0.65;
+    
+}
+.modal-right {
+    float: right;
+    text-align: right;
+    right:0px;
+    background-position-x: 100%;
+    opacity: 0;
+    transition: opacity .65s ease-in-out;
+    transition-duration: 1s;
+    
+}
+
+.modal-right:hover,
+.modal-right:focus {
+    background-image: url(/img/chevron-right.svg);
+    opacity: 0.65;
 }
 
 #map {
