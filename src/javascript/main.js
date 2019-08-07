@@ -11,6 +11,7 @@ class setLocation {
 const access_token = "179767298.1677ed0.53df19c85ce44f2ebabd7040526cab70";
 const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 const months = ["January","Febuary","March","April","May","June","July","August","September","October","November","Decemeber"];
+let IsCreated = 0;
 
 function dynamicSort(property) {
 	var sortOrder = 1;
@@ -63,30 +64,53 @@ $('#getMoreIstagram').on("click",function(e){
 });
 
 $(document).on('click','.pic__modal', function(e){
-	$('#bigstagram').removeClass('hidden');
+	$('#bigstagram').addClass('hidden');
 	$('#bigstagram--vid').addClass('hidden');
 	$('.modal-btn').addClass('hidden');
-	
-	let srcUrl = $(this).data('pic'); 
-	let caption = $(this).data('caption');
-	let alt = $(this).data('alt'); 
-	let currebtPos = $(this).data('pid');
-	if(alt == 'undefined' || alt == "") alt = caption;
+	let currentPos = $(this).data('pid');
 
-	$('#bigstagram').attr('src', srcUrl);
-	$('#bigstagram').attr('alt', alt);
-	$('.modal-dynamic-title').html(caption);
-	$('#photoModal').modal('show');
+	let srcUrl = instagramGallery[currentPos].mediaURL;
+	let caption = instagramGallery[currentPos].caption;
+	let alt = instagramGallery[currentPos].alt;
+	if (alt == 'undefined' || alt == "") alt = caption;
+	let isVideo = instagramGallery[currentPos].isVideo;
+	let video = document.getElementById('bigstagram--vid');
+	
+
+	if (isVideo) {
+		$('#bigstagram--vid').removeClass('hidden');
+		video.pause();
+		if (IsCreated <= 0) {
+			let source = document.createElement('source');
+			IsCreated = 1;
+			source.setAttribute('src', srcUrl);
+			source.setAttribute('id', 'instaPlayer');
+			video.appendChild(source);
+		} else {
+			$('#instaPlayer').attr('src', srcUrl);
+		}
+
+		video.load();
+	} else {
+		video.pause();
+		$('#bigstagram').removeClass('hidden');
+		$('#bigstagram').attr('src', srcUrl);
+		$('#bigstagram').attr('alt', alt);
+
+	}
 
 	//if in gallery mode
-	if (currebtPos != undefined){
+	if (currentPos != undefined) {
 		$('.modal-btn').removeClass('hidden');
-		let prevPos = getNextPosition(currebtPos, -1);
-		let nextPos = getNextPosition(currebtPos, 1);
+		let prevPos = getNextPosition(currentPos, -1);
+		let nextPos = getNextPosition(currentPos, 1);
 		
 		$('.modal-left').data('gotoPos', prevPos);
 		$('.modal-right').data('gotoPos', nextPos);
 	}
+
+	$('#photoModal').modal('show'); 
+	$('.modal-dynamic-title').html(caption);
 	
 });
 

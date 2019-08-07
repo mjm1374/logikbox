@@ -115,7 +115,7 @@
     float: left;
     background-image: none;
     opacity: 0;
-    transition: opacity .65s ease-in-out;
+    transition: opacity .65 ease-in-out;
     transition-duration: 1s;
     
     
@@ -124,6 +124,8 @@
 .modal-left:focus {
     background-image: url(/img/chevron-left.svg);
     opacity: 0.65;
+    transition: opacity 0 ease-in-out;
+    transition-duration: 1s;
     
 }
 .modal-right {
@@ -132,7 +134,7 @@
     right:0px;
     background-position-x: 100%;
     opacity: 0;
-    transition: opacity .65s ease-in-out;
+    transition: opacity .65 ease-in-out;
     transition-duration: 1s;
     
 }
@@ -141,6 +143,8 @@
 .modal-right:focus {
     background-image: url(/img/chevron-right.svg);
     opacity: 0.65;
+    transition: opacity 0 ease-in-out;
+    transition-duration: 1s;
 }
 
 #map {

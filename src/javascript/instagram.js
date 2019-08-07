@@ -55,8 +55,8 @@ function GetInstagram(max_id){
                 myString += `<div class='instagram__border pic__modal' data-isVid='${isVideo}' data-pid='${instaGalPos}' data-pic='${mediaURL}' data-caption='${myCaption}' style='background-image:url(${mediaURL});'><div class='likebox'><span class='text-red'>&hearts;</span><span class='instagram__date likecnt'>${likes}</span></div>`;
             }else{
                 mediaURL =  myPics[i].videos.standard_resolution.url;
-                myString += `<div class='instagram__border vid__modal' data-vid='${mediaURL}' data-caption='${myCaption}'><div class='likebox'><span class='text-red'>&hearts;</span><span class='instagram__date likecnt'>${likes}</span></div>`;
-                myString += `<div class='instagram__video' ><video autoplay muted loop><source src='${mediaURL}' type='video/mp4'></video></div>`;
+                myString += `<div class='instagram__border pic__modal' data-isVid='${isVideo}' data-pid='${instaGalPos}' data-vid='${mediaURL}' data-caption='${myCaption}'><div class='likebox'><span class='text-red'>&hearts;</span><span class='instagram__date likecnt'>${likes}</span></div>`;
+                myString += `<div class='instagram__video'><video autoplay muted loop><source src='${mediaURL}' type='video/mp4'></video></div>`;
             }
             myString += `</div><div class='instagram__copy'>${myCaption}<br /><span class='instagram__date'>${fullDate}` ;
             if(location.name != "" && location.name != undefined){
@@ -85,8 +85,7 @@ function getNextPosition(ind, dir) {
     return nextPos;
 
 }
-
-let cccnt = 0;
+ 
 
 $(document).on('click', '.modal-btn', function(e){
     let currebtPos = $(this).data('gotoPos');
@@ -98,7 +97,7 @@ $(document).on('click', '.modal-btn', function(e){
     if (alt == 'undefined' || alt == "") alt = caption;
     let isVideo = instagramGallery[currebtPos].isVideo;
     let video = document.getElementById('bigstagram--vid');
-    console.log(cccnt);
+    console.log(IsCreated);
     
     
     
@@ -112,16 +111,14 @@ $(document).on('click', '.modal-btn', function(e){
     if (isVideo) {
         $('#bigstagram--vid').removeClass('hidden');
         video.pause();  
-        if (cccnt <= 0) {
+        if (IsCreated <= 0) {
             let source = document.createElement('source');
-            cccnt = 1;
+            IsCreated = 1;
             source.setAttribute('src', srcUrl);
             source.setAttribute('id', 'instaPlayer');
             video.appendChild(source);
-            console.log("here");
         }else{
             $('#instaPlayer').attr('src', srcUrl);
-            console.log("there");
         }
         
         video.load();
