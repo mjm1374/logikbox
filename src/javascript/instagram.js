@@ -52,10 +52,10 @@ function GetInstagram(max_id){
             
             if(isVideo == false){
                 mediaURL =  myPics[i].images.standard_resolution.url;
-                myString += `<div class='instagram__border pic__modal' data-isVid='${isVideo}' data-pid='${instaGalPos}' data-pic='${mediaURL}' data-caption='${myCaption}' style='background-image:url(${mediaURL});'><div class='likebox'><span class='text-red'>&hearts;</span><span class='instagram__date likecnt'>${likes}</span></div>`;
+                myString += `<div class='instagram__border gallery__modal' data-isVid='${isVideo}' data-pid='${instaGalPos}' data-pic='${mediaURL}' data-caption='${myCaption}' style='background-image:url(${mediaURL});'><div class='likebox'><span class='text-red'>&hearts;</span><span class='instagram__date likecnt'>${likes}</span></div>`;
             }else{
                 mediaURL =  myPics[i].videos.standard_resolution.url;
-                myString += `<div class='instagram__border pic__modal' data-isVid='${isVideo}' data-pid='${instaGalPos}' data-vid='${mediaURL}' data-caption='${myCaption}'><div class='likebox'><span class='text-red'>&hearts;</span><span class='instagram__date likecnt'>${likes}</span></div>`;
+                myString += `<div class='instagram__border gallery__modal' data-isVid='${isVideo}' data-pid='${instaGalPos}' data-vid='${mediaURL}' data-caption='${myCaption}'><div class='likebox'><span class='text-red'>&hearts;</span><span class='instagram__date likecnt'>${likes}</span></div>`;
                 myString += `<div class='instagram__video'><video autoplay muted loop><source src='${mediaURL}' type='video/mp4'></video></div>`;
             }
             myString += `</div><div class='instagram__copy'>${myCaption}<br /><span class='instagram__date'>${fullDate}` ;
