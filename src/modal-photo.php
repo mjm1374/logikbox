@@ -9,8 +9,8 @@
             </div>
             <div class="modal-body">
                 <div class="modal-body--holder">
-                    <div class="modal-btn modal-left" data-gotoPos="">&LT;</div>
-                    <div class="modal-btn modal-right" data-gotoPos="">&GT;</div>
+                    <div class="modal-btn modal-left" data-gotoPos=""></div>
+                    <div class="modal-btn modal-right" data-gotoPos=""></div>
                     <img id="bigstagram" src="" alt="" class="modalImage" />
                     <video id="bigstagram--vid" width="100%" height="100%" controls autoplay muted>
                     </video>

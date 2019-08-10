@@ -8,7 +8,7 @@
             <h4 class="modal-title modal-dynamic-title"></h4>
             </div>
             <div class="modal-body">
-                <video  id="bigstagram--vid" width="100%" height="100%" controls autoplay muted> 
+                <video  id="modal--vid" width="100%" height="100%" controls autoplay muted> 
                 </video>
             </div>
             <div class="modal-footer">

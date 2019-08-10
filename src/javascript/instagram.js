@@ -130,3 +130,75 @@ $(document).on('click', '.modal-btn', function(e){
 
     }
 });
+
+$('#getMoreIstagram').on("click", function (e) {
+    e.preventDefault();
+    var max_id = $('#getMoreIstagram').data('nexturl');
+    GetInstagram(max_id);
+
+});
+
+$(document).on('click', '.pic__modal', function (e) {
+    $('#bigstagram').addClass('hidden');
+    $('#bigstagram--vid').addClass('hidden');
+    $('.modal-btn').addClass('hidden');
+
+    let srcUrl = $(this).data('pic');
+    let caption = $(this).data('caption');
+    let alt = $(this).data('alt');
+    if (alt == 'undefined' || alt == "") alt = caption;
+
+    $('#bigstagram').removeClass('hidden');
+    $('#bigstagram').attr('src', srcUrl);
+    $('#bigstagram').attr('alt', alt);
+    $('#photoModal').modal('show');
+    $('.modal-dynamic-title').html(caption);
+});
+
+$(document).on('click', '.gallery__modal', function (e) {
+    $('#bigstagram').addClass('hidden');
+    $('#bigstagram--vid').addClass('hidden');
+    $('.modal-btn').addClass('hidden');
+    let currentPos = $(this).data('pid');
+
+    //if in gallery mode
+    if (currentPos != undefined) {
+        $('.modal-btn').removeClass('hidden');
+        let prevPos = getNextPosition(currentPos, -1);
+        let nextPos = getNextPosition(currentPos, 1);
+
+        $('.modal-left').data('gotoPos', prevPos);
+        $('.modal-right').data('gotoPos', nextPos);
+    }
+
+    let srcUrl = instagramGallery[currentPos].mediaURL;
+    let caption = instagramGallery[currentPos].caption;
+    let alt = instagramGallery[currentPos].alt;
+    if (alt == 'undefined' || alt == "") alt = caption;
+    let isVideo = instagramGallery[currentPos].isVideo;
+    let video = document.getElementById('bigstagram--vid');
+
+
+    if (isVideo) {
+        $('#bigstagram--vid').removeClass('hidden');
+        video.pause();
+        if (IsCreated <= 0) {
+            let source = document.createElement('source');
+            IsCreated = 1;
+            source.setAttribute('src', srcUrl);
+            source.setAttribute('id', 'instaPlayer');
+            video.appendChild(source);
+        } else {
+            $('#instaPlayer').attr('src', srcUrl);
+        }
+        video.load();
+    } else {
+        video.pause();
+        $('#bigstagram').removeClass('hidden');
+        $('#bigstagram').attr('src', srcUrl);
+        $('#bigstagram').attr('alt', alt);
+    }
+    $('#photoModal').modal('show');
+    $('.modal-dynamic-title').html(caption);
+
+});

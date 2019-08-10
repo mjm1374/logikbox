@@ -8,7 +8,7 @@ $gmtTimezone = new DateTimeZone('GMT');
 Unirest\Request::verifyPeer(false);
 if ($mode == 'prod') {
     $myTeam = 50; // live
-    $myLeagueCurrentSeason = 2;
+    $myLeagueCurrentSeason = 524;
     $myLeagueNextSeason = 524;
 } else {
     $myTeam = 13; // dev
