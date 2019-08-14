@@ -58,12 +58,38 @@ function checkLogo($logo)
     return $logo;
 }
 
-$standings =  getStandings($myLeagueCurrentSeason);
+//cache checking
+$con = new mysqli($host, $user, $password, $dbname, $port, $socket)
+    or die('Could not connect to the database server' . mysqli_connect_error());
+
+$time = time();
+$time = $time - (60*5);
+echo $time . "<BR/>";
+// Perform queries 
+$cacheSet = mysqli_query($con, "SELECT * FROM lbx_dev.football_cache WHERE fc_timestamp >= FROM_UNIXTIME($time)");
+//
+
+$rowcount = mysqli_num_rows($cacheSet);
+echo $rowcount;
+
+
+if($rowcount == 0){
+    $standings =  getStandings($myLeagueCurrentSeason);
+    $sqlStandings = json_encode($standings);
+    $myInsert = mysqli_query($con, "INSERT INTO lbx_dev.football_cache (fc_content,fc_timestamp) VALUES ('$sqlStandings',Now())");
+} else{
+    $row = mysqli_fetch_array($cacheSet, MYSQLI_ASSOC);
+    $standings =  json_decode($row["fc_content"]);
+    mysqli_free_result($cacheSet);
+}
+
+
 $fixtures = getFixturess($myLeagueCurrentSeason, $myTeam);
 
 $teams = $standings->body->api->standings[0];
 $games = $fixtures->body->api->fixtures;
 
+$con->close();
 //var_dump($standings->body);
 ?>
 
