@@ -75,11 +75,13 @@ echo $rowcount;
 
 if($rowcount == 0){
     $standings =  getStandings($myLeagueCurrentSeason);
-    $sqlStandings = json_encode($standings);
-    $myInsert = mysqli_query($con, "INSERT INTO lbx_dev.football_cache (fc_content,fc_timestamp) VALUES ('$sqlStandings',Now())");
+     
+    //$myInsert = mysqli_query($con, "INSERT INTO lbx_dev.football_cache (fc_content,fc_timestamp) VALUES ('.mysql_real_escape_string(array(json_encode($standings)))',Now())");
 } else{
     $row = mysqli_fetch_array($cacheSet, MYSQLI_ASSOC);
+    echo  $row["fc_content"];
     $standings =  json_decode($row["fc_content"]);
+    echo $standings;
     mysqli_free_result($cacheSet);
 }
 
@@ -91,13 +93,12 @@ $games = $fixtures->body->api->fixtures;
 
 $con->close();
 //var_dump($standings->body);
-?>
 
-<div class="football">
-    <div class="foootball__inner">
-        <?php
+$rankings = getRankHTML($teams, $myTeam);
 
-        foreach ($teams as $team) {
+function getRankHTML($teams, $myTeam){
+$html = '';
+foreach ($teams as $team) {
             //echo $team->team_id;
             $teamInfo = $team;
             $showTeam = "hide";
@@ -107,16 +108,13 @@ $con->close();
             }
             $logo = checkLogo($teamInfo->logo);
             $teamStanding  = $teamInfo->all;
-            ?>
-            <div class="football_flex football__item football_teams football_team--<?php echo $teamInfo->rank; ?> football_team--<?php echo $showTeam; ?> ">
+                $html = $html . '<div class="football_flex football__item football_teams football_team--'. $teamInfo->rank . ' football_team--' . $showTeam . '">';
 
-                <div class="football__logo" style="background-image:url(<?php echo $logo; ?>);"></div>
+                $html = $html . '<div class="football__logo" style="background-image:url(' . $logo . ');"></div>';
 
-                <div class="football_teamData">
-                    <h2 class="football_title"><?php echo $teamInfo->teamName; ?></h2>
-                    <div class="football_rank"><?php echo $teamInfo->group; ?></div>
+                $html = $html . '<div class="football_teamData"> <h2 class="football_title">' . $teamInfo->teamName . '</h2><div class="football_rank">' . $teamInfo->group . '</div>';
 
-                    <table class="footbal__table">
+                $html = $html . '<table class="footbal__table">
                         <tr class="footbal__table_tr">
                             <th class="football__table__header">
                                 <div aria-label="Rank">Rank</div>
@@ -147,33 +145,41 @@ $con->close();
                             </th>
 
                         </tr>
-                        <tr>
-                            <td class="football__table__td__div"><?php echo $teamInfo->rank; ?></td>
-                            <td class="football__table__td__div"><?php echo $teamStanding->matchsPlayed; ?></td>
-                            <td class="football__table__td__div"><?php echo $teamStanding->win; ?></td>
-                            <td class="football__table__td__div"><?php echo $teamStanding->draw; ?></td>
-                            <td class="football__table__td__div"><?php echo $teamStanding->lose; ?></td>
-                            <td class="football__table__td__div"><?php echo $teamStanding->goalsFor; ?></td>
-                            <td class="football__table__td__div"><?php echo $teamStanding->goalsAgainst; ?></td>
-                            <td class="football__table__td__div"><?php echo $teamInfo->goalsDiff; ?></td>
-                            <td class="football__table__td__div"><?php echo $teamInfo->points; ?></td>
+                        <tr>';
+                            $html = $html . '<td class="football__table__td__div">' . $teamInfo->rank . '</td>';
+                            $html = $html . '<td class="football__table__td__div">' . $teamStanding->matchsPlayed . '</td> ';
+                            $html = $html . '<td class="football__table__td__div">' . $teamStanding->win . '</td> ';
+                            $html = $html . '<td class="football__table__td__div">' . $teamStanding->draw . '</td> ';
+                            $html = $html . '<td class="football__table__td__div">' . $teamStanding->lose . '</td> ';
+                            $html = $html . '<td class="football__table__td__div">' . $teamStanding->goalsFor . '</td> ';
+                            $html = $html . '<td class="football__table__td__div">' . $teamStanding->goalsAgainst . '</td> ';
+                            $html = $html . '<td class="football__table__td__div">' . $teamInfo->goalsDiff . '</td> ';
+                            $html = $html . '<td class="football__table__td__div">' . $teamInfo->points . '</td> ';
 
-                        </tr>
-                    </table>
+                        $html = $html . '</tr> </table> ';
 
-                    <div class="football_rank"><span class="bold">Form:</span> <?php echo $teamInfo->forme; ?></div>
-                </div>
-                <div class="football__item--scroller">
-                    <div class="football__item--up" data-dir="up" aria-label="Rank up"></div>
-                    <div class=" football__item--down" data-dir="down" aria-label="Rank down"></div>
-                </div>
+                    $html = $html . '<div class="football_rank"><span class="bold">Form:</span>' . $teamInfo->forme . '</div> ';
+                    $html = $html . '</div><div class="football__item--scroller">
+                            <div class="football__item--up" data-dir="up" aria-label="Rank up"></div>
+                            <div class=" football__item--down" data-dir="down" aria-label="Rank down"></div>
+                        </div>
 
-            </div>
 
-        <?php
+                    
+                    </div>';
 
         } // end the rankings loop
 
+    return $html;
+}
+
+?>
+
+<div class="football">
+    <div class="foootball__inner">
+        <?php
+        
+        echo $rankings;
 
         $today = time();
         //$today = '1540321200';
@@ -276,5 +282,5 @@ $con->close();
 </div>
 
 <script>
-    let currentRank = <?php echo $myteamRank; ?>
+    let currentRank = 1<?php //echo $myteamRank; ?>;
 </script>
