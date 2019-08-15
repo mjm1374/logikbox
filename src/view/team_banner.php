@@ -63,38 +63,40 @@ $con = new mysqli($host, $user, $password, $dbname, $port, $socket)
     or die('Could not connect to the database server' . mysqli_connect_error());
 
 $time = time();
-$time = $time - (60*5);
-echo $time . "<BR/>";
+$time = $time - (60 * $cacheTime);
+
 // Perform queries 
-$cacheSet = mysqli_query($con, "SELECT * FROM lbx_dev.football_cache WHERE fc_timestamp >= FROM_UNIXTIME($time)");
-//
-
-$rowcount = mysqli_num_rows($cacheSet);
-echo $rowcount;
-
+$cacheSet = mysqli_query($con, "SELECT * FROM football_cache WHERE fc_timestamp >= FROM_UNIXTIME($time)");
+ 
+if($cacheSet === FALSE) {
+    $rowcount = mysqli_num_rows($cacheSet);
+}else{
+   $rowcount = 0; 
+}
+//echo $rowcount;
 
 if($rowcount == 0){
     $standings =  getStandings($myLeagueCurrentSeason);
-     
-    //$myInsert = mysqli_query($con, "INSERT INTO lbx_dev.football_cache (fc_content,fc_timestamp) VALUES ('.mysql_real_escape_string(array(json_encode($standings)))',Now())");
+    $teams = $standings->body->api->standings[0];
+    $rankings = getRankHTML($teams, $myTeam);
+    
+    $myInsert = mysqli_query($con, "INSERT INTO football_cache (fc_content,fc_timestamp) VALUES ('$rankings',Now())");
 } else{
     $row = mysqli_fetch_array($cacheSet, MYSQLI_ASSOC);
-    echo  $row["fc_content"];
-    $standings =  json_decode($row["fc_content"]);
-    echo $standings;
+    $rankings =  $row["fc_content"];
     mysqli_free_result($cacheSet);
 }
 
 
 $fixtures = getFixturess($myLeagueCurrentSeason, $myTeam);
 
-$teams = $standings->body->api->standings[0];
+
 $games = $fixtures->body->api->fixtures;
 
 $con->close();
 //var_dump($standings->body);
 
-$rankings = getRankHTML($teams, $myTeam);
+
 
 function getRankHTML($teams, $myTeam){
 $html = '';
@@ -155,20 +157,17 @@ foreach ($teams as $team) {
                             $html = $html . '<td class="football__table__td__div">' . $teamStanding->goalsAgainst . '</td> ';
                             $html = $html . '<td class="football__table__td__div">' . $teamInfo->goalsDiff . '</td> ';
                             $html = $html . '<td class="football__table__td__div">' . $teamInfo->points . '</td> ';
-
-                        $html = $html . '</tr> </table> ';
-
-                    $html = $html . '<div class="football_rank"><span class="bold">Form:</span>' . $teamInfo->forme . '</div> ';
+                    $html = $html . '</tr> </table> ';
+                    $html = $html . '<div class="football_rank"><span class="bold">Form:</span> ' . $teamInfo->forme . '</div> ';
                     $html = $html . '</div><div class="football__item--scroller">
                             <div class="football__item--up" data-dir="up" aria-label="Rank up"></div>
                             <div class=" football__item--down" data-dir="down" aria-label="Rank down"></div>
                         </div>
-
-
-                    
                     </div>';
 
         } // end the rankings loop
+    
+        $html = $html . '<script> let currentRank = ' . $myteamRank .';</script>';
 
     return $html;
 }
@@ -281,6 +280,3 @@ foreach ($teams as $team) {
     </div>
 </div>
 
-<script>
-    let currentRank = 1<?php //echo $myteamRank; ?>;
-</script>
