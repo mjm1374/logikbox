@@ -67,12 +67,8 @@ $time = $time - (60 * $cacheTime);
 
 // Perform queries 
 $cacheSet = mysqli_query($con, "SELECT * FROM football_cache WHERE fc_timestamp >= FROM_UNIXTIME($time)");
- 
-if($cacheSet === FALSE) {
-    $rowcount = mysqli_num_rows($cacheSet);
-}else{
-   $rowcount = 0; 
-}
+
+$rowcount = mysqli_num_rows($cacheSet);
 //echo $rowcount;
 
 if($rowcount == 0){

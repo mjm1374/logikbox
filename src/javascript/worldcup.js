@@ -3,31 +3,25 @@
 function GetGroupResults(max_cnt){
 	$.when(  $.get( 'https://worldcup.sfg.io/teams/group_results' ) )
 	.then(function( groups ) {
-        console.log("groups: ", groups);
         let worldcupBoard = $('.worldcup'); 
-         
         
-        for (let i = 0; i < groups.length; i++) {
-            let groupString = "<div class='worldcup__group'><table class='worldcup__table'><thead><tr><th scope='col' class='left' title='GROUP ";
-            let group = groups[i];
-            let letter = group.letter;
-            let teams = getTeams(group.ordered_teams);
-            groupString += letter + "'>GROUP " + letter + "</th>";
-            groupString += "<th scope='col' class='center' title='GP'>GP</th><th scope='col' class='center' title='W' > W </th><th scope='col' class='center' title='D'>D</th><th scope='col' class='center' title='L' > L </th><th scope='col' class='center' title='GD'>GD</th><th scope='col' class='center' title='P'> P </th></tr></thead>";
-            groupString += teams;
-            groupString += "</table></div>";
-            worldcupBoard.append(groupString);
-        }
-        
-        
-
+            for (let i = 0; i < groups.length; i++) {
+                let groupString = "<div class='worldcup__group'><table class='worldcup__table'><thead><tr><th scope='col' class='left' title='GROUP ";
+                let group = groups[i];
+                let letter = group.letter;
+                let teams = getTeams(group.ordered_teams);
+                groupString += letter + "'>GROUP " + letter + "</th>";
+                groupString += "<th scope='col' class='center' title='GP'>GP</th><th scope='col' class='center' title='W' > W </th><th scope='col' class='center' title='D'>D</th><th scope='col' class='center' title='L' > L </th><th scope='col' class='center' title='GD'>GD</th><th scope='col' class='center' title='P'> P </th></tr></thead>";
+                groupString += teams;
+                groupString += "</table></div>";
+                worldcupBoard.append(groupString);
+            }
         }
     ); 
 } 
 
 function getTeams(teams){
     let teamsString = "";
-    //console.log(teams);
     for (let j = 0; j < teams.length; j++) {
         let team = teams[j];
         let name = team.country;
@@ -39,7 +33,6 @@ function getTeams(teams){
         teamsString += "<td class='center'>" + team.losses + "</td>";
         teamsString += "<td class='center'>" + team.goal_differential + "</td>";
         teamsString += "<td class='center'>" + team.points + "</td>";
-
         teamsString += "</tr>"; 
 
     }
@@ -79,16 +72,12 @@ function getMatches(team){
         $('#worldcupModal').modal('show');
         return matchesString;
         });
-    
 }
 
 jQuery(document).ready(function ($) {
-
     $(document).on('click', '.worldcup__teamName', function () {
         let thisTeam = $(this).data('fifa');
         getMatches(thisTeam);
     });
     
 });
-
- 

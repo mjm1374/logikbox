@@ -116,7 +116,6 @@ $(document).on('click','.gallery__modal', function(e){
 		} else {
 			$('#instaPlayer').attr('src', srcUrl);
 		}
-
 		video.load();
 	} else {
 		video.pause();
@@ -178,9 +177,6 @@ $(document).on('click','.gallery__modal', function(e){
 	var percentage = offset / width * 100;
 	panorama.css('background-position', percentage + '% 0');
 	});
-
- 
-
 
 });
 

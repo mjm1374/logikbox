@@ -14,7 +14,7 @@ $(document).on('click', '.football__item--up, .football__item--down', function(e
 
     if (thisClick == 'up'){
         currentRank = currentRank - 1;
-        if(currentRank == 0) currentRank =20;
+        if (currentRank == 0) currentRank = 20;
     }
     else{
         currentRank = currentRank + 1;
@@ -23,7 +23,6 @@ $(document).on('click', '.football__item--up, .football__item--down', function(e
 
     $('.football_team--' + currentRank).removeClass('football_team--hide');
     $('.football_team--' + currentRank).addClass('football_team--show');
-
 });
 
 $(document).on('touchend', '.football__item--up .football__item--down', function (e) {

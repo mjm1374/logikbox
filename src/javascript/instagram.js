@@ -19,8 +19,8 @@ function GetInstagram(max_id){
 	.then(function( result ) {
 		//console.log( "my results", result );
 		var myPics =  result.data;
-		var NextMaxID = result.pagination.next_max_id;
-
+        var NextMaxID = result.pagination.next_max_id;
+        
 		if(NextMaxID != undefined){
 			$('#getMoreIstagram').data('nexturl', NextMaxID);
 		}else{
@@ -83,9 +83,8 @@ function getNextPosition(ind, dir) {
     if (nextPos > (InstraArrayLen -1)) nextPos = 0;
 
     return nextPos;
-
 }
- 
+
 
 $(document).on('click', '.modal-btn', function(e){
     let currebtPos = $(this).data('gotoPos');
@@ -97,13 +96,9 @@ $(document).on('click', '.modal-btn', function(e){
     if (alt == 'undefined' || alt == "") alt = caption;
     let isVideo = instagramGallery[currebtPos].isVideo;
     let video = document.getElementById('bigstagram--vid');
-    console.log(IsCreated);
-    
-    
-    
+
     $('#bigstagram--vid').addClass('hidden');
     $('#bigstagram').addClass('hidden');
-
     $('.modal-left').data('gotoPos', prevPos);
     $('.modal-right').data('gotoPos', nextPos);
     $('.modal-dynamic-title').html(caption);
@@ -135,7 +130,6 @@ $('#getMoreIstagram').on("click", function (e) {
     e.preventDefault();
     var max_id = $('#getMoreIstagram').data('nexturl');
     GetInstagram(max_id);
-
 });
 
 $(document).on('click', '.pic__modal', function (e) {
