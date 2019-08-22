@@ -43,7 +43,6 @@ function GetInstagram(max_id){
                 myCaption = "Untitled";
             }
             myCaption =  myCaption.replace(/'/g, "&#8217;");
-            //myCaption =  myCaption ; 
             if(myPics[i].location != undefined){ location =  new setLocation(myPics[i].location.latitude, myPics[i].location.longitude, myPics[i].location.name ); }
             if(myPics[i].videos != undefined){ isVideo = true; }
             
