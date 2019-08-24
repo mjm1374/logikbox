@@ -16,7 +16,6 @@ public methods:
     taris.DayMonthDate({date}); -- preformatted displays
 */
 
-/*jshint esversion: 6 */
 let tardis = (function (theTime, pattern) {
     // Keep this variables private inside this closure scope
 

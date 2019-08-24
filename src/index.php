@@ -18,7 +18,7 @@ $controller = new Controller();
 			<!--/.navbar-collapse -->
 		</div>
 	</nav>
-
+	
 	<div id="acceleration" style="display:none; widht:100%; height:100px;"></div>
 	
 		<?php include_once("view/team_banner.php"); ?>

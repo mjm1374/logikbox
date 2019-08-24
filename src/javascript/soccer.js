@@ -1,5 +1,3 @@
-/*jshint esversion: 6 */ 
-
 let 
 rankUp = $('.football__item--up'),
 rankDown = $('.football__item--down')

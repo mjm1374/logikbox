@@ -1,5 +1,3 @@
-/*jshint esversion: 6 */
-
 class setLocation {
 	constructor(lat = '40.079', lng = '-75.160', name) {
 		this.setLat = lat;

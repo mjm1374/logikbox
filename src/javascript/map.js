@@ -1,4 +1,3 @@
-/*jshint esversion: 6 */
 let map;
 
 function initMap(newLat, newLng) {

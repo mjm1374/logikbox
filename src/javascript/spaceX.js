@@ -1,5 +1,3 @@
-/*jshint esversion: 6 */
-
 function GetSpaceX(max_cnt){
 	$.when(  $.get( 'https://api.spacexdata.com/v3/launches/upcoming', 
 	{ limit: max_cnt, tbd: 'false' } ) )
