@@ -63,10 +63,16 @@
     height: 40px;
     line-height: 1em;
     padding-top: 10px;
+    text-overflow: ellipsis;
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .instagram__date {
     font-size: 0.65em;
+    line-height: 0.85em;
 }
 
 #signature {
@@ -78,12 +84,67 @@
     float: right;
 
 }
-
+.modal-body--holder{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
 .modalImage {
     width: 100%;
     display: block;
     margin: 0 auto;
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
+}
+
+.modal-btn{
+    cursor: pointer;
+    width: 50%;
+    height: 85%;
+    display: inline-block;
+    position: absolute;
+    z-index: 100;
+    vertical-align: center;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-size: 25%;
+    
+}
+ 
+
+.modal-left{
+    float: left;
+    background-image: none;
+    opacity: 0;
+    transition: opacity .65 ease-in-out;
+    transition-duration: 1s;
+    
+    
+}
+.modal-left:hover,
+.modal-left:focus {
+    background-image: url(/img/chevron-left.svg);
+    opacity: 0.65;
+    transition: opacity 0 ease-in-out;
+    transition-duration: 1s;
+    
+}
+.modal-right {
+    float: right;
+    text-align: right;
+    right:0px;
+    background-position-x: 100%;
+    opacity: 0;
+    transition: opacity .65 ease-in-out;
+    transition-duration: 1s;
+    
+}
+
+.modal-right:hover,
+.modal-right:focus {
+    background-image: url(/img/chevron-right.svg);
+    opacity: 0.65;
+    transition: opacity 0 ease-in-out;
+    transition-duration: 1s;
 }
 
 #map {

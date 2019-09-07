@@ -18,7 +18,7 @@ $controller = new Controller();
 			<!--/.navbar-collapse -->
 		</div>
 	</nav>
-
+	
 	<div id="acceleration" style="display:none; widht:100%; height:100px;"></div>
 	
 		<?php include_once("view/team_banner.php"); ?>
@@ -108,6 +108,8 @@ $controller = new Controller();
 	include_once("modal-photo.php");
 	include_once("modal-video.php");
 	include_once("modal-worldcup.php");
+
+	
 	?>
 
 	<!-- /container -->

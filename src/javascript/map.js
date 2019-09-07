@@ -1,4 +1,3 @@
-/*jshint esversion: 6 */
 let map;
 
 function initMap(newLat, newLng) {
@@ -13,12 +12,10 @@ function initMap(newLat, newLng) {
     });
     goTravel();
     map.addListener('dragend', function () {
-        //    
         let newCenter = map.getCenter();
         let at = newCenter.lat() + "," + newCenter.lng();
     });
 }
-
 
     function getLocation() {
         if (navigator.geolocation) {
@@ -26,8 +23,6 @@ function initMap(newLat, newLng) {
         } 
     } 
 
-
-        
     function showError(error) {
         initMap('40.079' ,'-75.160' );
         switch(error.code) {
@@ -54,7 +49,6 @@ function initMap(newLat, newLng) {
         if(currentAlt != null){currentAlt = currentAlt.toFixed(6);}
         
         initMap(currentLat ,currentLng ); // init gmap
-        //sButton.disabled = false;
         let loop = false;
         let at = currentLat + "," + currentLng;
         
@@ -154,7 +148,6 @@ let myTravels = [
     function goTravel(){
         let arrayLength = myTravels.length;
         for (let i = 0; i < arrayLength; i++) {
-           // console.log(myTravels[i].name);
             setMarkers(myTravels[i].setLat, myTravels[i].setLng, myTravels[i].name);
         }
     }
@@ -179,9 +172,6 @@ let myTravels = [
             }
             infowindow.open(map, marker);
         });
-
-        //markers.push(marker);
-        //map.panTo(marker.getPosition());
     }
 
     function DeleteMarkers() {

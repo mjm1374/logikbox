@@ -8,7 +8,7 @@ $gmtTimezone = new DateTimeZone('GMT');
 Unirest\Request::verifyPeer(false);
 if ($mode == 'prod') {
     $myTeam = 50; // live
-    $myLeagueCurrentSeason = 2;
+    $myLeagueCurrentSeason = 524;
     $myLeagueNextSeason = 524;
 } else {
     $myTeam = 13; // dev
@@ -58,20 +58,45 @@ function checkLogo($logo)
     return $logo;
 }
 
-$standings =  getStandings($myLeagueCurrentSeason);
+//cache checking
+$con = new mysqli($host, $user, $password, $dbname, $port, $socket)
+    or die('Could not connect to the database server' . mysqli_connect_error());
+
+$time = time();
+$time = $time - (60 * $cacheTime);
+
+// Perform queries 
+$cacheSet = mysqli_query($con, "SELECT * FROM football_cache WHERE fc_timestamp >= FROM_UNIXTIME($time)");
+
+$rowcount = mysqli_num_rows($cacheSet);
+//echo $rowcount;
+
+if($rowcount == 0){
+    $standings =  getStandings($myLeagueCurrentSeason);
+    $teams = $standings->body->api->standings[0];
+    $rankings = getRankHTML($teams, $myTeam);
+    
+    $myInsert = mysqli_query($con, "INSERT INTO football_cache (fc_content,fc_timestamp) VALUES ('$rankings',Now())");
+} else{
+    $row = mysqli_fetch_array($cacheSet, MYSQLI_ASSOC);
+    $rankings =  $row["fc_content"];
+    mysqli_free_result($cacheSet);
+}
+
+
 $fixtures = getFixturess($myLeagueCurrentSeason, $myTeam);
 
-$teams = $standings->body->api->standings[0];
+
 $games = $fixtures->body->api->fixtures;
 
+$con->close();
 //var_dump($standings->body);
-?>
 
-<div class="football">
-    <div class="foootball__inner">
-        <?php
 
-        foreach ($teams as $team) {
+
+function getRankHTML($teams, $myTeam){
+$html = '';
+foreach ($teams as $team) {
             //echo $team->team_id;
             $teamInfo = $team;
             $showTeam = "hide";
@@ -81,16 +106,13 @@ $games = $fixtures->body->api->fixtures;
             }
             $logo = checkLogo($teamInfo->logo);
             $teamStanding  = $teamInfo->all;
-            ?>
-            <div class="football_flex football__item football_teams football_team--<?php echo $teamInfo->rank; ?> football_team--<?php echo $showTeam; ?> ">
+                $html = $html . '<div class="football_flex football__item football_teams football_team--'. $teamInfo->rank . ' football_team--' . $showTeam . '">';
 
-                <div class="football__logo" style="background-image:url(<?php echo $logo; ?>);"></div>
+                $html = $html . '<div class="football__logo" style="background-image:url(' . $logo . ');"></div>';
 
-                <div class="football_teamData">
-                    <h2 class="football_title"><?php echo $teamInfo->teamName; ?></h2>
-                    <div class="football_rank"><?php echo $teamInfo->group; ?></div>
+                $html = $html . '<div class="football_teamData"> <h2 class="football_title">' . $teamInfo->teamName . '</h2><div class="football_rank">' . $teamInfo->group . '</div>';
 
-                    <table class="footbal__table">
+                $html = $html . '<table class="footbal__table">
                         <tr class="footbal__table_tr">
                             <th class="football__table__header">
                                 <div aria-label="Rank">Rank</div>
@@ -121,33 +143,38 @@ $games = $fixtures->body->api->fixtures;
                             </th>
 
                         </tr>
-                        <tr>
-                            <td class="football__table__td__div"><?php echo $teamInfo->rank; ?></td>
-                            <td class="football__table__td__div"><?php echo $teamStanding->matchsPlayed; ?></td>
-                            <td class="football__table__td__div"><?php echo $teamStanding->win; ?></td>
-                            <td class="football__table__td__div"><?php echo $teamStanding->draw; ?></td>
-                            <td class="football__table__td__div"><?php echo $teamStanding->lose; ?></td>
-                            <td class="football__table__td__div"><?php echo $teamStanding->goalsFor; ?></td>
-                            <td class="football__table__td__div"><?php echo $teamStanding->goalsAgainst; ?></td>
-                            <td class="football__table__td__div"><?php echo $teamInfo->goalsDiff; ?></td>
-                            <td class="football__table__td__div"><?php echo $teamInfo->points; ?></td>
-
-                        </tr>
-                    </table>
-
-                    <div class="football_rank"><span class="bold">Form:</span> <?php echo $teamInfo->forme; ?></div>
-                </div>
-                <div class="football__item--scroller">
-                    <div class="football__item--up" data-dir="up" aria-label="Rank up"></div>
-                    <div class=" football__item--down" data-dir="down" aria-label="Rank down"></div>
-                </div>
-
-            </div>
-
-        <?php
+                        <tr>';
+                            $html = $html . '<td class="football__table__td__div">' . $teamInfo->rank . '</td>';
+                            $html = $html . '<td class="football__table__td__div">' . $teamStanding->matchsPlayed . '</td> ';
+                            $html = $html . '<td class="football__table__td__div">' . $teamStanding->win . '</td> ';
+                            $html = $html . '<td class="football__table__td__div">' . $teamStanding->draw . '</td> ';
+                            $html = $html . '<td class="football__table__td__div">' . $teamStanding->lose . '</td> ';
+                            $html = $html . '<td class="football__table__td__div">' . $teamStanding->goalsFor . '</td> ';
+                            $html = $html . '<td class="football__table__td__div">' . $teamStanding->goalsAgainst . '</td> ';
+                            $html = $html . '<td class="football__table__td__div">' . $teamInfo->goalsDiff . '</td> ';
+                            $html = $html . '<td class="football__table__td__div">' . $teamInfo->points . '</td> ';
+                    $html = $html . '</tr> </table> ';
+                    $html = $html . '<div class="football_rank"><span class="bold">Form:</span> ' . $teamInfo->forme . '</div> ';
+                    $html = $html . '</div><div class="football__item--scroller">
+                            <div class="football__item--up" data-dir="up" aria-label="Rank up"></div>
+                            <div class=" football__item--down" data-dir="down" aria-label="Rank down"></div>
+                        </div>
+                    </div>';
 
         } // end the rankings loop
+    
+        $html = $html . '<script> let currentRank = ' . $myteamRank .';</script>';
 
+    return $html;
+}
+
+?>
+
+<div class="football">
+    <div class="foootball__inner">
+        <?php
+        
+        echo $rankings;
 
         $today = time();
         //$today = '1540321200';
@@ -249,6 +276,3 @@ $games = $fixtures->body->api->fixtures;
     </div>
 </div>
 
-<script>
-    let currentRank = <?php echo $myteamRank; ?>
-</script>
