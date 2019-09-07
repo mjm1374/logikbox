@@ -12,6 +12,17 @@ const plumber = require("gulp-plumber");
 const sourcemaps = require('gulp-sourcemaps');
 const sassdoc = require('sassdoc');
 const tardis = require('tardis');
+var Server = require('karma').Server;
+
+/**
+ * Run test once and exit
+ */
+gulp.task('test', function (done) {
+  new Server({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true
+  }, done).start();
+});
 
 // BrowserSync
 function browserSync(done) {
