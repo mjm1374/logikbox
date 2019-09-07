@@ -139,7 +139,7 @@ $(document).on('click','.gallery__modal', function(e){
 		(!window.requestAnimationFrame) ?
 		setTimeout(function() {
 			showBlocks(timelineBlocks, offset);
-		}, 100): window.requestAnimationFrame(function() {
+		}, 100) : window.requestAnimationFrame(function() {
 			showBlocks(timelineBlocks, offset);
 		});
 	});

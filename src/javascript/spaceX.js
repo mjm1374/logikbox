@@ -47,7 +47,7 @@ function GetSpaceX(max_cnt){
         }
     );
 } 
-
+ 
 function buildTargetBlock(i){
     let targetBlock = `<div class="col-md-4"><div id="launchBlock${i}" class="launchContainer">
                 <img src="" class="launch__img launch__copy" />

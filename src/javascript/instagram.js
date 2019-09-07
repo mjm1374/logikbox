@@ -1,5 +1,5 @@
 class Instragram {
-	constructor(caption = '', date, isVideo = false, mediaURL, location, likes) {
+	constructor(caption = '', date = Date.now(), isVideo = false, mediaURL = '', location = '', likes = '') {
 		this.caption = caption;
         this.date = date;
         this.isVideo = isVideo;
