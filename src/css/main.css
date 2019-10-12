@@ -42,6 +42,28 @@ body {
 .hidden{
 	display:none;
 }
+a.pic__modal::after {
+	content:' \f03e';
+	font-family: 'Font Awesome 5 Pro';
+	font-size: .9em;
+	font-weight:900;
+
+}
+
+a.map__modal::after{
+	content:' \f5a0';
+	font-family: 'Font Awesome 5 Pro';
+	font-size: .9em;
+	font-weight:900;
+}
+
+a[rel$='noopener']::after {
+	content: ' \f35d';
+	font-family: 'Font Awesome 5 Pro';
+	font-size: .75em;
+	font-weight: 900;
+}
+
 
 h1 {
 	color: #ffffff !important;
