@@ -16,7 +16,7 @@ class Job {
 		$this->title = $title;
 		$this->startDate = $startDate;
 		$this->endDate = $endDate;
-	    $this->description = $description;
+		$this->description = $description;
 		$this->logo = $logo;
 		$this->link = $link;
 		$this->url = $url;
