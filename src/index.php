@@ -20,9 +20,7 @@ $controller = new Controller();
 	</nav>
 	
 	<div id="acceleration" style="display:none; widht:100%; height:100px;"></div>
-	
-		<?php include_once("view/team_banner.php"); ?>
-
+	<?php include_once("view/team_banner.php"); ?>
 	<div class="jumbotron jumbotron--homepage">
 		<div class="container">
 			<h1>Hello, World!</h1>
