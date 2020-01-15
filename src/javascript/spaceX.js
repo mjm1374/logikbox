@@ -4,7 +4,7 @@ function GetSpaceX(max_cnt) {
 				limit: max_cnt
 			})
 		)
-		.then(function (result) {
+		.then(result => {
 			let launches = result;
 			var promises = [];
 

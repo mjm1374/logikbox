@@ -14,9 +14,7 @@ if ($mode == 'prod') {
     $myTeam = 13; // dev
     $myLeagueCurrentSeason = 2;
     $myLeagueNextSeason = 524;
-}
-
-
+} 
 //https:api-football-v1.p.rapidapi.com/v2/teams/team/{id}
 
 
@@ -91,7 +89,7 @@ $games = $fixtures->body->api->fixtures;
 
 $con->close();
 //var_dump($standings->body);
-
+var_dump($fixtures);
 
 
 function getRankHTML($teams, $myTeam)

@@ -97,7 +97,7 @@ $controller = new Controller();
 								<li>Visual Studio</li>
 								<li>DevOps</li>
 								<li>MS Office Suite</li>
-								<li>MySQL Workbench</li>
+								<li>Node JS</li>
 								<li>Git</li>
 								<li>SVN</li>
 							</ul>
