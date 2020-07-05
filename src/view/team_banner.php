@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 require_once 'vendor/autoload.php';
 include_once("api-key.php");
 
@@ -12,10 +12,11 @@ if ($mode == 'prod') {
     $myLeagueNextSeason = 524;
 } else {
     $myTeam = 13; // dev
-    $myLeagueCurrentSeason = 2;
+    $myLeagueCurrentSeason = 524;
     $myLeagueNextSeason = 524;
 } 
 //https:api-football-v1.p.rapidapi.com/v2/teams/team/{id}
+//https://www.api-football.com/demo/v2/
 
 
 function getStandings($myLeague)
@@ -88,7 +89,7 @@ $fixtures = getFixturess($myLeagueCurrentSeason, $myTeam);
 $games = $fixtures->body->api->fixtures;
 
 $con->close();
-//var_dump($standings->body);
+var_dump($standings->body);
 var_dump($fixtures);
 
 
@@ -272,4 +273,4 @@ function getRankHTML($teams, $myTeam)
             ?>
         </div>
     </div>
-</div>
+</div> -->
