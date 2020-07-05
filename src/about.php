@@ -3,7 +3,7 @@ require_once 'vendor/autoload.php';
 include_once("api-key.php");
 include_once("controller/Controller.php");
 $controller = new Controller();
-?>
+?> 
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -75,6 +75,7 @@ $controller = new Controller();
 								<li>Sass</li>
 								<li>Javascript</li>
 								<li>ES6</li>
+								<li>Typescript 3.7</li>
 								<li>jQuery 3.0</li>
 								<li>Vue</li>
 								<li>Angular 5</li>
