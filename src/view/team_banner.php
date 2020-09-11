@@ -75,19 +75,21 @@ if ($rowcount == 0) {
     $standings =  getStandings($myLeagueCurrentSeason);
     $teams = $standings->body->api->standings[0];
     $rankings = getRankHTML($teams, $myTeamName);
+    $fixtures = getFixturess($myLeagueCurrentSeason, $myTeam);
+    $games = $fixtures->body->api->fixtures;
+    $gamesSerialized = addslashes(serialize($games));
 
-    $myInsert = mysqli_query($con, "INSERT INTO football_cache (fc_content,fc_timestamp) VALUES ('$rankings',Now())");
+    $sqlCommand = "INSERT INTO football_cache (fc_content,fc_fixtures,fc_timestamp) VALUES ('$rankings','$gamesSerialized' ,Now())";
+    $myInsert = mysqli_query($con, $sqlCommand) or die("Fatal error: " . mysqli_error($con));
 } else {
     $row = mysqli_fetch_array($cacheSet, MYSQLI_ASSOC);
     $rankings =  $row["fc_content"];
+    $games = unserialize($row["fc_fixtures"]);
     mysqli_free_result($cacheSet);
 }
 
 
-$fixtures = getFixturess($myLeagueCurrentSeason, $myTeam);
 
-
-$games = $fixtures->body->api->fixtures;
 
 $con->close();
 //var_dump($standings->body);
