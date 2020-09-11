@@ -1,9 +1,10 @@
-<!-- <?php
+<?php
 require_once 'vendor/autoload.php';
 include_once("api-key.php");
 
 $userTimezone = new DateTimeZone('America/New_York');
 $gmtTimezone = new DateTimeZone('GMT');
+$myTeamName = 'Manchester City';
 
 Unirest\Request::verifyPeer(false);
 if ($mode == 'prod') {
@@ -11,7 +12,7 @@ if ($mode == 'prod') {
     $myLeagueCurrentSeason = 524;
     $myLeagueNextSeason = 524;
 } else {
-    $myTeam = 13; // dev
+    $myTeam = 31; // dev
     $myLeagueCurrentSeason = 524;
     $myLeagueNextSeason = 524;
 } 
@@ -49,11 +50,11 @@ function getFixturess($myLeague, $myTeam)
 
 function checkLogo($logo)
 {
-    if ($logo == "Not available in Demo" || $logo == NULL) {
+    
+    if ($logo == "Not available in demo" || $logo == NULL) {
         $logo = "img/football_noLogo.png";
         //$logo = "https://www.api-football.com/public/teams/50.png";
     }
-
     return $logo;
 }
 
@@ -73,7 +74,7 @@ $rowcount = mysqli_num_rows($cacheSet);
 if ($rowcount == 0) {
     $standings =  getStandings($myLeagueCurrentSeason);
     $teams = $standings->body->api->standings[0];
-    $rankings = getRankHTML($teams, $myTeam);
+    $rankings = getRankHTML($teams, $myTeamName);
 
     $myInsert = mysqli_query($con, "INSERT INTO football_cache (fc_content,fc_timestamp) VALUES ('$rankings',Now())");
 } else {
@@ -89,22 +90,26 @@ $fixtures = getFixturess($myLeagueCurrentSeason, $myTeam);
 $games = $fixtures->body->api->fixtures;
 
 $con->close();
-var_dump($standings->body);
-var_dump($fixtures);
+//var_dump($standings->body);
+//var_dump($standings);
+//var_dump($fixtures);
+//var_dump($rankings );
 
 
-function getRankHTML($teams, $myTeam)
+function getRankHTML($teams, $myTeamName)
 {
     $html = '';
     foreach ($teams as $team) {
         //echo $team->team_id;
         $teamInfo = $team;
         $showTeam = "hide";
-        if ($team->team_id == $myTeam) {
+        if ($team->teamName == $myTeamName) {
+            $myTeam = $team->team_id ;
             $showTeam = "show";
             $myteamRank = $teamInfo->rank;
         }
         $logo = checkLogo($teamInfo->logo);
+        //echo($logo);
         $teamStanding  = $teamInfo->all;
         $html = $html . '<div class="football_flex football__item football_teams football_team--' . $teamInfo->rank . ' football_team--' . $showTeam . '">';
 
@@ -173,18 +178,20 @@ function getRankHTML($teams, $myTeam)
     <div class="foootball__inner">
         <?php
 
-        echo $rankings;
+        echo($rankings);
 
         $today = time();
         //$today = '1540321200';
         $lastGame = null;
         $nextGame = null;
         $filter = 0;
+        //echo('games: ' . count($games));
 
         foreach ($games as $game) {
             //echo $game->event_timestamp . "<br />";
             if ($game->event_timestamp < $today) {
                 $lastGame = $game;
+
             }
 
             if ($game->event_timestamp >= $today && $filter == 0) {
@@ -208,7 +215,7 @@ function getRankHTML($teams, $myTeam)
         }
         ?>
 
-
+ 
 
         <div class="football__item mobile__hide">
             <h4 class="football_title">Last Man City Game</h4>
@@ -273,4 +280,4 @@ function getRankHTML($teams, $myTeam)
             ?>
         </div>
     </div>
-</div> -->
+</div>

@@ -20,7 +20,9 @@ $controller = new Controller();
 	</nav>
 	
 	<div id="acceleration" style="display:none; widht:100%; height:100px;"></div>
+
 	<?php include_once("view/team_banner.php"); ?>
+	
 	<div class="jumbotron jumbotron--homepage">
 		<div class="container">
 			<h1>Hello, World!</h1>
@@ -90,11 +92,11 @@ $controller = new Controller();
 			<div id="launchBlockHolder"></div>
 		</div>
 		<hr>
-		<h2 class="homeH2">Lastest Photos</h2>
+		<!-- <h2 class="homeH2">Lastest Photos</h2>
 		<div class="row instagram">
 		</div>
-		<a id="getMoreIstagram" class="btn btn-default" href="#" data-nexturl="" role="button">View More &raquo;</a>
-		<hr>
+		<a id="getMoreIstagram" class="btn btn-default" href="#" data-nexturl="" role="button">View More &raquo;</a> 
+		<hr>-->
 		<footer>
 			<?php include_once("footer.php"); ?>
 
