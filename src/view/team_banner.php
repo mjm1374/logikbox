@@ -11,7 +11,12 @@ if ($mode == 'prod') {
     $myTeam = 50; // live
     $myLeagueCurrentSeason = 524;
     $myLeagueNextSeason = 524;
-} else {
+} elseif ($mode == 'hybrid') {
+    $myTeam = 50; // live
+    $myLeagueCurrentSeason = 524;
+    $myLeagueNextSeason = 524;
+}
+else {
     $myTeam = 31; // dev
     $myLeagueCurrentSeason = 524;
     $myLeagueNextSeason = 524;
@@ -69,7 +74,7 @@ $time = $time - (60 * $cacheTime);
 $cacheSet = mysqli_query($con, "SELECT * FROM football_cache WHERE fc_timestamp >= FROM_UNIXTIME($time)");
 
 $rowcount = mysqli_num_rows($cacheSet);
-//echo $rowcount;
+//echo $rowcount . " - " . $mode;
 
 if ($rowcount == 0) {
     $standings =  getStandings($myLeagueCurrentSeason);
@@ -85,6 +90,7 @@ if ($rowcount == 0) {
     $row = mysqli_fetch_array($cacheSet, MYSQLI_ASSOC);
     $rankings =  $row["fc_content"];
     $games = unserialize($row["fc_fixtures"]);
+    //var_dump(unserialize($row["fc_fixtures"]));
     mysqli_free_result($cacheSet);
 }
 
