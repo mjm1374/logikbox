@@ -9,12 +9,12 @@ $myTeamName = 'Manchester City';
 Unirest\Request::verifyPeer(false);
 if ($mode == 'prod') {
     $myTeam = 50; // live
-    $myLeagueCurrentSeason = 524;
-    $myLeagueNextSeason = 524;
+    $myLeagueCurrentSeason = 2790;
+    $myLeagueNextSeason = 2790;
 } elseif ($mode == 'hybrid') {
     $myTeam = 50; // live
-    $myLeagueCurrentSeason = 524;
-    $myLeagueNextSeason = 524;
+    $myLeagueCurrentSeason = 2790;
+    $myLeagueNextSeason = 2790;
 }
 else {
     $myTeam = 31; // dev
@@ -51,8 +51,6 @@ function getFixturess($myLeague, $myTeam)
     return $fixtures;
 }
 
-
-
 function checkLogo($logo)
 {
     
@@ -84,6 +82,11 @@ if ($rowcount == 0) {
     $games = $fixtures->body->api->fixtures;
     $gamesSerialized = addslashes(serialize($games));
 
+    //drop old records
+    $sqlCommand = "delete from football_cache where 1";
+    $myInsert = mysqli_query($con, $sqlCommand) or die("Fatal error: " . mysqli_error($con));
+
+    //add current record
     $sqlCommand = "INSERT INTO football_cache (fc_content,fc_fixtures,fc_timestamp) VALUES ('$rankings','$gamesSerialized' ,Now())";
     $myInsert = mysqli_query($con, $sqlCommand) or die("Fatal error: " . mysqli_error($con));
 } else {
