@@ -13,33 +13,35 @@ let instagramGallery = [];
 let instaGalPos = 0;
 
 function GetInstagram(max_id) {
-    $.when($.get('https://api.instagram.com/v1/users/self/media/recent/', {
+    $.when($.get('https://graph.instagram.com/me/media/', {
             access_token: access_token,
-            max_id: max_id
+            max_id: max_id,
+            fields: 'id,username,caption,media_type,media_url,permalink,thumbnail_url,timestamp,username'
         }))
         .then(function (result) {
             console.log("my results", result);
             var myPics = result.data;
-            var NextMaxID = result.pagination.next_max_id;
+            // var NextMaxID = result.pagination.next_max_id;
 
-            if (NextMaxID != undefined) {
-                $('#getMoreIstagram').data('nexturl', NextMaxID);
-            } else {
-                $('#getMoreIstagram').hide();
-            }
+            // if (NextMaxID != undefined) {
+            //     $('#getMoreIstagram').data('nexturl', NextMaxID);
+            // } else {
+            //     $('#getMoreIstagram').hide();
+            // }ß
 
             for (let i = 0; i < myPics.length; i++) {
                 let myString = "";
                 let isVideo = false;
-                let date = tardis.DayMonthDate(myPics[i].created_time);
+                let date = myPics[i].timestamp; //tardis.DayMonthDate(myPics[i].timestamp);
                 let fullDate = date;
                 let location = new setLocation();
                 let myCaption = "";
                 let mediaURL = "";
-                let likes = myPics[i].likes.count;
+                let likes = null;
+                //let likes = myPics[i].likes.count;
 
                 if (myPics[i].caption != undefined || myPics[i].caption != null) {
-                    myCaption = myPics[i].caption.text;
+                    myCaption = myPics[i].caption;
                 } else {
                     myCaption = "Untitled";
                 }
@@ -47,7 +49,7 @@ function GetInstagram(max_id) {
                 if (myPics[i].location != undefined) {
                     location = new setLocation(myPics[i].location.latitude, myPics[i].location.longitude, myPics[i].location.name);
                 }
-                if (myPics[i].videos != undefined) {
+                if (myPics[i].media_type == "VIDEO") {
                     isVideo = true;
                 }
 
@@ -55,11 +57,13 @@ function GetInstagram(max_id) {
                 myString += "<div class='instagram__holder'>";
 
                 if (isVideo == false) {
-                    mediaURL = myPics[i].images.standard_resolution.url;
-                    myString += `<div class='instagram__border gallery__modal' data-isVid='${isVideo}' data-pid='${instaGalPos}' data-pic='${mediaURL}' data-caption='${myCaption}' style='background-image:url(${mediaURL});'><div class='likebox'><span class='text-red'>&hearts;</span><span class='instagram__date likecnt'>${likes}</span></div>`;
+                    mediaURL = myPics[i].media_url;
+                    myString += `<div class='instagram__border gallery__modal' data-isVid='${isVideo}' data-pid='${instaGalPos}' data-pic='${mediaURL}' data-caption='${myCaption}' style='background-image:url(${mediaURL});'>`;
+                    //<div class='likebox'><span class='text-red'>&hearts;</span><span class='instagram__date likecnt'>${likes}</span></div>
                 } else {
-                    mediaURL = myPics[i].videos.standard_resolution.url;
-                    myString += `<div class='instagram__border gallery__modal' data-isVid='${isVideo}' data-pid='${instaGalPos}' data-vid='${mediaURL}' data-caption='${myCaption}'><div class='likebox'><span class='text-red'>&hearts;</span><span class='instagram__date likecnt'>${likes}</span></div>`;
+                    mediaURL = myPics[i].media_url;
+                    myString += `<div class='instagram__border gallery__modal' data-isVid='${isVideo}' data-pid='${instaGalPos}' data-vid='${mediaURL}' data-caption='${myCaption}'>`;
+                    //<div class='likebox'></div> <span class='text-red'>&hearts;</span><span class='instagram__date likecnt'>${likes}</span>
                     myString += `<div class='instagram__video'><video autoplay muted loop><source src='${mediaURL}' type='video/mp4'></video></div>`;
                 }
                 myString += `</div><div class='instagram__copy'>${myCaption}<br /><span class='instagram__date'>${fullDate}`;

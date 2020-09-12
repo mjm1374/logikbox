@@ -92,11 +92,11 @@ $controller = new Controller();
 			<div id="launchBlockHolder"></div>
 		</div>
 		<hr>
-		<!-- <h2 class="homeH2">Lastest Photos</h2>
+		<h2 class="homeH2">Lastest Photos</h2>
 		<div class="row instagram">
 		</div>
 		<a id="getMoreIstagram" class="btn btn-default" href="#" data-nexturl="" role="button">View More &raquo;</a> 
-		<hr>-->
+		<hr>
 		<footer>
 			<?php include_once("footer.php"); ?>
 
