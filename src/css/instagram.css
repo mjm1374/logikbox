@@ -1,4 +1,8 @@
-.instagram {}
+.instagram {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 .instagram__holder {
     position: relative;
@@ -84,11 +88,13 @@
     float: right;
 
 }
-.modal-body--holder{
+
+.modal-body--holder {
     position: relative;
     height: 100%;
     width: 100%;
 }
+
 .modalImage {
     width: 100%;
     display: block;
@@ -96,7 +102,7 @@
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
 }
 
-.modal-btn{
+.modal-btn {
     cursor: pointer;
     width: 50%;
     height: 85%;
@@ -107,36 +113,38 @@
     background-repeat: no-repeat;
     background-position-y: 50%;
     background-size: 25%;
-    
-}
- 
 
-.modal-left{
+}
+
+
+.modal-left {
     float: left;
     background-image: none;
     opacity: 0;
     transition: opacity .65 ease-in-out;
     transition-duration: 1s;
-    
-    
+
+
 }
+
 .modal-left:hover,
 .modal-left:focus {
     background-image: url(/img/chevron-left.svg);
     opacity: 0.65;
     transition: opacity 0 ease-in-out;
     transition-duration: 1s;
-    
+
 }
+
 .modal-right {
     float: right;
     text-align: right;
-    right:0px;
+    right: 0px;
     background-position-x: 100%;
     opacity: 0;
     transition: opacity .65 ease-in-out;
     transition-duration: 1s;
-    
+
 }
 
 .modal-right:hover,
@@ -159,8 +167,8 @@
 }
 
 
- @media (max-width: 768px) {
-     .instagram__holder {
-         padding-top: 120%;
-     }
+@media (max-width: 768px) {
+    .instagram__holder {
+        padding-top: 120%;
+    }
 }
