@@ -166,9 +166,50 @@
     z-index: 0 !important;
 }
 
+.insta__big {
+    display: block;
+    background-image: url(../img/instagram-big.png);
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+    z-index: -1;
+    position: relative;
+    top: 375px;
+    left: -70px;
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+    opacity: .25;
+    margin-top: -400px;
+
+}
+
 
 @media (max-width: 768px) {
     .instagram__holder {
         padding-top: 120%;
+    }
+
+    .socialContainer {
+        position: relative;
+        height: 150px !important;
+    }
+
+    .socialContainer--plus50 {
+        height: 170px !important;
+    }
+
+    .launch__details {
+        height: 135px !important;
+    }
+}
+
+@media (max-width: 414px) {
+
+    .instagram {
+        flex-direction: column;
+    }
+
+    .instagram__holder {
+        height: 450px;
     }
 }

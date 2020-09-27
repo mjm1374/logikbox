@@ -92,6 +92,7 @@ $controller = new Controller();
 			<div id="launchBlockHolder"></div>
 		</div>
 		<hr>
+		<div class="insta__big"></div>
 		<h2 class="homeH2">Lastest Photos</h2>
 		<div class="row instagram">
 		</div>
