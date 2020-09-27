@@ -12,3 +12,4 @@ Disallow: /sherry/
 Disallow: /vs/
 Disallow: /beta/
 Disallow: /PatientJourney/
+Disallow: /kairos/
