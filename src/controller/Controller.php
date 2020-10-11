@@ -1,15 +1,15 @@
 <?php
 require_once 'vendor/autoload.php';
-include_once("model/Model.php");
+include_once("model/model.php");
 
 class Controller {
-	public $model;
-	public $project;
+	public $jobs;
+	public $projects;
 
 	public function __construct()
     {
-		$this->model = new Model();
-		$this->project = new Projects();
+		$this->jobs = new Jobs();
+		$this->projects = new Projects();
 
     }
 
@@ -18,13 +18,13 @@ class Controller {
 		if (!isset($_GET['job']))
 		{
 			// no project chosen, show them all
-			$projects = $this->project->getProjectList();
+			$projects = $this->projects->getProjectList();
 			include 'view/timeline.php';
 		}
 		else
 		{
 			// show the requested job
-			$job = $this->model->getJob($_GET['job']);
+			$job = $this->jobs->getJob($_GET['job']);
 			include 'view/viewjob.php';
 		}
 	}
@@ -33,7 +33,7 @@ class Controller {
 	{
 		
 			// show the 1st project
-			$lastest = $this->project->getFirstProject();
+			$lastest = $this->projects->getFirstProject();
 			include 'view/viewLatest.php';
 		
 	}
@@ -42,14 +42,14 @@ class Controller {
 
 	public function nav()
 	{
-		$jobs = $this->model->getJobList();
+		$jobs = $this->jobs->getJobList();
 		include 'view/jobnav.php';
 	}
 
 
 	public function projects()
 	{
-		$projects = $this->project->getProjectList();
+		$projects = $this->projects->getProjectList();
 		include 'view/projectsnav.php';
 	}
 
@@ -89,7 +89,7 @@ class Controller {
 
 		if(isset($result['success'] ) &&  $result['success'] == 1) {
 
-             print_r("Thanks for reaching out. I'll get back to you.");
+            print_r("Thanks for reaching out. I'll get back to you.");
 
 			if($msg !== ''){
 
@@ -102,7 +102,7 @@ class Controller {
 				$headers .= "X-Priority: 1\r\n";
 				$headers .= "X-MSMail-Priority: High\r\n";
 
-			   @mail($email_to, $email_subject, $msg, $headers);
+				@mail($email_to, $email_subject, $msg, $headers);
 			}
 
 		} else {

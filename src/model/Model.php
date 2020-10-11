@@ -3,7 +3,7 @@
 include_once("model/Job.php");
 include_once("model/Project.php");
 
-class Model {
+class Jobs {
 	public function getJobList()
 	{
 		// here goes some hardcoded values to simulate the database
