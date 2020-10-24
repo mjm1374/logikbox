@@ -179,7 +179,7 @@
     -webkit-transform: rotate(-20deg);
     transform: rotate(-20deg);
     opacity: .25;
-    margin-top: -400px;
+    box-sizing: border-box;
 
 }
 
