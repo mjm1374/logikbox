@@ -17,7 +17,7 @@ const tardis = require('lbx-tardis');
 function browserSync(done) {
   console.log(tardis.doctorwho());
   browsersync.init({
-      proxy: "localhost:8888",
+      proxy: "logikbox:8888",
       baseDir: "./",
       open: true,
       notify: false

@@ -26,6 +26,18 @@ function dynamicSort(property) {
 	};
 }
 
+
+let isInViewport = function (elem) {
+	var bounding = elem.getBoundingClientRect();
+	return (
+		bounding.top >= 0 &&
+		bounding.left >= 0 &&
+		bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+		bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+	);
+};
+
+
 jQuery(document).ready(function ($) {
 	var timelineBlocks = $('.cd-timeline-block'),
 		offset = 0.8,
@@ -163,8 +175,6 @@ jQuery(document).ready(function ($) {
 		});
 	});
 
-	//console.log("xxx",instagramGallery);
-
 	//panorama
 	var panorama = $('.jumbotron--homepage');
 	var left = panorama.offset().left;
@@ -172,7 +182,6 @@ jQuery(document).ready(function ($) {
 
 	$('.jumbotron--homepage').mousemove(function (e) {
 		var offset = e.pageX - left;
-		//console.log(e.pageX  + " - " + offset);
 		var percentage = offset / width * 100;
 		panorama.css('background-position', percentage + '% 0');
 	});

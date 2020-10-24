@@ -100,10 +100,10 @@ function GetInstagram(max_id) {
 
             $('.instagram').append(myString);
         }
-    });
+    })
     .fail(function (err) {
         console.log("Error: " + err.responseText);
-    })
+    });
 }
 
 function getNextPosition(ind, dir) {

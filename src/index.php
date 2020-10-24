@@ -18,11 +18,11 @@ $controller = new Controller();
 			<!--/.navbar-collapse -->
 		</div>
 	</nav>
-	
+
 	<div id="acceleration" style="display:none; widht:100%; height:100px;"></div>
 
 	<?php include_once("view/team_banner.php"); ?>
-	
+
 	<div class="jumbotron jumbotron--homepage">
 		<div class="container">
 			<h1>Hello, World!</h1>
@@ -92,11 +92,11 @@ $controller = new Controller();
 			<div id="launchBlockHolder"></div>
 		</div>
 		<hr>
-		<div class="insta__big"></div>
+		<div id="insta__big" class="insta__big"></div>
 		<h2 class="homeH2">Lastest Photos</h2>
 		<div class="row instagram">
 		</div>
-		<a id="getMoreIstagram" class="btn btn-default" href="#" data-nexturl="" role="button">View More &raquo;</a> 
+		<a id="getMoreIstagram" class="btn btn-default" href="#" data-nexturl="" role="button">View More &raquo;</a>
 		<hr>
 		<footer>
 			<?php include_once("footer.php"); ?>
@@ -109,7 +109,7 @@ $controller = new Controller();
 	include_once("modal-video.php");
 	include_once("modal-worldcup.php");
 
-	
+
 	?>
 
 	<!-- /container -->
@@ -134,6 +134,14 @@ $controller = new Controller();
 			GetInstagram();
 			GetSpaceX(3);
 			//GetGroupResults();
+
+			let bigInstagram = document.getElementById('insta__big');
+
+			window.addEventListener('scroll', checkInstagramVisable);
+
+			function checkInstagramVisable() {
+				if (isInViewport(bigInstagram)) bigInstagram.classList.add('insta__big--rotate');
+			}
 		});
 	</script>
 
