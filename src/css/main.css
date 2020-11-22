@@ -13,6 +13,11 @@ body {
 	width:100%;
 }
 
+::selection {
+	background-color: #013896;
+	color: #f1f1f1;
+	}
+
 .text-red{
 	color:#910505;
 	margin-right: 2px;
@@ -42,12 +47,12 @@ body {
 .hidden{
 	display:none;
 }
+
 a.pic__modal::after {
 	content:' \f03e';
 	font-family: 'Font Awesome 5 Pro';
 	font-size: .9em;
 	font-weight:900;
-
 }
 
 a.map__modal::after{
