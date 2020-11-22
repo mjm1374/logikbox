@@ -19,7 +19,7 @@ $controller = new Controller();
 		</div>
 	</nav>
 
-	<div id="acceleration" style="display:none; widht:100%; height:100px;"></div>
+	<div id="acceleration" style="display:none; width:100%; height:100px;"></div>
 
 	<?php include_once("view/team_banner.php"); ?>
 
@@ -132,7 +132,8 @@ $controller = new Controller();
 			$('#pickupLine').html(json.lines[Math.floor(Math.random() * (json.lines.length - 1))]);
 			//console.log( json.lines[Math.floor(Math.random() * 11)]);
 			GetInstagram();
-			GetSpaceX(3);
+			//GetSpaceX(3);
+			GetSpaceXV4(3);
 			//GetGroupResults();
 
 			let bigInstagram = document.getElementById('insta__big');
