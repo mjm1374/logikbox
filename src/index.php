@@ -130,11 +130,8 @@ $controller = new Controller();
 			})();
 
 			$('#pickupLine').html(json.lines[Math.floor(Math.random() * (json.lines.length - 1))]);
-			//console.log( json.lines[Math.floor(Math.random() * 11)]);
 			GetInstagram();
-			//GetSpaceX(3);
 			GetSpaceXV4(3);
-			//GetGroupResults();
 
 			let bigInstagram = document.getElementById('insta__big');
 
@@ -146,8 +143,6 @@ $controller = new Controller();
 		});
 	</script>
 
-
-	<!-- <script src="js/goodwill-halloween.min.js"></script> -->
 </body>
 
 </html>
