@@ -93,7 +93,7 @@ function processData(data){
 }
 
 async function getLaunchPad(id,obj){
-    var requestOptions = {
+    let requestOptions = {
         method: 'GET', 
         redirect: 'follow',
         id: id
@@ -107,7 +107,7 @@ async function getLaunchPad(id,obj){
 }
 
 async function getLandingPad(id,obj){
-    var requestOptions = {
+    let requestOptions = {
         method: 'GET', 
         redirect: 'follow',
         id: id
@@ -127,7 +127,7 @@ async function getLandingPad(id,obj){
 }
 
 async function getRocket(id,obj){
-    var requestOptions = {
+    let requestOptions = {
         method: 'GET', 
         redirect: 'follow',
         id: id

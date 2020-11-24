@@ -100,7 +100,6 @@ $controller = new Controller();
 		<hr>
 		<footer>
 			<?php include_once("footer.php"); ?>
-
 		</footer>
 	</div>
 
@@ -108,32 +107,19 @@ $controller = new Controller();
 	include_once("modal-photo.php");
 	include_once("modal-video.php");
 	include_once("modal-worldcup.php");
-
-
 	?>
 
 	<!-- /container -->
 	<script>
-		$(document).ready(function() {
-			var json = (function() {
-				var json = null;
-				$.ajax({
-					'async': false,
-					'global': false,
-					'url': 'js/quotes.json',
-					'dataType': "json",
-					'success': function(data) {
-						json = data;
-					}
-				});
-				return json;
-			})();
+		document.addEventListener("DOMContentLoaded", function() {
+			let bigInstagram = document.getElementById('insta__big');
 
-			$('#pickupLine').html(json.lines[Math.floor(Math.random() * (json.lines.length - 1))]);
+			fetch('js/quotes.json')
+				.then(response => response.json())
+				.then(result => document.getElementById('pickupLine').innerHTML = result.lines[Math.floor(Math.random() * (result.lines.length - 1))])
+
 			GetInstagram();
 			GetSpaceXV4(3);
-
-			let bigInstagram = document.getElementById('insta__big');
 
 			window.addEventListener('scroll', checkInstagramVisable);
 
