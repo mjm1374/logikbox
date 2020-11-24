@@ -93,32 +93,16 @@ function processData(data){
 }
 
 async function getLaunchPad(id,obj){
-    let requestOptions = {
-        method: 'GET', 
-        redirect: 'follow',
-        id: id
-        };
-    const res = await fetch('https://api.spacexdata.com/v4/launchpads',requestOptions );
+    const res = await fetch('https://api.spacexdata.com/v4/launchpads/' + id );
     const data = await res.json();
-
-    data.forEach(element => {
-        if (element.id == id) obj.setLandingPad(element.name);
-    });
+    obj.setLandingPad(data.name);
 }
 
 async function getLandingPad(id,obj){
-    let requestOptions = {
-        method: 'GET', 
-        redirect: 'follow',
-        id: id
-        };
-    const res = await fetch('https://api.spacexdata.com/v4/landpads',requestOptions );
-    const data = await res.json();
-
     if(id !== null){
-        data.forEach(element => {
-            if (element.id == id) obj.setLandinghPad(element.name);
-        });
+    const res = await fetch('https://api.spacexdata.com/v4/landpads/' + id );
+    const data = await res.json();
+        obj.setLandinghPad(data.name);
     }
     else{
         obj.setLandinghPad('TBD');
@@ -132,29 +116,27 @@ async function getRocket(id,obj){
         redirect: 'follow',
         id: id
         };
-    const res = await fetch('https://api.spacexdata.com/v4/rockets',requestOptions );
+    const res = await fetch('https://api.spacexdata.com/v4/rockets/' + id );
     const data = await res.json();
     obj.setPic('falcon9.png');
 
-    data.forEach(element => {
-        if (element.id == id) {
-            obj.setRocket(element.name)
+    if (data.id == id) {
+        obj.setRocket(data.name)
 
-            switch (element.name){
-                case 'Falcon 9': 
-                obj.setPic('falcon9.png');
-                break;
-                case 'Falcon Heavy': 
-                obj.setPic('falconheavy.png');
-                break;
-                case 'Starship': 
-                obj.setPic('Starship.png');
-                break;
+        switch (data.name){
+            case 'Falcon 9': 
+            obj.setPic('falcon9.png');
+            break;
+            case 'Falcon Heavy': 
+            obj.setPic('falconheavy.png');
+            break;
+            case 'Starship': 
+            obj.setPic('Starship.png');
+            break;
 
-            }
-        
-        };
-    });
+        }
+    
+    };
 }
 
 
