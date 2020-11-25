@@ -2,7 +2,7 @@ let loopCnt = 0;
 let promises = [];
 
 class LaunchInfo {
-    constructor(id, name, date, rocket, launchPad, landingPad, desc, pic, capsule) {
+    constructor(id, name, date, rocket, launchPad, launchPadInfo, landingPad, landingPadInfo, desc, pic, capsule) {
         this.id = id;
         this.name = name;
         this.pic = pic;
@@ -30,12 +30,20 @@ class LaunchInfo {
         this.date = date;
     }
 
-    setLandingPad(launchPad){
+    setLaunchPad(launchPad){
         this.launchPad = launchPad;
     }
 
     setLandinghPad(landingPad){
         this.landingPad = landingPad;
+    }
+
+    setLaunchPadInfo(launchPadInfo){
+        this.launchPadInfo = launchPadInfo;
+    }
+
+    setLandingPadInfo(landingPadInfo){
+        this.landingPadInfo = landingPadInfo;
     }
 
     setDesc(desc){
@@ -95,14 +103,16 @@ function processData(data){
 async function getLaunchPad(id,obj){
     const res = await fetch('https://api.spacexdata.com/v4/launchpads/' + id );
     const data = await res.json();
-    obj.setLandingPad(data.name);
+    obj.setLaunchPad(data.name);
+    obj.setLaunchPadInfo(data.details)
 }
 
 async function getLandingPad(id,obj){
     if(id !== null){
     const res = await fetch('https://api.spacexdata.com/v4/landpads/' + id );
     const data = await res.json();
-        obj.setLandinghPad(data.name);
+        obj.setLandinghPad(data.full_name);
+        obj.setLandingPadInfo(data.details)
     }
     else{
         obj.setLandinghPad('TBD');
@@ -161,6 +171,7 @@ function buildTargetBlock(launch) {
                 <div class="launch__mission__name launch__copy">${launch.name}</div>
                 <div class="launch__rocket launch__copy">${launch.rocket}</div>
                 <div class="launch__date launch__copy">${launch.date}</div>
+                <div class="launch__site_info launch__copy">${launch.launchPadInfo}</div>
                 <div class="launch__site launch__copy">Launch: ${launch.launchPad}</div>
                 <div class="launch__site launch__copy">Landing: ${launch.landingPad}</div>
                 <hr />
