@@ -1,7 +1,7 @@
 let loopCnt = 0;
 let promises = [];
 
-function GetSpaceXV4(cnt) {
+function GetSpaceXV4(cnt) { 
     loopCnt =  cnt;
     fetch('https://api.spacexdata.com/v4/launches/upcoming',  {
         limit: cnt})

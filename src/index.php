@@ -113,7 +113,14 @@ $controller = new Controller();
 	<!-- /container -->
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
+
 			let bigInstagram = document.getElementById('insta__big');
+			window.addEventListener('scroll', checkInstagramVisable);
+
+			function checkInstagramVisable() {
+				if (isInViewport(bigInstagram)) bigInstagram.classList.add('insta__big--rotate');
+			}
+
 			fetch('js/quotes.json')
 				.then(response => response.json())
 				.then(result => document.getElementById('pickupLine').innerHTML = result.lines[Math.floor(Math.random() * (result.lines.length - 1))])
