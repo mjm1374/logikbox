@@ -1,64 +1,6 @@
 let loopCnt = 0;
 let promises = [];
 
-class LaunchInfo {
-    constructor(id, name, date, rocket, launchPad, launchPadInfo, landingPad, landingPadInfo, desc, pic, capsule) {
-        this.id = id;
-        this.name = name;
-        this.pic = pic;
-        this.rocket = rocket;
-        this.date = date;
-        this.launchPad = launchPad;
-        this.landingPad =  landingPad;
-        this.desc = desc;
-        this.capsule = capsule;
-    }
-
-    setName(name){
-        this.name = name;
-    }
-
-    setPic(pic){
-        this.pic = pic;
-    }
-
-    setRocket(rocket){
-        this.rocket = rocket;
-    }
-
-    setDate(date){
-        this.date = date;
-    }
-
-    setLaunchPad(launchPad){
-        this.launchPad = launchPad;
-    }
-
-    setLandinghPad(landingPad){
-        this.landingPad = landingPad;
-    }
-
-    setLaunchPadInfo(launchPadInfo){
-        this.launchPadInfo = launchPadInfo;
-    }
-
-    setLandingPadInfo(landingPadInfo){
-        this.landingPadInfo = landingPadInfo;
-    }
-
-    setDesc(desc){
-        this.desc = desc;
-    }
-
-    setCapsule(capsule){
-        this.capsule = capsule;
-    }
-
-    getCapsule(){
-        return this.capsule;
-    }
-}
-
 function GetSpaceXV4(cnt) {
     loopCnt =  cnt;
     fetch('https://api.spacexdata.com/v4/launches/upcoming',  {
@@ -76,6 +18,7 @@ function processData(data){
 
         launchInfo.setName(data[i].name);
         launchInfo.setDate(makeDate(data[i]));
+        launchInfo.setCrew(data[i].crew);
 
         (data[i].details ===  null ) ? launchInfo.setDesc('There are no details available for this mission.') : launchInfo.setDesc(data[i].details);
         
@@ -88,7 +31,7 @@ function processData(data){
         );
 
         promises.push(
-            getRocket(data[i].rocket,launchInfo)
+            getRocket( data[i].rocket,launchInfo )
         );
         
         Promise.all(promises).then(() => {
@@ -104,14 +47,16 @@ async function getLaunchPad(id,obj){
     const res = await fetch('https://api.spacexdata.com/v4/launchpads/' + id );
     const data = await res.json();
     obj.setLaunchPad(data.name);
-    obj.setLaunchPadInfo(data.details)
+    obj.setLaunchPadFullName(data.full_name);
+    obj.setLaunchPadInfo(data.details);
 }
 
 async function getLandingPad(id,obj){
     if(id !== null){
     const res = await fetch('https://api.spacexdata.com/v4/landpads/' + id );
     const data = await res.json();
-        obj.setLandinghPad(data.full_name);
+        obj.setLandinghPad(data.name);
+        obj.setLandingPadFullName(data.full_name);
         obj.setLandingPadInfo(data.details)
     }
     else{
@@ -143,10 +88,10 @@ async function getRocket(id,obj){
             case 'Starship': 
             obj.setPic('Starship.png');
             break;
-
         }
-    
     };
+    // checj for crew or CRS mission and update the image
+    if(obj.crew.length > 0 || obj.name.includes("CRS")) obj.setPic('dragon.png'); 
 }
 
 
@@ -172,7 +117,7 @@ function buildTargetBlock(launch) {
                 <div class="launch__rocket launch__copy">${launch.rocket}</div>
                 <div class="launch__date launch__copy">${launch.date}</div>
                 <div class="launch__site launch__copy launch__tooltip">Launch: ${launch.launchPad}
-                    <div class="launch__site_info launch__copy launch__tooltiptext">${launch.launchPadInfo}</div>
+                    <div class="launch__site_info launch__copy launch__tooltiptext"><h4>${launch.launchPad_full_name}</h4>${launch.launchPadInfo}</div>
                 </div>
                 <div class="launch__site launch__copy`;
 
@@ -180,7 +125,7 @@ function buildTargetBlock(launch) {
 
                 targetCopy += `">Landing: ${launch.landingPad}`;
 
-                if (launch.landingPad !== 'TBD') targetCopy += `<div class="launch__site_info launch__copy launch__tooltiptext">${launch.landingPadInfo}</div>`;
+                if (launch.landingPad !== 'TBD') targetCopy += `<div class="launch__site_info launch__copy launch__tooltiptext"><h4>${launch.landingPad_full_name}</h4>${launch.landingPadInfo}</div>`;
 
                 targetCopy += `</div>
                 <hr />
