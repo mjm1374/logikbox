@@ -171,9 +171,18 @@ function buildTargetBlock(launch) {
                 <div class="launch__mission__name launch__copy">${launch.name}</div>
                 <div class="launch__rocket launch__copy">${launch.rocket}</div>
                 <div class="launch__date launch__copy">${launch.date}</div>
-                <div class="launch__site_info launch__copy">${launch.launchPadInfo}</div>
-                <div class="launch__site launch__copy">Launch: ${launch.launchPad}</div>
-                <div class="launch__site launch__copy">Landing: ${launch.landingPad}</div>
+                <div class="launch__site launch__copy launch__tooltip">Launch: ${launch.launchPad}
+                    <div class="launch__site_info launch__copy launch__tooltiptext">${launch.launchPadInfo}</div>
+                </div>
+                <div class="launch__site launch__copy`;
+
+                if (launch.landingPad !== 'TBD') targetCopy += ` launch__tooltip`;
+
+                targetCopy += `">Landing: ${launch.landingPad}`;
+
+                if (launch.landingPad !== 'TBD') targetCopy += `<div class="launch__site_info launch__copy launch__tooltiptext">${launch.landingPadInfo}</div>`;
+
+                targetCopy += `</div>
                 <hr />
                 <div class="launch__details launch__copy">${launch.desc}</div>
                 `;

@@ -100,6 +100,7 @@ $controller = new Controller();
 		<hr>
 		<footer>
 			<?php include_once("footer.php"); ?>
+
 		</footer>
 	</div>
 
@@ -113,7 +114,6 @@ $controller = new Controller();
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
 			let bigInstagram = document.getElementById('insta__big');
-
 			fetch('js/quotes.json')
 				.then(response => response.json())
 				.then(result => document.getElementById('pickupLine').innerHTML = result.lines[Math.floor(Math.random() * (result.lines.length - 1))])

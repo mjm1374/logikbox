@@ -11,7 +11,7 @@ const postcss = require("gulp-postcss");
 const plumber = require("gulp-plumber");
 const sourcemaps = require('gulp-sourcemaps');
 const sassdoc = require('sassdoc');
-const tardis = require('lbx-tardis');
+const tardis = require('lbx-tardis'); 
 
 // BrowserSync
 function browserSync(done) {

@@ -1,0 +1,25 @@
+.launch__tooltip {
+    position: relative;
+    display: block;
+    border-bottom: 1px dotted black;
+    cursor: pointer;
+    width: fit-content;
+  }
+  
+  .launch__tooltip .launch__tooltiptext {
+    visibility: hidden;
+    background-color: #000;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 20px;
+    width: 350px;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .launch__tooltip:hover .launch__tooltiptext {
+    visibility: visible;
+  }
