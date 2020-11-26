@@ -11,7 +11,7 @@ const postcss = require("gulp-postcss");
 const plumber = require("gulp-plumber");
 const sourcemaps = require('gulp-sourcemaps');
 const sassdoc = require('sassdoc');
-const tardis = require('lbx-tardis');
+const tardis = require('lbx-tardis'); 
 
 // BrowserSync
 function browserSync(done) {
@@ -76,9 +76,9 @@ function scripts() {
     gulp
     .src('javascript/**/*.js')
     .pipe(sourcemaps.init())
-    .pipe(babel({
-      presets: ['@babel/env']
-    }))
+    // .pipe(babel({
+    //   presets: ['@babel/env']
+    // }))
     .pipe(plumber())
     .pipe(concat('script.min.js'))
     .on('error', onError)

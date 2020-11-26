@@ -19,7 +19,7 @@ $controller = new Controller();
 		</div>
 	</nav>
 
-	<div id="acceleration" style="display:none; widht:100%; height:100px;"></div>
+	<div id="acceleration" style="display:none; width:100%; height:100px;"></div>
 
 	<?php include_once("view/team_banner.php"); ?>
 
@@ -108,34 +108,18 @@ $controller = new Controller();
 	include_once("modal-photo.php");
 	include_once("modal-video.php");
 	include_once("modal-worldcup.php");
-
-
 	?>
 
 	<!-- /container -->
 	<script>
-		$(document).ready(function() {
-			var json = (function() {
-				var json = null;
-				$.ajax({
-					'async': false,
-					'global': false,
-					'url': 'js/quotes.json',
-					'dataType': "json",
-					'success': function(data) {
-						json = data;
-					}
-				});
-				return json;
-			})();
-
-			$('#pickupLine').html(json.lines[Math.floor(Math.random() * (json.lines.length - 1))]);
-			//console.log( json.lines[Math.floor(Math.random() * 11)]);
-			GetInstagram();
-			GetSpaceX(3);
-			//GetGroupResults();
-
+		document.addEventListener("DOMContentLoaded", function() {
 			let bigInstagram = document.getElementById('insta__big');
+			fetch('js/quotes.json')
+				.then(response => response.json())
+				.then(result => document.getElementById('pickupLine').innerHTML = result.lines[Math.floor(Math.random() * (result.lines.length - 1))])
+
+			GetInstagram();
+			GetSpaceXV4(3);
 
 			window.addEventListener('scroll', checkInstagramVisable);
 
@@ -145,8 +129,6 @@ $controller = new Controller();
 		});
 	</script>
 
-
-	<!-- <script src="js/goodwill-halloween.min.js"></script> -->
 </body>
 
 </html>
