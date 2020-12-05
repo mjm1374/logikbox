@@ -109,10 +109,11 @@ function buildTargetBlock(launch) {
     const targetDiv = document.getElementById('launchBlockHolder');
     let targetBlock = makeElement('div', 'col-md-4'); 
     targetBlock.appendChild(makeElement('div', 'launchContainer', `launchBlock${launch.id}`));
+    targetBlock.setAttribute('tabindex',0);
     targetDiv.appendChild(targetBlock);
 
 	let targetCopy = `
-                <img src="img/spacex/${launch.pic}" class="launch__img launch__copy" />
+                <img src="img/spacex/${launch.pic}" class="launch__img launch__copy" alt="${launch.rocket}"/>
                 <div class="launch__mission__name launch__copy">${launch.name}</div>
                 <div class="launch__rocket launch__copy">${launch.rocket}</div>
                 <div class="launch__date launch__copy">${launch.date}</div>
