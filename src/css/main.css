@@ -1,11 +1,7 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-/*font-family: 'Archivo', sans-serif;
-font-family: 'Shadows Into Light', cursive;
-font-family: 'Teko', sans-serif;
-font-family: 'Permanent Marker', cursive;
-*/
+
 body {
 	padding-top: 50px;
 	padding-bottom: 20px;
@@ -18,7 +14,7 @@ body {
 	color: #f1f1f1;
 	}
 
-.text-red{
+.text-red  {
 	color:#910505;
 	margin-right: 2px;
 }
@@ -31,20 +27,20 @@ body {
     color: #fff;
     right: 0px;
 }
-.likecnt{
+.likecnt {
 	position: relative;
     top: -2px;
 }
 
-.italic{
+.italic {
 	font-style: italic;
 }
 
-.bold{
+.bold {
 	font-weight: 700;
 }
 
-.hidden{
+.hidden {
 	display:none;
 }
 
@@ -55,7 +51,7 @@ a.pic__modal::after {
 	font-weight:900;
 }
 
-a.map__modal::after{
+a.map__modal::after {
 	content:' \f5a0';
 	font-family: 'Font Awesome 5 Pro';
 	font-size: .9em;
@@ -77,11 +73,12 @@ h1 {
 	position: relative;
 	font-family: 'Permanent Marker', cursive !important;
 }
+
 h2 {
 	color: #efefef; 
 }
 
-h2.homeH2{
+h2.homeH2 {
 	color: rgba(44, 44, 44, 1);
 }
 
@@ -97,7 +94,7 @@ h2.homeH2{
 	border-radius: 20px;
     z-index: 99999999;
 }
-.skip-nav:focus  {
+.skip-nav:focus {
 	transform: translateX(0%);
 }
 
@@ -110,7 +107,7 @@ h2.homeH2{
 	background-position: 50% 0;
 }
 
-.jumbotron--homepage{
+.jumbotron--homepage {
 	cursor: ew-resize;
 	transition: background-position 1s linear;
 }
@@ -121,12 +118,6 @@ h2.homeH2{
 	}
 }
 
-/* @media (min-width: 2500px) {
-	.jumbotron  {
-		background-size: 200%;
-	}
-} */
-
 .jumbotron p {
     margin-bottom: 15px;
     font-size: 21px;
@@ -134,7 +125,7 @@ h2.homeH2{
 	color: #efefef;
 	margin-top: -10px;
 }
-.portaitclear{
+.portaitclear {
 	display:block;
 	float: right;
 	margin-left:50px;
@@ -152,15 +143,15 @@ h2.homeH2{
 	border: 10px solid #f5f3f3;
 	filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
 	-ms-transform: translate(-38px, -33px) rotate(367deg);
-  	-webkit-transform: translate(-38px, -33px) rotate(367deg);
-  	transform: translate(-38px, -33px) rotate(367deg);
+	-webkit-transform: translate(-38px, -33px) rotate(367deg);
+	transform: translate(-38px, -33px) rotate(367deg);
 	/* animation-name: tilt; */
 	animation-duration: 5s;
 	transition-timing-function: ease-out;
-  	transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+	transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
 }
 
-#quadrophenia{
+#quadrophenia {
 	width: 30px;
     height: 300px;
     float: right;
@@ -169,8 +160,7 @@ h2.homeH2{
 
 }
 
-#nameplate{
-	
+#nameplate {
 	background: url(../img/mikeMc.png);
 	background-size: cover;
 	background-position-x: -115px;
@@ -184,8 +174,9 @@ h2.homeH2{
 	top: -100px;
 	left: -100px;
 	
-  }
-  #photo{
+}
+
+#photo {
 	background: url(../img/Scooter-bg.jpg);
 	background-size: cover;
 	background-position-x: -115px;
@@ -198,29 +189,30 @@ h2.homeH2{
 	position: relative;
 	top: 0px;
 	left: 0px;
-  }
-  
-  .blue {
+}
+
+.blue {
 	background: #00247d;
-  }
-  
-  .white {
+}
+
+.white {
 	background: #ffffff;
-  }
-  
+}
+
 .red {
 	background: #ce1126;
-  }
+}
 
-.quadrophenia_ring1{
+.quadrophenia_ring1 {
 	border-radius: 100%;
 	display: block;
 	margin: 0 auto;
 	width: 300px;
 	height: 300px;
-	filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.4));
-} 
-.quadrophenia_ring2{
+	filter: drop-shadow(20px 20px 20px rgba(0,0,0, 0.4));
+}
+
+.quadrophenia_ring2 {
 	border-radius: 100%;
 	position: relative;
 	display: block;
@@ -229,7 +221,7 @@ h2.homeH2{
 	width: 200px;
 	height: 200px;
 }
-.quadrophenia_ring3{
+.quadrophenia_ring3 {
 	border-radius: 100%;
 	position: relative;
 	display: block;
@@ -238,16 +230,19 @@ h2.homeH2{
 	width: 100px;
 	height: 100px;
 }
-#brand{
+
+#brand {
 	display:block;
 	float:right;
 	width:315px;
 	margin-bottom:10px;
 }
-.brand__logo{
+
+.brand__logo {
 	float: left;
 }
-.brand_ring1{
+
+.brand_ring1 {
 	border-radius: 100%;
 	display: block;
 	margin: 0 auto;
@@ -255,7 +250,7 @@ h2.homeH2{
 	height: 60px;
 }
 
-.brand_ring2{
+.brand_ring2 {
 	border-radius: 100%;
 	position: relative;
 	display: block;
@@ -265,7 +260,7 @@ h2.homeH2{
 	height: 40px;
 }
 
-.brand_ring3{
+.brand_ring3 {
 	border-radius: 100%;
 	position: relative;
 	display: block;
@@ -275,22 +270,22 @@ h2.homeH2{
 	height: 20px;
 }
 
-.socialContainer{
+.socialContainer {
 	position: relative;
 	height:230px;
 }
 
-.socialContainer--plus50{
+.socialContainer--plus50 {
 	height:280px;
 }
 
-.socialContainer--btn{
+.socialContainer--btn {
 	position: absolute;
 	bottom:0px;
 }
 
 
-footer{
+footer {
 	padding:10px;
 	margin-bottom: 10px;
 }
@@ -312,7 +307,7 @@ footer{
 		margin-right: -28px;
 		margin-top: -100px;
 		border: 10px solid #f5f3f3;
-		filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
+		filter: drop-shadow(10px 10px 10px rgba(0,0,0, 0.3));
 
 	}
 	.homeProject {
@@ -322,19 +317,16 @@ footer{
 		margin-bottom: 20px;
 	}
 
-	#qrCode{
+	#qrCode {
 		display:none;
 	}
 
 	.instagram__holder {
-	 
 	}
 }
 
 @media only screen and (max-device-width : 600px)  {
-
 	#portrait {
-		/* background: url(../img/mike-mcallister-processed-250.jpg); */
 		background-size: cover;
 		background-repeat: no-repeat;
 		width: 150px;
@@ -343,7 +335,6 @@ footer{
 		margin-right: -28px;
 		margin-top: -100px;
 		border: 10px solid white;
-
 	}
 
 	#pickupLine {
@@ -352,16 +343,7 @@ footer{
 		z-index: 100;
 		position: relative;
 	}
-
 }
-
-@media (max-width: 375px) { 
-	.instagram__holder {
-		/* height: 420px; */
-	}
-
- }
- 
 
 #pickupLine {
 	width: 50%;
@@ -374,7 +356,7 @@ footer{
 	position: relative;
 }
 
-#qrCode{
+#qrCode {
 	border-radius: 0% 5% 5% 0%;
 	border: 2px solid #000;
 	height: 180px;
@@ -386,14 +368,12 @@ footer{
 	background-size: 170px 170px;
 }
 
-#qrCode:hover{
-	/* left:-10px; */
+#qrCode:hover {
 	cursor: pointer;
 }
 
-#qrTitle{
+#qrTitle {
 	background: #000;
-	
 	color: #fff;
 	position: absolute;
 	right:-92px;
@@ -401,7 +381,8 @@ footer{
     width: 125px;
     height: 196px;
 }
-#qrTitle span{
+
+#qrTitle span {
 	transform: rotate(90deg);
 	transform-origin: top left;
 	display: block;
@@ -409,6 +390,7 @@ footer{
     left: 26px;
     top: 60px;
 }
+
 .logoimg {
 	float: right;
 	margin-left: 20px;
@@ -420,7 +402,6 @@ footer{
 .logoimgLeft {
 	float: left;
 	margin-right: 20px;
-
 }
 
 .emailform {
@@ -432,6 +413,7 @@ footer{
 	border: 3px solid #a944423b;
 	transition: all 0.4s ease-in-out;
 }
+
 .emailform:focus {
 	border: 5px solid #a94442ff;
 	outline: none; 
@@ -441,12 +423,11 @@ footer{
 	height: 200px !important;
 }
 
-
 .error {
 	color: #910505
 }
 
-.logo{
+.logo {
 	margin:0 auto;
 	vertical-align: middle;
 	display:block;
@@ -454,10 +435,10 @@ footer{
 	display: block;
 }
 
- .logo img{
+.logo img{
 	display: block;
 	margin: 0 auto;;
- }
+}
 
 .clientBlock{
 	margin-top:50px;
@@ -467,20 +448,16 @@ footer{
 	width:100%;
 }
 
-.nava{
-	/* font-size: 1.5em !important; */
-}
-.homeProject{
+.homeProject {
 	float:right;
 	margin-left: 10px;
 	width:300px;
 }
 
-.homeTitle{
+.homeTitle {
 	color: rgba(229, 181, 44, 0.9);
-
 }
 
-.credits{
+.credits {
 	font-size: 8px;
 }
