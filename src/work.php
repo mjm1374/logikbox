@@ -1,24 +1,29 @@
 <?php
-	include_once("controller/Controller.php");
-    $controller = new Controller();
+include_once("controller/Controller.php");
+$controller = new Controller();
 ?>
 
 <!doctype html>
-<html class="no-js"  lang="en">
+<html class="no-js" lang="en">
+
 <head>
 	<?php include("header.php"); ?>
-	<link rel="canonical" href="http://logikbox.com/work.php"/>
+	<link rel="canonical" href="http://logikbox.com/work.php" />
 </head>
+
 <body>
+	<a href="#main" class="skip-nav" tabindex="0">Skip to main content</a>
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
-				<?php include("nav.php"); ?>
+			<?php include("nav.php"); ?>
 			<!--/.navbar-collapse -->
 		</div>
 	</nav>
-	<?php
+	<main id="main">
+		<?php
 		$controller->invoke();
-	?>
+		?>
+	</main>
 	<hr>
 	<footer>
 		<?php include_once("footer.php"); ?>
@@ -26,4 +31,5 @@
 	</div>
 	<!-- /container -->
 </body>
+
 </html>

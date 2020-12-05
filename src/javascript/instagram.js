@@ -29,11 +29,11 @@ function GetInstagram(max_id) {
     ).then(function (result) {
         //console.log("my results", result);
         let myPics = result.data;
-        let NextMaxID = result.paging.next;
+        let nextMaxID = result.paging.next;
 
-        if (NextMaxID != undefined) {
-            NextMaxID = NextMaxID.slice(NextMaxID.indexOf("after=") + 6);
-            $('#getMoreIstagram').data('nexturl', NextMaxID);
+        if (nextMaxID != undefined) {
+            nextMaxID = nextMaxID.slice(nextMaxID.indexOf("after=") + 6);
+            $('#getMoreIstagram').data('nexturl', nextMaxID);
         } else {
             $('#getMoreIstagram').hide();
         }
@@ -67,7 +67,7 @@ function GetInstagram(max_id) {
             }
 
             myString += "<div class='col-md-3 col-sm-6'>";
-            myString += "<div class='instagram__holder'>";
+            myString += "<div class='instagram__holder' tabindex='0'>";
 
             if (isVideo == false) {
                 mediaURL = myPics[i].media_url;
