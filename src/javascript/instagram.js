@@ -47,6 +47,7 @@ function GetInstagram(max_id) {
             let myCaption = '';
             let mediaURL = '';
             let likes = null;
+            let imgTypeText = 'Photo'
             //let likes = myPics[i].likes.count;
 
             if (myPics[i].caption != undefined || myPics[i].caption != null) {
@@ -64,10 +65,11 @@ function GetInstagram(max_id) {
             }
             if (myPics[i].media_type == 'VIDEO') {
                 isVideo = true;
+                imgTypeText = 'Video';
             }
 
             myString += "<div class='col-md-3 col-sm-6'>";
-            myString += `<div class='instagram__holder' tabindex='0' aria-label='Photo by Mike McAllister. ${myCaption}. Taken on ${fullDate}'>`;
+            myString += `<div class='instagram__holder' tabindex='0' aria-label='${imgTypeText} by Mike McAllister. ${myCaption}. Taken on ${fullDate}'>`;
 
             if (isVideo == false) {
                 mediaURL = myPics[i].media_url;
