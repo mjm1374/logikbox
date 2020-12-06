@@ -24,7 +24,7 @@ let tardis = (function (theTime, pattern) {
     const patterns = ["YYYY", "YYY", "YY", "y", "MMMM", "MMM", "MM", "M", "m", "DDDD", "DDD", "DD", "D", "d", "HHHH", "HH", "H", "h", "IIII", "II", "I", "i", "SSSS", "SS", "S", "s", "TT", "tt"];
     const keys = ["fullYear", "wordYear", "YYear", "year", "fullMonth", "shortMonth", "MMonth", "month", "monthInt", "fullDay", "shortDay", "DDay", "day", "dayInt", "wordHour", "HHour", "hour", "hourInt", "wordMin", "MMin", "min", "minInt", "wordSec", "SSec", "sec", "secInt", "TT", "tt"];
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    const months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "Decemeber"];
+    const months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     const a = ['', 'one ', 'two ', 'three ', 'four ', 'five ', 'six ', 'seven ', 'eight ', 'nine ', 'ten ', 'eleven ', 'twelve ', 'thirteen ', 'fourteen ', 'fifteen ', 'sixteen ', 'seventeen ', 'eighteen ', 'nineteen '];
     const b = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
 

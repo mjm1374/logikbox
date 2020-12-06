@@ -67,7 +67,7 @@ function GetInstagram(max_id) {
             }
 
             myString += "<div class='col-md-3 col-sm-6'>";
-            myString += "<div class='instagram__holder' tabindex='0'>";
+            myString += `<div class='instagram__holder' tabindex='0' aria-label='Photo by Mike McAllister. ${myCaption}. Taken on ${fullDate}'>`;
 
             if (isVideo == false) {
                 mediaURL = myPics[i].media_url;
@@ -79,7 +79,7 @@ function GetInstagram(max_id) {
                 //<div class='likebox'></div> <span class='text-red'>&hearts;</span><span class='instagram__date likecnt'>${likes}</span>
                 myString += `<div class='instagram__video'><video autoplay muted loop><source src='${mediaURL}' type='video/mp4'></video></div>`;
             }
-            myString += `</div><div class='instagram__copy'>${myCaption}<br /><span class='instagram__date'>${fullDate}`;
+            myString += `</div><div class='instagram__copy' aria-hidden='true'>${myCaption}<br /><span class='instagram__date'>${fullDate}`;
             if (location.name != '' && location.name != undefined) {
                 myString += ` - ${location.name}`;
             }
