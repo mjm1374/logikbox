@@ -95,16 +95,17 @@ $controller = new Controller();
 			</div>
 			<div id="launchBlockHolder"></div>
 		</section>
+
+		<hr>
+		<section id="Instagram" class="col-md-12 ">
+			<div id="insta__big" class="insta__big"></div>
+			<h2 class="homeH2" tabindex="0">Latest Photos</h2>
+			<div class="row instagram">
+			</div>
+			<a id="getMoreIstagram" class="btn btn-default" href="#" data-nexturl="" role="button" aria-label="View more Photos">View More &raquo;</a>
+		</section>
+		<hr>
 	</div>
-	<hr>
-	<section id="Instagram">
-		<div id="insta__big" class="insta__big"></div>
-		<h2 class="homeH2" tabindex="0">Latest Photos</h2>
-		<div class="row instagram">
-		</div>
-		<a id="getMoreIstagram" class="btn btn-default" href="#" data-nexturl="" role="button" aria-label="View more Photos">View More &raquo;</a>
-	</section>
-	<hr>
 	<footer>
 		<?php include_once("footer.php"); ?>
 
