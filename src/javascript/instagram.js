@@ -29,11 +29,11 @@ function GetInstagram(max_id) {
     ).then(function (result) {
         //console.log("my results", result);
         let myPics = result.data;
-        let NextMaxID = result.paging.next;
+        let nextMaxID = result.paging.next;
 
-        if (NextMaxID != undefined) {
-            NextMaxID = NextMaxID.slice(NextMaxID.indexOf("after=") + 6);
-            $('#getMoreIstagram').data('nexturl', NextMaxID);
+        if (nextMaxID != undefined) {
+            nextMaxID = nextMaxID.slice(nextMaxID.indexOf("after=") + 6);
+            $('#getMoreIstagram').data('nexturl', nextMaxID);
         } else {
             $('#getMoreIstagram').hide();
         }
@@ -47,6 +47,7 @@ function GetInstagram(max_id) {
             let myCaption = '';
             let mediaURL = '';
             let likes = null;
+            let imgTypeText = 'Photo'
             //let likes = myPics[i].likes.count;
 
             if (myPics[i].caption != undefined || myPics[i].caption != null) {
@@ -64,10 +65,11 @@ function GetInstagram(max_id) {
             }
             if (myPics[i].media_type == 'VIDEO') {
                 isVideo = true;
+                imgTypeText = 'Video';
             }
 
             myString += "<div class='col-md-3 col-sm-6'>";
-            myString += "<div class='instagram__holder'>";
+            myString += `<div class='instagram__holder' tabindex='0' aria-label='${imgTypeText} by Mike McAllister. ${myCaption}. Taken on ${fullDate}'>`;
 
             if (isVideo == false) {
                 mediaURL = myPics[i].media_url;
@@ -79,7 +81,7 @@ function GetInstagram(max_id) {
                 //<div class='likebox'></div> <span class='text-red'>&hearts;</span><span class='instagram__date likecnt'>${likes}</span>
                 myString += `<div class='instagram__video'><video autoplay muted loop><source src='${mediaURL}' type='video/mp4'></video></div>`;
             }
-            myString += `</div><div class='instagram__copy'>${myCaption}<br /><span class='instagram__date'>${fullDate}`;
+            myString += `</div><div class='instagram__copy' aria-hidden='true'>${myCaption}<br /><span class='instagram__date'>${fullDate}`;
             if (location.name != '' && location.name != undefined) {
                 myString += ` - ${location.name}`;
             }

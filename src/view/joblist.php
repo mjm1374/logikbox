@@ -14,23 +14,21 @@ date_default_timezone_set('America/New_York');
 			$myString = $myString . '"isSelected": "';
 			if ($cnt == 0) {
 				$myString = $myString. 'true';
-			 }
-			 $myString =  $myString . '",' ;
-			 $myString =  $myString . '"nextDistance": 4,';
-			 $myString =  $myString .'"taskTitle": "' . $job->company . '",';
+			}
+			$myString =  $myString . '",' ;
+			$myString =  $myString . '"nextDistance": 4,';
+			$myString =  $myString .'"taskTitle": "' . $job->company . '",';
 				$date = new DateTime($job->startDate);
-			 $myString =  $myString .'"taskSubTitle": "' .  $job->title . '",';
-			 $myString =  $myString .'"assignDate": "' . date_format($date, 'd/m/Y') . '",';
-			 $myString =  $myString .'"taskShortDate": "' . date_format($date, 'd M Y') . '",';
+			$myString =  $myString .'"taskSubTitle": "' .  $job->title . '",';
+			$myString =  $myString .'"assignDate": "' . date_format($date, 'd/m/Y') . '",';
+			$myString =  $myString .'"taskShortDate": "' . date_format($date, 'd M Y') . '",';
 			 //$myString =  $myString .'"taskShortDate": "p' . $cnt . '",';
 			 //$myString =  $myString .'"taskDetails": "' . $job->description . '"';
-			  $myString =  $myString .'"taskDetails": "XXX"';
-			 $myString =  $myString .' },';
-			 $cnt =  $cnt + 1;
+			$myString =  $myString .'"taskDetails": "XXX"';
+			$myString =  $myString .' },';
+			$cnt =  $cnt + 1;
 		}
 		
 		$myString = substr ( $myString, 1 , (strlen($myString) -1 ));
 		
 		echo $myString ;
-	?>
-   

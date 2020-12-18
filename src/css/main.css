@@ -19,6 +19,10 @@ body {
 	margin-right: 2px;
 }
 
+*:focus{
+	outline: none;
+}
+
 .likebox{
 	position: absolute;
     bottom: 0px;
@@ -455,7 +459,7 @@ footer {
 }
 
 .homeTitle {
-	color: rgba(229, 181, 44, 0.9);
+	color: rgba(229,181,44, 0.9);
 }
 
 .credits {

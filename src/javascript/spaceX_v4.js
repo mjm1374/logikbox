@@ -98,7 +98,7 @@ async function getRocket(id,obj){
 function makeDate(launch){
     let launchDate = tardis.MonthDateTime(launch.date_unix) + '<br /><span class="italic">';
 
-        (launch.upcoming) ? launchDate += "tenative up to a " + launch.date_precision : launchDate += "&nbsp;";
+        (launch.upcoming) ? launchDate += "tentative up to a " + launch.date_precision : launchDate += "&nbsp;";
 
         launchDate += "</span>";
                 
@@ -109,21 +109,22 @@ function buildTargetBlock(launch) {
     const targetDiv = document.getElementById('launchBlockHolder');
     let targetBlock = makeElement('div', 'col-md-4'); 
     targetBlock.appendChild(makeElement('div', 'launchContainer', `launchBlock${launch.id}`));
+    targetBlock.setAttribute('tabindex',0);
     targetDiv.appendChild(targetBlock);
 
 	let targetCopy = `
-                <img src="img/spacex/${launch.pic}" class="launch__img launch__copy" />
-                <div class="launch__mission__name launch__copy">${launch.name}</div>
-                <div class="launch__rocket launch__copy">${launch.rocket}</div>
-                <div class="launch__date launch__copy">${launch.date}</div>
-                <div class="launch__site launch__copy launch__tooltip">Launch: ${launch.launchPad}
+                <img src="img/spacex/${launch.pic}" class="launch__img launch__copy" alt="${launch.rocket} rocket picture."/>
+                <div class="launch__mission__name launch__copy">${launch.name}.</div>
+                <div class="launch__rocket launch__copy">${launch.rocket}.</div>
+                <div class="launch__date launch__copy">${launch.date}.</div>
+                <div class="launch__site launch__copy launch__tooltip">Launch: ${launch.launchPad}.
                     <div class="launch__site_info launch__copy launch__tooltiptext"><h4>${launch.launchPad_full_name}</h4>${launch.launchPadInfo}</div>
                 </div>
                 <div class="launch__site launch__copy`;
 
                 if (launch.landingPad !== 'TBD') targetCopy += ` launch__tooltip`;
 
-                targetCopy += `">Landing: ${launch.landingPad}`;
+                targetCopy += `">Landing: ${launch.landingPad}.`;
 
                 if (launch.landingPad !== 'TBD') targetCopy += `<div class="launch__site_info launch__copy launch__tooltiptext"><h4>${launch.landingPad_full_name}</h4>${launch.landingPadInfo}</div>`;
 
