@@ -61,7 +61,7 @@ class Projects
 
 	public function getProject($title)
 	{
-		$allProjects = $this->getProjectsList();
+		$allProjects = $this->getProjectList();
 		return $allProjects[$title];
 	}
 
