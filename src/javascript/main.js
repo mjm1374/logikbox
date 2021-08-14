@@ -6,43 +6,65 @@ class setLocation {
 	}
 }
 
-const access_token = "IGQVJVR2N3ZAk1IOFNGV2c3OGwxUVB4RHI0UFA4ZAmRQR1ZAnN19tazQ0OVJQLWNZAYVJsOVcxMTUtX1JZAQWZA2VS1JU0k0NE9kRXJTVlhabm5rZAHRsNGQzTjNoOUd6SXcyUGdJVUFlXzljZA21ybDhJZAl9CRwZDZD";
-const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-const months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "Decemeber"];
+const instagramAPI =
+	'IGQVJVR2N3ZAk1IOFNGV2c3OGwxUVB4RHI0UFA4ZAmRQR1ZAnN19tazQ0OVJQLWNZAYVJsOVcxMTUtX1JZAQWZA2VS1JU0k0NE9kRXJTVlhabm5rZAHRsNGQzTjNoOUd6SXcyUGdJVUFlXzljZA21ybDhJZAl9CRwZDZD';
+const days = [
+	'Sunday',
+	'Monday',
+	'Tuesday',
+	'Wednesday',
+	'Thursday',
+	'Friday',
+	'Saturday',
+];
+const months = [
+	'January',
+	'Febuary',
+	'March',
+	'April',
+	'May',
+	'June',
+	'July',
+	'August',
+	'September',
+	'October',
+	'November',
+	'Decemeber',
+];
 let IsCreated = 0;
 
 function dynamicSort(property) {
 	var sortOrder = 1;
-	if (property[0] === "-") {
+	if (property[0] === '-') {
 		sortOrder = -1;
 		property = property.substr(1);
 	}
 	return function (a, b) {
-		/* next line works with strings and numbers, 
+		/* next line works with strings and numbers,
 		 * and you may want to customize it to your needs
 		 */
-		var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
+		var result =
+			a[property] < b[property] ? -1 : a[property] > b[property] ? 1 : 0;
 		return result * sortOrder;
 	};
 }
-
 
 let isInViewport = function (elem) {
 	var bounding = elem.getBoundingClientRect();
 	return (
 		bounding.top >= 0 &&
 		bounding.left >= 0 &&
-		bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-		bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+		bounding.bottom <=
+			(window.innerHeight || document.documentElement.clientHeight) &&
+		bounding.right <=
+			(window.innerWidth || document.documentElement.clientWidth)
 	);
 };
-
 
 jQuery(document).ready(function ($) {
 	var timelineBlocks = $('.cd-timeline-block'),
 		offset = 0.8,
 		initial_position = null;
-
 
 	window.addEventListener('deviceorientation', function (e) {
 		if (initial_position === null) {
@@ -62,11 +84,11 @@ jQuery(document).ready(function ($) {
 		if (offset <= left) offset = 0;
 		if (offset >= right) offset = right;
 		//console.log(current_position + " - " + left + " - " + initial_position);
-		var percentage = offset / width * 100;
+		var percentage = (offset / width) * 100;
 		panorama.css('background-position', percentage + '% 0');
 	});
 
-	$('#getMoreIstagram').on("click", function (e) {
+	$('#getMoreIstagram').on('click', function (e) {
 		e.preventDefault();
 		var max_id = $('#getMoreIstagram').data('nexturl');
 		GetInstagram(max_id);
@@ -80,7 +102,7 @@ jQuery(document).ready(function ($) {
 		let srcUrl = $(this).data('pic');
 		let caption = $(this).data('caption');
 		let alt = $(this).data('alt');
-		if (alt == 'undefined' || alt == "") alt = caption;
+		if (alt == 'undefined' || alt == '') alt = caption;
 
 		$('#bigstagram').removeClass('hidden');
 		$('#bigstagram').attr('src', srcUrl);
@@ -108,10 +130,9 @@ jQuery(document).ready(function ($) {
 		let srcUrl = instagramGallery[currentPos].mediaURL;
 		let caption = instagramGallery[currentPos].caption;
 		let alt = instagramGallery[currentPos].alt;
-		if (alt == 'undefined' || alt == "") alt = caption;
+		if (alt == 'undefined' || alt == '') alt = caption;
 		let isVideo = instagramGallery[currentPos].isVideo;
 		let video = document.getElementById('bigstagram--vid');
-
 
 		if (isVideo) {
 			$('#bigstagram--vid').removeClass('hidden');
@@ -131,47 +152,53 @@ jQuery(document).ready(function ($) {
 			$('#bigstagram').removeClass('hidden');
 			$('#bigstagram').attr('src', srcUrl);
 			$('#bigstagram').attr('alt', alt);
-
 		}
-
-
 
 		$('#photoModal').modal('show');
 		$('.modal-dynamic-title').html(caption);
-
 	});
-
 
 	//hide timeline blocks which are outside the viewport
 	hideBlocks(timelineBlocks, offset);
 
 	//on scolling, show/animate timeline blocks when enter the viewport
 	$(window).on('scroll', function () {
-		(!window.requestAnimationFrame) ?
-		setTimeout(function () {
-			showBlocks(timelineBlocks, offset);
-		}, 100): window.requestAnimationFrame(function () {
-			showBlocks(timelineBlocks, offset);
-		});
+		!window.requestAnimationFrame
+			? setTimeout(function () {
+					showBlocks(timelineBlocks, offset);
+			  }, 100)
+			: window.requestAnimationFrame(function () {
+					showBlocks(timelineBlocks, offset);
+			  });
 	});
 
 	function hideBlocks(blocks, offset) {
 		blocks.each(function () {
-			($(this).offset().top > $(window).scrollTop() + $(window).height() * offset) && $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
+			$(this).offset().top >
+				$(window).scrollTop() + $(window).height() * offset &&
+				$(this)
+					.find('.cd-timeline-img, .cd-timeline-content')
+					.addClass('is-hidden');
 		});
 	}
 
 	function showBlocks(blocks, offset) {
 		blocks.each(function () {
-			($(this).offset().top <= $(window).scrollTop() + $(window).height() * offset && $(this).find('.cd-timeline-img').hasClass('is-hidden')) && $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+			$(this).offset().top <=
+				$(window).scrollTop() + $(window).height() * offset &&
+				$(this).find('.cd-timeline-img').hasClass('is-hidden') &&
+				$(this)
+					.find('.cd-timeline-img, .cd-timeline-content')
+					.removeClass('is-hidden')
+					.addClass('bounce-in');
 		});
 	}
 
 	//QRCode toggle
 	$('#qrCode').click(function () {
-		var toggleWidth = $("#qrCode").width() < 38 ? "210px" : "37px";
+		var toggleWidth = $('#qrCode').width() < 38 ? '210px' : '37px';
 		$('#qrCode').animate({
-			width: toggleWidth
+			width: toggleWidth,
 		});
 	});
 
@@ -182,8 +209,7 @@ jQuery(document).ready(function ($) {
 
 	$('.jumbotron--homepage').mousemove(function (e) {
 		var offset = e.pageX - left;
-		var percentage = offset / width * 100;
+		var percentage = (offset / width) * 100;
 		panorama.css('background-position', percentage + '% 0');
 	});
-
 });

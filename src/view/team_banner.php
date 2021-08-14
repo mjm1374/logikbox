@@ -15,12 +15,11 @@ if ($mode == 'prod') {
     $myTeam = 50; // live
     $myLeagueCurrentSeason = 2790;
     $myLeagueNextSeason = 2790;
-}
-else {
+} else {
     $myTeam = 31; // dev
     $myLeagueCurrentSeason = 524;
     $myLeagueNextSeason = 524;
-} 
+}
 //https:api-football-v1.p.rapidapi.com/v2/teams/team/{id}
 //https://www.api-football.com/demo/v2/
 
@@ -53,10 +52,9 @@ function getFixturess($myLeague, $myTeam)
 
 function checkLogo($logo)
 {
-    
+
     if ($logo == "Not available in demo" || $logo == NULL) {
         $logo = "img/football_noLogo.png";
-        //$logo = "https://www.api-football.com/public/teams/50.png";
     }
     return $logo;
 }
@@ -93,31 +91,24 @@ if ($rowcount == 0) {
     $row = mysqli_fetch_array($cacheSet, MYSQLI_ASSOC);
     $rankings =  $row["fc_content"];
     $games = unserialize($row["fc_fixtures"]);
-    //var_dump(unserialize($row["fc_fixtures"]));
     mysqli_free_result($cacheSet);
 }
 
-
-
-
 $con->close();
-//var_dump($standings->body);
-//var_dump($standings);
-//var_dump($fixtures);
-//var_dump($rankings );
-
 
 function getRankHTML($teams, $myTeamName)
 {
     $html = '';
     foreach ($teams as $team) {
         //echo $team->team_id;
-        $teamInfo = $team;
+        $teamInfo = $tea
+        m;
         $showTeam = "hide";
         if ($team->teamName == $myTeamName) {
-            $myTeam = $team->team_id ;
+            $myTeam = $team->team_id;
             $showTeam = "show";
             $myteamRank = $teamInfo->rank;
+            if ($myteamRank == '' || $myteamRank == null) $myteamRank = 20;
         }
         $logo = checkLogo($teamInfo->logo);
         //echo($logo);
@@ -143,10 +134,10 @@ function getRankHTML($teams, $myTeamName)
                                 <div aria-label=" Draws">D</div>
                             </th>
                             <th class="football__table__header">
-                                <div aria-label=" Losses">L</div>
+                                <div aria-label="Losses">L</div>
                             </th>
                             <th class="football__table__header">
-                                <div aria-label=" Goals scored">GF</div>
+                                <div aria-label="Goals scored">GF</div>
                             </th>
                             <th class="football__table__header">
                                 <div aria-label=" Goals against">GA</div>
@@ -157,7 +148,6 @@ function getRankHTML($teams, $myTeamName)
                             <th class="football__table__header">
                                 <div aria-label="Points">Pts</div>
                             </th>
-
                         </tr>
                         <tr>';
         $html = $html . '<td class="football__table__td__div">' . $teamInfo->rank . '</td>';
@@ -169,7 +159,7 @@ function getRankHTML($teams, $myTeamName)
         $html = $html . '<td class="football__table__td__div">' . $teamStanding->goalsAgainst . '</td> ';
         $html = $html . '<td class="football__table__td__div">' . $teamInfo->goalsDiff . '</td> ';
         $html = $html . '<td class="football__table__td__div">' . $teamInfo->points . '</td> ';
-        $html = $html . '</tr> </table> ';
+        $html = $html . '</tr></table> ';
         $html = $html . '<div class="football_rank"><span class="bold">Form:</span> ' . $teamInfo->forme . '</div> ';
         $html = $html . '</div><div class="football__item--scroller">
                             <div class="football__item--up" data-dir="up" aria-label="Rank up"></div>
@@ -189,20 +179,17 @@ function getRankHTML($teams, $myTeamName)
     <div class="foootball__inner">
         <?php
 
-        echo($rankings);
+        echo ($rankings);
 
         $today = time();
-        //$today = '1540321200';
         $lastGame = null;
         $nextGame = null;
         $filter = 0;
-        //echo('games: ' . count($games));
+
 
         foreach ($games as $game) {
-            //echo $game->event_timestamp . "<br />";
             if ($game->event_timestamp < $today) {
                 $lastGame = $game;
-
             }
 
             if ($game->event_timestamp >= $today && $filter == 0) {
@@ -226,7 +213,7 @@ function getRankHTML($teams, $myTeamName)
         }
         ?>
 
- 
+
 
         <div class="football__item mobile__hide">
             <h4 class="football_title">Last Man City Game</h4>
@@ -267,7 +254,7 @@ function getRankHTML($teams, $myTeamName)
                 $myDateTime->add($myInterval);
                 $gameTime = $myDateTime->format('M d, Y H:i A');
 
-                ?> <table class="football__matchInfo">
+            ?> <table class="football__matchInfo">
                     <tr>
                         <td class="football__match__teamLogo">
                             <div class="football__match__logo" style="background-image:url(<?php echo checkLogo($homeTeam->logo); ?>);"></div>
