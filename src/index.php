@@ -9,6 +9,16 @@ $controller = new Controller();
 <head>
 	<?php include("header.php"); ?>
 	<link rel="canonical" href="http://logikbox.com/index.php" />
+
+	<style>
+		.football-header {
+			width: 100%;
+			height: 200px;
+			overflow: hidden;
+			border: 0px;
+
+		}
+	</style>
 </head>
 
 <body>
@@ -22,7 +32,7 @@ $controller = new Controller();
 
 	<!-- <div id="acceleration" style="display:none; width:100%; height:100px;"></div> -->
 	<section id="soccer">
-		<?php include_once("view/team_banner.php"); ?>
+		<iframe class="football-header" src="/football-header/"></iframe>
 	</section>
 
 	<div class="jumbotron jumbotron--homepage">
@@ -97,13 +107,13 @@ $controller = new Controller();
 		</section>
 
 		<hr>
-		<section id="Instagram" class="col-md-12 ">
+		<!-- <section id="Instagram" class="col-md-12 ">
 			<div id="insta__big" class="insta__big"></div>
 			<h2 class="homeH2" tabindex="0">Latest Photos</h2>
 			<div class="row instagram">
 			</div>
 			<a id="getMoreIstagram" class="btn btn-default" href="#" data-nexturl="" role="button" aria-label="View more Photos">View More &raquo;</a>
-		</section>
+		</section> -->
 		<hr>
 	</div>
 	<footer>
