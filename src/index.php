@@ -133,7 +133,7 @@ $controller = new Controller();
 		document.addEventListener("DOMContentLoaded", function() {
 
 			let bigInstagram = document.getElementById('insta__big');
-			window.addEventListener('scroll', checkInstagramVisable);
+			// window.addEventListener('scroll', checkInstagramVisable);
 
 			function checkInstagramVisable() {
 				if (isInViewport(bigInstagram)) bigInstagram.classList.add('insta__big--rotate');
@@ -143,14 +143,9 @@ $controller = new Controller();
 				.then(response => response.json())
 				.then(result => document.getElementById('pickupLine').innerHTML = result.lines[Math.floor(Math.random() * (result.lines.length - 1))])
 
-			GetInstagram();
+			// GetInstagram();
 			GetSpaceXV4(3);
 
-			window.addEventListener('scroll', checkInstagramVisable);
-
-			function checkInstagramVisable() {
-				if (isInViewport(bigInstagram)) bigInstagram.classList.add('insta__big--rotate');
-			}
 		});
 	</script>
 
