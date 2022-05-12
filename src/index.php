@@ -22,6 +22,7 @@ $controller = new Controller();
 </head>
 
 <body>
+
 	<a href="#main" class="skip-nav" tabindex="0">Skip to main content</a>
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
@@ -31,6 +32,10 @@ $controller = new Controller();
 	</nav>
 
 	<!-- <div id="acceleration" style="display:none; width:100%; height:100px;"></div> -->
+	<div class="ukraine">
+		<div class="uk uk-blue"></div>
+		<div class="uk uk-yellow"></div>
+	</div>
 	<section id="soccer">
 		<iframe class="football-header" src="/football-header/"></iframe>
 	</section>
