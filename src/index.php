@@ -9,12 +9,26 @@ $controller = new Controller();
 <head>
 	<?php include("header.php"); ?>
 	<link rel="canonical" href="http://logikbox.com/index.php" />
+	<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+	<script defer="defer" src="/spacex/static/js/main.9d41f462.js"></script>
+	<link href="/spacex/static/css/main.b6aac8ea.css" rel="stylesheet">
 
 	<style>
 		.football-header {
 			width: 100%;
 			height: 200px;
 			overflow: hidden;
+			border: 0px;
+
+		}
+
+		.spacex-widget {
+			width: 100%;
+			height: auto;
+			display: block;
+			overflow: visible;
 			border: 0px;
 
 		}
@@ -103,13 +117,8 @@ $controller = new Controller();
 					</div>
 				</div>
 		</main>
-		<section id="SpaceX">
-			<div class="col-md-12 launchHeader">
-				<img src='/img/spacex/SpaceX-Logo.svg' class='launchLogo' alt="SpaceX" />
-				<h2 class="homeH2" aria-label="Upcoming SpaceX Launchess" tabindex="0">Upcoming Launches</h2>
-			</div>
-			<div id="launchBlockHolder"></div>
-		</section>
+
+		<div id="spacex"></div>
 
 		<hr>
 		<!-- <section id="Instagram" class="col-md-12 ">
@@ -149,7 +158,7 @@ $controller = new Controller();
 				.then(result => document.getElementById('pickupLine').innerHTML = result.lines[Math.floor(Math.random() * (result.lines.length - 1))])
 
 			// GetInstagram();
-			GetSpaceXV4(3);
+
 
 		});
 	</script>
