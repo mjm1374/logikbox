@@ -12,23 +12,14 @@ $controller = new Controller();
 	<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
 	<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 
-	<script defer="defer" src="/spacex/static/js/main.9d41f462.js"></script>
-	<link href="/spacex/static/css/main.b6aac8ea.css" rel="stylesheet">
+	<script defer="defer" src="/spacex/static/js/main.cab3b6a0.js"></script>
+	<link href="/spacex/static/css/main.703caddb.css" rel="stylesheet" />
 
 	<style>
 		.football-header {
 			width: 100%;
 			height: 200px;
 			overflow: hidden;
-			border: 0px;
-
-		}
-
-		.spacex-widget {
-			width: 100%;
-			height: auto;
-			display: block;
-			overflow: visible;
 			border: 0px;
 
 		}
