@@ -20,7 +20,6 @@ let instagramGallery = [];
 let instaGalPos = 0;
 
 function GetInstagram(max_id) {
-	console.log(instagramAPI);
 	$.when(
 		$.get('https://graph.instagram.com/me/media', {
 			access_token: instagramAPI,
