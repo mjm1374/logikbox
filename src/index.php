@@ -112,13 +112,13 @@ $controller = new Controller();
 		<div id="spacex"></div>
 
 		<hr>
-		<!-- <section id="Instagram" class="col-md-12 ">
+		<section id="Instagram" class="col-md-12 ">
 			<div id="insta__big" class="insta__big"></div>
 			<h2 class="homeH2" tabindex="0">Latest Photos</h2>
 			<div class="row instagram">
 			</div>
 			<a id="getMoreIstagram" class="btn btn-default" href="#" data-nexturl="" role="button" aria-label="View more Photos">View More &raquo;</a>
-		</section> -->
+		</section>
 		<hr>
 	</div>
 	<footer>
@@ -148,7 +148,7 @@ $controller = new Controller();
 				.then(response => response.json())
 				.then(result => document.getElementById('pickupLine').innerHTML = result.lines[Math.floor(Math.random() * (result.lines.length - 1))])
 
-			// GetInstagram();
+			GetInstagram();
 
 
 		});
