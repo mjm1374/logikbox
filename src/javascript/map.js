@@ -154,7 +154,6 @@ let myTravels = [
 	new setLocation('38.9707996', '-74.8345959', 'Wildwood'),
 	new setLocation('38.9403316', '-74.9212611', 'Cape May'),
 	new setLocation('39.5473402', '-76.1240484', 'Harve De grace'),
-	new setLocation('39.5271633', '-75.8146038', 'Chesapeake City'),
 	new setLocation('39.5753181', '-75.6093883', 'Delaware City'),
 	new setLocation('36.1913724', '-75.7901978', 'Duck'),
 	new setLocation('36.0710382', '-75.7302105', 'Kitty Hawk'),
