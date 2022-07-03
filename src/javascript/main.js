@@ -7,7 +7,7 @@ class setLocation {
 }
 
 const instagramAPI =
-	'IGQVJXRkhRQThGX3kzOVozdkpWSGZAqME1BQkhnZAEg1dThWbjNjbHRLSzZANUzIyWXVyaU9Eazl1eVlpWHRWb3JHTlhTSEpGNFdQZAVBLc1B2OUtadTAtTHlfQVktMHVqV3JueUltLWVtR2dEZAkcyOURMSzhrZAWlFektsQ1VR';
+	'AQAwHWidYrKh-TeZYRAuEO2AHcy21xi76cKS832wF-bZ2052iwGZlLrPjMb_sdGoVAvPfC4CKLzGTy3rzOylKKAjb90lMsregnN63UInHJrYw-MpWG4ZLUvNLDbcg8tKTy8DWc8M7bz6hD6EJko5sw8VJDvomPCdquRF1HCBfCPZt1CSB-bZbOdHcjdrmZ7uMVgAp4nkWKwu0Lb2I1uqffAFm-Z6NlsvfgSo794U5gLVPA';
 const days = [
 	'Sunday',
 	'Monday',

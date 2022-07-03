@@ -159,6 +159,12 @@ let myTravels = [
 	new setLocation('36.1913724', '-75.7901978', 'Duck'),
 	new setLocation('36.0710382', '-75.7302105', 'Kitty Hawk'),
 	new setLocation('37.9161043', '-85.9562469', 'Fort Knox'),
+	new setLocation('38.9784', '-76.4922', 'Annapolis'),
+	new setLocation('38.7854', '-76.2233', 'St. Michaels'),
+	// new setLocation('','',''),
+	// new setLocation('','',''),
+	// new setLocation('','',''),
+	// new setLocation('','',''),
 	// new setLocation('','',''),
 	// new setLocation('','',''),
 	// new setLocation('','',''),
@@ -166,10 +172,9 @@ let myTravels = [
 ];
 
 function goTravel() {
-	let arrayLength = myTravels.length;
-	for (let i = 0; i < arrayLength; i++) {
-		setMarkers(myTravels[i].setLat, myTravels[i].setLng, myTravels[i].name);
-	}
+	myTravels.map((place) => {
+		setMarkers(place.setLat, place.setLng, place.name);
+	});
 }
 
 function setMarkers(lat, lng, copy) {
