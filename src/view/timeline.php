@@ -23,7 +23,10 @@ foreach ($projects as $title => $project) {
 	$myString =  $myString . '	<h2 tabindex="0">' . $project->name . '</h2>';
 	$myString =  $myString . '<img src="img/' . $project->bigimg  . '" class="projectImg picLeft" alt="' . $project->name . '" />';
 	$myString =  $myString . '	<span  tabindex="0">' . $project->description . '</span>';
-	$myString =  $myString . '	<a href="' . $project->link . '" class="cd-read-more">See Site</a>';
+	if ($project->active == 1) {
+		$myString =  $myString . '	<a href="' . $project->link . '" class="cd-read-more">See Site</a>';
+	}
+
 	$myString =  $myString . '</div> ';
 	$myString =  $myString . '</div> ';
 

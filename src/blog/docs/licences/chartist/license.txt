@@ -1,5 +1,0 @@
-Chartist.js 0.10.0
-Copyright © 2016 Gion Kunz
-Free to use under either the WTFPL license or the MIT license.
-https://raw.githubusercontent.com/gionkunz/chartist-js/master/LICENSE-WTFPL
-https://raw.githubusercontent.com/gionkunz/chartist-js/master/LICENSE-MIT

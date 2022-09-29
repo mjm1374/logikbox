@@ -4,4 +4,10 @@
 <span tabindex="0">
     <?php echo $lastest->description ?>
 </span>
-<a class="btn btn-default" href="<?php echo $lastest->link ?>" role="button" aria-label="Go see my <?php echo $lastest->name ?> project">See it &raquo;</a>
+<?php
+if ($lastest->active == 1) {
+?>
+    <a class="btn btn-default" href="<?php echo $lastest->link ?>" role="button" aria-label="Go see my <?php echo $lastest->name ?> project">See it &raquo; </a>
+<?php
+}
+?>

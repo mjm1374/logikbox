@@ -53,20 +53,20 @@ class Controller {
 		include 'view/projectsnav.php';
 	}
 
-	public function getTable($league_id)
-	{
-		include 'view/team_banner.php';
-		$response = Unirest\Request::get(
-			"https://api-football-v1.p.rapidapi.com/v2/leagues/league/" . $league_id,
-			array(
-				"X-RapidAPI-Host" => "api-football-v1.p.rapidapi.com",
-				"X-RapidAPI-Key" => "Rd2pyVFguwJeulnqTswlZ2pJCrlurqnE"
-			)
-		);
+	// public function getTable($league_id)
+	// {
+	// 	include 'view/team_banner.php';
+	// 	$response = Unirest\Request::get(
+	// 		"https://api-football-v1.p.rapidapi.com/v2/leagues/league/" . $league_id,
+	// 		array(
+	// 			"X-RapidAPI-Host" => "api-football-v1.p.rapidapi.com",
+	// 			"X-RapidAPI-Key" => "Rd2pyVFguwJeulnqTswlZ2pJCrlurqnE"
+	// 		)
+	// 	);
 
 		//return $response;
 		
-	}
+	//}
 
 
 	public function get_form(){
@@ -114,5 +114,3 @@ class Controller {
 	}
 	
 }
-
-?>

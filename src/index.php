@@ -118,8 +118,8 @@ $controller = new Controller();
 			<div class="row instagram">
 			</div>
 			<a id="getMoreIstagram" class="btn btn-default" href="#" data-nexturl="" role="button" aria-label="View more Photos">View More &raquo;</a>
-		</section> -->
-		<hr>
+		</section> 
+		<hr> -->
 	</div>
 	<footer>
 		<?php include_once("footer.php"); ?>
