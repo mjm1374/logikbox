@@ -12,7 +12,7 @@ $controller = new Controller();
 	<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
 	<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 
-	<script defer="defer" src="/spacex/static/js/main.cab3b6a0.js"></script>
+	<script defer="defer" src="/spacex/static/js/main.7331e342.js"></script>
 	<link href="/spacex/static/css/main.703caddb.css" rel="stylesheet" />
 
 	<style>
@@ -112,13 +112,13 @@ $controller = new Controller();
 		<div id="spacex"></div>
 
 		<hr>
-		<section id="Instagram" class="col-md-12 ">
+		<!-- <section id="Instagram" class="col-md-12 ">
 			<div id="insta__big" class="insta__big"></div>
 			<h2 class="homeH2" tabindex="0">Latest Photos</h2>
 			<div class="row instagram">
 			</div>
 			<a id="getMoreIstagram" class="btn btn-default" href="#" data-nexturl="" role="button" aria-label="View more Photos">View More &raquo;</a>
-		</section>
+		</section> -->
 		<hr>
 	</div>
 	<footer>
