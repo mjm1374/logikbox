@@ -36,7 +36,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="javascript/main.js"></script>
     <script src="javascript/tardis.js"></script>
-    <link rel="canonical" href="http://tardis.logikbox.com/index.php" />
+    <link rel="canonical" href="https://tardis.logikbox.com/index.php" />
 </head>
 
 <body>

@@ -8,7 +8,7 @@ $controller = new Controller();
 
 <head>
 	<?php include("header.php"); ?>
-	<link rel="canonical" href="http://logikbox.com/index.php" />
+	<link rel="canonical" href="https://logikbox.com/index.php" />
 	<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
 	<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 

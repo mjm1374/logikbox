@@ -8,7 +8,7 @@ $controller = new Controller();
 
 <head>
 	<?php include("header.php"); ?>
-	<link rel="canonical" href="http://logikbox.com/work.php" />
+	<link rel="canonical" href="https://logikbox.com/work.php" />
 </head>
 
 <body>

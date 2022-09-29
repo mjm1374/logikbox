@@ -1,13 +1,14 @@
 <?php
-	include_once("controller/Controller.php");
-    $controller = new Controller();
+include_once("controller/Controller.php");
+$controller = new Controller();
 ?>
 
 <!doctype html>
-<html class="no-js"  lang="en">
+<html class="no-js" lang="en">
+
 <head>
 	<?php include("header.php"); ?>
-	<link rel="canonical" href="http://logikbox.com/contact.php"/>
+	<link rel="canonical" href="https://logikbox.com/contact.php" />
 	<script src='https://www.google.com/recaptcha/api.js?render=6LfoV3sUAAAAALwuQVeRhBeMbPqxZ561orueLeJo'></script>
 	<script>
 		grecaptcha.ready(function() {
@@ -24,13 +25,14 @@
 		});
 	</script>
 </head>
+
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 
-				<?php include("nav.php"); ?>
-			</div>
-			<!--/.navbar-collapse -->
+			<?php include("nav.php"); ?>
+		</div>
+		<!--/.navbar-collapse -->
 		</div>
 	</nav>
 	<div class="jumbotron">
@@ -47,13 +49,13 @@
 			<div class="col-md-8">
 				<h3>Send me a missive</h3>
 				<form action="thanks.php" method="POST" id="commentForm" name="commentForm">
-					<label>Give me a name, it's only polite.</label><br/>
-					<input type="text" name="name" class="emailform" required aria-label="Name"><br/>
-					<label>Email, if you want an answer......</label><br/>
-					<input type="text" name="email" class="emailform"  aria-label="Email" required><br/>
-					<label>Send me your thoughts, complaints, rants abouts sports...</label><br/>
-					<textarea name="msg" class="emailform msgbox"  aria-label="Message"></textarea><br/>
-					<button  type="submit" name="sendMail" class="btn btn-primary">Shoot it off!</button>
+					<label>Give me a name, it's only polite.</label><br />
+					<input type="text" name="name" class="emailform" required aria-label="Name"><br />
+					<label>Email, if you want an answer......</label><br />
+					<input type="text" name="email" class="emailform" aria-label="Email" required><br />
+					<label>Send me your thoughts, complaints, rants abouts sports...</label><br />
+					<textarea name="msg" class="emailform msgbox" aria-label="Message"></textarea><br />
+					<button type="submit" name="sendMail" class="btn btn-primary">Shoot it off!</button>
 				</form>
 			</div>
 			<div class="col-md-2">
@@ -90,4 +92,5 @@
 		});
 	</script>
 </body>
+
 </html>

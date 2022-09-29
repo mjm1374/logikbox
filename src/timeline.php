@@ -9,7 +9,7 @@ $controller = new Controller();
 <head>
 
 	<?php include("header.php"); ?>
-	<link rel="canonical" href="http://logikbox.com/timeline.php" />
+	<link rel="canonical" href="https://logikbox.com/timeline.php" />
 </head>
 
 <body>

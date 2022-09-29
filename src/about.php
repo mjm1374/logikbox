@@ -10,7 +10,7 @@ $controller = new Controller();
 
 <head>
 	<?php include("header.php"); ?>
-	<link rel="canonical" href="http://logikbox.com/about.php" />
+	<link rel="canonical" href="https://logikbox.com/about.php" />
 	<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $gMapKey ?>"></script>
 
 </head>
