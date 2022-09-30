@@ -16,9 +16,13 @@ $controller = new Controller();
 	<link href="/spacex/static/css/main.703caddb.css" rel="stylesheet" />
 
 	<style>
+		#soccer {
+			height: 195px;
+		}
+
 		.football-header {
 			width: 100%;
-			height: 200px;
+			height: 195px;
 			overflow: hidden;
 			border: 0px;
 
