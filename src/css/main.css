@@ -104,7 +104,7 @@ h2.homeH2 {
 
 
 .jumbotron {
-	background: url(/img/backgrounds/London-2019-panorama-compressed.jpg);
+	background: url(/img/London-2019-panorama.webp);
 	background-size: cover;
 	background-repeat: no-repeat;
 	margin: 0 auto;
@@ -165,7 +165,7 @@ h2.homeH2 {
 }
 
 #nameplate {
-	background: url(../img/mikeMc.png);
+	background: url(../img/mikeMc.webp);
 	background-size: cover;
 	background-position-x: -115px;
 	opacity: 1;
