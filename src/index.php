@@ -46,7 +46,7 @@ $controller = new Controller();
 		<div class="uk uk-yellow"></div>
 	</div>
 	<section id="soccer">
-		<iframe class="football-header" src="/football-header/"></iframe>
+		<iframe class="football-header" src="/football-header/" title="Premeir League Table widget."></iframe>
 	</section>
 
 	<div class="jumbotron jumbotron--homepage">
