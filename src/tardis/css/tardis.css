@@ -130,6 +130,10 @@
     display:none;
 }
 
+.dateObject{
+    padding-left: 30px;
+}
+
 @media only screen and (max-device-width : 768px) {
     .tabletHide {
         display: none;

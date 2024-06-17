@@ -48,8 +48,6 @@
             $thisPage = substr($thisPage, 1, strlen($thisPage));
             $thisHost = $_SERVER['HTTP_HOST'];
             $isDev =  !strpos($thisHost, 'logikbox');
-
-
             ?>
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -103,7 +101,7 @@
                     &lt;script type="text/javascript" src="tardis.js"&gt;&lt;/script&gt;
 
                 </code>
-                <br />
+                <br /><br />
                 <p>Download <a href="javascript/tardis.js.zip" title="Downlaod Tardis JS">tardis.js</a></p>
                 <p>Clone it on <a href="https://github.com/mjm1374/tardis" title="Cline it on GitHub">GitHub</a></p>
 
@@ -122,7 +120,8 @@
                 <p>The Date Object</p>
                 <pre>
 {
-    <span class="pl-en">Day</span>: <span class="pl-k">"03"</span>
+    <div id="dateObject" class="dateObject"></div>
+    <!-- <span class="pl-en">Day</span>: <span class="pl-k">"03"</span>
     <span class="pl-en">HHour</span>: <span class="pl-k"> "20"</span>
     <span class="pl-en">MMin</span>: <span class="pl-k"> "07"</span>
     <span class="pl-en">MMonth</span>: <span class="pl-k"> "07"</span>
@@ -153,7 +152,7 @@
     <span class="pl-en">wordSec</span>: <span class="pl-k"> "twenty two"</span>
     <span class="pl-en">wordYear</span>: <span class="pl-k"> "two thousand and nineteen"</span>
     <span class="pl-en">year</span>: <span class="pl-c1"> 119</span>
-    <span class="pl-en">yearInt</span>: <span class="pl-c1"> 119</span>
+    <span class="pl-en">yearInt</span>: <span class="pl-c1"> 119</span> -->
 }
 </pre>
 
@@ -171,7 +170,7 @@
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">YYYY</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">fullYear</span></div>
-                            <div class="tardis__tableCell">2019</div>
+                            <div class="tardis__tableCell" id="filterYYYY">2019</div>
                             <div class="tardis__tableCell tabletHide">full 4 digit year</div>
                         </div>
                         <div class="tardis__tableRow">
@@ -389,8 +388,7 @@
     </audio>
 </body>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38537843-1"></script>
-<script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38537843-1">
     window.dataLayer = window.dataLayer || [];
 
     function gtag() {
@@ -399,6 +397,29 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-38537843-1');
+</script>
+<script>
+    let dateString = "";
+    for (const [key, value] of Object.entries(tardis.dateparts())) {
+        dateString = dateString + `<span class="pl-en">${key}</span>: `;
+
+        if (typeof value === 'string') {
+            dateString = dateString + `<span class="pl-k">"${value}"</span>`
+        } else {
+            dateString = dateString + `<span class="pl-c1">${value}</span>`
+        }
+
+        dateString = dateString + "\n";
+    }
+
+    window.onload = function() {
+        const dateObject = document.getElementById('dateObject');
+        dateObject.innerHTML = dateString;
+
+        const currentDate = new Date(theTime * 1000);
+
+        document.getElementById('filterYYYY').innerHTML = tardis.patterned('', 'YYYY');;
+    };
 </script>
 
 </html>
