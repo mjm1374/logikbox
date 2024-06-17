@@ -416,9 +416,10 @@
         const dateObject = document.getElementById('dateObject');
         dateObject.innerHTML = dateString;
 
-        const currentDate = new Date(theTime * 1000);
+        const currentDate = new Date();
+        console.log(tardis.patterned(1133481000, 'M/DD/YYYY - H:I:SS TT tt').pattern)
 
-        document.getElementById('filterYYYY').innerHTML = tardis.patterned('', 'YYYY');;
+        document.getElementById('filterYYYY').innerHTML = tardis.patterned(currentDate, 'YYYY').pattern;
     };
 </script>
 
