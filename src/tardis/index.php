@@ -103,7 +103,7 @@
 
                 </code>
                 <br /><br />
-                <p>Download <a href="javascript/tardis.js.zip" title="Downlaod Tardis JS">tardis.js</a> or <a href="javascript/tardis.min.js.zip" title="Downlaod Tardis JS Minified">tardis.min.js</p>
+                <p>Download <a href="javascript/tardis.js.zip" title="Downlaod Tardis JS">tardis.js</a> or <a href="javascript/tardis.min.js.zip" title="Downlaod Tardis JS Minified">tardis.min.js</a></p>
                 <p>Clone it on <a href="https://github.com/mjm1374/tardis" title="Cline it on GitHub">GitHub</a></p>
 
                 <h3 id="usage">Usage</h3>
