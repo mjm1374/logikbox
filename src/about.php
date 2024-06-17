@@ -16,6 +16,7 @@ $controller = new Controller();
 </head>
 
 <body>
+	xxx: <?php echo $gMapKey ?>
 	<a href="#main" class="skip-nav" tabindex="0">Skip to main content</a>
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
