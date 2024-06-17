@@ -19,9 +19,6 @@ function _typeof(o) {
 		_typeof(o)
 	);
 }
-function _readOnlyError(r) {
-	throw new TypeError('"' + r + '" is read-only');
-}
 function _defineProperties(e, r) {
 	for (var t = 0; t < r.length; t++) {
 		var o = r[t];
@@ -355,8 +352,8 @@ var tardis = (function (theTime, pattern) {
 		var thisDate = convertTime(theTime);
 		var formattedDate = thisDate;
 		if (_typeof(thisDate) == 'object') {
-			thisDate.fullYear + '-' + thisDate.MMonth + '-' + thisDate.day,
-				_readOnlyError('formattedDate');
+			formattedDate =
+				thisDate.fullYear + '-' + thisDate.MMonth + '-' + thisDate.day;
 		}
 		return formattedDate;
 	};
@@ -364,8 +361,8 @@ var tardis = (function (theTime, pattern) {
 		var thisDate = convertTime(theTime);
 		var formattedDate = thisDate;
 		if (_typeof(thisDate) == 'object') {
-			thisDate.MMonth + '/' + thisDate.day + '/' + thisDate.fullYear,
-				_readOnlyError('formattedDate');
+			formattedDate =
+				thisDate.MMonth + '/' + thisDate.day + '/' + thisDate.fullYear;
 		}
 		return formattedDate;
 	};
@@ -373,8 +370,12 @@ var tardis = (function (theTime, pattern) {
 		var thisDate = convertTime(theTime);
 		var formattedDate = thisDate;
 		if (_typeof(thisDate) == 'object') {
-			thisDate.shortMonth + ' ' + thisDate.day + ' ' + thisDate.fullYear,
-				_readOnlyError('formattedDate');
+			formattedDate =
+				thisDate.shortMonth +
+				' ' +
+				thisDate.day +
+				' ' +
+				thisDate.fullYear;
 		}
 		return formattedDate;
 	};
@@ -382,8 +383,12 @@ var tardis = (function (theTime, pattern) {
 		var thisDate = convertTime(theTime);
 		var formattedDate = thisDate;
 		if (_typeof(thisDate) == 'object') {
-			thisDate.fullMonth + ' ' + thisDate.day + ', ' + thisDate.fullYear,
-				_readOnlyError('formattedDate');
+			formattedDate =
+				thisDate.fullMonth +
+				' ' +
+				thisDate.day +
+				', ' +
+				thisDate.fullYear;
 		}
 		return formattedDate;
 	};
@@ -391,7 +396,8 @@ var tardis = (function (theTime, pattern) {
 		var thisDate = convertTime(theTime);
 		var formattedDate = thisDate;
 		if (_typeof(thisDate) == 'object') {
-			thisDate.fullMonth +
+			formattedDate =
+				thisDate.fullMonth +
 				' ' +
 				thisDate.day +
 				', ' +
@@ -399,8 +405,7 @@ var tardis = (function (theTime, pattern) {
 				' ' +
 				thisDate.hour +
 				':' +
-				thisDate.min,
-				_readOnlyError('formattedDate');
+				thisDate.min;
 		}
 		return formattedDate;
 	};
@@ -408,7 +413,8 @@ var tardis = (function (theTime, pattern) {
 		var thisDate = convertTime(theTime);
 		var formattedDate = thisDate;
 		if (_typeof(thisDate) == 'object') {
-			thisDate.fullMonth +
+			formattedDate =
+				thisDate.fullMonth +
 				' ' +
 				thisDate.day +
 				', ' +
@@ -418,8 +424,7 @@ var tardis = (function (theTime, pattern) {
 				':' +
 				thisDate.min +
 				' ' +
-				thisDate.TT,
-				_readOnlyError('formattedDate');
+				thisDate.TT;
 		}
 		return formattedDate;
 	};
@@ -427,14 +432,14 @@ var tardis = (function (theTime, pattern) {
 		var thisDate = convertTime(theTime);
 		var formattedDate = thisDate;
 		if (_typeof(thisDate) == 'object') {
-			thisDate.fullDay +
+			formattedDate =
+				thisDate.fullDay +
 				', ' +
 				thisDate.fullMonth +
 				' ' +
 				thisDate.day +
 				', ' +
-				thisDate.fullYear,
-				_readOnlyError('formattedDate');
+				thisDate.fullYear;
 		}
 		return formattedDate;
 	};
@@ -442,7 +447,7 @@ var tardis = (function (theTime, pattern) {
 		var thisDate = convertTime(theTime);
 		var formattedDate = thisDate;
 		if (_typeof(thisDate) == 'object') {
-			thisDate.fullYear, _readOnlyError('formattedDate');
+			formattedDate = thisDate.fullYear;
 		}
 		return formattedDate;
 	};
@@ -450,7 +455,7 @@ var tardis = (function (theTime, pattern) {
 		var thisDate = convertTime(theTime);
 		var formattedDate = thisDate;
 		if (_typeof(thisDate) == 'object') {
-			thisDate.fullMonth, _readOnlyError('formattedDate');
+			formattedDate = thisDate.fullMonth;
 		}
 		return formattedDate;
 	};
@@ -458,7 +463,7 @@ var tardis = (function (theTime, pattern) {
 		var thisDate = convertTime(theTime);
 		var formattedDate = thisDate;
 		if (_typeof(thisDate) == 'object') {
-			thisDate.fullDay, _readOnlyError('formattedDate');
+			formattedDate = thisDate.fullDay;
 		}
 		return formattedDate;
 	};
@@ -466,8 +471,8 @@ var tardis = (function (theTime, pattern) {
 		var thisDate = convertTime(theTime);
 		var formattedDate = thisDate;
 		if (_typeof(thisDate) == 'object') {
-			thisDate.hour + ':' + thisDate.min + ':' + thisDate.SSec,
-				_readOnlyError('formattedDate');
+			formattedDate =
+				thisDate.hour + ':' + thisDate.min + ':' + thisDate.SSec;
 		}
 		return formattedDate;
 	};
@@ -475,14 +480,14 @@ var tardis = (function (theTime, pattern) {
 		var thisDate = convertTime(theTime);
 		var formattedDate = thisDate;
 		if (_typeof(thisDate) == 'object') {
-			workTweleve(thisDate.hour) +
+			formattedDate =
+				workTweleve(thisDate.hour) +
 				':' +
 				thisDate.min +
 				':' +
 				thisDate.SSec +
 				' ' +
-				thisDate.TT,
-				_readOnlyError('formattedDate');
+				thisDate.TT;
 		}
 		return formattedDate;
 	};
@@ -554,7 +559,7 @@ var tardis = (function (theTime, pattern) {
 // console.log(tardis.Day());
 // console.log('-------------------------------------');
 // console.log(tardis.dateparts(1133481000));
-// console.log(tardis.DayMonthDate(1133481000));
+// console.log(tardis.DayMonthDate());
 // console.log(tardis.MonthDateTime(1133481000));
 // console.log(tardis.MonthDateTime12(1133481000));
 // console.log(tardis.MonthDate(1133481000));

@@ -7,11 +7,11 @@
 
     <title>Tardis JS - Logikbox - Mike McAllister</title>
 
-    <meta name="description" content="A Lightweight Javascript Date and Time Converter and Formatter">
-    <meta property="og:url" content="http//:tardis.logikbox.com" />
+    <meta name="description" content="A Lightweight Javascript Date, Time Converter and Formatter">
+    <meta property="og:url" content="https//:tardis.logikbox.com" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Tardis by Logikbox" />
-    <meta property="og:description" content="A Lightweight Javascript Date and Time Converter and Formatter" />
+    <meta property="og:description" content="A Lightweight Javascript Date, Time Converter and Formatter" />
     <meta property="og:image" content="http://tardis.logikbox.com/img/og-image-tardis.png" />
     <meta property="og:image:alt" content="Tardis - a Lightweight Javascript Date and Time Converter and Formatter" />
 
@@ -21,6 +21,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="https://tardis.logikbox.com/fav.ico">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
@@ -89,7 +90,7 @@
 
             <div class="col-sm-3"></div>
             <div class="col-sm-6 tardis__copy">
-                <h1>Tardis JS</h1>
+                <h1>Tardis JS V1.6.3</h1>
                 <P>Tardis JS an open source JavaScript Date library for parsing, formatting and processing. A simple, light weight and easy to implement module that you can use in your JS appication or website. </p>
 
                 <h3 id="install">Install</h3>
@@ -102,7 +103,7 @@
 
                 </code>
                 <br /><br />
-                <p>Download <a href="javascript/tardis.js.zip" title="Downlaod Tardis JS">tardis.js</a></p>
+                <p>Download <a href="javascript/tardis.js.zip" title="Downlaod Tardis JS">tardis.js</a> or <a href="javascript/tardis.min.js.zip" title="Downlaod Tardis JS Minified">tardis.min.js</p>
                 <p>Clone it on <a href="https://github.com/mjm1374/tardis" title="Cline it on GitHub">GitHub</a></p>
 
                 <h3 id="usage">Usage</h3>
@@ -121,44 +122,12 @@
                 <pre>
 {
     <div id="dateObject" class="dateObject"></div>
-    <!-- <span class="pl-en">Day</span>: <span class="pl-k">"03"</span>
-    <span class="pl-en">HHour</span>: <span class="pl-k"> "20"</span>
-    <span class="pl-en">MMin</span>: <span class="pl-k"> "07"</span>
-    <span class="pl-en">MMonth</span>: <span class="pl-k"> "07"</span>
-    <span class="pl-en">SSec</span>: <span class="pl-k"> "22"</span>
-    <span class="pl-en">TT</span>: <span class="pl-k"> "PM"</span>
-    <span class="pl-en">YYear</span>: <span class="pl-k"> "19"</span>
-    <span class="pl-en">day</span>: <span class="pl-c1"> 2</span>
-    <span class="pl-en">dayInt</span>: <span class="pl-c1"> 2</span>
-    <span class="pl-en">fullDay</span>: <span class="pl-k"> "Tuesday"</span>
-    <span class="pl-en">fullMonth</span>: <span class="pl-k"> "July"</span>
-    <span class="pl-en">fullYear</span>: <span class="pl-c1"> 2019</span>
-    <span class="pl-en">hour</span>: <span class="pl-c1"> 20</span>
-    <span class="pl-en">hourInt</span>: <span class="pl-c1"> 20</span>
-    <span class="pl-en">min</span>: <span class="pl-k"> "07"</span>
-    <span class="pl-en">minInt</span>: <span class="pl-c1"> 7</span>
-    <span class="pl-en">month</span>: <span class="pl-c1"> 7</span>
-    <span class="pl-en">monthInt</span>: <span class="pl-c1"> 6</span>
-    <span class="pl-en">sec</span>: <span class="pl-k"> "22"</span>
-    <span class="pl-en">secInt</span>: <span class="pl-c1"> 22</span>
-    <span class="pl-en">shortDay</span>: <span class="pl-k"> "Tue"</span>
-    <span class="pl-en">shortMonth</span>: <span class="pl-k"> "Jul"</span>
-    <span class="pl-en">shortYear</span>: <span class="pl-k"> "19"</span>
-    <span class="pl-en">timestamp</span>: <span class="pl-c1"> 1562112442</span>
-    <span class="pl-en">tt</span>: <span class="pl-k"> "pm"</span>
-    <span class="pl-en">utc</span>: <span class="pl-c"> Tue Jul 02 2019 20:07:22 GMT-0400 (Eastern Daylight Time) {}</span>
-    <span class="pl-en">wordHour</span>: <span class="pl-k"> "twenty"</span>
-    <span class="pl-en">wordMin</span>: <span class="pl-k"> "seven"</span>
-    <span class="pl-en">wordSec</span>: <span class="pl-k"> "twenty two"</span>
-    <span class="pl-en">wordYear</span>: <span class="pl-k"> "two thousand and nineteen"</span>
-    <span class="pl-en">year</span>: <span class="pl-c1"> 119</span>
-    <span class="pl-en">yearInt</span>: <span class="pl-c1"> 119</span> -->
 }
-</pre>
+                </pre>
 
 
-                <h3 id="filters">Filters</h3>
-                <p>By using a simple mask you can create an unique time format to meet all of your needs. Simply by invoking the <span class="pl-en">patterned</span> method, passing in a time stamp and define a filter pattern. If you do not supply a time stamp the method will assume you want the current time and return date.Now(). The returned object ({<span class="pl-en">pattern</span>: <span class="pl-c"> pattern</span>, <span class="pl-en">time</span>: <span class="pl-c"> theTime</span>}) with have your patterned string and the time as a unix time stamp should you need to reuse it.
+                <h3 id="filtersTitle">Filters</h3>
+                <p>By using a simple mask you can create a unique time format to meet all of your needs. Simply by invoking the <span class="pl-en">patterned</span> method, passing in a time stamp and defining a filter pattern. If you do not supply a time stamp the method will assume you want the current time and return date.Now(). The returned object ({<span class="pl-en">pattern</span>: <span class="pl-c"> pattern</span>, <span class="pl-en">time</span>: <span class="pl-c"> theTime</span>}) with have your patterned string and the time as a unix timestamp should you need to reuse it.
                 <div class="tardis__table tardis__filters code">
                     <div class="tardis__tableBody">
                         <div class="tardis__tableRow">
@@ -338,27 +307,27 @@
 
                     </div>
                 </div>
-                <!-- tardis__table.com -->
+                <!-- tardis__table -->
 
 
                 <h3 id="presets">Presets</h3>
-                <p>Tardis JS has several prebuilt filter patterns for the most commonly use time formats. Simply, call the method of the preset format you want and set a time stamp. If you do not supply a timestamp, date.Now() will be returned.</P>
+                <p>Tardis JS has several prebuilt filter patterns for the most commonly used time formats. Simply, call the method of the preset format you want and set a timestamp. If you do not supply a timestamp, date.Now() will be returned.</P>
 
 
                 <pre>
-<span class="pl-c1">tardis</span>.<span class="pl-en">ISO</span>(<span class="pl-smi">{date}</span>)                <span class="pl-c">// 2019-06-30</span>
-<span class="pl-c1">tardis</span>.<span class="pl-en">ShortDate</span>(<span class="pl-smi">{date}</span>)          <span class="pl-c">// 06/30/2019</span>
-<span class="pl-c1">tardis</span>.<span class="pl-en">LongDate</span>(<span class="pl-smi">{date}</span>)           <span class="pl-c">// Jun 30 2019</span>
-<span class="pl-c1">tardis</span>.<span class="pl-en">DayMonthDate</span>(<span class="pl-smi">{date}</span>)       <span class="pl-c">// Thursday,  Decemeber 1, 2005</span>
-<span class="pl-c1">tardis</span>.<span class="pl-en">MonthDateTime</span>(<span class="pl-smi">{date}</span>)      <span class="pl-c">// Decemeber 1, 2005 18:50</span>
-<span class="pl-c1">tardis</span>.<span class="pl-en">MonthDateTime12</span>(<span class="pl-smi">{date}</span>)    <span class="pl-c">// Decemeber 1, 2005 6:50 PM</span>
-<span class="pl-c1">tardis</span>.<span class="pl-en">MonthDate</span>(<span class="pl-smi">{date}</span>)          <span class="pl-c">// Decemeber 1, 2005</span>
-<span class="pl-c1">tardis</span>.<span class="pl-en">TimeOfDay</span>(<span class="pl-smi">{date}</span>)          <span class="pl-c">// 14:00:53</span>
-<span class="pl-c1">tardis</span>.<span class="pl-en">TimeOfDay12</span>(<span class="pl-smi">{date}</span>)        <span class="pl-c">// 2:01:31 PM</span>
-<span class="pl-c1">tardis</span>.<span class="pl-en">Year</span>(<span class="pl-smi">{date}</span>)               <span class="pl-c">// 2019</span>
-<span class="pl-c1">tardis</span>.<span class="pl-en">Month</span>(<span class="pl-smi">{date}</span>)              <span class="pl-c">// June</span>
-<span class="pl-c1">tardis</span>.<span class="pl-en">Day</span>(<span class="pl-smi">{date}</span>)                <span class="pl-c">// Sunday</span>
-</pre>
+<span class="pl-c1">tardis</span>.<span class="pl-en">ISO</span>(<span class="pl-smi">{date}</span>)                <span class="pl-c" id="presetISO">// 2019-06-30</span>
+<span class="pl-c1">tardis</span>.<span class="pl-en">ShortDate</span>(<span class="pl-smi">{date}</span>)          <span class="pl-c" id="presetShortDate">// 06/30/2019</span>
+<span class="pl-c1">tardis</span>.<span class="pl-en">LongDate</span>(<span class="pl-smi">{date}</span>)           <span class="pl-c" id="presetLongDate">// Jun 30 2019</span>
+<span class="pl-c1">tardis</span>.<span class="pl-en">DayMonthDate</span>(<span class="pl-smi">{date}</span>)       <span class="pl-c" id="presetDayMonthDate">// Thursday,  Decemeber 1, 2005</span>
+<span class="pl-c1">tardis</span>.<span class="pl-en">MonthDateTime</span>(<span class="pl-smi">{date}</span>)      <span class="pl-c" id="presetMonthDateTime">// Decemeber 1, 2005 18:50</span>
+<span class="pl-c1">tardis</span>.<span class="pl-en">MonthDateTime12</span>(<span class="pl-smi">{date}</span>)    <span class="pl-c" id="presetMonthDateTime12">// Decemeber 1, 2005 6:50 PM</span>
+<span class="pl-c1">tardis</span>.<span class="pl-en">MonthDate</span>(<span class="pl-smi">{date}</span>)          <span class="pl-c" id="presetMonthDate">// Decemeber 1, 2005</span>
+<span class="pl-c1">tardis</span>.<span class="pl-en">TimeOfDay</span>(<span class="pl-smi">{date}</span>)          <span class="pl-c" id="presetTimeOfDay">// 14:00:53</span>
+<span class="pl-c1">tardis</span>.<span class="pl-en">TimeOfDay12</span>(<span class="pl-smi">{date}</span>)        <span class="pl-c" id="presetTimeOfDay12">// 2:01:31 PM</span>
+<span class="pl-c1">tardis</span>.<span class="pl-en">Year</span>(<span class="pl-smi">{date}</span>)               <span class="pl-c" id="presetYear">// 2019</span>
+<span class="pl-c1">tardis</span>.<span class="pl-en">Month</span>(<span class="pl-smi">{date}</span>)              <span class="pl-c" id="presetMonth">// June</span>
+<span class="pl-c1">tardis</span>.<span class="pl-en">Day</span>(<span class="pl-smi">{date}</span>)                <span class="pl-c" id="presetDay">// Sunday</span>
+                </pre>
 
             </div>
             <div class="col-sm-3"></div>
@@ -419,60 +388,48 @@
         const currentDate = new Date();
 
         document.getElementById('filterYYYY').innerHTML = tardis.patterned(currentDate, 'YYYY').pattern;
-
         document.getElementById('filterYYY').innerHTML = tardis.patterned(currentDate, 'YYY').pattern;
-
         document.getElementById('filterYY').innerHTML = tardis.patterned(currentDate, 'YY').pattern;
-
         document.getElementById('filterY').innerHTML = tardis.patterned(currentDate, 'y').pattern;
-
         document.getElementById('filterMMMM').innerHTML = tardis.patterned(currentDate, 'MMMM').pattern;
-
         document.getElementById('filterMMM').innerHTML = tardis.patterned(currentDate, 'MMM').pattern;
-
         document.getElementById('filterMM').innerHTML = tardis.patterned(currentDate, 'MM').pattern;
-
         document.getElementById('filterM').innerHTML = tardis.patterned(currentDate, 'M').pattern;
-
         document.getElementById('filterm').innerHTML = tardis.patterned(currentDate, 'm').pattern;
-
         document.getElementById('filterDDDD').innerHTML = tardis.patterned(currentDate, 'DDDD').pattern;
-
         document.getElementById('filterDDD').innerHTML = tardis.patterned(currentDate, 'DDD').pattern;
-
         document.getElementById('filterDD').innerHTML = tardis.patterned(currentDate, 'DD').pattern;
-
         document.getElementById('filterD').innerHTML = tardis.patterned(currentDate, 'D').pattern;
-
         document.getElementById('filterd').innerHTML = tardis.patterned(currentDate, 'd').pattern;
-
         document.getElementById('filterHHHH').innerHTML = tardis.patterned(currentDate, 'HHHH').pattern;
-
         document.getElementById('filterHH').innerHTML = tardis.patterned(currentDate, 'HH').pattern;
-
         document.getElementById('filterH').innerHTML = tardis.patterned(currentDate, 'H').pattern;
-
         document.getElementById('filterh').innerHTML = tardis.patterned(currentDate, 'h').pattern;
-
         document.getElementById('filterIIII').innerHTML = tardis.patterned(currentDate, 'IIII').pattern;
-
         document.getElementById('filterII').innerHTML = tardis.patterned(currentDate, 'II').pattern;
-
         document.getElementById('filterI').innerHTML = tardis.patterned(currentDate, 'I').pattern;
-
         document.getElementById('filteri').innerHTML = tardis.patterned(currentDate, 'i').pattern;
-
         document.getElementById('filterSSSS').innerHTML = tardis.patterned(currentDate, 'SSSS').pattern;
-
         document.getElementById('filterSS').innerHTML = tardis.patterned(currentDate, 'SS').pattern;
-
         document.getElementById('filterS').innerHTML = tardis.patterned(currentDate, 'S').pattern;
-
         document.getElementById('filters').innerHTML = tardis.patterned(currentDate, 's').pattern;
-
         document.getElementById('filterTT').innerHTML = tardis.patterned(currentDate, 'TT').pattern;
-
         document.getElementById('filtertt').innerHTML = tardis.patterned(currentDate, 'tt').pattern;
+
+        // ----Presets --------------------------------
+
+        document.getElementById('presetISO').innerHTML = "// " + tardis.ISO(currentDate);
+        document.getElementById('presetShortDate').innerHTML = "// " + tardis.ShortDate(currentDate);
+        document.getElementById('presetLongDate').innerHTML = "// " + tardis.LongDate(currentDate);
+        document.getElementById('presetDayMonthDate').innerHTML = "// " + tardis.DayMonthDate(currentDate);
+        document.getElementById('presetMonthDateTime').innerHTML = "// " + tardis.MonthDateTime(currentDate);
+        document.getElementById('presetMonthDateTime12').innerHTML = "// " + tardis.MonthDateTime12(currentDate);
+        document.getElementById('presetMonthDate').innerHTML = "// " + tardis.MonthDate(currentDate);
+        document.getElementById('presetTimeOfDay').innerHTML = "// " + tardis.TimeOfDay(currentDate);
+        document.getElementById('presetTimeOfDay12').innerHTML = "// " + tardis.TimeOfDay12(currentDate);
+        document.getElementById('presetYear').innerHTML = "// " + tardis.Year(currentDate);
+        document.getElementById('presetMonth').innerHTML = "// " + tardis.Month(currentDate);
+        document.getElementById('presetDay').innerHTML = "// " + tardis.Day(currentDate);
 
     };
 </script>
