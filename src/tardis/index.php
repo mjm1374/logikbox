@@ -176,163 +176,163 @@
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">YYY</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">wordYear</span></div>
-                            <div class="tardis__tableCell">two thousand and nineteen</div>
+                            <div class="tardis__tableCell" id="filterYYY">two thousand and nineteen</div>
                             <div class="tardis__tableCell tabletHide">full english 4 digit year</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">YY</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">shortYear</span></div>
-                            <div class="tardis__tableCell">19</div>
+                            <div class="tardis__tableCell" id="filterYY">19</div>
                             <div class="tardis__tableCell tabletHide">truncated string of YYYY</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">y</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">year</span></div>
-                            <div class="tardis__tableCell">119</div>
+                            <div class="tardis__tableCell" id="filterY">119</div>
                             <div class="tardis__tableCell tabletHide">integer value, no leading 0, years from 1970</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">MMMM</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">fullMonth</span></div>
-                            <div class="tardis__tableCell">June</div>
+                            <div class="tardis__tableCell" id="filterMMMM">June</div>
                             <div class="tardis__tableCell tabletHide">name value of month from months array</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">MMM</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">shortMonth</span></div>
-                            <div class="tardis__tableCell">Jun</div>
+                            <div class="tardis__tableCell" id="filterMMM">Jun</div>
                             <div class="tardis__tableCell tabletHide">months[date.getMonth()].substr(0, 3)</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">MM</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">MMonth</span></div>
-                            <div class="tardis__tableCell">06</div>
+                            <div class="tardis__tableCell" id="filterMM">06</div>
                             <div class="tardis__tableCell tabletHide">string value of month with leading 0</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">M</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">month</span></div>
-                            <div class="tardis__tableCell">6</div>
+                            <div class="tardis__tableCell" id="filterM">6</div>
                             <div class="tardis__tableCell tabletHide">integer value, no leading 0</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">m</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">monthInt</span></div>
-                            <div class="tardis__tableCell">6</div>
+                            <div class="tardis__tableCell" id="filterm">6</div>
                             <div class="tardis__tableCell tabletHide">integer value, no leading 0</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">DDDD</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">fullDay</span></div>
-                            <div class="tardis__tableCell">Saturday</div>
+                            <div class="tardis__tableCell" id="filterDDDD">Saturday</div>
                             <div class="tardis__tableCell tabletHide">name value of day or week from Days Array</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">DDD</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDat</span>.<span class="pl-en">shortDay</span></div>
-                            <div class="tardis__tableCell">Sat</div>
+                            <div class="tardis__tableCell" id="filterDDD">Sat</div>
                             <div class="tardis__tableCell tabletHide">truncated string of DDDD</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">DD</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">DDay</span></div>
-                            <div class="tardis__tableCell">06</div>
+                            <div class="tardis__tableCell" id="filterDD">06</div>
                             <div class="tardis__tableCell tabletHide">string value of D with leading 0</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">D</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">day</span></div>
-                            <div class="tardis__tableCell">6</div>
+                            <div class="tardis__tableCell" id="filterD">6</div>
                             <div class="tardis__tableCell tabletHide">integer value, no leading 0</div>
                         </div>
                         <div class="tardis__tableRow">
-                            <div class="tardis__tableCell">D</div>
+                            <div class="tardis__tableCell">d</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">dayInt</span></div>
-                            <div class="tardis__tableCell">1</div>
+                            <div class="tardis__tableCell" id="filterd">1</div>
                             <div class="tardis__tableCell tabletHide">Day of week counter (Sun = 0, Sat = 6)</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">HHHH</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">wordHour</span></div>
-                            <div class="tardis__tableCell">nine</div>
+                            <div class="tardis__tableCell" id="filterHHHH">nine</div>
                             <div class="tardis__tableCell tabletHide">string value of english text for a number</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">HH</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">HHour</span></div>
-                            <div class="tardis__tableCell">09</div>
+                            <div class="tardis__tableCell" id="filterHH">09</div>
                             <div class="tardis__tableCell tabletHide">string value of H with leading 0</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">H</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">hour</span></div>
-                            <div class="tardis__tableCell">4</div>
+                            <div class="tardis__tableCell" id="filterH">4</div>
                             <div class="tardis__tableCell tabletHide">integer value, no leading 0</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">h</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">hourInt</span></div>
-                            <div class="tardis__tableCell">4</div>
+                            <div class="tardis__tableCell" id="filterh">4</div>
                             <div class="tardis__tableCell tabletHide">integer value, no leading 0</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">IIII</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">wordSec</span></div>
-                            <div class="tardis__tableCell">twenty one</div>
+                            <div class="tardis__tableCell" id="filterIIII">twenty one</div>
                             <div class="tardis__tableCell tabletHide">string value of english text for a number</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">II </div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">MMin</span></div>
-                            <div class="tardis__tableCell">30</div>
+                            <div class="tardis__tableCell" id="filterII">30</div>
                             <div class="tardis__tableCell tabletHide">string value of I with leading 0</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">I</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">min</span></div>
-                            <div class="tardis__tableCell">30</div>
+                            <div class="tardis__tableCell" id="filterI">30</div>
                             <div class="tardis__tableCell tabletHide">integer value, no leading 0</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">i</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">minInt</span></div>
-                            <div class="tardis__tableCell">30</div>
+                            <div class="tardis__tableCell" id="filteri">30</div>
                             <div class="tardis__tableCell tabletHide">integer value, no leading 0</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">SSSS</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">wordMin</span></div>
-                            <div class="tardis__tableCell">thirty three</div>
+                            <div class="tardis__tableCell" id="filterSSSS">thirty three</div>
                             <div class="tardis__tableCell tabletHide">string value of english text for a number</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">SS </div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">sec</span></div>
-                            <div class="tardis__tableCell">05</div>
+                            <div class="tardis__tableCell" id="filterSS">05</div>
                             <div class="tardis__tableCell tabletHide">string value of S with leading 0</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">S</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">sec</span></div>
-                            <div class="tardis__tableCell">45</div>
+                            <div class="tardis__tableCell" id="filterS">45</div>
                             <div class="tardis__tableCell tabletHide">integer value, no leading 0</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">s</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">secInt</span></div>
-                            <div class="tardis__tableCell">45</div>
+                            <div class="tardis__tableCell" id="filters">45</div>
                             <div class="tardis__tableCell tabletHide">integer value, no leading 0</div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">TT</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">hour</span></div>
-                            <div class="tardis__tableCell">AM/PM</div>
+                            <div class="tardis__tableCell" id="filterTT">AM/PM</div>
                             <div class="tardis__tableCell tabletHide">meridiem display - upper case </div>
                         </div>
                         <div class="tardis__tableRow">
                             <div class="tardis__tableCell">tt</div>
                             <div class="tardis__tableCell mobileHide"><span class="pl-c1">thisDate</span>.<span class="pl-en">hour</span></div>
-                            <div class="tardis__tableCell">am/pm</div>
+                            <div class="tardis__tableCell" id="filtertt">am/pm</div>
                             <div class="tardis__tableCell tabletHide">meridiem display - lower case</div>
                         </div>
 
@@ -417,9 +417,63 @@
         dateObject.innerHTML = dateString;
 
         const currentDate = new Date();
-        console.log(tardis.patterned(1133481000, 'M/DD/YYYY - H:I:SS TT tt').pattern)
 
         document.getElementById('filterYYYY').innerHTML = tardis.patterned(currentDate, 'YYYY').pattern;
+
+        document.getElementById('filterYYY').innerHTML = tardis.patterned(currentDate, 'YYY').pattern;
+
+        document.getElementById('filterYY').innerHTML = tardis.patterned(currentDate, 'YY').pattern;
+
+        document.getElementById('filterY').innerHTML = tardis.patterned(currentDate, 'y').pattern;
+
+        document.getElementById('filterMMMM').innerHTML = tardis.patterned(currentDate, 'MMMM').pattern;
+
+        document.getElementById('filterMMM').innerHTML = tardis.patterned(currentDate, 'MMM').pattern;
+
+        document.getElementById('filterMM').innerHTML = tardis.patterned(currentDate, 'MM').pattern;
+
+        document.getElementById('filterM').innerHTML = tardis.patterned(currentDate, 'M').pattern;
+
+        document.getElementById('filterm').innerHTML = tardis.patterned(currentDate, 'm').pattern;
+
+        document.getElementById('filterDDDD').innerHTML = tardis.patterned(currentDate, 'DDDD').pattern;
+
+        document.getElementById('filterDDD').innerHTML = tardis.patterned(currentDate, 'DDD').pattern;
+
+        document.getElementById('filterDD').innerHTML = tardis.patterned(currentDate, 'DD').pattern;
+
+        document.getElementById('filterD').innerHTML = tardis.patterned(currentDate, 'D').pattern;
+
+        document.getElementById('filterd').innerHTML = tardis.patterned(currentDate, 'd').pattern;
+
+        document.getElementById('filterHHHH').innerHTML = tardis.patterned(currentDate, 'HHHH').pattern;
+
+        document.getElementById('filterHH').innerHTML = tardis.patterned(currentDate, 'HH').pattern;
+
+        document.getElementById('filterH').innerHTML = tardis.patterned(currentDate, 'H').pattern;
+
+        document.getElementById('filterh').innerHTML = tardis.patterned(currentDate, 'h').pattern;
+
+        document.getElementById('filterIIII').innerHTML = tardis.patterned(currentDate, 'IIII').pattern;
+
+        document.getElementById('filterII').innerHTML = tardis.patterned(currentDate, 'II').pattern;
+
+        document.getElementById('filterI').innerHTML = tardis.patterned(currentDate, 'I').pattern;
+
+        document.getElementById('filteri').innerHTML = tardis.patterned(currentDate, 'i').pattern;
+
+        document.getElementById('filterSSSS').innerHTML = tardis.patterned(currentDate, 'SSSS').pattern;
+
+        document.getElementById('filterSS').innerHTML = tardis.patterned(currentDate, 'SS').pattern;
+
+        document.getElementById('filterS').innerHTML = tardis.patterned(currentDate, 'S').pattern;
+
+        document.getElementById('filters').innerHTML = tardis.patterned(currentDate, 's').pattern;
+
+        document.getElementById('filterTT').innerHTML = tardis.patterned(currentDate, 'TT').pattern;
+
+        document.getElementById('filtertt').innerHTML = tardis.patterned(currentDate, 'tt').pattern;
+
     };
 </script>
 
